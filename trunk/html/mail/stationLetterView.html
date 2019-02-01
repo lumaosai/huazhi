@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>站内信查看页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        body{
+            font-size: 12px;
+            color: #666;
+        }
+        #stationLetterView{
+            padding: 0;
+        }
+        .mail-top{
+            font-size: 24px;
+            font-weight: 100;
+        }
+        .theme{
+            font-size: 16px;
+        }
+        .font-weight400{
+            font-weight: 400;
+        }
+        .font-weight600{
+            font-weight: 600;
+        }
+        
+        .content-padding{
+            padding: 30px 20px 20px;
+        }
+        .content-title{
+            /*padding-bottom: 20px;*/
+            border-bottom: 1px solid #eaeaea;
+            padding: 0 20px 20px;
+        }
+        .mail-content{
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body id="stationLetterView" class="wrapper-white">
+    <div class="clearfix content-padding">
+        <div class="pull-left mail-top">查看邮件</div>
+        <div class="pull-right">
+            <button class="btn btn-search" id="return"  type="button"><i class="fa fa-reply"></i>返回</button>
+            <button class="btn btn-search"  id="reply" type="button"><i class="fa fa-edit"></i>回复</button>
+        </div>
+    </div>
+    <div class="content-title">
+        <div class="theme mgt-5">
+            <span class="font-weight400">主题:</span>
+            <span class="font-weight600">主題内容</span>
+        </div>
+        <div class="mgt-5">
+            <div class="clearfix">
+                <span class="font-weight400">发件人:</span>
+                <i class="font-weight600">admin</i>
+                <span class="pull-right font-weight400">2018-12-23</span>
+            </div>
+        </div>
+        <div class="mgt-5">
+            <span class="font-weight400">收件人:</span>
+            <i class="font-weight600">zhangsan</i>
+        </div>
+    </div>
+    <div class="content-padding">
+        <div class="mail-content">这是邮件的内容</div>
+        <div class="mail-history">
+            <div>---------------------原始邮件-----------------------</div>
+            <div>
+                <span>发件人:</span>
+                <i>admin</i>
+            </div>
+            <div>
+                <span>发送时间:</span>
+                <i>2018-12-23</i>
+            </div>
+            <div>
+                <span>收件人:</span>
+                <i>zhangsan</i>
+            </div>
+            <div>
+                <span>主题:</span>
+                <span>主題内容</span>
+            </div>
+            <div>邮件内容</div>
+            <!--<div>-->
+                <!--<div class="clearfix">-->
+                    <!--<span>发件人:</span>-->
+                    <!--<i>admin</i>-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<span>收件人:</span>-->
+                    <!--<i>zhangsan</i>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+<script type="text/javascript">
+    includeRJ("/js/module/mail/stataionLetter");
+</script>
+</body>
+</html>

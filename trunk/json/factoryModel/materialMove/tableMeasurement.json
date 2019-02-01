@@ -1,0 +1,61 @@
+{
+ "title":"表计量创建",
+ "colName":["表名","前读数","取数","确认前读数","前读数时间","后读数","取数","确认后读数","后读数时间","回零前读数","回零后读数"],
+ "colModel":[
+  {
+   "name": "name",
+   "label": "name",
+   "align": "center"
+  },
+  {
+   "name": "preRead",
+   "label": "preRead",
+   "align": "center"
+  },
+  {
+   "name": "",
+   "label": "",
+   "align": "center"
+  },
+  {
+   "name": "conPreRead",
+   "label": "conPreRead",
+   "align": "center"
+  },
+  {
+   "name": "preReadDate",
+   "label": "preReadDate",
+   "align": "center"
+  },
+  {
+   "name": "aftRead",
+   "label": "aftRead",
+   "align": "center"
+  },
+  {
+   "name": "",
+   "label": "",
+   "align": "center"
+  },
+  {
+   "name": "conAftRead",
+   "label": "conAftRead",
+   "align": "center"
+  },
+  {
+   "name": "aftReadDate",
+   "label": "aftReadDate",
+   "align": "center"
+  },
+  {
+   "name": "preResetReadVal",
+   "label": "preResetReadVal",
+   "align": "center"
+  },
+  {
+   "name": "aftResetReadVal",
+   "label": "aftResetReadVal",
+   "align": "center"
+  }
+ ]
+}

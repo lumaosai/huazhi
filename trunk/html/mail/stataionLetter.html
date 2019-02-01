@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>站内信</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        #btn-delete{
+            margin-bottom: 10px;
+        }
+        .fa{
+            font-size: 18px;
+        }
+        .btn-reply{
+            color: #1ab394;
+        }
+        .btn-reply:hover{
+            color: #1ab394;
+        }
+        .check-btn{
+            color: #ffa82d;
+        }
+        .check-btn:hover{
+            color: #ffa82d;
+        }
+
+
+    </style>
+
+</head>
+<body id="stataionLetter" class="wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title  theme-tight">
+        <div class="titName clearfix">
+            <span>站内信</span>
+            <div class="pull-right toolbar-btns">
+                <button class="btn" id="btn-add"><i class="fa fa-plus "></i> 写信
+                </button>
+                <!--<a class="btn" id="btn-add"><i class="fa fa-plus"></i> 写信</a>-->
+                <!--<a class="btn" id="delete"><i class="fa fa-trash-o"></i>删除</a>-->
+                <!--<button class="btn" id="btn-help"><i class="fa fa-trash-o "></i> 删除-->
+                <!--</button>-->
+            </div>
+        </div>
+        <!--<div class="toolbar-form clearfix">-->
+            <!--<div class="pull-right">-->
+                <!--<button class="btn btn-search" id="btn-search"  type="button"><i class="fa fa-search"></i>写信</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="ibox-content">
+        <!--切换-->
+        <div class="tab-box">
+            <div class="tab-bar clearfix">
+                <ul class="tab-nav tabBtn  pull-left">
+                    <li class="noBtn active">收件箱</li>
+                    <li class="hasBtn">已发送</li>
+                    <li class="hasBtn">草稿箱</li>
+                </ul>
+                <button class="btn btn-delete pull-right" id="btn-delete"  type="button"><i class="fa fa-trash-o"></i>删除</button>
+
+            </div>
+            <!--切换内容-->
+            <div class="tab-con mgt-10" id="tables">
+                <!--收件箱-->
+                <div class="table-item tab-con-item active" id="inbox">
+                    <div class="ibox-content-table">
+                        <div class="table-content classMeasure">
+                            <!--<button class="btn btn-delete pull-right" id="btn-delete"  type="button"><i class="fa fa-trash-o"></i>删除</button>-->
+                            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                <thead>
+                                <tr role="row">
+                                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                                    <th>状态</th>
+                                    <th>发件人</th>
+                                    <th>标题</th>
+                                    <th>内容</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <!--表内容-->
+                                <tbody id="datainner">
+
+                                </tbody>
+                            </table>
+                            <!--分页-->
+                            <!--<div class="clearfix pagination-box">-->
+                                <!--<div class="page-info pull-left"></div>-->
+                                <!--<div id="pagination" class="pagination-roll pull-right"></div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+                <!--已发送-->
+                <div class="table-item tab-con-item" id="send">
+                    <div class="ibox-content-table">
+                        <div class="table-content classMeasure">
+                            <table id="treeTable2" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                <thead>
+                                <tr role="row">
+                                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                                    <th>发件人2</th>
+                                    <th>标题</th>
+                                    <th>内容</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <!--表内容-->
+                                <tbody id="datainner2">
+
+                                </tbody>
+                            </table>
+                            <!--分页-->
+                            <!--<div class="clearfix pagination-box">-->
+                                <!--<div class="page-info pull-left"></div>-->
+                                <!--<div id="pagination" class="pagination-roll pull-right"></div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+                <!--草稿箱-->
+                <div class="table-item tab-con-item" id="drafts">
+                    <div class=" ibox-content-table">
+                        <div class="inputOutput table-content">
+                            <table id="treeTable3" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                <thead>
+                                <tr role="row">
+                                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                                    <th>发件人3</th>
+                                    <th>标题</th>
+                                    <th>内容</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="datainner3">
+
+                                </tbody>
+                            </table>
+                            <!--分页-->
+                            <!--<div class="clearfix pagination-box">-->
+                                <!--<div class="page-info pull-left"></div>-->
+                                <!--<div id="pagination" class="pagination-roll pull-right"></div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    includeRJ("/js/module/mail/stataionLetter");
+</script>
+</html>

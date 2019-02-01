@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进出厂计量单</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="mobilisationTicket" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>进出厂计量单</span>
+            <!--create类名用来判断是制单状态还是关闭状态-->
+            <!--如果是制单状态就显示create类-->
+            <!--如果是关闭状态就显示liftOff类..默认显示制单状态-->
+            <div class="pull-right toolbar-btns">
+                <a class="btn create" id="btn-addmsg"><i class="fa fa-plus col-1ab394"></i> 创建</a>
+                <a class="btn create" id="btn-maintainF"><i class="fa fa-pencil-square col-1ab394"></i> 维护</a>
+                <a class="btn create" id="btn-colse"><i class="fa fa-times-circle col-1ab394"></i> 关闭</a>
+                <a class="btn create" id="btn-delete"><i class="fa fa-trash col-f98080"></i> 删除</a>
+                <a class="btn liftOff hide" id="btn-liftoff"><i class="fa fa-unlink col-1ab394"></i> 解除关闭</a>
+            </div>
+        </div>
+        <div class="toolbar-form clearfix">
+            <div class="pull-left">
+                <div class="form-inline">
+                    <span>日期：</span>
+                    <input id="tankDate" name="tankDate" autocomplete="off" class="Wdate form-control" onclick="WdatePicker();"  type="text" value="" >
+                </div>
+                <div class="form-inline">
+                    <span>班次：</span>
+                    <select id="shift" name="shift" class="form-control">
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>状态：</span>
+                    <select id="status" name="status" class="form-control">
+                        <option value="0">制单中</option>
+                        <option value="1">关闭中</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>类型：</span>
+                    <select id="transTypes" name="transType" class="form-control">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <input type="radio" class="i-checks radios" name="outIn" value="0" checked/>进厂
+                    <input type="radio" class="i-checks radios" name="outIn" value="1"/>出厂
+                </div>
+                <div class="form-inline">
+                    <button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+                </div>
+            </div>
+            <div class="pull-right">
+              <div class="form-inline">
+                  <button class="btn btn-1ab394" id="btn-instrument" type="button"><i class="iconfont icon-yibiaopan"></i>仪表计量</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table id="SmtinoutBill">
+
+        </table>
+        <div class="mgt-10 treeTable-count hide">
+            <a class="">
+                <i class="fa fa-check-circle col-00cc66" aria-hidden="true"></i>
+            </a>
+            <span class="treeTable-taps">进出厂计量单记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    includeRJ("/js/module/material/materialMove/mobilisationTicket");
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}-个人工作台</title>
+    <script type="text/javascript" src="../js/meta.js"></script>
+</head>
+</head>
+<body class="body gray-bg">
+<!--编辑按钮-->
+<div id="bjbtn" class="navtopstyle">
+    <a href="javascript:void(0);" class="sjkhs" title="点击编辑">
+        <i></i>
+    </a>
+</div>
+<!--编辑按钮-->
+<div class="sumenlist" style="display: none;">
+    <a href="javascript:void(0);" class="succesesed_ok" title="点击保存"><i></i></a>
+    <a href="javascript:void(0);" class="appendtext" data-p="off" title="点开选项"><i></i></a>
+</div>
+<div class="center gridster">
+    <!--分组修改-->
+    <ul id="home-gridster-ul" class="function gridster-uls" style="width: 1260px; position: relative; height: 420px;">
+
+    </ul>
+</div>
+<!-- 右侧隐藏磁贴商店 -->
+<div id="right-sidebar" style="display:none">
+    <div class="sidebar-open">
+        <a class="sideOpener" data-p="off"><b>&lt;</b></a>
+    </div>
+    <div class="sidebar-container">
+        <div class="headStore"><p>磁贴商店</p></div>
+        <div class="mainStore">
+            <img src="../images/workPlace/close_cart.png"  onclick="closeStore()" class="side-close">
+            <div class="selects">
+                <select id="apps">
+                </select>
+                <select id="tile_type">
+
+                </select>
+                <div class="searchI">
+                    <input type="text" class="search" id="keyword">
+                    <a id="searchBtn">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCp" id="store_group_main">
+                <!--磁贴商店磁贴缩略图显示-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--磁贴商店模板-->
+<script id="tile_store_Tmpl" type="text/html">
+    {{each apps as value}}
+        {{if value.total > 0}}
+            <div class="mainCon">
+                <div class="privateTiles-box clearfix">
+                    <span class="title">
+                        私有磁贴
+                        <span id="tiles_total_privateTiles">({{value.tiles.length}})</span>
+                        <span class="tiles_total_sort">
+                            <i class="fa fa-sort-desc " aria-hidden="true"></i>
+                        </span>
+
+                    </span>
+                    <ul class="totleCon" id="store_group_tiles">
+                        {{each value.tiles as item}}
+                        <li id="breviary_{{item.id}}" class="tile_li">
+                            <span class="headCon" title="{{item.title}}">{{item.title}}({{item.sizex}}×{{item.sizey}})</span>
+                            <p class="midCon" id="store_tile_{{item.id}}">
+                                {{if item.icon.indexOf(".")<0}}
+                                <span class="store-iconInfo"><i class="icon iconfont {{item.icon}}"></i></span>
+                                {{else}}
+                                <img style="max-height:85px;max-width:110px" data-code="{{item.templateCode}}" src="{{item.imgSrc}}">
+                                {{/if}}
+                            </p>
+                            <span class="bottomCon"><img src="../images/addB.png" /></span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="publicTiles-box clearfix">
+                    <span class="title">
+                        公有磁贴
+                        <span id="tiles_total_publicTiles">({{value.publicTiles.length}})</span>
+                        <span class="tiles_total_sort ">
+                            <i class="fa fa-sort-desc " aria-hidden="true"></i>
+                        </span>
+                    </span>
+                    <ul class="totleCon clearfix" id="store_group_publicTiles">
+                        {{each value.publicTiles as item}}
+                        <li id="breviary_{{item.id}}" class="tile_li">
+                            <span class="headCon" title="{{item.title}}">{{item.title}}({{item.sizex}}×{{item.sizey}})</span>
+                            <p class="midCon" id="store_tile_{{item.id}}">
+                                {{if item.icon.indexOf(".")<0}}
+                                <span class="store-iconInfo"><i class="icon iconfont {{item.icon}}"></i></span>
+                                {{else}}
+                                <img style="max-height:85px;max-width:110px" data-code="{{item.templateCode}}" src="{{item.imgSrc}}">
+                                {{/if}}
+                            </p>
+                            <span class="bottomCon"><img src="../images/addB.png" /></span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        {{/if}}
+    {{/each}}
+</script>
+<!--磁贴商店面板类（暂时没有开发此功能）  注释： 此处data是数组，要改为对象-->
+<script id="tile_store_panel_tmpl" type="text/html">
+    {{each list as item}}
+        <li id="breviary_panel_{{item.panelCode}}" class="tile_li">
+            <span class="headCon" title="{{item.title}}">{{item.title}}({{item.sizex}}×{{item.sizey}})</span>
+            <p class="midCon" id="store_tile_panel_{{item.panelId}}">
+                <img style="max-height:85px;max-width:110px" data-code="{{item.panelCode}}" src="{{item.imgSrc}}">
+            </p>
+            <span class="bottomCon"><img src="../images/addB.png" /></span>
+        </li>
+    {{/each}}
+</script>
+<!--快捷入口类磁贴-->
+<script id="tmpl1" type="text/html">
+    <div class="box-shortcut {{className}}" style="{{sizeStyle}}">
+        <img id={{tileTemplateId}} data-needid="tile-{{tileTemplateId}}" data-type="shortcut" src="../images/close.png" class="ingsht">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <a href="javascript:void(0);" data-url={{dataSource}} data-target={{targer}} data-id={{tileTemplateId}} data-title={{title}} style="background:{{bgColor}};">
+                <span class="short_span">
+                    {{if icon.indexOf(".")<0}}
+                        <span class="tile-iconInfo" style="width:{{width/1.64 | Mathround}}px;height:{{height/1.7 | Mathround}}px;line-height:{{height/1.7 | Mathround}}px;padding-top:{{height*0.049 | Mathround}}px;"><i class="icon iconfont {{icon}}" style="font-size:{{height * 0.46 | Mathround}}px;color:#fff;"></i></span>
+                    {{else}}
+                        <img src={{imgSrc}}>
+                    {{/if}}
+                    <p style="color:#fff;" title={{title}}>{{title}}</p>
+                </span>
+        </a>
+        <div class="loading-img">
+            <img src="../images/loading-2.gif" alt="img" title="正在加载中">
+        </div>
+    </div>
+</script>
+
+<!--数字类磁贴-->
+<script id="tmpl2" type="text/html">
+    <div class="box-number {{className}} box-number" style={{sizeStyle}}>
+        <img data-needid="tile-{{tileTemplateId}}" data-type="number" src="../images/close.png" class="ingsht">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="tile-content pag0" >
+            <div class="error-div"></div>
+            <div id="{{tileTemplateId}}" data-number="{{tileTemplateId}}" class="comant data-div" style="background:{{bgColor}}">
+                <div class="number-content">
+                    <div class="tile-number-left">
+                        {{if icon.indexOf(".")<0}}
+                        <i class="icon iconfont {{icon}}" style="color:#fff;font-size:{{height*0.68 | Mathround}}px;line-height:{{height*0.76 | Mathround}}px;"></i>
+                        {{else}}
+                        <img class="view-picture" src="{{imgSrc}}" title="img">
+                        {{/if}}
+                    </div>
+                    <div class="tile-number-right" >
+                        <p class="tile-number-info line1" id="num{{tileTemplateId}}" style="margin-bottom:{{height*0.08 | Mathround}}"></p>
+                        <p class="tile-number-title line1" >{{title}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-img">
+            <img src="../images/loading-2.gif" alt="img" title="正在加载中">
+        </div>
+
+    </div>
+</script>
+
+<!--图表类磁贴-->
+<script id="tmpl-chart" type="text/html">
+    <div class="box-chart {{className}} box-chart" style={{sizeStyle}}>
+        <img data-needid="tile-{{tileTemplateId}}" data-type="freedom" src="../images/close.png" class="eacstrslist">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="tile-content">
+            <div class="tile-title">{{title}}</div>
+            <div class="error-div"></div>
+            <div id="{{tileTemplateId}}" class="data-div" style="{{canvasSizeStyle}}">
+            </div>
+        </div>
+
+        <div class="loading-img">
+            <img src="../images/loading-2.gif" alt="img" title="正在加载中">
+        </div>
+    </div>
+</script>
+
+<!--列表类磁贴-->
+<script id="tmpl4" type="text/html">
+    <div class="box-list {{className}} box-list" style="{{sizeStyle}}">
+        <img id="{{tileId}}" data-needid="tile-{{tileTemplateId}}" data-type="freedom" src="../images/close.png" class="lbdestlist">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="tile-content" style="padding-bottom:30px;">
+            <div class="tile-title">{{title}}</div>
+            <div class="error-div"></div>
+            <div class="data-div" id={{tileTemplateId}}>
+                <table class="renderTable table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                    <thead class="renderTable-thead"><tr></tr></thead>
+                    <tbody class="renderTable-tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-container"></div>
+        </div>
+        <div class="loading-img">
+            <img src="../images/loading-2.gif" alt="img" title="正在加载中">
+        </div>
+    </div>
+</script>
+
+<!--卡片类磁贴-->
+<script id="tmpl5" type="text/html">
+    <div class="box-card {{className}} box-card" style="{{sizeStyle}}">
+        <img id="{{tileId}}" data-needid="tile-{{tileTemplateId}}" data-type="freedom" src="../images/close.png" class="shewidt">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="card_registerBox">
+            <div class="card-registerCon">
+                <h5 id="card-registerCon-title">{{title}}</h5>
+                <ul class="card-registerCon-ul">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--文本类磁贴-->
+<script id="tmpl6" type="text/html">
+    <div  class="box-text {{className}} box-text" style="{{sizeStyle}}">
+        <img id="{{tileId}}" data-needid="tile-{{tileTemplateId}}" data-type="freedom" src="../images/close.png" class="shewidt">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="tile-content noAdorn-content">
+            <div class="tile-title tile-title-sm line1" title="{{title}}">{{title}}</div>
+            <div class="tile-textarea">
+                <textarea name="content" id="text-content-prev{{id}}" readonly>{{content}}</textarea>
+            </div>
+        </div>
+        <div class="loading-img">
+            <img src="../images/loading-2.gif" alt="img" title="正在加载中">
+        </div>
+    </div>
+</script>
+
+<!--自定义磁贴-->
+<script id="tmpl7" type="text/html">
+    <div class="box-custom {{className}}" style="{{sizeStyle}}">
+        <img id="{{tileId}}" data-needid="tile-{{tileTemplateId}}" data-type="freedom" src="../images/close.png" class="ingsht">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="iframe-mask"></div>
+        <div id="cus{{tileTemplateCode}}" style="{{sizeStyle}}">
+        </div>
+    </div>
+</script>
+
+<!-- 图片类 -->
+<script id="tmpl8" type="text/html">
+    <div class="box-image {{className}}" style="{{sizeStyle}}">
+        <img id="{{tileId}}" data-needid="tile-{{tileTemplateId}}" data-type="freedom" src="../images/close.png" class="shewidt">
+        {{if status == -1}}
+        <div class="disabled-tile-mask" title="权限被取消，请联系管理员"><div>无权限</div></div>
+        {{/if}}
+        <div class="tile-content tile-content-image">
+            <div class="tile-title  tile-title-sm line1" title="{{title}}">{{title}}</div>
+            <div class="error-div"></div>
+            <div id="{{id}}" data-number="{{id}}" class="comant data-div">
+                <div class="image-content">
+                    <img class="view-picture" src="{{imgSrc}}" title="{{title}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 面板类 -->
+<script id="panel-tmpl" type="text/html">
+    <div class="group-wrap" style="{{sizeStyle}}">
+        <img id="{{panelId}}" data-needid="panel-{{panelId}}" data-group="panel" data-type="freedom" data-pid="{{panelId}}" src="../images/close.png" class="ingsht">
+        <div class="group-title">
+            <h3 class="group-title-h" onclick="spantoinput(this)">
+                <span class="group-title-nameSp">{{title}}</span>
+                <input class="group-title-nameInp" data-oid="{{panelId}}" onblur="saveGroupTitle(this)">（<span id="selectCount{{panelId}}">0</span>）
+                <b></b>
+            </h3>
+            <i id="icon-set-{{panelId}}" class="icon-setting" data-tileId="{{tileId}}" data-panelid="{{panelId}}" data-tempid="{{panelId}}" onclick="layerOpenPanel(this)" style="display:none;"></i>
+        </div>
+        <div id="div-group-panel-{{panelId}}" class="group-tiles-div tile-ul">
+            <div class="div-group-shadows"></div>
+            <ul id="ul-group-panel-{{panelId}}" class="group-panel-ul"></ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    includeRJ('/js/module/home/home');
+    include([
+        cdnDomain+'/js/plugins/gridster/jquery.gridster.css',
+        '/css/home/workBench-iconsLibrary/iconfont.css',
+        '/css/home/personalDesk.css',
+        '/css/customDataTable.css',
+        '/css/home/home-slide.css'
+    ]);
+</script>
+</body>
+</html>

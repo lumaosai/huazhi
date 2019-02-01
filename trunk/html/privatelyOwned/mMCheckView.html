@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>磁贴查看</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .tileDetail-top{width:100%;padding:15px 0;text-align: center;}
+        .iconImage{width:90px;height:90px;margin:0 auto 8px;line-height: 90px; position: relative;}
+        #iconImg{font-size: 100px; color: #3ab394; }
+        .tile-tit{font-size: 26px;line-height: 24px;}
+        .tileDetail-con{font-size: 0;padding-top:10px;border-top:1px solid #eaeaea;}
+        .w-33{width:33%;display: inline-block;vertical-align: top;}
+        .tileDetail-con li{padding:0 10px;line-height: 30px;font-size:14px;word-break: break-all;word-wrap: break-word;}
+        .layui-layer-btn{border:none;}
+        .layui-layer-iframe{border-radius: 8px;-ms-border-radius: 8px;}
+    </style>
+</head>
+<!--内容-->
+<body id="mMCheckView">
+    <div id="tileDetail">
+        <div class="tileDetail-top">
+            <div class="iconImage tile-icon"></div>
+            <div id="title" class="tile-tit"><span></span></div>
+        </div>
+        <ul class="tileDetail-con clearfix">
+            <li class="w-33">编码: <span id="tileTemplateCode"></span></li>
+            <li class="w-33">应用: <span id="appName"></span></li>
+            <li class="w-33">磁贴大小: <span id="size"></span></li>
+            <li>数据来源: <span id="dataSource"></span></li>
+            <li>描述: <span id="des"></span></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        includeRJ("/js/module/privatelyOwned/magnetManagement");
+        include(['/css/home/workBench-iconsLibrary/iconfont.css','/css/privatelyOwned.css','/css/aps.css']);
+    </script>
+</body>
+</html>

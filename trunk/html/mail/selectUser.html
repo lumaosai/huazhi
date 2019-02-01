@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择用户</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .ibox{
+            margin: 20px;
+        }
+    </style>
+
+</head>
+<body id="selectUser" >
+<div class="ibox">
+    <div class="ibox-content pag-0 clearfix">
+        <!--树-->
+        <div class="pull-left zTreeBox">
+                <span class="searchGroup dataTable_my ">
+                    <span>用户:</span>
+                    <input type="text" id="wait_searchText"  class="form-control" placeholder="关键字筛选" >
+                    <button type="button" class="btn btn-primary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            <ul id="zTree" class="ztree"></ul>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript">
+    includeRJ("/js/module/mail/stataionLetter");
+</script>
+</html>

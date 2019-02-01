@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datatable功能</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.dataTables.min.css"/>
+    <!--<link rel="stylesheet" href="../../js/plugins/datatables/css/colReorder.dataTables.min.css"/>-->
+    <!--<link rel="stylesheet" href="../../js/plugins/datatables/css/fixedHeader.dataTables.min.css"/>-->
+
+    <style>
+        /*.ul{*/
+            /*width: 150px;*/
+            /*border: 1px solid #ccc;*/
+            /*display: none;*/
+            /*background: #fff;*/
+            /*z-index: 100;*/
+        /*}*/
+       .ul li:hover{
+           background-color: #d7ebf9;
+       }
+        .dataTables_wrapper {
+            overflow: hidden ;
+        }
+        #treeTable{
+            width: 200% !important;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body id="newDataTables" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-content">
+        <!--<select name="visibleColumn" id="visibleColumn"></select>-->
+        <button class="btn btn-add" id="btn-add"><i class="fa fa-plus "></i> 添加
+        </button>
+        <button class="btn btn-save" id="save-btn" ><i class="fa fa-floppy-o  "></i> 保存
+        </button>
+        <button class="btn btn-delete" id="btn-delete"><i class="fa fa-trash-o "></i> 删除
+        </button>
+        <div class="visibleColumn">点击显示隐藏列
+
+        </div>
+        <!--表格区-->
+        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+            <!--表头-->
+            <thead>
+            <tr role="row">
+                <th width="60px" data-titles="复选框"  data-name="id"><input type="checkbox" class="i-checks" ></th>
+                <th data-titles="工厂编号"  data-name="fctrNo">工厂编号</th>
+                <th data-titles="工厂编码"  data-name="fctrCode.code">工厂编码</th>
+                <th data-titles="工厂名称"  data-name="enable.name">工厂名称</th>
+                <th data-titles="工厂别名"  data-name="fctrAlias">工厂别名</th>
+            </tr>
+            </thead>
+            <!--表内容-->
+            <tbody id="datainner">
+
+            </tbody>
+        </table>
+        <!--分页-->
+        <div class="clearfix pagination-box">
+            <div class="page-info pull-left"></div>
+            <div id="pagination" class="pagination-roll pull-right"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    includeRJ("/html/0_0/js/newDataTables");
+//    include(['http://127.0.0.1:80/js/plugins/datatables/css/colReorder.dataTables.min.css','http://127.0.0.1:80/js/plugins/datatables/css/fixedHeader.dataTables.min.css']);
+</script>
+</body>
+</html>

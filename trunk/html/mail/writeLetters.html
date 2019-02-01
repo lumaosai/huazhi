@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写信</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        #writeLetters{
+            padding: 0;
+        }
+        .mail-title{
+            font-size: 24px;
+            position: relative;
+        }
+        .mail-title:before{
+            content: "";
+            width: 7px;
+            height: 28px;
+            background: #1ab394;
+            position: absolute;
+            top: 2px;
+            left: -15px;
+        }
+
+        .content-btn{
+            /*padding-bottom: 10px;*/
+            padding: 20px 40px;
+            border-bottom: 1px solid #ccc;
+        }
+        .mail-body{
+            padding: 20px 10%;
+        }
+        label{
+            text-align: right;
+        }
+        .receiverName{
+            height: 30px;
+            width: 100%;
+        }
+        .mail-left{
+            width: 10%;
+        }
+        .mail-rightBtn{
+            position: relative;
+            width: 90%;
+            height: 30px;
+        }
+        .input-group-btn{
+            position: absolute;
+            top: -6px;
+            right: 21px;
+        }
+        .receiverName{
+            position: relative;
+            top: -6px;
+            outline: medium;
+        }
+        .mail-theme{
+            margin-top: 10px;
+        }
+        .mail-ueditor{
+            padding: 10px 10%;
+        }
+
+
+    </style>
+</head>
+
+<body id="writeLetters" class="wrapper-white">
+<!--<img src="" alt="" id="img"/>-->
+    <div class="clearfix content-btn">
+        <div class="pull-left mail-title">写信</div>
+        <div class="pull-right">
+            <!--<button class="btn btn-search" id="return"  type="button"><i class="fa fa-reply"></i>返回</button>-->
+            <button class="btn btn-search" id="send"  type="button"><i class="fa fa-save"></i>发送</button>
+            <button class="btn btn-ffa82d"  id="draft" type="button"><i class="fa fa-pencil"></i>存为草稿</button>
+            <button class="btn btn-delete"  id="reply" type="button"><i class="fa fa-times-circle"></i>放弃</button>
+        </div>
+    </div>
+    <div class="mail-body ">
+        <div class="clearfix ">
+            <label class="pull-left mail-left"><font color="red">*</font>发送到：</label>
+            <div class="pull-left mail-rightBtn clearfix">
+                <input id="receiverName" class="receiverName form-control" name="receiverNames" readonly="readonly" type="text">
+                <span class="input-group-btn searchGroup">
+                     <button type="button" id="receiverButton" class="btn btn-primary"><i class="fa fa-search"></i>
+                     </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="clearfix mail-theme">
+            <label class="pull-left mail-left">主题：</label>
+            <div class="pull-left mail-rightBtn clearfix">
+                <input id="theme" class="receiverName form-control" name="theme"  type="text">
+            </div>
+        </div>
+    </div>
+    <div class="mail-ueditor">
+        <script type="text/plain" id="myEditor1" style="width:100%;height:300px;">
+
+        </script>
+
+    </div>
+<script type="text/javascript">
+    includeRJ("/js/module/mail/stataionLetter");
+    include([
+        'http://127.0.0.1:80/js/plugins/utf8-jsp/themes/default/css/ueditor.css'
+    ]);
+</script>
+</body>
+</html>

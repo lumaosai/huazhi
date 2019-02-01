@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>artTemplate模板</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="artTemplate" >
+ <div id="root"></div>
+ <div id="app"></div>
+ <div>====================</div>
+ <div id="otherTemp"></div>
+<script type="text/javascript">
+    includeRJ("/html/0_0/js/artTemplateDemo");
+</script>
+
+<script id="template1" type="text/html">
+     <!--展示数据 -->
+    <h1 class="bbb{{name}}" id="{{id}}">{{title}}</h1>
+    <!-- template3 为模板id 默认使用当前数据 -->
+    {{include 'template3'}}
+    <hr>
+    <!-- 三元表达式 -->
+    <div>{{isAdmin ? 1 : 0}}</div>
+    <!-- 遍历数组 -->
+    <ul>
+        {{each list as value i}}
+        <li>索引 {{i + 1}} ：{{value}}</li>
+        {{/each}}
+    </ul>
+    <hr/>
+    <!-- 简化版 $index 表示索引 $value 表示值-->
+    <ul>
+        {{each list}}
+        <li>{{$index}} ：{{$value}}</li>
+        {{/each}}
+    </ul>
+    <hr/>
+    <!-- 遍历对象去掉as-->
+    {{each obj value key}}
+    <div>{{key}}----{{value}}</div>
+    {{/each}}
+    <hr/>
+    <!-- 条件判断 -->
+    {{if num == 5}}
+    <h4>{{num}}</h4>
+    {{ else if num == 4}}
+    <h5>{{num}}</h5>
+    {{else}}
+    <h5>{{num}}</h5>
+    {{/if}}
+
+</script>
+
+<script id="template2" type="text/html">
+    <hr/>
+    <h2 id="{{id}}">模板2</h2>
+    {{each list as value key}}
+    <div>{{key}}----{{value.name}}
+        <span>{{ value.id}}</span>
+        <i>{{value.email}}</i>
+    </div>
+    {{/each}}
+
+</script>
+
+<script id="template3" type="text/html">
+    <h1>引入模板</h1>
+    <ul>
+        {{each list as value i}}
+        <li> {{i + 1}} ：{{value}}</li>
+        {{/each}}
+    </ul>
+</script>
+</body>
+</html>

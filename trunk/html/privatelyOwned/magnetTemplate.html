@@ -1,0 +1,764 @@
+<!--渲染磁贴类型点击按钮-->
+{{if magnetType == true}}
+{{each typeList as value}}
+<li id={{value.id}}>
+    <a>{{value.name}}<span></span>
+</li>
+{{/each}}
+{{/if}}
+
+
+<!--渲染磁贴-->
+{{each list as value}}
+<li class="typeid" id={{value.id}} >
+    <input type="hidden" class="typecode" value={{value.type}} data-datasourcetype={{value.datasourcetype}}>
+    <div class="topcontent">
+        <div class="checkView"></div>
+        <div class="iconImage"><img src="../../../images/workPlace/{{value.icon}}" alt=""></div>
+        <div class="typeName"><span>{{value.title}}</span></div>
+    </div>
+    <ul class="contentfrom">
+        <li>编码: <span>{{value.tileTemplateCode}}</span></li>
+        <li>应用: <span>{{value.appName}}</span></li>
+        <li>数据来源: <span title='{{value.dataSource}}'>{{value.dataSourceLabel}}</span></li>
+        <li>
+            <div class="btn btn-delete"><i class="fa fa-trash"></i>删除</div>
+            <div class="btn btn-change"><i class="fa icon-change"></i>修改</div>
+        </li>
+    </ul>
+</li>
+{{/each}}
+
+
+<!--快捷入口类-->
+{{if dataType == 1}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75"><input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" value="" class="form-control "></td>
+</tr>
+<tr>
+    <td class="active require">应用:</td>
+    <td>
+        <select class="form-control" name="appCode" id="appCode" require="true"></select>
+        <input type="hidden" name="appName" id="appName" value="">
+        <input id="appCodeId" name="appCodeId" type="hidden" value="" class="form-control 1">
+        <label id="appCode-error" class="error" for="appCode" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class="">
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">数据源:</td>
+    <td>
+        <select id="dataSource" name="dataSource" type="text" data-width="80%" class="form-control select2 ">
+
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+        </select>
+    </td>
+</tr>
+<tr class="icons ">
+    <td class="require active">图标:</td>
+    <td>
+        <i id="iconIcon" class="icon iconfont"></i>
+        &nbsp;&nbsp;
+        <input id="icon" name="icon" type="text" class="  1" require="true" value>
+        <a id="iconButton" href="javascript:" class="btn btn-primary color">选择</a>
+        &nbsp;&nbsp;
+        <input id="iconclear" class="btn btn-default" type="button" value="清除">
+    </td>
+</tr>
+<tr>
+    <td class="active">背景颜色:</td>
+    <td>
+        <div class="bgColor"><input class="1" type="hidden" id="bgColor" name="bgColor">
+            <li class="dropdown color-picker">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                    <span><i class="fa fa-circle"></i></span>
+                </a>
+                <ul class="dropdown-menu pull-right animated fadeIn" role="menu">
+                    <li class="padder-h-xs">
+                        <table class="table color-swatches-table text-center no-m-b">
+                            <tbody>
+                            <tr>
+                                <td class="text-center colorr">
+                                    <a data-theme="blue" class="theme-picker">
+                                        <i class="fa fa-circle blue-base"></i> </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="green" class="theme-picker">
+                                        <i class="fa fa-circle green-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="red" class="theme-picker">
+                                        <i class="fa fa-circle red-base"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center colorr">
+                                    <a data-theme="purple" class="theme-picker">
+                                        <i class="fa fa-circle purple-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="midnight-blue" class="theme-picker">
+                                        <i class="fa fa-circle midnight-blue-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="lynch" class="theme-picker">
+                                        <i class="fa fa-circle lynch-base"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="require active">打开方式:</td>
+    <td class="">
+        <select class="form-control " require="true" name="targer" id="targer">
+            <option value="0">Tab选项卡</option>
+            <option value="1">新窗口</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea>
+    </td>
+</tr>
+{{/if}}
+
+
+<!--数字类-->
+{{if dataType == 2}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="active require">应用:</td>
+    <td>
+        <select class="form-control" name="appCode" id="appCode" require="true"></select>
+        <input type="hidden" name="appName" id="appName" value="">
+        <input id="appCodeId" name="appCodeId" type="hidden" value="" class="form-control 1">
+        <label id="appCode-error" class="error" for="appCode" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class="">
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">数据源:</td>
+    <td>
+        <select id="dataSource" name="dataSource" type="text" style="width:80%;" class="form-control select2 1">
+
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">手机端显示:</td>
+    <td>
+        <select class="form-control 1" name="displayMobile" id="displayMobile" require="true">
+            <option value=0>不显示</option>
+            <option class="isMobile" value=1>显示</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="2">2</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+        </select>
+    </td>
+</tr>
+<tr class="icons ">
+    <td class="require active">图标:</td>
+    <td>
+        <i id="iconIcon" class="icon iconfont"></i>
+        &nbsp;&nbsp;
+        <input id="icon" name="icon" type="text" class="  1" require="true" value>
+        <a id="iconButton" href="javascript:" class="btn btn-primary color">选择</a>
+        &nbsp;&nbsp;
+        <input id="iconclear" class="btn btn-default" type="button" value="清除">
+    </td>
+</tr>
+<tr>
+    <td class="active">背景颜色:</td>
+    <td>
+        <div class="bgColor"><input class="1" type="hidden" id="bgColor" name="bgColor">
+            <li class="dropdown color-picker">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                    <span><i class="fa fa-circle"></i></span>
+                </a>
+                <ul class="dropdown-menu pull-right animated fadeIn" role="menu">
+                    <li class="padder-h-xs">
+                        <table class="table color-swatches-table text-center no-m-b">
+                            <tbody>
+                            <tr>
+                                <td class="text-center colorr">
+                                    <a data-theme="blue" class="theme-picker">
+                                        <i class="fa fa-circle blue-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="green" class="theme-picker">
+                                        <i class="fa fa-circle green-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="red" class="theme-picker">
+                                        <i class="fa fa-circle red-base"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center colorr">
+                                    <a data-theme="purple" class="theme-picker">
+                                        <i class="fa fa-circle purple-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="midnight-blue" class="theme-picker">
+                                        <i class="fa fa-circle midnight-blue-base"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center colorr">
+                                    <a data-theme="lynch" class="theme-picker">
+                                        <i class="fa fa-circle lynch-base"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="active">刷新间隔:</td>
+    <td class="">
+        <input id="timeInterval" name="timeInterval" type="text" value="0" class="form-control ">（秒）
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea>
+    </td>
+</tr>
+{{/if}}
+
+
+<!--图表类-->
+{{if  dataType == 3}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="active require">应用:</td>
+    <td>
+        <select class="form-control" name="appCode" id="appCode" require="true"></select>
+        <input type="hidden" name="appName" id="appName" value="">
+        <input id="appCodeId" name="appCodeId" type="hidden" value="" class="form-control 1">
+        <label id="appCode-error" class="error" for="appCode" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class="">
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="active require">数据源:</td>
+    <td>
+        <select id="dataSource" name="dataSource" type="text" class="form-control select2 1"
+                style="width:80%;">
+
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">手机端显示:</td>
+    <td>
+        <select class="form-control 1" name="displayMobile" id="displayMobile" require="true">
+            <option value=0>不显示</option>
+            <option class="isMobile" value=1>显示</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="active">刷新间隔:</td>
+    <td class="">
+        <input id="timeInterval" name="timeInterval" type="text" value="0" class="form-control ">（秒）
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea>
+    </td>
+</tr>
+{{/if}}
+
+
+<!--列表类-->
+{{if dataType == 4}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" class="form-control "></td>
+</tr>
+<tr>
+    <td class="active require">应用:</td>
+    <td>
+        <select class="form-control" name="appCode" id="appCode" require="true"></select>
+        <input type="hidden" name="appName" id="appName" value="">
+        <input id="appCodeId" name="appCodeId" type="hidden" value="" class="form-control 1">
+        <label id="appCode-error" class="error" for="appCode" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class="">
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">数据源:</td>
+    <td>
+        <select id="dataSource" name="dataSource" type="text" style="width:80%;" class="form-control select2 1"></select></td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="active require">列名:</td>
+    <td>
+        <input id="columnName" name="columnName" type="text" require="true" value="" class="form-control 1">
+        <label id="columnName-error" class="error" for="columnName" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">每页条数:</td>
+    <td class="">
+        <input id="pageSize" name="pageSize" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="active">刷新间隔:</td>
+    <td class="">
+        <input id="timeInterval" name="timeInterval" type="text" value="0" class="form-control ">（秒）
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea>
+    </td>
+</tr>
+{{/if}}
+
+
+<!--卡片类  暂时没有开发-->
+{{if dataType == 5}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" class="form-control "></td>
+</tr>
+<tr>
+    <td class="require active">应用:</td>
+    <td>
+        <select class="form-control " name="appCode" id="appCode" require="true">
+            <option value="">请选择</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td >
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">数据源:</td>
+    <td>
+        <select id="dataSource" name="dataSource" type="text" style="width:80%;" class="form-control select2 1"></select></td>
+</tr>
+<tr>
+    <td class="require active">手机端显示:</td>
+    <td>
+        <select class="form-control 1" name="displayMobile" id="displayMobile" require="true">
+            <option value=0>不显示</option>
+            <option class="isMobile" value=1>显示</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">字段配置:</td>
+    <td class="">
+        <input id="displayName" name="displayName" type="text" require="true" value="" class="form-control "></td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea></td>
+</tr>
+{{/if}}
+
+
+<!--文本类-->
+{{if dataType == 6}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" value="" class="form-control "></td>
+</tr>
+<tr>
+    <td class="active require">应用:</td>
+    <td>
+        <select class="form-control" name="appCode" id="appCode" require="true"></select>
+        <input type="hidden" name="appName" id="appName" value="">
+        <input id="appCodeId" name="appCodeId" type="hidden" value="" class="form-control 1">
+        <label id="appCode-error" class="error" for="appCode" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class="">
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+        <option value=0>私有磁贴</option>
+        <option value=1>公用磁贴</option>
+    </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">文本内容:</td>
+    <td class="">
+        <textarea name="content" rows="4" id="content" require="true" class="form-control "></textarea>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea></td>
+</tr>
+{{/if}}
+
+
+<!--自定义-->
+{{if dataType == 7}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">应用:</td>
+    <td>
+        <select class="form-control " name="appCode" id="appCode" require="true">
+            <option value="">请选择</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class="">
+        <input id="title" name="title" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="require active">数据源:</td>
+    <td>
+        <select id="dataSource" name="dataSource" type="text" style="width:80%;" class="form-control select2 1"></select>
+    </td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea></td>
+</tr>
+{{/if}}
+
+<!--图片类-->
+{{if dataType == 8}}
+<tr>
+    <td class="active require width-25">编码:</td>
+    <td class="width-75">
+        <input id="tileTemplateCode" name="tileTemplateCode" type="text" require="true" value="" class="form-control ">
+    </td>
+</tr>
+<tr>
+    <td class="active require">应用:</td>
+    <td>
+        <select class="form-control" name="appCode" id="appCode" require="true"></select>
+        <input type="hidden" name="appName" id="appName" value="">
+        <input id="appCodeId" name="appCodeId" type="hidden" value="" class="form-control 1">
+        <label id="appCode-error" class="error" for="appCode" style="display:none"></label>
+    </td>
+</tr>
+<tr>
+    <td class="require active">标题:</td>
+    <td class=""><input id="title" name="title" type="text" require="true" value="" class="form-control "></td>
+</tr>
+<tr>
+    <td class="require active">开放类型:</td>
+    <td>
+        <select class="form-control 1" name="isPublic" id="isPublic" require="true">
+            <option value=0>私有磁贴</option>
+            <option value=1>公用磁贴</option>
+        </select>
+    </td>
+</tr>
+<tr class="sizexy">
+    <td class="active">磁贴大小:</td>
+    <td class="">
+        <select id="sizex" name="sizex" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <i class="iconx">×</i>
+        <select id="sizey" name="sizey" class="form-control ">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </td>
+</tr>
+<tr class="picture">
+    <td class="active require">图片上传</td>
+    <td>
+        <input id="nameImage" name="icon" maxlength="255" class="input-xlarge 1" type="hidden" value=""/>
+        <ol id="nameImagePreview"></ol>
+        <a href="javascript:" id="filePicker">+</a>
+        <label id="nameImage-error" class="error" for="nameImage"></label>
+    </td>
+</tr>
+<tr>
+    <td class="active">描述:</td>
+    <td>
+        <textarea name="des" rows="4" id="des" class="form-control "></textarea>
+    </td>
+</tr>
+{{/if}}

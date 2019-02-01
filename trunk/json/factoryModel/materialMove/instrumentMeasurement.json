@@ -1,0 +1,134 @@
+{
+"title":"仪表计量",
+  "rows":[
+    {
+      "primaryTable":[
+        {
+          "itemName":"仪表计量主表",
+          "Name":"仪表计量主表",
+          "colNames":[
+            "conPreRead","conAftRead","preReadDate","aftReadDate","id","instrId","F","仪表名称","采集时间","前读数","C","RTDB读数","C","后读数","净读数","回零/开工前值","回零/开工后值","系数","虚实标识","累计表标示","工位号","提交人","提交时间"
+          ],
+          "colModel":[
+            {
+              "name": "saveFlag",
+              "label": "saveFlag",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "tagDate",
+              "label": "tagDate",
+              "align": "center"
+            },
+            {
+              "name": "frontVal",
+              "label": "frontVal",
+              "align": "center"
+            },
+            {
+              "name": "rtdbVal",
+              "label": "rtdbVal",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "behindVal",
+              "label": "behindVal",
+              "align": "center"
+            },
+            {
+              "name": "pureVal",
+              "label": "pureVal",
+              "align": "center"
+            },
+            {
+              "name": "resetFrtVal",
+              "label": "resetFrtVal",
+              "align": "center"
+            },
+            {
+              "name": "resetBhdVal",
+              "label": "resetBhdVal",
+              "align": "center"
+            },
+            {
+              "name": "resetBhdVal",
+              "label": "resetBhdVal",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            }
+          ]
+        }
+      ],
+      "seedTable":[
+        {
+          "itemName":"仪表计量主子表",
+          "Name":"仪表计量子表",
+          "colNames":[
+            "F","进出厂点名称","物料","质量等级"
+          ],
+          "colModel":[
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

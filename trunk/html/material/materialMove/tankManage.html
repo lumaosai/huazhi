@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <title>槽/罐区管理列表页</title>
+    <style>
+        .zTreeBox{
+            width: 210px;
+            background-color: #F2F5F7;
+            padding: 10px;
+            border:1px solid #dcdcdc;
+            margin-right:10px;
+        }
+        #zTree{
+            background-color: #fff;
+            margin-top: 10px;
+            border:1px solid #dcdcdc;
+        }
+        .ztree{
+            max-height: 344px;
+        }
+        #wait_searchText{
+            height: 30px;
+            width: 80%;
+        }
+        .tab-box{overflow: hidden;
+            position: relative;}
+        /*设置table滚动*/
+        .form-inline .form-control {
+            width: 166px;
+        }
+        /*.jqGridTable{width:500px; }*/
+        /*删除添加样式*/
+        a.delete{
+            cursor: pointer;
+            color: #2F79C4;
+            text-decoration:underline
+        }
+        a.delete:hover{
+            color: black;
+        }
+        /*删除添加样式结束*/
+    </style>
+</head>
+<body id="tankManage" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>槽/罐区管理</span>
+        </div>
+        <div class="toolbar-form clearfix">
+            <label>
+                <div class="form-inline">
+                    <span>日期：</span>
+                    <input type="text" id="tankDate" class="form-control Wdate" onclick="WdatePicker();">
+                </div>
+            </label>
+            <div class="form-inline">
+                <label>
+                    <span>班次:</span>
+                    <select name="shift" class="form-control" id="shift">
+                    </select>
+                    <input type="hidden" id="shiftHidden" value="" data-time="" data-nodeTankId="" data-areaTankId="" >
+                </label>
+            </div>
+            <button class="btn btn-search" id="searchBtn" type="button"><i class="fa fa-search"></i>查询</button>
+        </div>
+    </div>
+    <div class="ibox-content pag-0 pagr-10 clearfix">
+        <div class="pull-left zTreeBox ">
+                <span class="searchGroup dataTable_my ">槽/罐:
+                    <input type="text" id="wait_searchText"  class="form-control" placeholder="关键字筛选" >
+                    <button type="button" class="btn btn-primary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            <ul id="zTree" class="ztree"></ul>
+        </div>
+        <!--表格区-->
+        <div class="tab-box">
+            <div class="clearfix tab-bar">
+                <ul class="tab-nav  pull-left">
+                    <li>槽/罐检尺</li>
+                    <li>槽/罐物料移动</li>
+                    <li>封账提交</li>
+                    <li>场景图</li>
+                </ul>
+                <ul class="tab-btns pull-right" style="margin-top:7px;">
+                    <li class="active">
+                        <button class="btn btn-1ab394" id="initialize">
+                            <i class="fa fa-refresh"></i>
+                            槽/罐初始化
+                        </button>
+                        <button class="btn btn-1ab394" id="batch">
+                            <i class="fa fa-th"></i>
+                            批量检尺
+                        </button>
+                        <button class="btn btn-1ab394" id="construction">
+                            <i class="fa fa-plus"></i>
+                            新建
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-1ab394" id="btn-add"><i class="fa fa-plus"></i> 新建
+                        </button>
+                        <button class="btn btn-1ab394" id="btn-close"><i class="fa fa-times-circle"></i> 关闭
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-1ab394" id="btn-save" ><i class="fa fa-check"></i> 提交
+                        </button>
+                        <button class="btn btn-1ab394" id="btn-relieve"><i class=" fa fa-times"></i> 解除
+                        </button>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="mgt-10" id="jgTables">
+                <div class="jqGridTable-item  active tab-con-item" id="measure">
+                    <!--罐检尺-->
+                    <div class="jqGridTable TankChk">
+                        <table id="TankChk"></table>
+                    </div>
+                    <div class="mgt-10 jqGridTable-info hide">
+                        <i class="fa fa-check-circle col-1ab394" aria-hidden="true"></i>
+                        <span class="jqGridTable-taps">槽/罐检尺记录查询成功,共 <i class="jqGridTable-num"></i> 条记录</span>
+                    </div>
+                </div>
+                <!--罐物料移动-->
+                <div class="jqGridTable-item  tab-con-item" id="matrlMove">
+                    <div class="scorll-bar">
+                        <div class="jqGridTable TankMtrlMove">
+                            <table id="TankMtrlMove" ></table>
+                        </div>
+                    </div>
+                    <div class="mgt-10 jqGridTable-info hide">
+                        <i class="fa fa-check-circle col-1ab394" aria-hidden="true"></i>
+                        <span class="jqGridTable-taps">槽/罐物料移动记录查询成功,共 <i class="jqGridTable-num"></i> 条记录</span>
+                    </div>
+                </div>
+                <!--封账提交-->
+                <div class="jqGridTable-item  tab-con-item" id="sealingAccount">
+                    <div class="scorll-bar">
+                        <div class="jqGridTable TankSeal">
+                            <table id="TankSeal"></table>
+                        </div>
+                    </div>
+                    <div class="mgt-10 jqGridTable-info hide">
+                        <i class="fa fa-check-circle col-1ab394" aria-hidden="true"></i>
+                        <span class="jqGridTable-taps">封账提交记录查询成功,共 <i class="jqGridTable-num"></i> 条记录</span>
+                    </div>
+                </div>
+                <!--场景图-->
+                <div class="jqGridTable-item  tab-con-item" id="sceneGraph">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    includeRJ("/js/module/material/materialMove/tankManage");
+</script>
+</body>
+</html>

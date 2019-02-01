@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>批量检尺</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="batchMeasureForm">
+<div class="ibox">
+    <div class="ibox-title">
+        <div class="clearfix">
+            <div class="toolbar-form clearfix pull-left">
+                <div class="form-inline">
+                    <span>检尺类型:</span>
+                    <select name="enable" class="form-control" id="authEnable">
+                        <option value="">--请选择--</option>
+                    </select>
+                </div>
+                    <div class="form-inline">
+                        <span>时间:</span>
+                        <!--时间限制在班内时间，动态改变时间范围-->
+                        <input id="dataTime" name="dataTime" class="form-control WdateTime">
+                    </div>
+                <div class="form-inline">
+                    <label>
+                        <input type="radio" name="tankType"   class='i-checks radios' checked value="move">动罐
+                    </label>
+                </div>
+                <div class="form-inline">
+                    <label>
+                        <input type="radio" name="tankType" class='i-checks radios' value="">全部
+                    </label>
+                </div>
+            </div>
+            <div class="pull-right toolbar-btns">
+                <a class="btn btn-1ab394" id="btn-add"><i class="fa fa-plus"></i> 新建</a>
+                <a class="btn btn-1ab394" disabled="disabled" id="btn-batch"><i class="iconfont icon-sj-caiji"></i> 批量采数</a>
+                <a class="btn btn-1ab394" disabled="disabled" id="btn-total"><i class="iconfont icon-icon_jisuanqi"></i> 批量计算</a>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div id="tableBox">
+            <div class="jqGridTable">
+                <table id="TankChk">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    includeRJ("/js/module/material/materialMove/tankManage");
+</script>
+</html>

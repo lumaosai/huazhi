@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echartsTest</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .chars {
+            height: 400px;
+            width: 49%;
+            border: 3px solid #efefef;
+            border-radius: 5px;
+            margin: 6px;
+            padding: 20px;
+            display: inline-block;
+
+        }
+        hr {
+            border-top: 2px solid rgb(128, 128, 128);
+        }
+        h2 {
+            text-align: center;
+            width: 150px;
+            margin: 10px auto;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body id="echartsDemo">
+<div class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-content">
+            <div class="pie">
+                <h2>饼图类</h2>
+                <hr>
+                <!--基础饼图-->
+                <div id="pieTest" class="chars"></div>
+                <!--环形图-->
+                <div id="loopPieTest" class="chars"></div>
+                <!--轴半径饼图-->
+                <div id="radiusPieTest" class="chars"></div>
+                <!--环环组合图-->
+                <div id="loopAndLoopTest" class="chars"></div>
+                <!--饼环组合图-->
+                <div id="pieAndLoopTest" class="chars"></div>
+                <!--环形组合图-->
+                <div id="loopComTest" class="chars"></div>
+            </div>
+            <div class="line&Bar">
+                <div class="line">
+                    <h2>线类</h2>
+                    <hr>
+                    <!--线图-->
+                    <div id="lineTest" class="chars"></div>
+                    <!--折点图-->
+                    <div id="dataBreakLineTest" class="chars"></div>
+                    <!--堆积折线图-->
+                    <div id="heapLineTest" class="chars"></div>
+                    <!--堆积面积图-->
+                    <div id="heapAreaLineTest" class="chars"></div>
+                    <!--标准面积图-->
+                    <div id="areaLineTest" class="chars"></div>
+                    <!--大小值折线图-->
+                    <div id="maxMinLineTest" class="chars"></div>
+                </div>
+                <div class="bar">
+                    <h2>柱类</h2>
+                    <hr>
+                    <!--柱状图-->
+                    <div id="barTest" class="chars"></div>
+
+                    <!--多系列队列图-->
+                    <div id="manySeriesBarTest" class="chars"></div>
+
+                    <!--多系列彩虹图-->
+                    <div id="manyColorBarTest" class="chars"></div>
+
+                    <!--系列堆积图-->
+                    <div id="seriesHeapBarTest" class="chars"></div>
+
+                    <!--条形堆积图-->
+                    <div id="stackedBarTest" class="chars"></div>
+
+                    <!--百分比堆积图-->
+                    <div id="percentHeapBarTest" class="chars"></div>
+
+                    <!--配比时间轴图-->
+                    <div id="timeLineBarTest" class="chars"></div>
+
+                </div>
+                <div class="lineAndBar">
+                    <h2>线柱类</h2>
+                    <hr>
+                    <!--线柱混合图-->
+                    <div id="lineAndBarTest" class="chars"></div>
+                </div>
+            </div>
+            <div class="gauge">
+                <h2>仪表类</h2>
+                <hr>
+                <!--仪表盘图-->
+                <div id="gaugeTest" class="chars"></div>
+                <div id="moreGaugeTest" class="chars"></div>
+            </div>
+            <div class="Waterfall">
+                <h2>正负轴交错</h2>
+                <hr>
+                <!--正负轴交错-->
+                <div id="staggered" class="chars"></div>
+                <div id="barqueue" class="chars"></div>
+            </div>
+            <div class="radar">
+                <h2>雷达类</h2>
+                <hr>
+                <!--雷达图-->
+                <div id="radarTest" class="chars"></div>
+                <div id="wormholeTest" class="chars"></div>
+            </div>
+            <div class="populationMap">
+                <h2>人口图</h2>
+                <hr>
+                <!--人口图-->
+                <div id="populationMap" class="chars"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    includeRJ("/html/0_0/js/echartsDemo");
+</script>
+
+</body>
+</html>

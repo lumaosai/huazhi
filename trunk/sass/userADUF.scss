@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import "menu-inner.scss";
+
+.form-horizontal {
+  margin: 0 10px;
+}
+@mixin btn ($bgc,$bdc,$c) {
+  background-color:$bgc;
+  border-color:$bdc;
+  color:$c;
+}
+
+.btn-primary{
+  @include btn(#1ab394,#1ab394,#FFFFFF);
+  &:focus,&:hover,&:active:focus {
+    @include btn(#18a689, #18a689, #FFFFFF);
+  }
+};
+.btn-default{
+  @include btn(#c2c2c2,#c2c2c2,#FFFFFF);
+  &:focus,&:hover,&:active:focus {
+    @include btn(#bababa, #bababa, #FFFFFF);
+  }
+}
+.input-group{
+  width: 100%;
+}

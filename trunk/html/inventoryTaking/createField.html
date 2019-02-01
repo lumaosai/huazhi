@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进厂物料月盘存信息</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<!--内容-->
+<body id="createField" class="wrapper-white">
+    <div class="ibox">
+        <!--头部-->
+        <div class="ibox-title">
+            <div class="titName">
+                <span>进厂物料月盘存信息</span>
+                <div class="pull-right">
+                    <button class="btn btn-white" id="back-btn" type="button">
+                        <i class="fa fa-reply"></i>返回</button>
+                </div>
+            </div>
+            <div class="toolbar-form">
+                <div id="searchForm" class="form-inline">
+                    <table class="table table-bordered  table-condensed dataTables-example dataTable">
+                        <tr>
+                            <td class="width-5 center active">主盘：</td>
+                            <td class="width-5 center">
+                                <input type="text" readonly class="maindiskUser form-control">
+                            </td>
+                            <td class="width-5 center active">监盘：</td>
+                            <td class="width-5 center">
+                                <input type="text" class="supervisionplate  form-control "/>
+                            </td>
+                            <td class="width-5 center active">盘存日期：</td>
+                            <td class="width-5 center">
+                                <label for="startDate">
+                                    <select id="startDate" class="form-control">
+                                        <option>--请选择--</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td class="width-5 center active">参与盘存人员：</td>
+                            <td class="width-5 center">
+                                <input type="text" class="form-control" id="otherPlate"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <h4 class="tabletitle">盘存信息</h4>
+            <!--按钮组-->
+            <!--表格区-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <ul class="tab-nav">
+
+                        </ul>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-save btnHide btn-bgf29" style="display: inline-block;">
+                            <i class="fa fa-save"></i>
+                            保存</button>
+                    </div>
+                </div>
+            </div>
+            <div id="tableArr">
+                <input type="hidden" id="id" />
+                <input type="hidden" id="status"  value="0"/>
+                <div class="jqGridTable-item">
+                    <!--<table id="dataTable0" class="datatable"></table>-->
+                </div>
+                <div class="jqGridTable-item">
+                    <!--<table id="dataTable1" class="datatable"></table>-->
+                </div>
+                <div class="jqGridTable-item">
+                    <!--<table id="dataTable2" class="datatable"></table>-->
+                </div>
+                <div class="jqGridTable-item">
+                    <!--<table id="dataTable3" class="datatable"></table>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        includeRJ("/js/module/inventoryTaking/createField");
+    </script>
+</body>
+</html>

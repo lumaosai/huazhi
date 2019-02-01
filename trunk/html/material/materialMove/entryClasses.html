@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物料移动--班量管理--进出厂班量</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        .edit{
+            width: 100%;
+        }
+    </style>
+</head>
+<body id="entryClasses" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>进出厂班量</span>
+            <div class="pull-right toolbar-btns">
+                <button class="btn" id="btn-submit"><i class=" fa fa-check col-1ab394"></i> 数据提交
+                </button>
+                <button class="btn" id="btn-relieve"><i class="fa fa-unlink col-1ab394"></i> 解除提交
+                </button>
+            </div>
+        </div>
+        <div class="toolbar-form clearfix">
+            <div class="form-inline">
+                <span>日期：</span>
+                <input id="createDate" name="createDate" autocomplete="off" class="Wdate form-control" onclick="WdatePicker({skin:'whyGreen',maxDate:'%y-%M-%d'});"  type="text" value="" maxlength="50" >
+            </div>
+            <div class="form-inline">
+                <span>班次 ：</span>
+                <select name="shift" class="form-control" id="shift">
+                </select>
+                <input type="hidden" id="shiftHidden" value="" data-time="" >
+            </div>
+            <div class="form-inline">
+                <button class="btn btn-search" id="btn-search"  style="margin-top:0;" type="button"><i class="fa fa-search"></i>查询</button>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-1ab394" id="btn-extract" ><i class="fa fa-arrow-up"></i> 提取班量数据
+                </button>
+                <button class="btn btn-save" id="save-btn" ><i class="fa fa-floppy-o"></i> 保存
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <!--表格区-->
+        <div class="table-content">
+            <table id="ShiftVal">
+
+            </table>
+        </div>
+        <div class="mgt-10 hide">
+            <i class="fa fa-check-circle col-0c6"></i>
+            <span class="treeTable-taps fontSize-12">进出场班量记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    includeRJ("/js/module/material/materialMove/entryClasses");
+</script>
+</body>
+</html>

@@ -1,0 +1,1256 @@
+{
+  "editConfigArr": [
+    {
+      "itemName": "GCWLHS",
+      "Name":"过程物料核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号",
+        "仓、槽、罐名称",
+        "工艺编号",
+        "编码",
+        "规格（米）",
+        "一期数量",
+        "d(槽直径）",
+        "h总高",
+        "V。(槽体积)",
+        "每米体积(m3)",
+        "槽空高度(m)",
+        "料位高度(m)",
+        "料位体积m3",
+        "总体积(m3)",
+        "液体体积(m3)",
+        "氧化铝成份(g/L)",
+        "氧化铝重量(t)",
+        "全碱成份(g/L)",
+        "碱折百重量(t)",
+        "固含成份(g/L)",
+        "固含重量(t)",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "code",
+          "label": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "label": "sort",
+          "align": "center",
+          "hidden":true
+
+        },
+        {
+          "name": "name",
+          "label": "name",
+          "align": "center"
+        },
+        {
+          "name": "techNo",
+          "label": "techNo",
+          "align": "center"
+        },
+        {
+          "name": "code",
+          "label": "code",
+          "align": "center"},
+        {
+          "name": "specification",
+          "label": "specification",
+          "align": "center"
+        },
+        {
+          "name": "fstCount",
+          "label": "fstCount",
+          "align": "center"
+        },
+        {
+          "name": "diameterGrooveD",
+          "label": "diameterGrooveD",
+          "align": "center"
+        },
+        {
+          "name": "highTotal",
+          "label": "highTotal",
+          "align": "center"
+        },
+        {
+          "name": "volumeGroove",
+          "label": "volumeGroove",
+          "align": "center"
+        },
+        {
+          "name": "volumeMeter",
+          "label": "volumeMeter",
+          "align": "center"
+        },
+        {
+          "name": "highGrooveUp",
+          "label": "highGrooveUp",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "highPos",
+          "label": "highPos",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "volumePos",
+          "label": "volumePos",
+          "align": "center"
+        },
+        {
+          "name": "volumeTotal",
+          "label": "volumeTotal",
+          "align": "center"
+        },
+        {
+          "name": "volumeLiquid",
+          "label": "volumeLiquid",
+          "align": "center"
+        },
+        {
+          "name": "densityAo",
+          "label": "densityAo",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "weightAos",
+          "label": "weightAos",
+          "align": "center"
+        },
+        {
+          "name": "densityNa",
+          "label": "densityNa",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "weightNa",
+          "label": "weightNa",
+          "align": "center"
+        },
+        {
+          "name": "densitySolid",
+          "label": "densitySolid",
+          "align": "center",
+          "editable":true
+        },
+        {
+          "name": "weightSolid",
+          "label": "weightSolid",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "itemName": "KSSHHS",
+      "Name":"矿石石灰核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号",
+        "仓、槽、罐名称",
+        "工艺编号",
+        "规格（米）",
+        "一期数量",
+        "b（长）米",
+        "a(宽）米",
+        "h(总高)",
+        "h1(锥高)米",
+        "V。(槽体积)立方米",
+        "筒体料位高度(米)",
+        "锥底存料量（V)湿",
+        "总存矿量",
+        "料位高度",
+        "空高",
+        "筒体(米)"
+
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "code",
+          "label": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "label": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "label": "name",
+          "align": "center"
+        },
+        {
+          "name": "techNo",
+          "label": "techNo",
+          "align": "center"
+        },
+        {
+          "name": "specification",
+          "label": "specification",
+          "align": "center"
+        },
+        {
+          "name": "fstCount",
+          "label": "fstCount",
+          "align": "center"
+        },
+        {
+          "name": "lengths",
+          "label": "lengths",
+          "align": "center"
+        },
+        {
+          "name": "widths",
+          "label": "widths",
+          "align": "center"
+        },
+        {
+          "name": "highTotal",
+          "label": "highTotal",
+          "align": "center"
+        },
+        {
+          "name": "highCone",
+          "label": "highCone",
+          "align": "center"
+        },
+        {
+          "name": "volumeGroove",
+          "label": "volumeGroove",
+          "align": "center"
+        },
+        {
+          "name": "highCylindPos",
+          "label": "highCylindPos",
+          "align": "center"
+        },
+        {
+          "name": "lowConeSurp",
+          "label": "lowConeSurp",
+          "align": "center"
+        },
+        {
+          "name": "mineralTotal",
+          "label": "mineralTotal",
+          "align": "center"
+        },
+        {
+          "name": "highPos",
+          "label": "highPos",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "highUp",
+          "label": "highUp",
+          "align": "center"
+        },
+        {
+          "name": "highCylind",
+          "label": "highCylind",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "itemName": "WBCCHS",
+      "Name":"外报仓库核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号 ",
+        "项目",
+        "折干重量/重量"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "code",
+          "label": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "label": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "label": "name",
+          "align": "center"
+        },
+        {
+          "name": "dryingWeight",
+          "align": "center",
+          "editable": true
+        }
+      ]
+
+    },
+    {
+      "itemName": "JCWLHS",
+      "Name":"进厂物料核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号 ",
+        "项目",
+        "单位",
+        "本月产量",
+        "累计产量",
+        "上月底库存量",
+        "本月底库存量",
+        "库存变化量",
+        "上月累计",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },{
+          "name": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthYield",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "monthTotal",
+          "align": "center"
+        },
+        {
+          "name": "monthLastInventory",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "monthInventory",
+          "align": "center"
+        },
+        {
+          "name": "monthChange",
+          "align": "center"
+        },
+        {
+          "name": "monthLastTotal",
+          "align": "center",
+          "editable": true
+        }
+      ]
+    },
+    {
+      "itemName": "CLHS",
+      "Name":"产量核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号 ",
+        "项目",
+        "单位",
+        "本月计划",
+        "本月产量",
+        "本月计划完成量(%)",
+        "本年累计产量",
+        "备注",
+        "上月累计",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },{
+          "name": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthPlan",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "monthYield",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "monthDone",
+          "align": "center"
+        },
+        {
+          "name": "yearTotal",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "align": "center"
+        },
+        {
+          "name": "monthLastTotal",
+          "align": "center",
+          "editable": true
+        }
+      ]
+    },
+    {
+      "itemName": "ZBHS",
+      "Name":"指标核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号",
+        "指标名称",
+        "单位",
+        "本月指标",
+        "累计平均",
+        "备注",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthQuota",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "monthAvg",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "remark",
+          "align": "center",
+          "editable": true
+        }
+      ]
+
+    },
+    {
+      "itemName": "ZYXHHS",
+      "Name":"主要消耗核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号 ",
+        "项目",
+        "单位",
+        "本月消耗量",
+        "累计消耗量",
+        "单耗单位",
+        "本月单耗",
+        "累计单耗",
+        "备注",
+        "上月累计"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthConsume",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "monthTotal",
+          "align": "center"
+        },
+        {
+          "name": "unitConsume",
+          "align": "center"
+        },
+        {
+          "name": "monthUnitConsume",
+          "align": "center"
+        },
+        {
+          "name": "monthUnitTotal",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "align": "center"
+        },
+        {
+          "name": "monthLastTotal",
+          "align": "center",
+          "editable": true
+        }
+      ]
+
+    },
+    {
+      "itemName": "AODCHS",
+      "Name":"AO大仓核算",
+      "colNames": [
+        "id",
+        "code",
+        "序号 ",
+        "名称",
+        "规格(米)",
+        "大仓筒体有效高度(米)",
+        "锥部总体积(m3)",
+        "每米体积(m3)",
+        "上空测量高度(米)",
+        "测量氧化铝仓体积",
+        "氧化铝容重(吨/m3)",
+        "测量氧化铝仓库存重量"
+
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "code",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "specification",
+          "align": "center"
+        },
+        {
+          "name": "highCylind",
+          "align": "center"
+        },
+        {
+          "name": "volumeCone",
+          "align": "center"
+        },
+        {
+          "name": "volumeMeter",
+          "align": "center"
+        },
+        {
+          "name": "highUpMeasure",
+          "align": "center",
+          "editable": true
+        },
+        {
+          "name": "volumeAo",
+          "align": "center"
+        },
+        {
+          "name": "weightMeter",
+          "align": "center"
+        },
+        {
+          "name": "weightAo",
+          "align": "center"
+        }
+      ]
+    }
+  ],
+  "checkConfigArr": [
+    {
+      "itemName": "GCWLHS",
+      "Name":"过程物料核算",
+      "colNames": [
+        "id",
+        "序号",
+        "仓、槽、罐名称",
+        "工艺编号",
+        "编码",
+        "规格（米）",
+        "一期数量",
+        "d(槽直径）",
+        "h总高",
+        "V。(槽体积)",
+        "每米体积(m3)",
+        "槽空高度(m)",
+        "料位高度(m)",
+        "料位体积m3",
+        "总体积(m3)",
+        "液体体积(m3)",
+        "氧化铝成份(g/L)",
+        "氧化铝重量(t)",
+        "全碱成份(g/L)",
+        "碱折百重量(t)",
+        "固含成份(g/L)",
+        "固含重量(t)"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "label": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "label": "name",
+          "align": "center"
+        },
+        {
+          "name": "techNo",
+          "label": "techNo",
+          "align": "center"
+        },
+        {
+          "name": "code",
+          "label": "code",
+          "align": "center"},
+        {
+          "name": "specification",
+          "label": "specification",
+          "align": "center"
+        },
+        {
+          "name": "fstCount",
+          "label": "fstCount",
+          "align": "center"
+        },
+        {
+          "name": "diameterGrooveD",
+          "label": "diameterGrooveD",
+          "align": "center"
+        },
+        {
+          "name": "highTotal",
+          "label": "highTotal",
+          "align": "center"
+        },
+        {
+          "name": "volumeGroove",
+          "label": "volumeGroove",
+          "align": "center"
+        },
+        {
+          "name": "volumeMeter",
+          "label": "volumeMeter",
+          "align": "center"
+        },
+        {
+          "name": "highGrooveUp",
+          "label": "highGrooveUp",
+          "align": "center"
+        },
+        {
+          "name": "highPos",
+          "label": "highPos",
+          "align": "center"
+        },
+        {
+          "name": "volumePos",
+          "label": "volumePos",
+          "align": "center"
+        },
+        {
+          "name": "volumeTotal",
+          "label": "volumeTotal",
+          "align": "center"
+        },
+        {
+          "name": "volumeLiquid",
+          "label": "volumeLiquid",
+          "align": "center"
+        },
+        {
+          "name": "densityAo",
+          "label": "densityAo",
+          "align": "center"
+        },
+        {
+          "name": "weightAo",
+          "label": "weightAo",
+          "align": "center"
+        },
+        {
+          "name": "densityNa",
+          "label": "densityNa",
+          "align": "center"
+        },
+        {
+          "name": "weightNa",
+          "label": "weightNa",
+          "align": "center"
+        },
+        {
+          "name": "densitySolid",
+          "label": "densitySolid",
+          "align": "center"
+        },
+        {
+          "name": "weightSolid",
+          "label": "weightSolid",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "itemName": "KSSHHS",
+      "Name":"矿石石灰核算",
+      "colNames": [
+        "id",
+        "序号",
+        "仓、槽、罐名称",
+        "工艺编号",
+        "规格（米）",
+        "一期数量",
+        "b（长）米",
+        "a(宽）米",
+        "h(总高)",
+        "h1(锥高)米",
+        "V。(槽体积)立方米",
+        "筒体料位高度(米)",
+        "锥底存料量（V)湿",
+        "总存矿量",
+        "料位高度",
+        "空高",
+        "筒体(米)"
+
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "label": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "label": "name",
+          "align": "center"
+        },
+        {
+          "name": "techNo",
+          "label": "techNo",
+          "align": "center"
+        },
+        {
+          "name": "specification",
+          "label": "specification",
+          "align": "center"
+        },
+        {
+          "name": "fstCount",
+          "label": "fstCount",
+          "align": "center"
+        },
+        {
+          "name": "lengths",
+          "label": "lengths",
+          "align": "center"
+        },
+        {
+          "name": "widths",
+          "label": "widths",
+          "align": "center"
+        },
+        {
+          "name": "highTotal",
+          "label": "highTotal",
+          "align": "center"
+        },
+        {
+          "name": "highCone",
+          "label": "highCone",
+          "align": "center"
+        },
+        {
+          "name": "volumeGroove",
+          "label": "volumeGroove",
+          "align": "center"
+        },
+        {
+          "name": "highCylindPos",
+          "label": "highCylindPos",
+          "align": "center"
+        },
+        {
+          "name": "lowConeSurp",
+          "label": "lowConeSurp",
+          "align": "center"
+        },
+        {
+          "name": "mineralTotal",
+          "label": "mineralTotal",
+          "align": "center"
+        },
+        {
+          "name": "highPos",
+          "label": "highPos",
+          "align": "center"
+        },
+        {
+          "name": "highUp",
+          "label": "highUp",
+          "align": "center"
+        },
+        {
+          "name": "highCylind",
+          "label": "highCylind",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "itemName": "WBCCHS",
+      "Name":"外报仓库核算",
+      "colNames": [
+        "id",
+        "序号 ",
+        "项目",
+        "折干重量/重量"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "label": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "label": "name",
+          "align": "center"
+        },
+        {
+          "name": "dryingWeight",
+          "align": "center"
+        }
+      ]
+
+    },
+    {
+      "itemName": "JCWLHS",
+      "Name":"进厂物料核算",
+      "colNames": [
+        "id",
+        "序号 ",
+        "项目",
+        "单位",
+        "本月产量",
+        "累计产量",
+        "上月底库存量",
+        "本月底库存量",
+        "库存变化量",
+        "上月累计",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthYield",
+          "align": "center"
+        },
+        {
+          "name": "monthTotal",
+          "align": "center"
+        },
+        {
+          "name": "monthLastInventory",
+          "align": "center"
+        },
+        {
+          "name": "monthInventory",
+          "align": "center"
+        },
+        {
+          "name": "monthChange",
+          "align": "center"
+        },
+        {
+          "name": "monthLastTotal",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "itemName": "CLHS",
+      "Name":"产量核算",
+      "colNames": [
+        "id",
+        "序号 ",
+        "项目",
+        "单位",
+        "本月计划",
+        "本月产量",
+        "本月计划完成量(%)",
+        "本年累计产量",
+        "备注",
+        "上月累计",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthPlan",
+          "align": "center"
+        },
+        {
+          "name": "monthYield",
+          "align": "center"
+        },
+        {
+          "name": "monthDone",
+          "align": "center"
+        },
+        {
+          "name": "yearTotal",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "align": "center"
+        },
+        {
+          "name": "monthLastTotal",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "itemName": "ZBHS",
+      "Name":"指标核算",
+      "colNames": [
+        "id",
+        "序号",
+        "指标名称",
+        "单位",
+        "本月指标",
+        "累计平均",
+        "备注",
+        "操作"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthQuota",
+          "align": "center"
+        },
+        {
+          "name": "monthAvg",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "align": "center"
+        }
+      ]
+
+    },
+    {
+      "itemName": "ZYXHHS",
+      "Name":"主要消耗核算",
+      "colNames": [
+        "id",
+        "序号 ",
+        "项目",
+        "单位",
+        "本月消耗量",
+        "累计消耗量",
+        "单耗单位",
+        "本月单耗",
+        "累计单耗",
+        "备注",
+        "上月累计"
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "unit",
+          "align": "center"
+        },
+        {
+          "name": "monthConsume",
+          "align": "center"
+        },
+        {
+          "name": "monthTotal",
+          "align": "center"
+        },
+        {
+          "name": "unitConsume",
+          "align": "center"
+        },
+        {
+          "name": "monthUnitConsume",
+          "align": "center"
+        },
+        {
+          "name": "monthUnitTotal",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "align": "center"
+        },
+        {
+          "name": "monthLastTotal",
+          "align": "center"
+        }
+      ]
+
+    },
+    {
+      "itemName": "AODCHS",
+      "Name":"AO大仓核算",
+      "colNames": [
+        "id",
+        "序号 ",
+        "名称",
+        "规格(米)",
+        "大仓筒体有效高度(米)",
+        "锥部总体积(m3)",
+        "每米体积(m3)",
+        "上空测量高度(米)",
+        "测量氧化铝仓体积",
+        "氧化铝容重(吨/m3)",
+        "测量氧化铝仓库存重量"
+
+      ],
+      "colModel": [
+        {
+          "name": "id",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "sort",
+          "align": "center",
+          "hidden":true
+        },
+        {
+          "name": "name",
+          "align": "center"
+        },
+        {
+          "name": "specification",
+          "align": "center"
+        },
+        {
+          "name": "highCylind",
+          "align": "center"
+        },
+        {
+          "name": "volumeCone",
+          "align": "center"
+        },
+        {
+          "name": "volumeMeter",
+          "align": "center"
+        },
+        {
+          "name": "highUpMeasure",
+          "align": "center"
+        },
+        {
+          "name": "volumeAo",
+          "align": "center"
+        },
+        {
+          "name": "weightMeter",
+          "align": "center"
+        },
+        {
+          "name": "weightAo",
+          "align": "center"
+        }
+      ]
+    }
+  ]
+}
+
+

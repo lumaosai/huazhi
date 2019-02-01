@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>审批流程</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="reviewPlan" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-content ">
+            <div class="tab-box">
+                <input type="hidden" value="" id="monthStatus">
+                <div class="tab-bar clearfix">
+                    <ul class="tab-nav  pull-left">
+                        <li class="active">审批流程</li>
+                        <li class="review-box">表单信息</li>
+                    </ul>
+                    <ul class="tab-btns pull-right" style="margin-top:7px;">
+                        <li class="active">
+                            <button type="button" class="back-btn btn btn-white">
+                                <i class="fa fa-reply"></i>
+                                返回</button>
+                            <button class="btn btn-submit  btn-white" id="btnSub">
+                                <i class="fa fa-file-text-o"></i>
+                                审核</button>
+                        </li>
+                        <li>
+                            <button type="button" class="back-btn btn btn-white">
+                                <i class="fa fa-reply"></i>
+                                返回</button>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="tab-con">
+                    <li id="reviewPlans" class="pag-10 bg-fff">
+                        <div>
+                            <span class=" mgr-30" style="display: inline-block;text-indent: 15px;">申请人&nbsp;：<i class="appUser"></i></span>
+                            <span class=" mgr-30">申请时间：<i class="appTime"></i></span>
+                            <span class=" mgr-30">当前审批人：<i class="currentApp" data-id=""></i></span>
+                            <span class=" mgr-30">流程状态：<i class="flowStatus">审批中</i></span>
+                        </div>
+                        <div class="app-radio">
+                            <span class="w-74">审批&nbsp;：</span>
+                            <label class="mgr-30 customRadio" ><input type="radio" value="通过" name="appRadio" checked><i></i>通过</label>
+                            <label class="mgr-30 customRadio"><input type="radio"  value="驳回" name="appRadio"><i></i>驳回</label>
+                        </div>
+                        <div class="app-view">
+                            <span style="vertical-align: top;" class="w-74">审批意见&nbsp;：</span>
+                            <textarea name="" id="" placeholder="请填写您的意见"  class="appTextare"></textarea>
+                        </div>
+                        <div class="tab-box">
+                            <ul class="app-flow-tit tab-nav clearfix">
+                                <li class="active">审批过程</li>
+                                <li >流程图</li>
+                            </ul>
+                            <ul class="tab-con">
+                                <li class="flow-list">
+                                </li>
+                                <li class="flow-process tab-con-item">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="pag-10 bg-fff tab-con-item">
+                        <h1 class="targetPlanTit mgb-20"><span></span>生产计划</h1>
+                        <div class="targetPlanTab tab-box">
+                            <ul class="targetPlanTab-nav tab-nav clearfix">
+                                <li class="active">全厂主要生产技术指标计划</li>
+                                <li>商务采购指标计划</li>
+                                <li>安全、环保、设备管理总体指标计划</li>
+                                <li>重点工作计划</li>
+                            </ul>
+                            <div class="targetPlanTab-con tab-con" id="iframeCon">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        includeRJ("/js/module/producePlan/monthPlan");
+        include("/css/aps.css");
+    </script>
+</body>
+</html>

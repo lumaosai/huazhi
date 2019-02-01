@@ -1,0 +1,608 @@
+{
+  "title":"槽/罐管理列表",
+  "rows":[
+      {"primaryTable":[{
+        "itemName":"槽/罐检尺",
+        "Name":"槽/罐检尺列表",
+        "colModel":[
+          {
+            "name": "initialization",
+            "label": "初始化状态",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "id",
+            "label": "id",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "tankId",
+            "label": "tankId",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "tankName",
+            "label": "槽/罐名称",
+            "align": "center"
+          },
+          {
+            "name": "chkTime",
+            "label": "检尺时间",
+            "align": "center"
+          },
+          {
+            "name": "chkType",
+            "label": "检尺类型   ",
+            "align": "center"
+          },
+          {
+            "name": "mtrlName",
+            "label": "物料",
+            "align": "center"
+          },
+          {
+            "name": "mtrlAlias",
+            "label": "别名",
+            "align": "center"
+          },
+          {
+            "name": "tankQutyStatus",
+            "label": "质量状态",
+            "align": "center"
+          },
+          {
+            "name": "tankConVal",
+            "label": "槽/罐量",
+            "align": "center"
+          },
+          {
+            "name": "chkMnulVal",
+            "label": "料位高度",
+            "align": "center"
+          },
+          {
+            "name": "temprt",
+            "label": "温度",
+            "align": "center"
+          },
+          {
+            "name": "oilDnst",
+            "label": "密度",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddVol",
+            "label": "体积",
+            "align": "center"
+          },
+          {
+            "name": "rap",
+            "label": "收付",
+            "align": "center"
+          },
+          {
+            "name": "submissionState",
+            "label": "提交状态 ",
+            "align": "center"
+          },
+          {
+            "name": "temprtAtp",
+            "label": "大气温度",
+            "align": "center"
+          },
+          {
+            "name": "temprtCct",
+            "label": "气相密度 ",
+            "align": "center"
+          },
+          {
+            "name": "temprtVol",
+            "label": "气相体积",
+            "align": "center"
+          },
+          {
+            "name": "temprtWeight",
+            "label": "气相质量",
+            "align": "center"
+          },
+          {
+            "name": "temprtClm",
+            "label": "气相温度",
+            "align": "center"
+          },
+          {
+            "name": "waterRate",
+            "label": "含水率",
+            "align": "center"
+          },
+          {
+            "name": "waterContent",
+            "label": "含水量",
+            "align": "center"
+          },
+          {
+            "name": "chkModVal",
+            "label": "修正料位高度",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddWeight",
+            "label": "毛标准质量",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddVol",
+            "label": "毛标准体积",
+            "align": "center"
+          },
+          {
+            "name": "gnrMetVol",
+            "label": "毛计量体积",
+            "align": "center"
+          }
+        ]
+      }],
+        "seedTable":[{"itemName":"槽/罐检尺",
+          "Name":"槽/罐检尺信息",
+          "colModel":[
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "chkTime",
+              "label": "检尺时间",
+              "align": "center"
+            },
+            {
+              "name": "chkType",
+              "label": "检尺类型",
+              "align": "center"
+            },
+            {
+              "name": "mtrlName",
+              "label": "物料",
+              "align": "center"
+            },
+            {
+              "name": "mtrlAlias",
+              "label": "别名",
+              "align": "center"
+            },
+            {
+              "name": "tankConVal",
+              "label": "槽/罐量",
+              "align": "center"
+            },
+            {
+              "name": "chkMnulVal",
+              "label": "人工检尺高度",
+              "align": "center"
+            },
+            {
+              "name": "temprt",
+              "label": "温度",
+              "align": "center"
+            },
+            {
+              "name": "oilDnst",
+              "label": "密度",
+              "align": "center"
+            },
+            {
+              "name": "chkInstVal",
+              "label": "仪表料位高度",
+              "align": "center"
+            },
+            {
+              "name": "watrHeight",
+              "label": "水尺高度",
+              "align": "center"
+            },
+            {
+              "name": "waterVol",
+              "label": "水容积",
+              "align": "center"
+            },
+            {
+              "name": "waterRate",
+              "label": "含水率",
+              "align": "center"
+            },
+            {
+              "name": "vcfVal",
+              "label": "VCF",
+              "align": "center"
+            },
+            {
+              "name": "pressure",
+              "label": "压力",
+              "align": "center"
+            },
+            {
+              "name": "temprtClm",
+              "label": "气相温度",
+              "align": "center"
+            },
+            {
+              "name": "temprtCct",
+              "label": "气相密度 ",
+              "align": "center"
+            },
+            {
+              "name": "temprtVol",
+              "label": "气相体积",
+              "align": "center"
+            },
+            {
+              "name": "temprtWeight",
+              "label": "气相质量",
+              "align": "center"
+            },
+            {
+              "name": "gnrStddWeight",
+              "label": "毛标准质量",
+              "align": "center"
+            },
+            {
+              "name": "gnrStddVol",
+              "label": "毛标准体积",
+              "align": "center"
+            },
+            {
+              "name": " gnrMetVol",
+              "label": "毛计量体积",
+              "align": "center"
+            },
+            {
+              "name": "temprtAtp",
+              "label": "大气温度",
+              "align": "center"
+            },
+            {
+              "name": "chkModVal",
+              "label": "修正料位高度",
+              "align": "center"
+            },
+            {
+              "name": "tempAdjVal",
+              "label": "温度修正值",
+              "align": "center"
+            },
+            {
+              "name": "netoilMass",
+              "label": "净油质量",
+              "align": "center"
+            },
+            {
+              "name": "acidFctr",
+              "label": "酸度系数 ",
+              "align": "center"
+            },
+            {
+              "name": "alklFctr",
+              "label": "浓碱系数",
+              "align": "center"
+            },
+            {
+              "name": "chkUser",
+              "label": "检尺人",
+              "align": "center"
+            },
+            {
+              "name": "createTime",
+              "label": "录入时间",
+              "align": "center"
+            },
+            {
+              "name": "submissionState",
+              "label": "提交状态",
+              "align": "center"
+            },
+            {
+              "name": "remark",
+              "label": "备注",
+              "align": "center"
+            },
+            {
+              "name": "maxSaleCont",
+              "label": "最大安全容量",
+              "align": "center"
+            },
+            {
+              "name": "maxSaleVol",
+              "label": "最大安全容积 ",
+              "align": "center"
+            },
+            {
+              "name": "minSaleCont",
+              "label": "最小安全容量",
+              "align": "center"
+            },
+            {
+              "name": "minSaleVol",
+              "label": "最小安全容积",
+              "align": "center"
+            },
+            {
+              "name": "netoilVol",
+              "label": "净油容积 ",
+              "align": "center"
+            }
+          ]}]},
+      {
+        "primaryTable": [
+          {
+            "itemName": "物料移动",
+            "Name": "罐列表物料移动",
+            "colNames": [
+              "id",
+              "tankId",
+              "槽/罐名称",
+              "检尺时间",
+              "检尺类型",
+              "物料",
+              "别名",
+              "质量状态",
+              "槽/罐量",
+              "槽/罐高",
+              "温度",
+              "密度",
+              "液/固质量",
+              "收付",
+              "提交状态",
+              "气相密度",
+              "气相体积",
+              "气相质量",
+              "气相温度",
+              "含水量",
+              "毛计量体积"
+            ],
+            "colModel": [
+              {
+                "name": "id",
+                "label": "id",
+                "align": "center",
+                "hidden": true
+              },
+              {
+                "name": "tankId",
+                "label": "tankId",
+                "align": "center",
+                "hidden": true
+              },
+              {
+                "name": "tankName",
+                "label": "tankName",
+                "align": "center"
+              },
+              {
+                "name": "chkDate",
+                "label": "chkDate",
+                "align": "center"
+              },
+              {
+                "name": "chkType",
+                "label": "chkType",
+                "align": "center"
+              },
+              {
+                "name": "mtrlName",
+                "label": "mtrlName",
+                "align": "center"
+              },
+              {
+                "name": "mtrlAlias",
+                "label": "mtrlAlias",
+                "align": "center"
+              },
+              {
+                "name": "tankQutyStatus",
+                "label": "tankQutyStatus",
+                "align": "center"
+              },
+              {
+                "name": "tankConVal",
+                "label": "tankConVal",
+                "align": "center"
+              },
+              {
+                "name": "chkMnulVal",
+                "label": "chkMnulVal",
+                "align": "center"
+              },
+              {
+                "name": "temprt",
+                "label": "temprt",
+                "align": "center"
+              },
+              {
+                "name": "oilDnst",
+                "label": "oilDnst",
+                "align": "center"
+              },
+              {
+                "name": "liquidSolidMass",
+                "label": "liquidSolidMass",
+                "align": "center"
+              },
+              {
+                "name": "rap",
+                "label": "rap",
+                "align": "center"
+              },
+              {
+                "name": "submissionState",
+                "label": "submissionState",
+                "align": "center"
+              },
+              {
+                "name": "temprtCct",
+                "label": "temprtCct",
+                "align": "center"
+              },
+              {
+                "name": "temprtVol",
+                "label": "temprtVol",
+                "align": "center"
+              },
+              {
+                "name": "temprtWeight",
+                "label": "temprtWeight",
+                "align": "center"
+              },
+              {
+                "name": "temprtClm",
+                "label": "temprtClm",
+                "align": "center"
+              },
+              {
+                "name": "waterContent",
+                "label": "waterContent",
+                "align": "center"
+              },
+              {
+                "name": "gnrMetVol",
+                "label": "gnrMetVol",
+                "align": "center"
+              }
+            ]
+          }
+        ],
+        "seedTable": [
+          {
+            "itemName": "移动列表",
+            "Name": "物料移动列表",
+            "colNames": [
+              "id",
+              "类型",
+              "移动类型",
+              "付方节点",
+              "收方节点",
+              "收付开始时间",
+              "收付结束时间",
+              "付方物料",
+              "收方物料",
+              "付方提交状态",
+              "收方提交状态",
+              "付方前检尺",
+              "付方后检尺",
+              "收方前检尺",
+              "收方后检尺",
+              "创建人",
+              "创建时间",
+              "关闭人",
+              "关闭时间"
+            ],
+            "colModel": {}
+          }
+        ]
+      },
+      {"primaryTable":[{
+        "itemName":"封账提交",
+        "Name":"封账提交列表",
+        "colModel":[
+          {
+            "name": "id",
+            "label": "id",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "name",
+            "label": "槽/罐名称",
+            "align": "center",
+            "title":false
+          },
+          {
+            "name": "submitFlag",
+            "label": "是否可提交",
+            "align": "center"
+
+          },
+          {
+            "name": "wuliao",
+            "label": "物料",
+            "align": "center"
+          },
+          {
+            "name": "sealFlag",
+            "label": "提交状态",
+            "align": "center"
+          },
+          {
+            "name": "submitBy",
+            "label": "提交人",
+            "align": "center"},
+          {
+            "name": "freeBy",
+            "label": "解除提交人",
+            "align": "center"
+          },
+          {
+            "name": "submitDate",
+            "label": "提交时间",
+            "align": "center"
+          },
+          {
+            "name": "freeDate",
+            "label": "解除提交时间",
+            "align": "center"
+          },
+          {
+            "name": "paySum",
+            "label": "罐收付",
+            "align": "center"
+          }
+        ]
+      }],
+        "seedTable":[
+        {"itemName":"封账提交",
+          "Name":"封账提交信息",
+          "colModel":[
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "type",
+              "label": "操作类型",
+              "align": "center"
+            },
+            {
+              "name": "name",
+              "label": "对方节点名称",
+              "align": "center"
+
+            },
+            {
+              "name": "startTime",
+              "label": "开始时间",
+              "align": "center"
+            },
+            {
+              "name": "endTime",
+              "label": "结束时间",
+              "align": "center"
+            },
+            {
+              "name": "node",
+              "label": "接点值",
+              "align": "center"
+            },
+            {
+              "name": "relieveTime",
+              "label": "关闭时间",
+              "align": "center"
+            }
+          ]}
+      ]}
+    ]
+}

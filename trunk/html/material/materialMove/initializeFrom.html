@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>槽/罐区-槽/罐初始化</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="initializeFrom" class="wrapper-white">
+<form id="inputForm"  action="$Api.mv$/api/mv/TankChk/SaveTankInitialization" method="post">
+    <input id="tankId" name="tankId" type="hidden" value="" >
+    <table class="form-table table">
+        <tr>
+            <td class="width-25 active require">槽/罐:</td>
+            <td class="width-75">
+                <input id="nodename" name="nodename" readonly class="form-control"  type="text">
+            </td>
+
+        </tr>
+        <tr>
+            <td class="active require">时间:</td>
+            <td>
+                <!--时间限制范围根据班次时间限制，根据列表选择时间，在tankManage.js设置-->
+                <input type="text" id="initDate" name="initDate" require="true" class="form-control WdateTime">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">物料:</td>
+            <td>
+                <select name="mtrlId" id="mtrlId" class="form-control require select2" require="true" data-height="80px">
+                    <option value=""> --请选择--</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript">
+    includeRJ("/js/module/material/materialMove/tankManage");
+</script>
+</body>
+</html>
