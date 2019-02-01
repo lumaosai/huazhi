@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进出场班量计量配置</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        #treeTable{
+            margin-top: 10px;
+        }
+        select{
+            width: 98%;
+        }
+        #save-btn{
+            float: right;
+            position: relative;
+            top: -36px;
+        }
+    </style>
+</head>
+<body id="measurementConfig" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>进出厂班量计量配置</span>
+        </div>
+        <button class="btn btn-save" id="save-btn" ><i class="fa fa-floppy-o  "></i> 保存
+        </button>
+    </div>
+    <div class="ibox-content clearfix">
+        <!--表格区-->
+        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+            <!--表头-->
+            <thead>
+            <tr role="row">
+                <th></th>
+                <th>进出厂点</th>
+                <th>默认计量名称</th>
+            </tr>
+            </thead>
+            <!--表内容-->
+            <tbody id="datainner">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+    <div class="hide">
+        <select class="form-control gaugeTypeSelect" data-allowClear="false"></select>
+    </div>
+<script data-main="/js/module/material/materialMove/measurementConfig" src="/js/zlib/require.js"></script>
+
+</body>
+</html>

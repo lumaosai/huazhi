@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        #right {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body id="userIndex" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName">用户管理</div>
+        </div>
+        <div class="ibox-content">
+            <!--左侧内容-->
+            <div id="left" class="leftBox pull-left">
+                <a onclick="refresh();"><i class="fa fa-refresh"></i></a>
+                <div id="tree" class="ztree leftBox-content"></div>
+            </div>
+            <!--右侧内容-->
+            <div id="right" class="animated fadeInRight">
+                    <div class="toolbar-form ">
+                        <input type="hidden" id="treeId">
+                        <div class="form-inline">
+                            <span>归属公司：</span>
+                            <span class="searchGroup">
+                               <input type="hidden" id="companyId" name="company.id">
+                               <input type="text" id="companyName" name="company.name" class="form-control" readonly placeholder="双击选择">
+                               <button type="button" id="companyButton" class="btn btn-primary"><i
+                                       class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                        <div class="form-inline">
+                            <span>归属部门：</span>
+                            <span class="searchGroup">
+                               <input type="hidden" id="officeId" name="office.id">
+                               <input type="text" id="officeName" name="office.name" class="form-control" readonly placeholder="双击选择">
+                               <button type="button" id="officeButton" class="btn btn-primary"><i
+                                       class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                        <div class=" form-inline">
+                            <span>姓名：</span>
+                            <input id="name" name="name" class="  form-control" type="text" value="" maxlength="50">
+                        </div>
+                        <div class="form-inline">
+                            <span class="loginIn" >登录名：</span>
+                            <input id="loginName" name="loginName" class="form-control" type="text" value="" maxlength="50">
+                        </div>
+                    </div>
+                    <!--按钮条-->
+                    <div class="toolbar-btns mgb-10 clearfix">
+                        <div class="pull-left">
+                            <button class="btn btn-white btn-sm" onclick="Bus.openEditDialog('新增用户','systemSettings/userIndexInner.html','712px','500px')"
+                                    title="添加"><i class="fa fa-plus"></i> 添加
+                            </button>
+
+                            <button class="btn btn-white btn-sm"
+                                    onclick="Bus.editCheckedTable('修改用户信息','systemSettings/userIndexInner.html','712px','500px','#treeTable')"
+                                    title="修改"><i
+                                    class="fa fa-file-text-o"></i> 修改
+                            </button>
+                            <button class="btn btn-white btn-sm"
+                                    onclick="Bus.delCheckTable('确认要删除该用户吗？',Api.admin+'/api/sys/SysUser/delete/','#treeTable')"><i
+                                    class="fa fa-trash-o"></i>删除
+                            </button>
+
+                            <button class="btn btn-white btn-sm " id="refresh-btn"
+                                    onclick="refresh()" title="刷新"><i class="glyphicon glyphicon-repeat"></i> 刷新
+                            </button>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-white btn-rounded btn-outline btn-sm " id="search-btn"><i
+                                    class="fa fa-search"></i> 查询
+                            </button>
+                            <button class="btn btn-white btn-rounded btn-outline btn-sm " id="reset-btn"><i
+                                    class="fa fa-refresh"></i> 重置
+                            </button>
+                        </div>
+                    </div>
+                    <!--内容表格-->
+                    <table id="treeTable"
+                           class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" class="i-checks" ></th>
+                            <th>登录名</th>
+                            <th>姓名</th>
+                            <th>电话</th>
+                            <th>手机</th>
+                            <!--<th>归属公司</th>-->
+                            <!--<th>归属部门 </th>-->
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody class="center">
+
+                        </tbody>
+                    </table>
+                    <!--分页-->
+                    <div class="clearfix pagination-box">
+                        <div class="page-info pull-left"></div>
+                        <div id="pagination" class="pagination-roll pull-right"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script data-main="/js/module/systemSettings/userIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

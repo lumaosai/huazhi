@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改磁贴</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <link rel="stylesheet" href="../../css/comInnerTable.css">
+    <link rel="stylesheet" href="../../css/home/workBench-iconsLibrary/iconfont.css">
+    <link rel="stylesheet" href="../../css/aps.css">
+    <link rel="stylesheet" href="../../css/privatelyOwned.css">
+    <style>
+        #des{
+            width: 100%;
+            border: 1px solid rgb(204,204,204);
+        }
+
+
+        #nameImage{
+            display: block;
+            float: right;
+            width: 73%;
+
+        }
+
+        td{
+            position: relative;
+        }
+        td>#filePicker {
+            line-height: 35px;
+            width: 27%;
+            height:35px;
+            opacity: 1;
+            position: relative;
+            left: 0;
+            cursor: pointer;
+            padding: 0 10px;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            background-color: #e7e7e7;
+            border-right:none;
+
+        }
+        #filePicker>div,#filePicker>div>input{
+            color: #000;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            line-height:32px;
+
+
+        }
+
+        .table-bordered > tbody > tr > td {
+            width: 410px;
+        }
+
+        #iconIcon{
+            font-size: 26px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #3ab394;
+        }
+        .select2{width:80% !important;}
+    </style>
+</head>
+<body id="mMUpdate" class="wrapper-white">
+    <form id="inputForm" class="form-horizontal" action="$Api.admin$/api/workbench/WorkbenchTileTemplate/ajaxSave" method="post">
+        <input id="id" name="id" type="hidden" />
+        <table id="dataTable" class="table form-table">
+            <tbody class="formtbody"></tbody>
+        </table>
+        <input type="hidden" name="type" id="mMtype">
+        <input type="hidden" name="templateId" id="mMid">
+        <input type="hidden" name="appName" id="appName">
+    </form>
+    <script data-main="/js/module/privatelyOwned/mMUpdate" src="/js/zlib/require.js"></script>
+</body>
+</html>

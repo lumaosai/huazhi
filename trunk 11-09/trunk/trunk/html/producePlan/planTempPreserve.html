@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text</title>
+    <!--插件-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../js/plugins/ztree/css/metroStyle/metroStyle.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/customDataTable.css">
+</head>
+<body id="planTempPreserve" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <button class="btn btn-white btn-sm"   title="添加" id="btn-add">
+                            <i class="fa fa-plus"></i> 添加指标标题
+                        </button>
+                        <button class="btn btn-white btn-sm"   title="添加" id="btn-addSon">
+                            <i class="fa fa-plus"></i> 添加下级指标
+                        </button>
+
+                        <button class="btn btn-white btn-sm"   title="删除" id="btn-del">
+                            <i class="fa fa-trash-o"></i> 删除指标
+                        </button>
+                        <button class="btn btn-white btn-sm"   title="编辑" id="btn-update">
+                            <i class="fa fa-file-text-o"></i> 排列顺序
+                        </button>
+                        <button class="btn btn-white btn-sm " style="visibility: hidden" id="refresh-btn"  
+                                onclick="window.location.reload()" title="刷新"><i class="glyphicon glyphicon-repeat"></i> 刷新
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="row">
+                <!--左侧内容-->
+                <div id="left" style="height: 100%;" class="leftBox pull-left">
+                    <div id="tree" class="ztree leftBox-content" style="height: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/planTemple" src="/js/zlib/require.js"></script>
+</body>
+</html>

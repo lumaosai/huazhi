@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仪表计量</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="instrumentMeasurement" class="wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="toolbar-form clearfix">
+            <label>
+                <div class="form-inline">
+                    <span>日期：</span>
+                    <input type="text" onclick="WdatePicker();" id="measureDate" class="time-input Wdate form-control" placeholder="">
+                </div>
+            </label>
+            <div class="form-inline">
+                <span>班次 ：</span>
+                <select id="shift" name="shift" class="form-control">
+                </select>
+            </div>
+            <div class="form-inline">
+                <button class="btn btn-search" id="searchLoad" type="button"><i class="fa fa-search"></i>查询</button>
+            </div>
+
+            <div class="pull-right">
+                <button class="btn btn-search" id="delete-btn" type="button"><i class="fa fa-trash"></i>删除班次记录</button>
+                <button class="btn btn-search" id="collect-btn" type="button"><i class="fa fa-search"></i>自动采集</button>
+                <button class="btn btn-search" id="save-btn" type="button"><i class="fa fa-search"></i>保存</button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table id="treeTable">
+
+        </table>
+    </div>
+</div>
+<script data-main="/js/module/material/materialMove/instrumentMeasurement" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>月计划列表页</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="monthPlanList" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>月计划列表</span></div>
+            <div class="toolbar-form">
+                <i class="fa fa-map-marker " aria-hidden="true" style="vertical-align: middle;margin-top:10px;color:#1ab394;"></i>
+                <div class="form-inline year">
+                    计划周期（年）：
+                    <input type="text" id="yMPicker" onclick="WdatePicker({dateFmt:'yyyy'});" class="form-control WdateTime" readonly>
+                </div>
+                <div class="form-inline month">
+                    计划周期（月）：
+                    <select name="" id="getMonth">
+                        <option value="">--请选择--</option>
+                        <option value="">全部</option>
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    状态&nbsp;&nbsp;：
+                    <select name="" id="apsState">
+                        <option value="">--请选择--</option>
+                    </select>
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-search  btn-white" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+                    <button class="btn btn-white hidden" id="btn-add" type="button"><i class="fa fa-plus"></i>新增</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <!--表头-->
+                <thead>
+                <tr role="row">
+                    <th>所属年计划</th>
+                    <th>计划名称</th>
+                    <th>计划周期</th>
+                    <th>创建人</th>
+                    <th>创建时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+
+                </tbody>
+
+            </table>
+
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/monthPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

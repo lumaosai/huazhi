@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="planDicCheckView" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="table form-table">
+        <tr>
+            <td class="active">上级指标:</td>
+            <td>
+                <input id="parentIdH" name="parent.id" class="form-control" type="hidden" value="">
+                <input id="_parentId" readonly="readonly" name="parentName" type="text" value=""
+                       class="form-control " style="">
+            </td>
+            <td class="require active">指标名称:</td>
+            <td>
+                <input id="itemName" name="itemName" require="true" type="text" value=""
+                       class="form-control"  >
+            </td>
+        </tr>
+        <tr>
+            <td class="require active">指标代码:</td>
+            <td>
+                <input id="itemCode" name="itemCode" require="true" type="text" value=""
+                       class="form-control " >
+            </td>
+            <td class="require active">单位:</td>
+            <td>
+                <input id="itemUnit" name="itemUnit" require="true" type="text" value=""
+                       class="form-control " >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">年指标值:</td>
+            <td>
+                <input id="itemValue" name="itemValue" type="text" value=""
+                       class="form-control " style="" aria-required="true">
+            </td>
+            <td class="active">月指标值:</td>
+            <td>
+                <input id="itemMonthValue" name="itemMonthValue" type="text" value=""
+                       class="form-control " style="" aria-required="true">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否启用:</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">启用</option>
+                    <option value="2">禁用</option>
+                </select>
+            </td>
+            <td class="active"></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/producePlan/planDictionary" src="/js/zlib/require.js"></script>
+</body>
+</html>

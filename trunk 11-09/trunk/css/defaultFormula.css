@@ -1,0 +1,87 @@
+.ibox-content{
+    min-height: 500px;
+}
+
+.content-left{
+    width: 74%;
+    /*height: 100%;*/
+    max-height: 1000px;
+    /*background-color:red;*/
+    border: 1px dashed #ccc;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.content-table{
+    margin: 10px 0;
+}
+.content-right{
+    width: 25%;
+    background: rgb(243, 243, 243);
+    /*background-color: yellow;*/
+    padding: 40px 10px 10px;
+
+}
+.content-wrap{
+    background-color: #fff;
+}
+.content-right-table{
+    margin: 10px 0;
+    height: 200px;
+    overflow: auto;
+}
+.btnFn{
+    width: 100%;
+    /*height: 210px;*/
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+fieldset{
+    font-size: 14px;
+    width: 100%;
+    height: 140px;
+    border: 1px solid #cacaca !important;
+    border-radius: 3px;
+    margin-bottom: 10px !important;
+}
+fieldset button{
+    width: 32px;
+    height: 32px;
+    margin: 0 0 12px 30px !important;
+}
+legend{
+    border: 0 !important;
+    width: 17% !important;
+    margin-left: 10px;
+    font-size: 14px !important;
+    padding: 0 5px !important;
+    margin-bottom: 15px !important;
+}
+.content-formula{
+    padding: 0 5px;
+}
+.valbox{
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    padding: 10px;
+    height: 100px;
+    padding: 0 5px;
+}
+.content-right-btn{
+    padding: 10px 23%;
+    height: 50px;
+}
+
+.selected{
+    background-color: yellow !important;
+}
+label{
+    margin-left: 20px !important;
+    margin-bottom: 10px !important;
+    padding-top: 10px !important;
+    position: absolute;
+    top: 80px;
+}
+label input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}

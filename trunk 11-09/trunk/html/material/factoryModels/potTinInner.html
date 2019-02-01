@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>罐弹出页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="potTinInner" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/NodeTank/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">
+                   罐编号:
+            </td>
+            <td>
+                <input id="nodeNo" name="nodeNo" class="form-control " require="true" type="number" value=""  placeholder="300000-349999之间" dataType="Range" min="300000"  max="349999"></td>
+            <td class="active require">
+                罐编码:
+            </td>
+            <td>
+                <input id="nodeCode" name="nodeCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                罐名称:
+            </td>
+            <td>
+                <input id="nodename" name="nodename" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">
+                罐别名:
+            </td>
+            <td>
+                <input id="nodeAlias" name="nodeAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                罐类型:
+            </td>
+            <td>
+                <select name="tankType" id="tankType" class="form-control" require="true">
+                    <option value="">
+                        --请选择--
+                    </option>
+                </select>
+            </td>
+            <td class="active require">
+                罐界区:
+            </td>
+            <td>
+                <select name="nodeAreaId" id="nodeAreaId" class="form-control" require="true">
+                    <option value="">
+                        --请选择--
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                罐精度:
+            </td>
+            <td>
+                <input id="pres" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" class="form-control" min="0" datatype="Range"  max="100" type="number" name="pres"  checked>
+            </td>
+            <td class="active">
+                料仓标识:
+            </td>
+            <td>
+                <input type="checkbox" name="stkhsFlag" id="stkhsFlag" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+              启用标识:
+            </td>
+            <td>
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">
+                是否保温罐:
+            </td>
+            <td>
+                <input type="checkbox" name="tankHtPret" id="tankHtPret" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+               罐高(米):
+            </td>
+            <td>
+                <input id="tankHgt" name="tankHgt" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active">
+                浮盘质量(米):
+            </td>
+            <td>
+                <input id="fltPlatWgt" name="fltPlatWgt" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+               起伏高度(米):
+            </td>
+            <td>
+                <input id="fltPlatPerhgt" name="fltPlatPerhgt" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active">
+                浮顶最低点(米):
+            </td>
+            <td>
+                <input id="fltTipLst" name="fltTipLst" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+              安全高度(米):
+            </td>
+            <td>
+                <input id="tankMaxHgt" name="tankMaxHgt" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active">
+              管低高度(米):
+            </td>
+            <td>
+                <input id="tankMinHgt" name="tankMinHgt" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+        <tr>
+            <td class="active">
+                公称容积(米):
+            </td>
+            <td>
+                <input id="tankTotlCuba" name="tankTotlCuba" class="form-control"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active">
+                显示顺序:
+            </td>
+            <td>
+                <input id="displayOrder"  class="form-control" min="0" max="1000" type="number" name="displayOrder" value="0" checked onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            </td>
+        </tr>
+        <tr>
+        <td class="active">
+            说明:
+        </td>
+        <td colspan="3">
+        <textarea name="remark" id="remark" class="form-control"  rows="3"></textarea>
+        </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="../../js/module/material/factoryModels/potTin" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dataTables</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body>
+    <div class="wrapper-gray">
+        <div class="ibox">
+            <div class="ibox-content">
+                <div class="toolbar-btns mgb-10">
+                    <button class="btn btn-white" id="add-btn">添加</button>
+                    <button class="btn btn-white" id="btn-save">保存</button>
+                    <button class="btn btn-white" id="btn-ok">确认</button>
+                </div>
+                <form id="inputForm"  action="" method="post">
+                    <table id="treeTable" class="table dataTable display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr role="row">
+                                <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                                <th>键值</th>
+                                <th>公式</th>
+                                <th>类型</th>
+                            </tr>
+                        </thead>
+                        <!--表内容-->
+                        <tbody id="datainner">
+
+                        </tbody>
+                    </table>
+                </form>
+
+                <div class="dtBox"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/html/0_0/js/dataTables" src="/js/zlib/require.js"></script>
+</body>
+</html>

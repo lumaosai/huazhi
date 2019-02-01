@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配矿管理--配矿方案--台账页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .giveWidth,#datainner select,#datainner .editor{
+            width: 100% !important;
+            border: 1px solid #efefef;
+            border-radius: 5px;
+            padding: 0;
+            text-align: center;
+            font-size: 12px;
+        }
+        #datainner select,#datainner .editor{
+            height:28px;
+        }
+        .select2-container--default .select2-selection--single{
+            border: 0;
+        }
+        #caseId{
+            height:34px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            border: 1px solid rgb(204,204,204);
+            border-radius: 5px;
+        }
+        .disNone{
+           display: none!important;
+        }
+    </style>
+</head>
+<body id="ledger" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName"><span>台账</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    配矿方案 ：
+                    <input type="text" readonly="readonly" id="caseId" name="caseId">
+                </div>
+                <div class="form-inline">
+                    质检单 ：
+                    <select id="quality" name="quality" class="form-control  " type="text"><option value="">方案一</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    矿石种类 ：
+                    <select id="oreType" name="oreType" class="form-control  " type="text">
+                        <option value="" selected="selected">--请选择--</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    时间 ：
+                    <input id="startDate" name="sendDate" onclick="WdatePicker();" class="form-control Wdate">
+                    &nbsp;—
+                    <input id="endDate" name="endDate" onclick="WdatePicker();" class="form-control Wdate">
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-search  " type="button" id="search-btn">
+                        <i class="fa fa-search"></i> 查询
+                    </button>
+                    <button class="btn btn-white " type="button" id="refresh-btn">
+                        <i class="fa fa-search"></i> 重置
+                    </button>
+                    <button class="btn btn-white " type="button" id="back-btn">
+                        <i class="fa fa-mail-reply"></i> 返回
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar-btns">
+                <button class="btn btn-white " id="add-btn" title="添加">
+                    <i class="fa fa-plus"></i> 新增
+                </button>
+                <button class="btn btn-white " id="delete-btn">
+                    <i class="fa fa-trash-o"> </i>删除
+                </button>
+                <button class="btn btn-white  " type="button" id="save-btn">
+                    <i class="fa fa-file-text-o"></i> 保存
+                </button>
+                <div class="pull-right">
+                    <button class="btn btn-white  hidden" type="button" id="calculate-btn">
+                        <i class="fa fa-calculator"></i> 计算
+                    </button>
+                    <button class="btn  btn-1ab394 " type="button" id="dataCollection-btn">
+                        <i class="fa fa-navicon"></i> 数据采集
+                    </button>
+                    <button class="btn btn-1ab394" type="button" id="schemeOpt-btn">
+                        <i class="fa fa-list-ol"></i> 方案优化
+                    </button>
+                    <button class="btn btn-export " type="button" id="export-btn">
+                        <i class="fa fa-sign-out"></i> 导出
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <!--表格区-->
+            <form id="inputForm" class="form-horizontal" action="/api/ob/OreLaboratoryInfo /save" method="post"
+                 >
+                <table id="dataTable"
+                       class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                    <!--表头-->
+                    <thead>
+                    <tr role="row">
+                        <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                        <th>时间</th>
+                        <th>矿石种类</th>
+                        <th>皮带秤抄重（T）</th>
+                        <th>均化库布矿数量（T）</th>
+                        <th>均化取样时间</th>
+                        <th>AI2O3</th>
+                        <th>SiO2</th>
+                        <th>Fe2O3</th>
+                        <th>TiO2</th>
+                        <th>CaO</th>
+                        <th>A/S</th>
+                        <th>TOL</th>
+                        <th>K2O</th>
+                        <th>C</th>
+                        <th>S</th>
+                    </tr>
+                    </thead>
+                    <!--表内容-->
+                    <tbody id="datainner">
+
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script data-main="/js/module/oreDistribution/ledger" src="/js/zlib/require.js"></script>
+</body>
+</html>

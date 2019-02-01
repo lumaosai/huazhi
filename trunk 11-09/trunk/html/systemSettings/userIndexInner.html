@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理--新增、编辑</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        input[type="file"]{
+            display: block;
+            width: 127px;
+            height: 22px;
+            position: absolute;
+            top: 50px;
+        }
+        .deptList span{
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-top: 5px;
+            padding: 0 5px;
+        }
+        .thumbnail{
+            border: none;
+            margin: 0;
+        }
+        .thumbnail img{
+            width: 100px;
+            height: 100px;
+            background: url("../../images/headPortrait.png") no-repeat;
+            background-size:100% 100%;
+        }
+        #nameImagePreview{
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+
+        }
+        #nameImagePreview img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body id="userIndexInner" class="wrapper-white">
+<form id="inputForm" action="$Api.admin$/api/sys/SysUser/save" method="post">
+    <input id="id" name="id" type="hidden"/>
+    <table class="table form-table">
+        <tr>
+            <!--上传头像-->
+            <td class="active width-15" rowspan="2">头像：</td>
+            <td rowspan="2" class="width-35">
+                <input id="nameImage" name="photo" maxlength="255" class="input-xlarge" type="hidden" value="0"/>
+                <ol id="nameImagePreview"></ol>
+                <a href="javascript:;" id="filePicker" class="btn btn-primary">选择</a>&nbsp;
+            </td>
+            <!--归属公司-->
+            <td class="require active width-15">归属公司:</td>
+            <td class="width-35">
+                <span class="searchGroup">
+                   <input type="hidden" id="companyId" name="companyId">
+                   <input type="text" id="companyName" name="companyName" class="form-control" require="true" readonly placeholder="双击选择">
+                   <button type="button" id="companyButton" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <!--归属岗位-->
+            <td class="active">所属岗位:</td>
+            <td>
+                <input type="hidden" name="jobTypeList" id="jobTypeListId">
+                <select name="job" id="jobTypeList" class="select2">
+                    <option value="">--请选择--</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <!--归属部门-->
+            <td class="active">归属部门:</td>
+            <td>
+                <input id="officeId" name="office.id" class="form-control" type="hidden" value="4" >
+                <div class="input-group deptList"></div>
+            </td>
+            <!--工号-->
+            <td class="active require">工号:</td>
+            <td>
+                <input id="no" name="no" class="form-control" require="true" type="text" value="" maxlength="50"/>
+            </td>
+        </tr>
+        <tr>
+            <!--姓名-->
+            <td class="active require">姓名:</td>
+            <td>
+                <input id="name" name="name" class="form-control" require="true" type="text" value="" maxlength="50"/>
+            </td>
+            <!--登录名-->
+            <td class="require active">登录名:</td>
+            <td>
+                <input id="oldLoginName" name="oldLoginName" type="hidden" value="">
+                <input id="loginName" name="loginName" class="form-control userName" require="true" type="text" value="" maxlength="50"/>
+            </td>
+        </tr>
+        <tr class="passwordTr">
+            <!--密码-->
+            <td class="active">密码:</td>
+            <td>
+                <input id="newPassword" name="newPassword" type="password" value=""  maxlength="50" minlength="3"
+                       class="form-control "/>
+            </td>
+            <!--确认密码-->
+            <td class="active">确认密码:</td>
+            <td>
+                <input id="confirmNewPassword" name="confirmNewPassword" type="password"  class="form-control " value=""
+                       maxlength="50" minlength="3" dataType="ConfirmPwd"  to="newPassword"/>
+            </td>
+        </tr>
+        <tr>
+            <!--邮箱-->
+            <td class="active">邮箱:</td>
+            <td>
+                <input id="email" name="email" class="form-control" dataType="Email" type="text" value="" maxlength="100"/>
+            </td>
+            <!--电话-->
+            <td class="active">电话:</td>
+            <td>
+                <input id="phone" name="phone" class="form-control" dataType="Tel" type="text" value="" maxlength="100"/>
+            </td>
+        </tr>
+        <tr>
+            <!--手机-->
+            <td class="active">手机:</td>
+            <td>
+                <input id="mobile" name="mobile" class="form-control" dataType="Mobile" type="text" value="" maxlength="100"/>
+            </td>
+            <!--用户状态-->
+            <td class="active">用户状态:</td>
+            <td>
+                <select id="loginFlag" name="enable" class="form-control">
+                    <option value="1">可用</option>
+                    <option value="0">禁用</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <!--用户角色-->
+            <td class="active">用户角色:</td>
+            <td colspan="3">
+                <input type="text" name="roleName" hidden="hidden" value="">
+                <select id="roleName" name="roleIdList" readonly="readonly"  class="select2 multiple" ></select>
+            </td>
+        </tr>
+        <tr>
+            <!--备注-->
+            <td class="active">备注:</td>
+            <td colspan="3">
+                <textarea id="remarks" name="remark" maxlength="200" class="form-control" rows="2"></textarea>
+            </td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td class="right">创建时间:</td>
+                <td>
+                    <input type="text" id="createDate" readonly="readonly" name="createDate" class="form-control">
+                </td>
+                <td class="right">修改时间:</td>
+                <td>
+                    <input type="text" readonly="readonly" name="updateDate" class="form-control">
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/userIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

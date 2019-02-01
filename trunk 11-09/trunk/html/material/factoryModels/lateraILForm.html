@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>料线弹出页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="lateraILForm" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/NodeSideline/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">料线编号:</td>
+            <td>
+                <input id="nodeNo" name="nodeNo" class="form-control " require="true" type="number" value=""  placeholder="200000-299999" dataType="Range" min="200000" max="299999" ></td>
+            <td class="active require">料线编码:</td>
+            <td>
+                <input id="nodeCode" name="nodeCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">料线名称:</td>
+            <td>
+                <input id="nodename" name="nodename" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">料线别名:</td>
+            <td>
+                <input id="nodeAlias" name="nodeAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">装置组:</td>
+            <td>
+                <select name="unitGroupId" id="unitGroupId" require="true" class="form-control">
+                    <option value="0">请选择</option>
+                </select>
+            </td>
+            <td class="active require">装置:</td>
+            <td>
+                <select name="unitId" id="unitId" require="true" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">料线物料类型:</td>
+            <td>
+                <select name="slineMtrlType" require="true" id="slineMtrlType" class="form-control">
+                    <option >请选择</option>
+                </select>
+            </td>
+            <td class="active require">料线进出类型:</td>
+            <td>
+                <select name="slineInoutType" require="true" id="slineInoutType" class="form-control">
+                    <option value="">
+                        请选择
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">料线精度:</td>
+            <td>
+                <div class="form-checked">
+                    <input id="pres" require="true" dataType="Range" onblur="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" class="form-control" min="0" max="100" type="number" name="pres" value="1" datatype="Range" checked >
+                </div>
+            </td>
+            <td class="active">关联料线:</td>
+            <td>
+                <input id="refSidelineId" name="refSidelineId" class="form-control " type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">显示顺序:</td>
+            <td>
+                <input id="displayOrder" dataType="Range" class="form-control" min="0"  type="number" name="displayOrder" onblur="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" value="0" checked>
+            </td>
+            <td class="active">是否校正:</td>
+            <td>
+                <input type="checkbox" name="isRvs"  class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">启动标识:</td>
+            <td>
+                <input type="checkbox" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">说明:</td>
+            <td>
+                <input name="remark" id="remark" class="form-control">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/lageralLine" src="/js/zlib/require.js"></script>
+
+
+</body>
+</html>

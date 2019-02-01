@@ -1,0 +1,34 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "MOMtype":[{
+    "id":"1212",
+    "name":"化学工厂"
+  },{
+    "id":"12123",
+    "name":"生产工厂"
+  }],
+  "zhuangzhi":[{
+    "id":"1212",
+    "name":"化学工厂"
+  },{
+    "id":"12123",
+    "name":"生产工厂"
+  }],
+  "unit":{
+    "id":"1",
+    "wspId":"0",
+    "unitNo":"1232",
+    "unitCode":"FSLY001’",
+    "unitName":"复晟铝业有限公司生产工厂",
+    "unitAllas":"复晟铝业",
+    "unitType":"生产工厂",
+    "areaName":"加热界区",
+    "nengli":"100",
+    "bankuai":"1000",
+    "useFlag":"0",
+    "displayOrder":"1000",
+    "remark":"这是工厂"
+  }
+}

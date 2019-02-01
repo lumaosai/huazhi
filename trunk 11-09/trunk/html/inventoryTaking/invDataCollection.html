@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘存管理--数据收集</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .apsType-linkage{
+            display: inline-block;
+        }
+        .apsType-linkage li{
+            display: inline-block;
+            padding: 0 10px 0 10px;
+        }
+        .col-394{
+            color: #1ab394;
+        }
+        .col-5e9{
+            color: #62b5e9;
+        }
+        .col-c5c{
+            color: #f75c5c;
+        }
+        .clearfix{
+            margin-bottom: 20px;
+        }
+        .datatimepicker{
+            margin-right: 0 !important;
+        }
+    </style>
+</head>
+<!--内容-->
+<body id="datacollection" class="wrapper-gray">
+    <div class="ibox">
+        <!--头部-->
+        <div class="ibox-title gray-line">
+            <div class="titName"><span>盘存数据收集</span></div>
+            <!--按钮组-->
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    盘存时间 ：
+                    <label for="startDate">
+                        <input id="startDate" name="sendDate" class="form-control datatimepicker" type="text"
+                               value=""><i class="fa fa-calendar"></i>
+                    </label>
+                    &nbsp—
+                    <label for="endDate">
+                        <input id="endDate" name="endDate" class="form-control datatimepicker" type="text"
+                               value=""><i class="fa fa-calendar"></i>
+                    </label>
+                </div>
+                <div class="form-inline">
+                    主盘人 ：<input id="supplierName" name="supplierName" class="form-control datatimepicker" type="text" value="">
+                </div>
+                <div class="form-inline">
+                    盘存状态 ：
+                    <select name="" id="oreStatua">
+                        <option value="">-- 请选择 --</option>
+                        <option value="0">-- 未封存 --</option>
+                        <option value="1">-- 已封存--</option>
+                        <option value="2">-- 已解封 --</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    数据类型 ：
+                    <select name="" id="oreType">
+                        <option value="">-- 请选择 --</option>
+                    </select>
+                </div>
+                <button class="btn btn-search pull-right" id="search-btn" type="button">
+                    <i class="fa fa-search"> </i>
+                    查询
+                </button>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <div class="toolbar-btns tabbtnbig mgb-10" style="margin-top:0;">
+                <button class="btn  btn-white" id="delbtn">
+                    <i class="fa fa-trash-o"></i>
+                    删除
+                </button>
+            </div>
+            <!--表格区-->
+            <form id="inputForm" class="form-horizontal" action="/api/sys/SysMenu/ajaxSave" method="post">
+                <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                    <thead>
+                    <tr>
+                        <th width='60px;'><input type='checkbox' class='i-checks'></th>
+                        <th>序号</th>
+                        <th>盘存时间</th>
+                        <th>数据类型</th>
+                        <th>状态</th>
+                        <th>主盘人</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="treeTableBody">
+                    </tbody>
+                </table>
+            </form>
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/inventoryTaking/invDataCollection" src="/js/zlib/require.js"></script>
+</body>
+</html>

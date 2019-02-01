@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组织机构</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="orgCheckView" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.admin$/api/sys/SysOrg/save" method="post">
+    <input id="id" name="id" type="hidden" >
+    <table class="table form-table">
+        <tr>
+            <td class="active require">机构名称:</td>
+            <td>
+                <input id="orgName" name="name" type="text" class="form-control" require="true">
+            </td>
+            <td class="active require">机构简称:</td>
+            <td>
+                <input id="sName" name="sname" type="text" class="form-control" require="true">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">上级机构:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="parentId" name="parent.id">
+                   <input type="text" id="parentName" name="parent.name" class="form-control" readonly placeholder="双击选择">
+                   <button type="button" id="parentNameButton" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+            <td class="active require">机构编码:</td>
+            <td>
+                <input id="code" name="code" type="text" class="form-control" require="true">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">机构类型:</td>
+            <td>
+                <select id="type" name="type" class="form-control" require="true"></select>
+            </td>
+            <td class="active require">机构等级:</td>
+            <td>
+                <select id="grade" name="grade" type="text" class="form-control" require="true"></select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">负责人:</td>
+            <td>
+                <input id="master" name="master" type="text" class="form-control">
+            </td>
+            <td class="active">联系电话:</td>
+            <td>
+                <input id="phone" name="phone" type="text" class="form-control" dataType="Tel">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">传真:</td>
+            <td>
+                <input id="fax" name="fax" type="text" class="form-control">
+            </td>
+            <td class="active">邮箱:</td>
+            <td>
+                <input id="email" name="email" type="text" class="form-control" dataType="Email">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">主负责人:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="pnameId" name="primaryPerson.id">
+                   <input type="text" id="pname" name="primaryPerson.name" class="form-control" readonly placeholder="双击选择">
+                   <button type="button" id="primaryPersonButton" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+            <td class="active">副负责人:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="dnameId" name="deputyPerson.id">
+                   <input type="text" id="dname" name="deputyPerson.name" class="form-control" readonly placeholder="双击选择">
+                   <button type="button" id="deputyPersonButton" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="active ">是否启用:</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">启用</option>
+                    <option value="2">禁用</option>
+                </select>
+            </td>
+            <td class="active">排序:</td>
+            <td>
+                <input id="sort" name="sort" type="number" value="10" class="form-control" dataType="Number">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">备注:</td>
+            <td colspan="3">
+                <textarea id="remark" name="remark" maxlength="200" class="form-control" rows="3"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/orgIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

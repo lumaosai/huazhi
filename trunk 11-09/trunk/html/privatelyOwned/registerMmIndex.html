@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册磁贴</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <link rel="stylesheet" href="../../css/comInnerTable.css">
+    <link rel="stylesheet" href="../../css/home/workBench-iconsLibrary/iconfont.css">
+    <link rel="stylesheet" href="../../css/aps.css">x
+    <link rel="stylesheet" href="../../css/privatelyOwned.css">
+    <style>
+        .width-10 {
+            width: 22%;
+        }
+        #inputForm{
+            border: none;
+        }
+        label.error {
+            color: red;
+            top: 7px;
+        }
+        #iconIcon{
+            font-size: 26px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #3ab394;
+        }
+        .form-table tbody > tr > td.active {font-size: 12px;}
+    </style>
+</head>
+<!--内容-->
+<body id="registerMmIndex" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName gray-line">
+                <span>注册磁贴</span>
+                <div class="pull-right">
+                    <button hidden="hidden" id="refresh-btn" class="fa-refresh" onclick="window.location.reload()"></button>
+                    <button class="btn btn-white btn-back" id="back-btn"><i class="fa fa-reply"></i> 返回 </button>
+                </div>
+            </div>
+        </div>
+        <!--标题 按钮-->
+        <div class="ibox-content">
+            <!--内容区-->
+            <div class="clearfix">
+                <div class="regHeader">
+                    <ul>
+                        <li><img class="choose" src="../../images/reg-title_r1_c1.png" alt=""><span class="choose">选择磁贴类型</span>
+                        </li>
+                        <li><img class="write" src="../../images/reg-title_r2_c2.png" alt=""><span
+                                class="write">填写磁贴类型</span></li>
+                        <li><img class="subSuccess" src="../../images/reg-title_r2_c3.png" alt=""><span
+                                class="subSuccess">递交成功</span></li>
+                    </ul>
+                </div>
+                <div class="regContent clearfix">
+                    <!--选择磁贴类型-->
+                    <div class="rCchange pull-left">
+                        <div class="title">选择磁贴类型</div>
+                        <ul class="leftlist clearfix"></ul>
+                        <div class="foot-btns clearfix"><img src="../../images/reg-Mnlist-go.jpg" alt="img" title="下一步" id="tile-choice" class="pull-right"></div>
+                    </div>
+                    <!--递交成功-->
+                    <div class="rCsubmit pull-right">
+                        <div class="submitSucc">
+                            <img src="../../images/submit-Success.jpg" alt="">
+                            <span>提交成功</span>
+                        </div>
+                        <!--<div class="subContent">
+                            <ul class="leftlist pull-left">
+                            </ul>
+                            <ul class="rightlist pull-left">
+
+                            </ul>
+                        </div>-->
+                        <div class="subfooterbtn center">
+                            <input type="button" class="btn btn-levels regGoOn" value="继续注册">
+                            <input type="button" class="btn mManagement" value="磁贴管理">
+                        </div>
+                    </div>
+                    <!--填写磁贴类型-->
+                    <div class="rCsave">
+                        <div class="title">请填写磁贴信息</div>
+                        <div class="rCsave-form">
+                            <form id="inputForm" action="/api/workbench/WorkbenchTileTemplate/ajaxSave" method="post">
+                                <table class="form-table table">
+                                    <tbody class="formtbody"></tbody>
+                                </table>
+                                <input type="hidden" name="type" id="mMtype">
+                                <input type="hidden" name="templateId" id="mMid">
+                            </form>
+
+                        </div>
+                        <div class="foot-btns clearfix">
+                            <img class="footbtn-back pull-left" src="../../images/reg-Mnlist-back.jpg" alt="img" title="返回">
+                            <img class="footbtn-go pull-right" id="tile-submit" src="../../images/reg-Mnlist-go.jpg" alt="img" title="保存">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script data-main="/js/module/privatelyOwned/registerMmIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

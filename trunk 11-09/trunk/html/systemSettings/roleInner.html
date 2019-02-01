@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="roleInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.admin$/api/sys/SysRole/ajaxSave" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="table form-table">
+        <tbody>
+        <tr>
+            <td class="active require">角色名称:</td>
+            <td>
+                <input id="name" name="name" class="form-control valid" require="true"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">英文名称:</td>
+            <td>
+                <input id="enname" name="enname" class="form-control valid" require="true" type="text" value="" maxlength="50" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active ">角色类型:</td>
+            <td>
+                <select id="roleType" name="roleType" data-height="120px" class="form-control select2"></select>
+                <span class="help-inline">
+                 角色类型是对角色进行分类，可以是实际部门,可以是拥有同一类职能的人构成的虚拟组织。
+                </span>
+            </td>
+            <td class="active">是否系统数据:</td>
+            <td >
+                <select id="isSys" name="isSys" class="form-control valid" aria-invalid="false">
+                    <option value="1" selected="selected">是</option>
+                    <option value="0">否</option>
+                </select>
+                <span class="help-inline">“是”代表此数据只有超级管理员能进行修改，“否”则表示拥有角色修改人员的权限都能进行修改</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否可用:</td>
+            <td>
+                <select id="enable" name="enable" class="form-control valid" aria-invalid="false">
+                    <option value="1" selected="selected">是</option>
+                    <option value="0">否</option>
+                </select>
+                <span class="help-inline">“是”代表此数据可用，“否”则表示此数据不可用</span>
+            </td>
+            <td class="active">备注:</td>
+            <td >
+                <textarea id="remark" name="remark" maxlength="200" class="form-control " rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</div><script data-main="/js/module/systemSettings/role" src="/js/zlib/require.js"></script>
+</body>
+</html>

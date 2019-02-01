@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>加工方案管理</title>
+</head>
+<body id="processingSchemeInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.mtrl$/api/fm/ProCase/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="require active">
+                    加工方案编号:
+            </td>
+            <td>
+                <input id="caseNo" placeholder="10000-99999" require="true" dataType="Range" min="10000" max="99999" name="caseNo" class="form-control "  type="number" value="" ></td>
+            <td class="require active">
+                    加工方案名称:
+            </td>
+            <td>
+                <input id="caseName" name="caseName" class="form-control "  require="true" type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class=" require active">
+                    加工方案别名:
+            </td>
+            <td>
+                <input id="caseAlias" name="caseAlias" class="form-control" require="true" type="text" value="">
+            </td>
+            <td class="require active">
+                    装置:
+            </td>
+            <td  >
+                <select name="unitId" id="unitId" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                    默认加工方案:
+            </td>
+            <td  >
+                <input type="checkbox" id="isDft" name="isDft" class="i-checks" value="1" checked>
+            </td>
+            <td class=" require active">
+                 显示顺序: 
+            </td>
+            <td  >
+                <input require="true"  onkeyup=" if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" id="displayOrder" name="displayOrder" class="form-control " datatype="Range"  min="0" max="1000" type="number" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                    启用标识:
+            </td>
+            <td  >
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">
+                    说明:
+            </td>
+            <td  >
+                <input id="remark" name="remark" class="form-control" type="text" value="">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/processingScheme" src="/js/zlib/require.js"></script>
+</body>
+</html>

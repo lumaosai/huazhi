@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计划模版</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="planTempIndex" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>生产计划模板</span></div>
+            <div class="toolbar-btns">
+                <button class="btn-white btn" id="add-btn"
+                        title="添加"><i class="fa fa-plus"></i> 添加
+                </button>
+
+                <button class="btn-white btn" id="edit-btn"
+                        title="修改"><i class="fa fa-file-text-o"></i> 修改
+                </button>
+                <button class="btn-white btn" id="del-btn"   ><i
+                        class="fa fa-trash-o"></i>删除
+                </button>
+                <button class="btn-white btn" id="refresh-btn"
+                        onclick="window.location.reload()" title="刷新"><i class="glyphicon glyphicon-repeat"></i> 刷新
+                </button>
+            </div>
+        </div>
+
+        <div class="ibox-content">
+            <!--内容表格-->
+            <table id="treeTable"
+                   class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+                <thead>
+                    <tr class="center">
+                        <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                        <th>模版名称	</th>
+                        <th>模版类型	</th>
+                        <th>创建时间	</th>
+                        <th>启用状态	</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyId">
+
+                </tbody>
+            </table>
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/planTemple" src="/js/zlib/require.js"></script>
+</body>
+</html>

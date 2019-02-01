@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "retCode": "10000",
+  "message": "操作成功",
+  "rows":[
+    {
+      "id":"1",
+      "startTime":"00:00:00",
+      "endTime": "07:59:59",
+      "name":"早班"
+    },
+    {
+      "id":"2",
+      "startTime":"08:00:00",
+      "endTime": "15:59:59",
+      "name":"中班"
+    },
+    {
+      "id":"3",
+      "startTime":"16:00:00",
+      "endTime": "23:59:59",
+      "name":"晚班"
+    }
+  ]
+}

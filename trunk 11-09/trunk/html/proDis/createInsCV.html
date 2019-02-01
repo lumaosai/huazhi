@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指令修改(或新增)</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="createInsCV" class="theme-tight wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.aps$/api/ctrl/BaseDirective/save" method="post">
+    <input id="pid" name="parentId" type="hidden" />
+    <input id="id" name="id" type="hidden" />
+    <table class="form-table table">
+        <tr>
+            <td class="require active">工序:</td>
+            <td>
+                <input type="hidden" name="processId" id="processId">
+                <select require="true" name="proc" id="proc" class="form-control">
+                    <option value="">--请选择--</option>
+                </select>
+            </td>
+            <td class="require active">级别:</td>
+            <td>
+                <input type="hidden" id="gradeVal" name="grade" value="">
+                <select require="true" name="grade" id="grade" class="form-control" disabled="disabled">
+                    <option value=""></option>
+                    <option value="1">一级菜单</option>
+                    <option value="2">二级菜单</option>
+                    <option value="3">三级菜单</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="require active">分类:</td>
+            <td>
+                <input type="hidden" name="classifyId" id="classifyId">
+                <select require="true" name="kind" id="kind" class="form-control">
+                    <option value="">--请选择--</option>
+                </select>
+            </td>
+            <td class="active">排序:</td>
+            <td>
+                <input type="hidden" name="classifyId">
+                <input type="number" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" min=0 class="form-control" name="sort" id="sort">
+            </td>
+        </tr>
+        <tr>
+            <td class="require active">指令内容:</td>
+            <td colspan="3">
+                <textarea require="true" id="content" name="content" maxlength="300" class="form-control" rows="3"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script data-main="/js/module/proDis/createInstructionIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

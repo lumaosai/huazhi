@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>生产调度--指令下达页面</title>
+    <!--<script src="../../js/plugins/websocket/sockjs.min.js"></script>
+    <script src="../../js/plugins/websocket/stomp.min.js"></script>-->
+</head>
+<body id="giveOrdersIndex" class="wrapper-gray">
+    <div class="ibox">
+        <!--标题 按钮-->
+        <div class="ibox-title gray-line">
+            <div class="titName "><span>指令下达</span></div>
+            <!--班信息-->
+            <div class="toolbar-form">
+            </div>
+            <div class="toolbar-form clearfix">
+                <span> 日期 : </span><span style="margin-right: 15px" class="date"></span>
+                <span> 班次 : </span><span style="margin-right: 15px" class="updateDate"></span>
+                <span> 班组 : </span><span class="groupName"></span>
+            </div>
+
+            <div class="toolbar-form clearfix">
+                <div class="form-inline">
+                    <span class="job">工序：</span>
+                    <select required="required" name="proc" id="proc" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span class="rank">级别：</span>
+                    <select required="required" name="grade" id="grade" class="width-fix-120">
+                        <option value="">请选择</option>
+                        <option value="1">一级</option>
+                        <option value="2">二级</option>
+                        <option value="3">三级</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span class="grade">分类：</span>
+                    <select required="required" name="kind" id="kind" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span class="content">指令内容：</span>
+                    <input type="text" required="required" name="contentParam" id="contentParam" value>
+                </div>
+                <div class="pull-right">
+                    <a class='btn btn-levels' id="giveOrders" style="width:90px"><i class='fa fa-download' ></i>指令下达</a >
+                </div>
+            </div>
+        </div>
+
+        <div class="ibox-content clearfix">
+            <!--左侧树-->
+            <div class="leftBox pull-left" id="left">
+                <div id="tree" class="ztree leftBox"></div>
+            </div>
+            <!--右侧内容-->
+            <div class="rightBox" id="right">
+                <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+                    <thead>
+                    <tr class="center">
+                        <th style="width: 10%;border: none;"></th>
+                        <th>指令</th>
+                    </tr>
+                    </thead>
+                    <tbody id="treeTableBody" ></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+<script data-main="/js/module/proDis/giveOrdersIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

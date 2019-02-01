@@ -1,0 +1,22 @@
+{
+  "success":"true",
+  "rows":[{
+    "id":"777",
+    "type":"罐",
+    "name":"乙烯",
+    "zhi":"222",
+    "qianlaing":"333",
+    "qiantime":"1200",
+    "houliang":"334",
+    "houtime":"222"
+  },{
+    "id":"999",
+    "type":"罐",
+    "name":"乙烯",
+    "zhi":"222",
+    "qianlaing":"333",
+    "qiantime":"1200",
+    "houliang":"334",
+    "houtime":"222"
+  }]
+}

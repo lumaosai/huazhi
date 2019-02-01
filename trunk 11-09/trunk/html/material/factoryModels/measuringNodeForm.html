@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计量节点弹出页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="measuringNodeForm" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/NodeMeasure/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">计量点编号:</td>
+            <td>
+                <input id="nodeNo" name="nodeNo" class="form-control " require="true" type="number" value=""  placeholder="700000-799999" dataType="Range" min="700000" max="799999" ></td>
+            <td class="active require">计量点编码:</td>
+            <td>
+                <input id="nodeCode" name="nodeCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">计量点名称:</td>
+            <td>
+                <input id="nodename" name="nodename" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">计量点别名:</td>
+            <td>
+                <input id="nodeAlias" name="nodeAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">计量点精度:
+            <td>
+                <div class="form-checked">
+                    <input id="pres" onblur="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" dataType="Range" class="form-control" min="0" datatype="Range" require="true" max="100" type="number" name="pres" value="1" checked>
+                </div>
+            </td>
+            <td class="active require">界区名称:</td>
+            <td >
+                <select name="nodeAreaId" require="true" id="nodeAreaId" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">界区类型:</td>
+            <td>
+                <select name="nodeAreaType" require="true" id="nodeAreaType" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active">显示顺序:</td>
+            <td >
+                <div class="form-checked">
+                    <input id="displayOrder" dataType="Range" class="form-control" min="0" type="number" name="displayOrder" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" value="0" checked>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">启动标识:</td>
+            <td>
+                <input type="checkbox"  name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">说明:</td>
+            <td>
+                <input name="remark"  id="remark" class="form-control"  />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/measuringNode" src="/js/zlib/require.js"></script>
+
+
+</body>
+</html>

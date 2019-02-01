@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘存管理--数据收集--石灰/石灰仓存</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .table tr td:nth-child(odd){
+            background-color: #f9f9f9;
+            padding: 0 !important;
+            margin: 0 !important;
+            text-align: center;
+        }
+
+        .tabBtn{
+            margin-top: 10px;
+        }
+        .tabBtn li{
+            display: inline-block;
+            padding: 4px 7px;
+            color: black;
+            background-color: #f9f9f9;
+        }
+       /* .active{
+            border-top: 2px solid #1ab394;
+            color: #1ab394 !important;
+            box-shadow: 0 5px 3px #888888;
+        }*/
+        .datagridsContent{
+            margin-bottom: 30px;
+        }
+        .hide{
+            display: none;
+        }
+        #tableArr .datagridsContent table{
+            width: 100% !important;
+        }
+        .ui-jqgrid tr.jqgroup{
+            display: none;!important;
+        }
+        .width-100px {
+            width: 100px !important;
+        }
+
+    </style>
+
+</head>
+<!--内容-->
+<body id="createshihui" class="wrapper-gray">
+    <div class="ibox">
+        <!--头部-->
+        <div class="ibox-title">
+            <div class="titName">
+                <span>矿石/石灰仓存盘存信息</span>
+                <div class="pull-right">
+                    <button class="btn  bg-ffa82d btn-white" id="back-btn" type="button">
+                        <i class="fa fa-reply"></i>返回</button>
+                </div>
+            </div>
+            <div class="toolbar-form mgt-10">
+                <table class="table form-table ">
+                    <tr>
+                        <td class="width-100px active">主盘人：</td>
+                        <td class="autoWidth">
+                            <input type="text" disabled="disabled" class="maindiskUser">
+                        </td>
+                        <td class="width-100px active">监盘人：</td>
+                        <td class="autoWidth">
+                            <input type="text" class="supervisionplate form-control datatimepicker"/>
+                        </td>
+                        <td class="width-100px active">盘存日期：</td>
+                        <td class="autoWidth">
+                            <select id="startDate" class="form-control">
+                                <option value="">--请选择--</option>
+                            </select>
+                        </td>
+                        <td class="width-100px active">参与盘存人员：</td>
+                        <td class="autoWidth">
+                            <input type="text" id="otherPlate" class="form-control"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <div class="titName int-style mgb-10"><span>盘存信息</span></div>
+            <!--表格区-->
+            <div class="tab-box">
+                <div class="tab-bar clearfix">
+                    <ul class="tab-nav  pull-left"></ul>
+                    <ul class="tab-btns pull-right" style="margin-top:2px;margin:0;">
+                        <li class="active">
+                            <button class="btn btn-save" >
+                                <i class="fa fa-save"></i>
+                                保存
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-save">
+                                <i class="fa fa-save"></i>
+                                保存
+                            </button>
+                        </li>
+                        <li>
+                            <div class="toolbar-btns mg0">
+                                <div class="form-inline mg0">
+                                    <span class="Acquisition ">采集时间：<span class="time"></span></span>
+                                    <select id="Interval" class="Acquisition ">
+                                        <option value="">--请选择时间段--</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-ffa82d" type="button" id="dataCollection-btn">
+                                    <i class="fa fa-bar-chart"></i> 数据采集
+                                </button>
+                                <button class="btn btn-save">
+                                    <i class="fa fa-save"></i>
+                                    保存
+                                </button>
+                            </div>
+
+
+                        </li>
+                    </ul>
+                </div>
+
+                <!--<div>
+                    <div class="pull-left">
+                        <ul class="tabBtn"></ul>
+                    </div>
+                    <div class="pull-right">
+                        <span class="Acquisition hide">采集时间：<span class="time"></span></span>
+                        <select id="Interval" class="Acquisition hide">
+                            <option value="">&#45;&#45;请选择时间段&#45;&#45;</option>
+                        </select>
+                        <button class="btn Acquisition hide btn-white btn-rounded btn-outline btn-sm data" type="button" id="dataCollection-btn"><i class="fa fa-navicon"></i> 数据采集
+                        </button>
+
+                    </div>
+                </div>-->
+                <div class="tab-con" id="jgTables">
+                    <!--<div class="datagridsContent active" data-type="ST_KDPCXX">
+                        <table id="dataTable0" class="datatable"></table>
+                    </div>
+                    <div class="datagridsContent" data-type="ST_MJPCXX">
+                        <table id="dataTable1" class="datatable"></table>
+                    </div>
+                    <div class="datagridsContent" data-type="ST_CCPCXX">
+                        <table id="dataTable2" class="datatable"></table>
+                    </div>-->
+                   <!-- <div class="jqTable-item" data-type="ST_KDPCXX">
+                        <table id="jqGrid-table0" class="jqGrid-table"></table>
+                    </div>-->
+                </div>
+            </div>
+        <div id="tableArr">
+
+        </div>
+        </div>
+    </div>
+    <script data-main="/js/module/inventoryTaking/inventoryCollection" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性管理--新增、编辑</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="proValueCheckView" class="wrapper-white">
+<form id="inputForm" action="$Api.admin$/api/sys/SysAuthPropertyValue/ajaxSave" method="post">
+    <input id="id" name="id" type="hidden" />
+    <table class="table form-table">
+        <tbody>
+        <tr>
+            <td class="active require" >名称:</td>
+            <td>
+                <input id="valueNameId" name="valueNameId" class="form-control" type="hidden" value="1" >
+                <input id="valueName" name="name" type="text"  require="true" class="form-control" >
+            </td>
+            <td class="active require" >属性值:</td>
+            <td>
+                <input id="valueId" name="valueId" class="form-control" type="hidden" value="1" >
+                <input id="value" name="value" type="text" require="true" class=" form-control" style="">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否可用:</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+            <td class="active">所属属性:</td>
+            <td>
+                <input id="sysAuthPropertyId" name="sysAuthProperty.id" class="form-control" type="hidden" >
+                <input id="sysAuthPropertyName" readonly name="sysAuthProperty.name" class="form-control">
+            </td>
+        </tr>
+        <tr class="hiddenView" >
+            <td class="active">上级节点:</td>
+            <td>
+                <input id="parentId" name="parent.id" class="form-control" type="hidden" >
+                <span id="parentName" name="parentName" class="form-control"></span>
+            </td>
+            <td class="active require">源ID: </td>
+            <td>
+                <input id="source" name="source" class="form-control" type="hidden" value="1" >
+                <input id="sourceId" required="required" name="sourceId" require="true" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">备注信息:</td>
+            <td>
+                <input id="remarkId" name="remarkId" class="form-control" type="hidden" value="1" >
+                <textarea id="remark" name="remark" class="form-control" rows="3"></textarea>
+            </td>
+            <td class="active require">排序:</td>
+            <td>
+                <input id="sortId" name="sortId" class="form-control" type="hidden" value="1" >
+                <input id="sort" require="true" maxlength="10" type="number" onkeyup="value=value.replace(/[^\d]/g,'')" name="sort" class="form-control" placeholder="仅支持数字" >
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/preserveValue" src="/js/zlib/require.js"></script>
+</body>
+</html>

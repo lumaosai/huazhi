@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>批量检尺</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        .form-inline{
+            margin-right: 0 !important;
+        }
+        .ibox-content{
+            overflow-x:scroll !important;
+        }
+        #tableBox{
+            width: 5873px;
+        }
+    </style>
+</head>
+<body id="batchMeasureForm">
+<div class="ibox">
+    <div class="ibox-title">
+        <div class="clearfix">
+            <div class="toolbar-form clearfix pull-left">
+                <div class="form-inline">
+                    <span>检尺类型:</span>
+                    <select name="enable" class="form-control" id="authEnable">
+                        <option value="">--请选择--</option>
+                    </select>
+                </div>
+                <label>
+                    <div class="form-inline">
+                        <span>时间:</span>
+                        <input id="dataTime" name="dataTime" onclick="WdatePicker();" class="form-control Wdate">
+                    </div>
+                </label>
+                <div class="form-inline">
+                    <label><input type="radio" name="tankType" class='i-checks' checked >动罐</label>
+                </div>
+                <div class="form-inline">
+                    <label><input type="radio" name="tankType" class='i-checks'>全部</label>
+                </div>
+            </div>
+            <div class="pull-right toolbar-btns">
+                <a class="btn" id="btn-add"><i class="fa fa-plus"></i> 新建</a>
+                <a class="btn" disabled="disabled" id="btn-batch"><i class="fa fa-edit"></i> 批量采数</a>
+                <a class="btn" disabled="disabled" id="btn-total"><i class="fa fa-download"></i> 批量计算</a>
+            </div>
+
+    </div>
+</div>
+    <div class="ibox-content">
+        <div id="tableBox">
+            <div class="tablebox">
+                <table id="dataTable">
+                </table>
+            </div>
+            <div class="tablebox">
+                <table id="TableEdit">
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>
+</html>

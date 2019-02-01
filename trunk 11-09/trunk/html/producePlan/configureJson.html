@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计划模板配置Json</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .hidden{
+            display: none;
+        }
+        #inputForm{
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        #textcontent{
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            height: 100%;
+            resize:none
+        }
+    </style>
+</head>
+<body id="configureJson">
+<form id="inputForm"  class="form-horizontal" action="$Api.aps$/api/aps/Template/saveTemplateCfg" method="post">
+    <input type="text" id="id" name="id" class="hidden" value="">
+    <textarea id="textcontent" name="jsonCfg"></textarea>
+</form>
+</body>
+<script>
+//    $(function () {
+//        $("#id").val(getQueryString('id'));
+//         var id=$("#id").val();
+//        ajaxToServer(aps_domain+"/api/aps/Template/form/"+id,{},function (result) {
+//            $("#textcontent").val(result.template.jsonCfg);
+//        })
+//    });
+//    /*得到传后台的表单*/
+//    function getSubmitFormId(){
+//        return "#inputForm";
+//    }
+</script>
+<script data-main="/js/module/producePlan/planTemple" src="/js/zlib/require.js"></script>
+</html>

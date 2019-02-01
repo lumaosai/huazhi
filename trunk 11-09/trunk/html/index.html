@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/logo/logo5.1.png" media="screen" />
+    <title>{{title}}</title>
+    <script type="text/javascript" src="../js/meta.js"></script>
+</head>
+<body class="nav-mini">
+    <div id="wrapper">
+        <!--顶部导航开始-->
+        <div class="logo">
+            <img src="../images/logo/logo5.5.png">
+            <div class="logo-right">
+                <div id="userName">
+                    <span class="userName"></span>
+                    <span class="job"></span>
+                    <span class="time"></span>
+                </div>
+                <ul>
+                    <li class="icon"><i class="fa fa-cog"></i></li>
+                    <li class="alarm-message">
+                        <span class="num"> </span>
+                        <i class="fa fa-commenting"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--顶部导航结束-->
+        <!-- 左侧导航开始 -->
+        <nav class="navbar-default navbar-static-side ">
+            <nav class="navbar-static-top clearfix">
+                <!--请输入查找内容-->
+                <!--<div class="navbar-header pull-left">-->
+                <a class="navbar-mini-btn" href="javascript:;">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+
+            <div class="navScrollView">
+                <ul class="sidebar-nav" id="side-menu">
+                </ul>
+            </div>
+        </nav>
+        <!-- 左侧导航结束 -->
+        <!-- 右侧部分开始 -->
+        <div class="wrapper-con ">
+            <div class="wrap-header">
+                <div class="content-tabs">
+                    <button class="tabs-lBtn tabs-btnIcon">
+                        <i class="fa icon-left"></i>
+                    </button>
+                    <div class="tabs-menu">
+                        <div class="tabs-nav clearfix">
+                            <a href="javascript:;" class="active navItem-tabTag" data-id="./home.html">个人工作台</a>
+                        </div>
+                    </div>
+                    <button class="tabs-rBtn tabs-btnIcon">
+                        <i class="fa icon-right"></i>
+                    </button>
+                    <div class="btn-group navBtns">
+                        <button class="dropdown" data-toggle="dropdown">关闭操作<span class="caret"></span>
+                        </button>
+                        <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                            <li class="tabTag-fixed"><a>定位当前选项卡</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="tabTag-closeAll"><a>关闭全部选项卡</a>
+                            </li>
+                            <li class="tabTag-closeOther"><a>关闭其他选项卡</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--退出部分-->
+                    <ul class="pull-right role-box logout">
+                        <li>
+                            <a href="javascript:;" class="role-quit-btn" id="quit-btn">
+                                <i class="fa fa fa-sign-out"></i>
+                                退出
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrap-con">
+                <div class="navItem-con">
+                    <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="home.html" frameborder="0" data-id="./home.html" seamless ></iframe>
+                </div>
+            </div>
+            <!--<div class="wrap-footer"></div>-->
+        </div>
+        <!-- 右侧部分结束 -->
+    </div>
+    <script data-main="/js/module/index/index" src="/js/zlib/require.js"></script>
+</body>
+</html>

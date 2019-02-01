@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装置界区</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="deviceBoundaryArea" class="theme-tight wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName clearfix">
+                <span>装置界区</span>
+                <div class="pull-right toolbar-btns">
+                    <button class="btn" id="btn-add" onclick="Bus.openEditDialog('新增装置界区数据','/material/factoryModels/deviceBoundaryAreaView.html','830px', '310px')"><i class="fa fa-plus "></i> 新增
+                    </button>
+                    <button class="btn" id="btn-edit" onclick="Bus.editCheckedTable('修改装置界区数据','/material/factoryModels/deviceBoundaryAreaView.html','830px', '310px','#treeTable')"><i class="fa fa-edit  "></i> 编辑
+                    </button>
+                    <button class="btn" id="btn-import"><i class="fa fa-download "></i> 导入
+                    </button>
+                    <button class="btn" id="btn-export"><i class="fa fa-upload "></i> 导出
+                    </button>
+                    <button class="btn" id="btn-help"><i class="fa fa-question-circle-o "></i> 帮助
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar-form clearfix">
+                <div class="form-inline">
+                    <span>界区编码：</span>
+                    <input id="areaCode" name="areaCode" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>界区名称：</span>
+                    <input id="areaName" name="areaName" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>MOM车间 ：</span>
+                    <select name="wspId" class="form-control" id="wspId">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>启用标识 ：</span>
+                    <select name="enable" class="form-control" id="enable">
+                        <option value="">全部</option>
+                        <option value="1">启用</option>
+                        <option value="0">禁用</option>
+                    </select>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-search" id="btn-search" type="button"><i class="fa fa-search"></i>查询</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <!--表头-->
+                <thead>
+                <tr role="row">
+                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                    <th>界区编号</th>
+                    <th>装置界区编码</th>
+                    <th>装置界区名称</th>
+                    <th>装置界区别名</th>
+                    <th>MOM车间</th>
+                    <th>启用标识</th>
+                    <th>显示顺序</th>
+                    <th>说明</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+
+                </tbody>
+            </table>
+            <!--分页-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="/js/module/material/factoryModels/deviceBoundaryArea" src="/js/zlib/require.js"></script>
+
+</body>
+</html>

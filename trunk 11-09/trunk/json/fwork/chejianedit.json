@@ -1,0 +1,26 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "MOMtype":[{
+    "id":"1212",
+    "name":"化学工厂"
+  },{
+    "id":"12123",
+    "name":"生产工厂"
+  }],
+  "Workshop":{
+    "id":"0",
+    "workshopNo  ":"1",
+    "workshopCode":"FSLY001’",
+    "workshopName":"复晟铝业有限公司生产工厂",
+    "workshopAlias":"复晟铝业",
+    "fctr":{
+      "id":"12123",
+      "fctrName":"生产工厂"
+    },
+    "enable":"0",
+    "displayOrder":"1000",
+    "remark":"这是工厂"
+  }
+}

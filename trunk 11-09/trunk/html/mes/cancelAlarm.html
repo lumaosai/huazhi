@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入样式-->
+    <link rel="stylesheet" href="../../css/customDatagrid.css">
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        #inputForm{
+            margin-top: 10px;
+            width:100%;
+        }
+        .cancle{
+            display: inline-block;
+            vertical-align: top;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        #remark{
+            width:70%;
+            height:120px;
+            resize: none;
+            outline: none;
+            border:1px solid #e5e6e7;
+            padding: 5px 8px;
+            line-height: 18px;
+        }
+        #remark:focus{
+            border-color:#1ab394;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="cancelAlarm">
+<form id="inputForm" class="form-horizontal" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <div class="cancle">取消原因:</div>
+    <textarea id="remark" name="DealInstruction" minlength="1" maxlength="200"></textarea>
+</form>
+
+<!--核心插件-->
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+<!--附属插件-->
+<script src="../../plugins/validate/jquery.validate.min.js"></script>
+<script src="../../plugins/validate/messages_zh.min.js"></script>
+<script src="../../plugins/jBox/jquery.jBox-2.3.min.js"></script>
+<script src="../../plugins/ibox.2.2/ibox.js"></script>
+<script src="../../plugins/layer/layer.js"></script>
+<script src="../../plugins/icheck/icheck.min.js"></script>
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../../plugins/datatables/js/jquery.dataTables.min.js"></script>
+<!--自定义文件-->
+<script src="../../js/common.js"></script>
+<script src="../../js/apiApi.js"></script>
+<script src="../../js/customForm.js"></script>
+<script>
+    $(document).ready(function () {
+        var id = getQueryString('dataId');
+        $('input').val(id);
+        $('#inputForm').attr('action',admin_Api+'/api/mes/AlertMsg/cancelAlarm')
+    });
+
+
+    //回调函数，在修改和添加时，供openDialog调用提交表单。
+    function doSubmitForm(layIdx, callbackFn){
+        if($.trim($("#remark").val()) == ""){
+            Mom.layAlert("请填写取消原因！");
+            return;
+        }
+        var formObj =$('#inputForm');
+        var url = formObj.attr('action');
+        var validateFlag = formObj.validate({
+            submitHandler: function(form){
+                var formdata = formObj.serializeJSON()/*JSON.stringify()*/;
+                Mom.layMsg('正在提交，请稍等...',{time: 1000});
+                Api.ajaxForm(url,formdata,function(result){
+                    if(result.success == true){
+                        Mom.layMsg('已成功提交',{time: 1000});
+                        setTimeout(function(){
+                            // var src =top.getActiveTab().attr('src');
+                            //获取父层
+                            // var index = top.layer.getFrameIndex(window.name);
+                            //关闭弹出层
+                            top.layer.closeAll(layIdx);
+                            if(callbackFn){
+                                callbackFn();
+                            }
+                        },1000);
+                    }else{
+                        layAlert(result.message)
+                    }
+                });
+            },
+            errorContainer: "#messageBox",
+            errorPlacement: function(error, element) {
+                $("#messageBox").text("输入有误，请先更正。");
+                if (element.is(":checkbox")||element.is(":radio")||element.parent().is(".input-append")){
+                    error.appendTo(element.parent().parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        }).form;
+        if(validateFlag){
+            formObj.submit();
+            // $(".layui-layer-btn0").css({"background":'red'});
+        }
+    }
+</script>
+</body>
+</html>

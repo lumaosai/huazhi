@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <link rel="stylesheet" href="../../css/home/workBench-iconsLibrary/iconfont.css">
+    <style>
+        .main{padding:10px 15px;}
+        dl{
+            display: block;
+            padding: 0 10px;
+            margin: 8px 0;
+        }
+        /* .title{
+            padding-left:40px;
+        } */
+        /* h4{
+            font-weight: 400;
+            padding: 0 10px;
+        } */
+        dt,dl>dt{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        dd {
+            list-style: none;
+            border: 2px solid #bdbdbd;
+            border-radius: 10px;
+            margin:0 10px 10px 0;
+            cursor: pointer;
+            padding: 6px 10px;
+            display: inline-block;
+            vertical-align: top;
+            min-width: 80px;
+        }
+        dd:hover {
+            border: 2px solid #21d7a7;
+        }
+        dd.active{
+            border: 2px solid #21d7a7;
+        }
+        dd.active>i,dd.active>div,dd:hover>div,dd:hover>i{
+            color: #37c3a0
+        }
+
+        dd div {
+            text-align: center;
+            color: #333;
+            font-size: 12px;
+        }
+
+        i.iconfont {
+            color:#525252;
+            text-align: center;
+            display: block;
+            max-width: 60px;
+            max-height: 40px;
+            margin: 0 auto ;
+            font-size: 28px;
+            overflow: hidden;
+            line-height: 28px;
+        }
+
+        .markdown > dl dd, .markdown blockquote dl > dd {
+            margin-left: 0;
+        }
+
+
+    </style>
+
+
+</head>
+<body id="fontInit">
+<div class="main markdown">
+    <div class="numberBox">
+        <dl class="number icon_lists clear"></dl>
+    </div>
+    <div class="shortcutBox">
+        <dl class="plan icon_lists clear">
+            <dt>生产计划</dt>
+        </dl>
+        <dl class="dis icon_lists clear">
+            <dt>生产调度</dt>
+        </dl>
+        <dl class="ope icon_lists clear">
+            <dt>操作管理</dt>
+        </dl>
+    </div>
+</div>
+<script data-main="/js/module/privatelyOwned/mMUpdate" src="/js/zlib/require.js"></script>
+</body>
+</html>

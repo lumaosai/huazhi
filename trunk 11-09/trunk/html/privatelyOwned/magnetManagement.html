@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>磁铁管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <link rel="stylesheet" href="../../css/privatelyOwned.css">
+</head>
+<body id="magnetManagement" class="wrapper-gray">
+    <div class="ibox">
+        <!--标题 按钮-->
+        <div class="ibox-title gray-line " style="position: relative;">
+            <div class="titName clearfix">
+                <span>磁贴管理</span>
+            </div>
+            <button class="btn  btn-check" id="btn-add" type="button" style="position: absolute;top:5px;right:10px;z-index: 99;" onclick="window.location.href='./registerMmIndex.html'">注册磁贴</button>
+            <!--按钮-->
+            <div class="clearfix tile-nav" >
+                <div class="apsType-box pull-left ">
+                    <ul class="apsType-linkage  clearfix" id="titleName">
+                    </ul>
+                </div>
+                <div id="refresh-btn" class="btn pull-right"><i class="fa fa-refresh"></i>刷新</div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div id="iframeCon">
+                <iframe id="ifr" src="../privatelyOwned/mMInit.html"  frameborder="0"></iframe>
+            </div>
+        </div>
+
+    </div>
+    <script data-main="/js/module/privatelyOwned/magnetManagement" src="/js/zlib/require.js"></script>
+</body>
+</html>

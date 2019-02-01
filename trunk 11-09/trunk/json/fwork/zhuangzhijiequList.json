@@ -1,0 +1,33 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "page":{
+    "rows":[{
+      "id":"1",
+      "wspId":"0",
+      "areaNo":"1232",
+      "areaCode":"FSLY001’",
+      "areaName":"复晟铝业有限公司生产工厂",
+      "areaAlias":"复晟铝业",
+      "fctrType":"生产工厂",
+      "enable":"0",
+      "displayOrder":"1000",
+      "remark":"这是工厂",
+      "MOMtype":[{
+        "id":"1212",
+        "name":"化学工厂"
+      },{
+        "id":"12123",
+        "name":"生产工厂"
+      }]
+    }],
+    "count":7,
+    "pageCount":5,
+    "pageNo":1,
+    "endRowNum": 17,
+    "startRowNum": 0,
+    "pageSize":10
+  }
+
+}

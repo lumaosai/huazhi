@@ -1,0 +1,112 @@
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+.label-warning {
+  background-color: #f0ad4e; }
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #2f4050; }
+  #wrapper #page-wrapper {
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    padding: 0 15px;
+    position: inherit;
+    margin: 0 0 0 220px;
+    background-color: #fff; }
+    #wrapper #page-wrapper .border-bottom .navbar-fixed-top, #wrapper #page-wrapper .border-bottom .navbar-static-top {
+      background: #f3f3f4; }
+    #wrapper #page-wrapper .border-bottom .navbar {
+      border: 0;
+      position: relative;
+      min-height: 50px;
+      margin-bottom: 20px; }
+    #wrapper #page-wrapper .border-bottom .navbar-static-top {
+      border-radius: 0;
+      z-index: 1000; }
+      #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-header {
+        height: 60px;
+        width: 60%;
+        float: left; }
+        #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-header .btn-primary {
+          background-color: #1ab394;
+          border-color: #1ab394;
+          color: #FFFFFF;
+          border-radius: 3px;
+          padding: 4px 12px;
+          margin: 14px 5px 5px 20px;
+          font-size: 14px;
+          float: left; }
+      #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right {
+        display: inline-block; }
+        #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li {
+          float: left; }
+          #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li .dropdown-messages, #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li .dropdown-alerts {
+            width: 310px;
+            padding: 10px; }
+          #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li > ul {
+            margin-top: 0; }
+        #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li:last-child {
+          margin-right: 10px;
+          display: inline-block;
+          height: 60px; }
+          #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li:last-child > a {
+            display: block;
+            width: 120px;
+            height: 60px; }
+          #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li:last-child > a > span {
+            position: relative;
+            top: 0; }
+        #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right .label-primary, #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right .badge-primary {
+          background-color: #1ab394;
+          color: #FFFFFF; }
+        #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li > a {
+          color: #999c9e;
+          font-size: 14px;
+          padding: 20px 10px;
+          min-height: 50px;
+          display: block;
+          font-weight: 600;
+          overflow: hidden; }
+          #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li > a > i {
+            margin-right: 6px; }
+          #wrapper #page-wrapper .border-bottom .navbar-static-top .navbar-right > li > a > span {
+            line-height: 12px;
+            padding: 1px 5px;
+            position: absolute;
+            right: 6px;
+            top: 12px; }
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px; }
+
+/*# sourceMappingURL=index.css.map */

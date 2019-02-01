@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style type="text/css">
+        #left.leftBox {padding-right: 0;}
+        #tree {max-height:420px;}
+        .ztree li a.curSelectedNode {
+            background-color: #f4ff92 !important;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body id="planTempPreserve" class="wrapper-white">
+    <div class="toobar-btns mgb-10">
+        <button class="btn btn-white btn-sm" title="添加" id="btn-add">
+            <i class="fa fa-plus"></i> 添加指标标题
+        </button>
+        <button class="btn btn-white btn-sm" title="添加" id="btn-addSon">
+            <i class="fa fa-plus"></i> 添加下级指标
+        </button>
+
+        <button class="btn btn-white btn-sm" title="删除" id="btn-del">
+            <i class="fa fa-trash-o"></i> 删除指标
+        </button>
+        <button class="btn btn-white btn-sm" title="编辑" id="btn-update">
+            <i class="fa fa-file-text-o"></i> 排列顺序
+        </button>
+        <button class="btn btn-white btn-sm " style="visibility: hidden" id="refresh-btn"
+                onclick="window.location.reload()" title="刷新"><i class="glyphicon glyphicon-repeat"></i> 刷新
+        </button>
+    </div>
+
+    <div id="left" class="leftBox">
+        <ul id="tree" class="ztree leftBox-content"></ul>
+    </div>
+
+    <script data-main="/js/module/producePlan/planTemple" src="/js/zlib/require.js"></script>
+</body>
+</html>

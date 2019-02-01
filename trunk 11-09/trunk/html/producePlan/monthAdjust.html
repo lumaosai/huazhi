@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>月计划--全厂主要生产技术指标计划--调整页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .panel-body{
+            border-top: none;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .datagrid-header-inner{
+            background: #1ab394;
+        }
+        .datagrid-header-row td{
+            color:#fff;
+        }
+        .changeVla{
+            border:1px solid #1ab394;
+            font-size: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .dataGridList .tableItemBox{border:none;border-radius: 0;}
+    </style>
+</head>
+<body id="monthAdjust" >
+<div >
+    <div class="ibox">
+        <div class="ibox-title clearfix">
+            <div class="pull-right">
+                <button class="btn btn-white " id="btn-count" type="button" data-status="0"><i class="fa fa-calculator"></i>计算</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="dataGridList">
+                <div class="tableItemBox">
+                    <h1 class="titName">装置运转计划</h1>
+                    <div class="renderTable-box">
+                        <table id="renderTable" class="customTable">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>1月</th>
+                                <th>2月</th>
+                                <th>3月</th>
+                                <th>4月</th>
+                                <th>5月</th>
+                                <th>6月</th>
+                                <th>7月</th>
+                                <th>8月</th>
+                                <th>9月</th>
+                                <th>10月</th>
+                                <th>11月</th>
+                                <th>12月</th>
+                                <th>合计</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tableItemBox">
+                    <h1 class="titName">原料计划</h1>
+                    <table id="td1" class="tableItem" >
+                    </table>
+                </div>
+                <div class="tableItemBox">
+                    <h1 class="titName">消耗计划</h1>
+                    <table id="td2" class="tableItem" >
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script data-main="/js/module/producePlan/monthPlanTabs" src="/js/zlib/require.js"></script>
+</body>
+</html>

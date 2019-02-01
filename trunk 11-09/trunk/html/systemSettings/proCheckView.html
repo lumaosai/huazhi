@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性管理--新增、编辑</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="proCheckView" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.admin$/api/sys/SysAuthProperty/ajaxSave" method="post">
+    <input id="id" name="id" type="hidden" />
+    <table class="table form-table">
+        <tbody>
+        <tr>
+            <td class="active require" >鉴权属性名称:</td>
+            <td>
+                <input id="proName" name="name" type="text" value=""  class="form-control" require="true" >
+            </td>
+            <td class="active require" >鉴权属性编码:</td>
+            <td>
+                <input id="proCode" name="code" type="text" value=""  class="form-control" require="true" >
+            </td>
+        </tr>
+        <tr>
+            <td  class="active">描述:</td>
+            <td>
+                <input id="prodes" name="des" type="text" value=""  class="form-control" >
+            </td>
+            <td class="active"> 层级类型:</td>
+            <td>
+                <select id="tierType" name="tierType" class="form-control">
+                    <option value="1">层级维度</option>
+                    <option value="0">单一维度</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否成对显示:</td>
+            <td>
+                <select id="isTwins" name="isTwins" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+            <td class="active">仅可选叶子节点:</td>
+            <td>
+                <select id="isLeafCheck" name="isLeafCheck" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否显示:</td>
+            <td >
+                <select id="isVisibility" name="isVisibility" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+            <td class="active">是否启用:</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">备注:</td>
+            <td  colspan="3">
+                <textarea  id="remarks" name="remark" maxlength="200" class="form-control" rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/proIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

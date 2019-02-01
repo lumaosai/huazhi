@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进出场列表页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="turnover" class="theme-tight wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName clearfix">
+                <span>进出厂点</span>
+                <div class="pull-right toolbar-btns">
+                    <button class="btn" id="btn-add"><i class="fa fa-plus "></i> 新增
+                    </button>
+                    <button class="btn" id="btn-edit"><i class="fa fa-edit  "></i> 编辑
+                    </button>
+                    <button class="btn" id="btn-import"><i class="fa fa-download "></i> 导入
+                    </button>
+                    <button class="btn" id="btn-export"><i class="fa fa-upload "></i> 导出
+                    </button>
+                    <button class="btn" id="btn-help"><i class="fa fa-question-circle-o "></i> 帮助
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar-form clearfix">
+                <div class="form-inline">
+                    <span>进出场编码：</span>
+                    <input id="nodeNo" name="nodeNo" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>进出场名称：</span>
+                    <input id="nodeName" name="nodeName" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>运输类型：</span>
+                    <select name="transType" class="form-control" id="transType">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>进出类型：</span>
+                    <select name="inputType" class="form-control" id="inputType">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+                    <button class="btn btn-reset " id="reset-btn"><i class="fa fa-refresh"></i> 重置
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <!--表头-->
+                <thead>
+                <tr role="row">
+                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                    <th>进出厂点编号</th>
+                    <th>进出厂点编码</th>
+                    <th>进出厂点名称</th>
+                    <th>进出厂点别名</th>
+                    <th>进出厂点精度</th>
+                    <th>装卸台</th>
+                    <th>运输类型</th>
+                    <th>进出类型</th>
+                    <th>启用标识</th>
+                    <th>显示顺序</th>
+                    <th>说明</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+
+                </tbody>
+            </table>
+            <!--分页-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="../../js/module/material/factoryModels/turnover" src="/js/zlib/require.js"></script>
+</body>
+</html>

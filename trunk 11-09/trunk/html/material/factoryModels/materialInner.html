@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物料管理</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+
+<body id="materialInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.mtrl$/api/fm/Mtrl/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="table form-table ">
+        <tbody>
+        <tr>
+            <td class="require active">物料编号:</td>
+            <td>
+                <input id="mtrlNo" name="mtrlNo" class="form-control " require="true" type="number" dataType="Range" placeholder="1500000-1589999"  min="1500000" max="1589999" value="" ></td>
+            <td class="require active">物料编码:</td>
+            <td>
+                <input id="mtrlCode" name="mtrlCode" class="form-control "  require="true" type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="require active">物料名称:</td>
+            <td>
+                <input id="mtrlName" name="mtrlName" class="form-control" require="true" type="text" value="" >
+            </td>
+            <td class="require active">物料别名:</td>
+            <td>
+                <input id="mtrlAlias" name="mtrlAlias" class="form-control" require="true" type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">物料类型:</td>
+            <td>
+                <select id="mtrlType" name="mtrlType" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">量纲:</td>
+            <td>
+                <select id="dimensionType" require="true" name="dimensionType"  class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">上级物料:</td>
+            <td>
+                <select require="true" data-height="150px" id="parentMtrlId" name="parent.id"  class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">VCF类别:</td>
+            <td>
+                <select id="vcfType" data-height="150px" name="vcfType" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">数据精度:</td>
+            <td>
+                <input require="true" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" .id="pres" name="pres" class="form-control" type="number"  require="true" dataType="Range" min="0" max="100" value="0" >
+            </td>
+            <td class="active ">显示顺序:</td>
+            <td>
+                <input  onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" id="displayOrder" name="displayOrder" class="form-control"   type="number" value="0">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">启用标识:</td>
+            <td>
+                <!--<input type="checkbox" name="checkboxName" class="i-checks" value="1" checked>-->
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">说明:</td>
+            <td>
+                <input id="remark" name="remark" class="form-control" type="text" value="">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/material" src="/js/zlib/require.js"></script>
+</body>
+</html>

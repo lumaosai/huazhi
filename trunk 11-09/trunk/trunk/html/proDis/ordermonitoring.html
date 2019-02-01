@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>生产调度--调度指令--指令监控</title>
+</head>
+<body id="ordermonitoring" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>指令监控</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline gettingTime"></div>
+                <div class="form-inline col-1ab394">
+                    <i class="fa fa-check-circle"></i>
+                    执行完成:<span></span>
+                </div>
+                <div class="form-inline col-ffa82d">
+                    <i class="fa icon-wait"></i>
+                    待执行:<span></span>
+                </div>
+                <div class="form-inline col-red">
+                    <i class="fa fa-exclamation-circle"></i>
+                    停止执行:<span></span>
+                </div>
+                <div class="form-inline btn-cacel">
+                    <i class="fa fa-times-circle"></i>
+                    取消执行:<span></span>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--创建表格-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <thead>
+                <tr>
+                    <th>工序</th>
+                    <th>指令</th>
+                    <th>状态</th>
+                    <th>下达时间</th>
+                    <th>结束时间</th>
+                </tr>
+                </thead>
+                <tbody id="treeTableBody">
+                </tbody>
+            </table>
+            <p id="wsConnError"></p>
+        </div>
+    </div>
+    <script data-main="/js/module/proDis/ordermonitoring" src="/js/zlib/require.js"></script>
+</body>
+</html>

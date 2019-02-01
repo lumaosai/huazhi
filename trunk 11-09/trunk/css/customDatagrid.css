@@ -1,0 +1,76 @@
+.tableItemBox {
+  margin-bottom: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.panel-header {
+  background: #f5f5f6 !important;
+  padding: 5px 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-weight: bold;
+}
+
+.panel-title {
+  color: black;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+}
+
+.panel-header, .panel-body {
+  border-color: #f5f5f6;
+}
+
+
+.datagrid-toolbar {
+  /*height: 0;*/
+  padding: 0;
+}
+
+.datagrid-cell, .datagrid-header .datagrid-cell span {
+  font-size: 14px;
+  line-height: 30px;
+}
+.datagrid-btable tbody td .datagrid-cell{
+  white-space: normal;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.datagrid-btable tbody tr td:last-child, .datagrid-btable tr td:last-child,.datagrid-header-row td:last-child{
+  border-right: 0;
+}
+
+.datagrid-btable tr td:last-child {
+  position: relative;
+}
+
+.datagrid-view2 .datagrid-btable tr td:last-child:after {
+  position: absolute;
+  bottom: -1px;
+  right: -31px;
+  width: 30px;
+  border-bottom: 1px dotted #ccc;
+  content: "";
+}
+
+.datagrid-btable tr {
+  position: relative;
+}
+
+.datagrid-view2 .datagrid-btable tr.datagrid-row-over td:last-child div:after {
+  content: "";
+  background: #eaf2ff;
+  width: 50px;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  bottom: 0;
+}
+
+.datagrid-btable > tbody > tr > td, .datagrid-htable td {
+  padding: 0 5px;
+}

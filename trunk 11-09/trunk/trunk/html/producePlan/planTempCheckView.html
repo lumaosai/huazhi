@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参数管理</title>
+</head>
+<body id="planTempCheckView" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" method="post">
+    <input id="id" name="id" type="hidden" />
+    <table class="table form-table">
+        <tr>
+            <td class="require active">模版名称:</td>
+            <td>
+                <input id="opeName" name="name" require="true" type="text" class="form-control">
+            </td>
+            <td class="require active">模版类型:</td>
+            <td>
+                <select id="opeCode" name="type" require="true" class="form-control select2"></select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否启用：</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/producePlan/planTemple" src="/js/zlib/require.js"></script>
+</body>
+</html>

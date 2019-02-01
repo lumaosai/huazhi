@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width,initial-scale=1.0">
+    <title>月计划--编辑页面</title>
+    <style>
+        .wrapper{min-height:100%;height:auto;}
+        .targetPlanTab{background: #f3f3f3;}
+        .targetPlanTit{font-size:18px;line-height: 30px;}
+        .targetPlanTab-nav{position: relative;z-index: 99;margin:0;}
+        .targetPlanTab-nav li{padding:0 20px; text-align: center;line-height: 42px;font-size:14px;float:left;cursor: pointer;border:1px solid #e3e3e3;border-left:none;background: #f9f9f9;border-bottom:none;position: relative;}
+        .targetPlanTab-nav li:before,.targetPlanTab-nav li:after{content: "";position: absolute;left:0; width:100%;height:1px;}
+        .targetPlanTab-nav li:before{border-top:1px solid transparent;top:0;}
+        .targetPlanTab-nav li:after{border-bottom:1px solid transparent;bottom:-1px;}
+        .targetPlanTab-nav li.active,.targetPlanTab-nav li:hover{border-top-color:#1ab394;border-bottom:none;background: #fff;}
+        .targetPlanTab-nav li.active:before,.targetPlanTab-nav li:hover:before{
+            border-top-color:#1ab394;
+        }
+        .targetPlanTab-nav li.active:after,.targetPlanTab-nav li:hover:after{
+            border-bottom-color:#fff;
+        }
+        #monthName{width: 200px;background: #fff;padding: 4px 12px;height: 30px;border-radius: 6px;cursor: pointer;}
+        #iframeCon{background: #fff;border-top:1px solid #e3e3e3;min-height:323px;padding:10px;}
+        #iframeCon iframe{position: relative;top:0;padding:0;background: #fff;}
+        .wrapper-content{background: #f3f3f3;margin:0;}
+        .apsType-box{margin:10px 0 0;}
+        .button-item{margin-top:6px;display: none;}
+        .button-item button{display: none;}
+        .PPMMPP_ZDGZO button{display: block;}
+        .titName{position: relative;border-bottom:1px solid #eee;padding-bottom:8px;}
+        .titName:before {content: "";width: 4px;height: 20px;background: #1ab394;position: absolute;
+            top: 50%;left: 0;margin-top: -14px;}
+        #button-group{margin:0;}
+        #button-group button{margin:0 6px;}
+    </style>
+</head>
+<body id="proTargetPlanEdit" class="wrapper-gray">
+    <input type="hidden" id="whichYear">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName targetPlanTit ">
+                <span>生产计划</span>
+            </div>
+            <div class="toolbar-form">
+                <i class="fa fa-map-marker " aria-hidden="true" style="vertical-align: middle;margin-top:10px;color:#1ab394;"></i>
+                <div class="form-inline year">
+                    年计划：
+                    <select name="yearPlan" class="inputFocus" id="yearPlan">
+                        <option value=''>请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline month">
+                    计划周期（月）：
+                    <select name="" id="getMonth" class="inputFocus">
+                        <option value="">请选择</option>
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
+                    </select>
+                </div>
+                <div class="form-inline monthPlan">
+                    月计划名称：
+                    <input type="text" name="monthName" class="inputFocus" id="monthName"  placeholder="请输入计划名称"  />
+                </div>
+                <input type="hidden" id="mainId">
+                <div class="toolbar-btns pull-right">
+                    <button type="button" class="back-btn btn btn-white">
+                        <i class="fa fa-reply"></i>
+                        返回</button>
+                    <button class="btn btn-submit  btn-white hidden" id="btnSub">
+                        <i class="fa fa-upload"></i>
+                        提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content pag0">
+            <div class="clearfix">
+                <div class="targetPlanTab clearfix">
+                    <ul class="targetPlanTab-nav pull-left">
+                        <li class="active">全厂主要生产技术指标计划</li>
+                        <li>商务采购指标计划</li>
+                        <li>安全、环保、设备管理总体指标计划</li>
+                        <li>重点工作计划</li>
+                    </ul>
+                    <ul id="button-group" class="pull-right">
+                        <!--全厂主要生产技术指标计划-->
+                        <li class="button-item PPMMPP_QCJSO">
+                            <button class="btn btn-adjust pull-right btn-white" id="btn-adjust" type="button">调整</button>
+                            <button class="btn pull-right btn-save" type="button" data-status="0">
+                                <i class="fa fa-save"></i>保存
+                            </button>
+                        </li>
+                        <!--商务采购指标计划-->
+                        <li class="button-item PPMMPP_SWCGO">
+                            <button class="btn btn-bgf29 pull-right btn-save" type="button" data-status="0" ><i class="fa fa-save"></i>保存</button>
+                        </li>
+                        <!--安全、环保、设备管理总体指标计划-->
+                        <li class="button-item PPMMPP_AHSO">
+                            <button class="btn  btn-bgf29 btn-save pull-right " type="button" data-status="0" ><i class="fa fa-save"></i>保存</button>
+                        </li>
+                        <!--重点工作计划-->
+                        <li class="button-item PPMMPP_ZDGZO">
+                            <button class="btn pull-right btn-save" type="button" data-status="0">
+                                <i class="fa fa-save"></i>保存
+                            </button>
+                            <button class="btn pull-right btn-delete" type="button" data-status="1" >
+                                <i class="fa fa-trash-o"></i>删除
+                            </button>
+                            <button class="btn pull-right btn-add" type="button" data-status="2">
+                                <i class="fa fa-save"></i>增加
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="targetPlanTab-con" id="iframeCon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/monthPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

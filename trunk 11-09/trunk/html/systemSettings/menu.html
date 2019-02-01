@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<!--内容-->
+<body id="menu-content" class="wrapper-gray">
+<div class="ibox">
+    <!--头部-->
+    <div class="ibox-title">
+        <div class="titName"><span>菜单管理</span></div>
+        <!--按钮组-->
+        <div class="toolbar-btns clearfix">
+            <div class="pull-left">
+                <button class="btn btn-white btn-sm " id = "add-btn" onclick="Bus.openEditDialog('新增菜单','systemSettings/menuInner.html','800px','456px')"
+                        title="添加"><i class="fa fa-plus"></i> 添加
+                </button>
+                <button class="btn btn-white btn-sm" id = "edit-btn"
+                        title="修改"><!--onclick="#"--><i class="fa fa-file-text-o"></i> 修改
+                </button>
+                <button class="btn btn-white btn-sm"  id = "delete-btn"><i class="fa fa-trash-o"></i>删除
+
+                </button>
+                <button  class="btn btn-white btn-sm" id="updateSort-btn" title="保存排序"><i class="fa fa-save"></i> 保存排序
+                </button>
+                <button class="btn btn-white btn-sm " id="refresh-btn" title="刷新" onclick="window.location.reload()"><i class="glyphicon glyphicon-repeat"></i> 刷新
+                </button>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-white btn-sm " id="sync-btn"
+                        title="同步到属性"><i class="glyphicon glyphicon-refresh"></i> 同步到属性
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--内容区-->
+    <div class="ibox-content">
+        <table id="tt" class="treeGridTable " style="width:100%; max-height:550px">
+            <thead>
+            <tr>
+                <th field="id" width="60" checkbox="true"></th>
+                <th field="name" width="150" formatter="nameFmt">名称</th>
+                <th field="href" width="200">链接</th>
+                <th field="sort" width="70" align="center" formatter="sortFmt">排序</th>
+                <th field="isShow" width="50" align="center" formatter="yesNoFmt">可见</th>
+                <th field="module" width="50" align="center">所属模块</th>
+                <th field="null"  class="autoWidth" formatter="operFmt" align="center">操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<script data-main="/js/module/systemSettings/menu" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "retCode": "10000",
+  "message": "操作成功",
+  "rows":[
+    {
+      "code":"lygx",
+      "name":"原料工序"
+    },
+    {
+      "code":"lygx1",
+      "name":"原料工序1"
+    },
+    {
+      "code":"lygx2",
+      "name":"原料工序2"
+    },
+    {
+      "code":"lygx3",
+      "name":"原料工序3"
+    }
+  ]
+}

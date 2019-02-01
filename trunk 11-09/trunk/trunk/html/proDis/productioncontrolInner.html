@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    .big p{
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .btnaddr{
+        width: 25px;
+        background-color: #1ab394;
+        border: none;
+        font-size: 17px;
+        color: white;
+    }
+    .content{
+        margin: 40px;
+
+    }
+    .content i{
+        color: gainsboro;
+        padding: 5px;
+    }
+    .datamsg{
+        padding-top: 10px;
+    }
+    .btn{
+
+    }
+    .textinput .context{
+        width: 830px;
+        margin-top: 10px;
+        height: 75px;
+        resize: none;
+        outline: none;
+        border: 1px solid #cacaca;
+    }
+    .textinput{
+        position: relative;
+    }
+    .inputc{
+        width: auto !important;
+        border: none;
+        background-color: white !important;
+    }
+    .textinput .btnadd{
+        width: 25px;
+        border: none;
+        background-color: #1ab394;
+        color: white;
+        font-size: 18px;
+        position: absolute;
+        top: 37px;
+        left: 840px;
+    }
+    .textinput .btnremove{
+        width: 25px;
+        border: none;
+        background-color: #1ab394;
+        color: white;
+        font-size: 18px;
+        position: absolute;
+        top: 37px;
+        left: 920px;
+    }
+
+    textarea{
+        width: 50%;
+    }
+    .btnadd4{
+        position: relative;
+        top: -20px;
+    }
+</style>
+<body id="productioncontrolInner" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>实产管控</span></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <ul class="rank-ul">
+                        	<li>
+                                <span class="title"> 事件类型</span>
+                                <select name="" id="type">
+                                    <option value="">-- 请选择 --</option>
+                                    <option value="指标类">指标类</option>
+                                    <option value="消耗类">消耗类</option>
+                                    <option value="能源类">能源类</option>
+                                    <option value="生产类">生产类</option>
+                                </select>
+                            </li>
+                            <li>
+                               	<span class="title">事件</span>
+                                <select name="" id="event" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li class="year">
+                                	<span class="title">工序</span>
+                                <select name="" id="proc" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li>
+                               	 <span class="title">原因</span>
+                                <select name="" id="cause" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                                   <li >
+                                        <span class="title">等级</span>
+                                <select name="" id="grade">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pull-right">
+                            <button class="btn  bg-ffa82d btn-white" id="back-btn" type="button">
+                                <i class="fa fa-reply"></i>返回</button>
+                            <button class="btn btn-search  bg-ffa82d btn-white" id="add-btn" type="button">
+                                <i class="fa fa-save"></i>保存</button>
+                            <button class="btn btn-search  bg-ffa82d btn-white" id="close-btn" type="button">
+                                <i class="fa icon-create"></i>关闭事故单</button>
+                    </div>
+
+                </div>
+            </div>
+			
+						<!--事故描述，解决方案，执行跟踪-->
+			<div class="SGMS content"><!--事故描述-->
+                <div class="big1 big">
+                    <div>  <p>事故描述:</p><input type="button" class="addbtn1 btnaddr" value="+"></div>
+                    <div class="parentbox" id="SGMS"></div>
+                </div>
+            </div>
+            <div class="JJFA content"><!--解决方案-->
+                <div class="big1 big">
+                    <div>  <p>解决方案:</p><input type="button" class="addbtn2 btnaddr" value="+"></div>
+                    <div class="parentbox" id="JJFA"></div>
+                </div>
+            </div>
+            <div class="ZXGZ content"><!--执行跟踪-->
+               <div class="big1 big">
+                    <div>  <p>执行跟踪:</p><input type="button" class="addbtn3 btnaddr" value="+"></div>
+                    <div class="parentbox" id="ZXGZ"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/proDis/productioncontrol" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width,initial-scale=1.0">
+    <title>年计划新增、编辑页面</title>
+    <link rel="stylesheet" href="../../js/plugins/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="../../js/plugins/easyui/themes/default/datagrid.css">
+    <link rel="stylesheet" href="../../css/customDatagrid.css">
+    <link rel="stylesheet" href="../../css/aps.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body id="yearPlanUpdate" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName">复晟铝业<span class="Moyear"></span><span>年生产经营计划</span></div>
+            <div class="clearfix btn-box">
+                <div class="pull-left">
+                    <ul class="apsType-linkage">
+                        <li class="month">
+                            计划周期（年）：
+                            <input type="text" value="" id="yMPicker" class="time-input inputFocus datePicker" placeholder="请选择年份">
+                        </li>
+                        <li class="month">
+                            计划名称：
+                            <input type="text" value="" id="yearName" class="time-input not-allowed inputFocus datePicker" placeholder="请输入计划名称" disabled="disabled" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-back btn-white" id="back-btn">
+                        <i class="fa fa-reply"></i> 返回
+                    </button>
+                    <button class="btn btn-save hidden  btn-bgf29">
+                        <i class="fa fa-save"></i>
+                        保存</button>
+                    <button class="btn btn-white btn-submit hidden"><i class="fa fa-upload"></i>提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="tableItemBox" >
+                <table id="td0"  class="tableItem" title="产品产量" ></table>
+            </div>
+            <div class="tableItemBox" >
+                <table id="td1"  class="tableItem" title="产品销量"></table>
+            </div>
+            <div class="tableItemBox" >
+                <table id="td2"  class="tableItem" title="质量计划"></table>
+            </div>
+            <div class="tableItemBox" >
+                <table id="td3"  class="tableItem" title="主要消耗指标计划"></table>
+            </div>
+            <div class="tableItemBox" >
+                <table id="td4"  class="tableItem" title="主要指标计划"></table>
+            </div>
+            <div class="tableItemBox" >
+                <table id="td5"  class="tableItem" ></table>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/yearPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>生产调度--调度指令页面</title>
+</head>
+<body id="disCommandsIndex" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>调度指令</span></div>
+            <div class="toolbar-form clearfix">
+                <div class="form-inline job">
+                    工序：
+                    <select name="proc" id="proc" class="width-fix-120">
+                        <option value="">请选择</option>
+
+                    </select>
+                </div>
+                <div class="form-inline rank">
+                    级别：
+                    <select name="grade" id="grade" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline grade">
+                    分类：
+                    <select name="kind" id="kind" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline content">
+                    指令内容：
+                    <input type="text" name="contentParam" id="contentParam" value="">
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-search btn-white" id="btn-search" type="button">
+                        <i class="fa fa-search"></i>
+                        查询
+                    </button>
+                    <button class="btn btn-white" id="btn-add" type="button" onclick="window.location.href='./createInstructionIndex.html'">
+                        <i class="fa icon-create"></i>
+                        创建指令
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--内容-->
+        <div class="ibox-content">
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+                <thead>
+                <tr>
+                    <th class='autoWidth'>工序</th>
+                    <th class='autoWidth'>指令内容</th>
+                    <th class='autoWidth'>指令级别</th>
+                    <th class='autoWidth'>指令分类</th>
+                    <th class='autoWidth'>创建时间</th>
+                </tr>
+                </thead>
+                <tbody id="treeTableBody" >
+
+                </tbody>
+            </table>
+
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="/js/module/proDis/disCommandsIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

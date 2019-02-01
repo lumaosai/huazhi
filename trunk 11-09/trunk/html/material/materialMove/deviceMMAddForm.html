@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增物料弹出页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="deviceMMAddFrom" class="theme-tight wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/mv/Unit/form/" method="post"
+      novalidate="novalidate">
+    <input id="id" name="id" type="hidden" value="" >
+    <input id="date" name="date" type="hidden" value="">
+    <input id="shift" name="shift" type="hidden" value="">
+    <input id="unitId" name="unitId" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="width-15 active">操作类型:</td>
+            <td class="width-35">
+                <select name="mtrlMvOprtType" id="operationType" class="form-control select2">
+                </select>
+            </td>
+            <td class="width-15 active">使用拓扑结构:</td>
+            <td class="width-35">
+                <input type="checkbox" id="useTopo" name="useTopo" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">本方节点:</td>
+            <td>
+                <select name="dlvNodeId" id="dlvNodeId" class="form-control select2">
+                    <option value>请选择</option>
+                </select>
+            </td>
+            <td class="active">对方节点:</td>
+            <td>
+                <select name="rcvNodeId" id="oppositeNode" class="form-control select2">
+                    <option value>请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">本方物料:</td>
+            <td>
+                <input type="text" id="ownMaterial" name="dlvMtrl.mtrlName" class="form-control">
+                <input type="hidden" id="dlvMtrlId" name="dlvMtrlId" class="form-control">
+
+            </td>
+            <td class="active">对方物料:</td>
+            <td>
+                <input type="text" id="oppositeMaterial" name="rcvMtrl.mtrlName" class="form-control">
+                <input type="hidden" id="rcvMtrlId" name="rcvMtrlId" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">开始时间:</td>
+            <td>
+                <input type="text" autocomplete="off" id="startTime" name="begMvDate" class="form-control">
+            </td>
+            <td class="active">结束时间:</td>
+            <td>
+                <input type="text" autocomplete="off" id="endTime" name="endMvDate" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">创建时间:</td>
+            <td>
+                <input type="text" autocomplete="off" id="createTime" name="createDate" class="dateTimePicker form-control">
+            </td>
+            <td class="active">关闭时间:</td>
+            <td>
+                <input type="text" id="closeTime" name="clsDate" class="dateTimePicker form-control">
+            </td>
+
+        </tr>
+        <tr>
+            <td class="active">创建人:</td>
+            <td>
+                <input type="text" id="createBy" name="createName" class=" form-control">
+            </td>
+            <td class="active">关闭人:</td>
+            <td>
+                <input type="text" id="closeBy" name="clsBy" class=" form-control">
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/materialMove/device" src="/js/zlib/require.js"></script>
+<!--结束-->
+</body>
+</html>

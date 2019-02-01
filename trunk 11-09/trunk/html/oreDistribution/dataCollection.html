@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配矿管理--配矿方案--台账--数据采集页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+
+        #Datetime{
+            border: 1px solid #e5e6e7;
+            border-radius: 3px;
+            height: 30px;
+            padding: 0 8px 0;
+        }
+        .giveWidth,#datainner select,#datainner .editor{
+            width: 100% !important;
+            border: 1px solid #efefef;
+            border-radius: 5px;
+            padding: 0;
+            text-align: center;
+            font-size: 12px;
+        }
+        #datainner select,#datainner .editor{
+            height:28px;
+        }
+        #caseName,#quality{
+            margin-right: 15px;
+        }
+        .select2-container--default .select2-selection--single{
+            border: 0;
+        }
+        .titName{padding-left:0;}
+        .titName:before{display: none;}
+    </style>
+</head>
+<body id="dataCollection">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>配矿方案</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    配矿方案 ：<span id="caseName"></span>
+                </div>
+                <div class="form-inline">
+                    质检单 ： <span id="quality"></span>
+                </div>
+                <div class="form-inline">
+                    创建方案时间 ：
+                    <input id="Datetime" readonly="readonly" name="Datetime" class="" type="text" value="">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="ibox-title">
+            <div class="titName"><span>化验信息</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    发报日期 ：
+                    <input id="startDate" name="sendDate" onclick="WdatePicker();" class="form-control Wdate">
+                    &nbsp;—
+                    <input id="endDate" name="endDate" onclick="WdatePicker();" class="form-control Wdate">
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-search " type="button" id="search-btn">
+                        <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--内容区-->
+        <div class="ibox-content">
+            <!--表格区-->
+            <form id="inputForm" class="form-horizontal" action="/api/ob/OreLaboratoryInfo/save" method="post" >
+                <table id="dataTable"
+                       class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                    <!--表头-->
+                    <thead>
+                    <tr role="row">
+                        <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                        <th>DATE</th>
+                        <th>SID2</th>
+                        <th>AI2O3</th>
+                        <th>SiO2</th>
+                        <th>Fe2O3</th>
+                        <th>TiO2</th>
+                        <th>CaO</th>
+                        <th>A/S</th>
+                        <th>TOL</th>
+                        <th>K2O</th>
+                        <th>C</th>
+                        <th>S</th>
+                        <th>检测人</th>
+                        <th>审核人</th>
+                        <th>送样日期</th>
+                        <th>发报告单日期</th>
+                    </tr>
+                    </thead>
+                    <!--表内容-->
+                    <tbody id="datainner">
+
+                    </tbody>
+                </table>
+                <!--分页-->
+                <div class="clearfix pagination-box">
+                    <div class="page-info pull-left"></div>
+                    <div id="pagination" class="pagination-roll pull-right"></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script data-main="/js/module/oreDistribution/ledger" src="/js/zlib/require.js"></script>
+</body>
+</html>

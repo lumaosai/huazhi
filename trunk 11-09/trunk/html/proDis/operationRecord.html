@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作管理--操作交接班日志--日志查看</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="operationRecord" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>交接班记录</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline execution time">
+                    执行时间 ：
+                    <input type="text" id="startDateParam" onclick="WdatePicker();" class="form-control Wdate">
+                    &nbsp;&nbsp;—
+                    <input type="text" id="endDateParam" onclick="WdatePicker();" class="form-control Wdate">
+                </div>
+                <div class="form-inline year">
+                    工序:
+                    <select name="" id="process" class="width-fix-120">
+                        <option value="">-- 全部 --</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    班次:
+                    <select name="" id="time" class="width-fix-120">
+                        <option value="">-- 全部 --</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    班组:
+                    <select name="" id="team" class="width-fix-120">
+                        <option value="">-- 全部 --</option>
+                    </select>
+                </div>
+                <button class="btn btn-search pull-right" id="search-btn" type="button">
+                    <i class="fa fa-search"></i>
+                    查询
+                </button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <thead>
+                <tr>
+                    <th>工序</th>
+                    <th>班次</th>
+                    <th>班组</th>
+                    <th>交班人</th>
+                    <th>接班人</th>
+                    <th>交班日期</th>
+                    <th>接班日期</th>
+                </tr>
+                </thead>
+                <tbody id="treeTableBody">
+                </tbody>
+            </table>
+            <!--分页显示-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="/js/module/proDis/operationRecord" src="/js/zlib/require.js"></script>
+</body>
+</html>

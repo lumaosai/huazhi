@@ -1,0 +1,169 @@
+{
+  "title":"进出厂计量单列表",
+  "rows":[
+    {"primaryTable":[{
+      "itemName":"槽/罐计量单",
+      "Name":"槽/罐计量",
+      "colNames":[
+        "单据编号","业务班次开始时间","业务班次结束时间","进出厂点","主物料名称","单据总量","确认总量","单据状态",
+        "创建人","创建时间","关闭人","关闭时间","备注"
+      ],
+      "colModel":[
+        {
+          "name": "conNo",
+          "label": "conNo",
+          "align": "center"
+        },
+        {
+          "name": "begShiftDate",
+          "label": "begShiftDate",
+          "align": "center"
+        },
+        {
+          "name": "endShiftDate",
+          "label": "endShiftDate",
+          "align": "center"
+        },
+        {
+          "name": "进出厂点",
+          "label": "endShiftDate",
+          "align": "center"
+        },
+        {
+          "name": "物料名称",
+          "label": "endShiftDate",
+          "align": "center"
+        },
+        {
+          "name": "amount",
+          "label": "amount",
+          "align": "center"
+        },
+        {
+          "name": "conAmount",
+          "label": "conAmount",
+          "align": "center"
+        },
+        {
+          "name": "smtinoutBillStatus",
+          "label": "smtinoutBillStatus",
+          "align": "center"
+        },
+        {
+          "name": "createBy",
+          "label": "createBy",
+          "align": "center"
+        },
+        {
+          "name": "createDate",
+          "label": "createDate",
+          "align": "center"
+        },
+        {
+          "name": "clsBy",
+          "label": "clsBy",
+          "align": "center"
+        },
+        {
+          "name": "clsDate",
+          "label": "clsDate",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "label": "remark",
+          "align": "center"
+        }
+      ]
+    }],"seedTable":[{
+      "itemName":"",
+      "Name":"槽/罐计量子表",
+      "colName":[
+        "表(车、罐)号","计量方式","前读数(空车)","后读数(重车)","计量量","确认量","前量(空车)时间","后量(重车)时间",
+        "班次开始时间","班次结束时间","测量人","计量时间","录入人","录入时间","确认人","备注"
+      ],
+      "colModel":[
+        {
+          "name": "表(车、罐)号",
+          "label": "conNo",
+          "align": "center"
+        },
+        {
+          "name": "gaugeType",
+          "label": "gaugeType",
+          "align": "center"
+        },
+        {
+          "name": "preRead",
+          "label": "preRead",
+          "align": "center"
+        },
+        {
+          "name": "aftRead",
+          "label": "aftRead",
+          "align": "center"
+        },
+        {
+          "name": "mearVal",
+          "label": "mearVal",
+          "align": "center"
+        },
+        {
+          "name": "conVal",
+          "label": "conVal",
+          "align": "center"
+        },
+        {
+          "name": "emptyDate",
+          "label": "emptyDate",
+          "align": "center"
+        },
+        {
+          "name": "heavyDate",
+          "label": "heavyDate",
+          "align": "center"
+        },
+        {
+          "name": "begShiftDate",
+          "label": "begShiftDate",
+          "align": "center"
+        },
+        {
+          "name": "endShiftDate",
+          "label": "endShiftDate",
+          "align": "center"
+        },
+        {
+          "name": "crtBy",
+          "label": "crtBy",
+          "align": "center"
+        },
+        {
+          "name": "measDate",
+          "label": "measDate",
+          "align": "center"
+        },
+        {
+          "name": "crtBy",
+          "label": "crtBy",
+          "align": "center"
+        },
+        {
+          "name": "录入时间",
+          "label": "录入时间",
+          "align": "center"
+        },
+        {
+          "name": "conBy",
+          "label": "conBy",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "label": "remark",
+          "align": "center"
+        }
+      ]
+    }]}
+  ]
+}

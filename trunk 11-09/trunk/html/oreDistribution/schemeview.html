@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配矿管理--配矿方案--台账--方案优化页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        #right #treeTable{
+            padding: 15px !important;
+        }
+        .apsType-linkage li{
+            line-height: 40px;
+        }
+        .apsType-linkage li span{
+            padding-left: 10px;
+        }
+        .content td:first-child input,.content td:not(:first-child) span{
+            display: none !important;
+        }
+        .exceedbg{
+            color: red;
+        }
+        .radio{
+            display: inline-block !important;
+            height: 25px !important;
+            margin-right: 5px !important;
+            vertical-align: middle;
+        }
+        .ibox{min-height:auto;}
+        .ibox .titName{padding-left:0;}
+        .ibox .titName:before{display: none;}
+        .ibox .row{margin:0;}
+        /*质检信息*/
+        .checks-box{height:auto;padding:15px 0 15px 15px;}
+        .checks-box li{line-height: 30px;}
+        .checks-box label{margin:0 !important;}
+        .checks-box li label div{margin-right:6px;}
+        .zjxx #left.leftBox{min-height:auto;width:160px;}
+        /*基础信息*/
+        .jcxx .ibox-content{border:1px solid #eaeaea;padding:0;}
+        .jcxx .col-md-6{padding:10px;}
+        .jcxx .row>.col-md-6:first-child{border-right:1px solid #eaeaea;}
+        .jcxx-left,.jcxx-right{line-height: 34px;}
+        /*方案优化*/
+        .fayh tr td{
+            text-align: center;
+        }
+        .fayh #datainners input{text-align: center;}
+    </style>
+</head>
+<body id="schemeview" class="wrapper-white">
+    <div class="ibox zjxx">
+        <div class="ibox-title">
+            <div class="titName"><span>矿石进厂质检信息</span></div>
+        </div>
+        <div class="ibox-content clearfix">
+            <!--左侧内容-->
+            <div id="left" class="leftBox pull-left">
+                <ul class="checks-box"></ul>
+            </div>
+            <!--右侧内容-->
+            <div id="right">
+                <div class="toolbar-form">
+                    <div class="form-inline">
+                        到货日期 ：
+                        <input id="startDate" name="sendDate" onclick="WdatePicker();" class="form-control Wdate">
+                        &nbsp;—
+                        <input id="endDate" name="endDate" onclick="WdatePicker();" class="form-control Wdate">
+                    </div>
+                    <div class="toolbar-btns pull-right">
+                        <button class="btn btn-add " id="calculation-btn" title="添加">
+                            <i class="fa fa-calculator"></i> 计算
+                        </button>
+                        <button class="btn btn-white " type="button" id="Sequestration">
+                            <i class="fa fa-file-text-o"></i> 查看
+                        </button>
+                    </div>
+                </div>
+                <!--表格区-->
+                <div class="aps-create-list">
+                    <form id="inputForm" class="form-horizontal" action="/api/sys/SysMenu/ajaxSave" method="post">
+                        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                            <!--表头-->
+                            <thead>
+                            <tr role="row">
+                                <th>矿石种类</th>
+                                <th>主数量</th>
+                                <th>Al2O3</th>
+                                <th>SiO2</th>
+                                <th>ST</th>
+                                <th>CaO</th>
+                                <th>C</th>
+                                <th>Fe203</th>
+                                <th>TiO2</th>
+                                <th>A/S</th>
+                                <th>TOL</th>
+                                <th>KO2</th>
+                                <th>水分含量</th>
+                            </tr>
+                            </thead>
+                            <!--表内容-->
+                            <tbody id="datainner">
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox jcxx mgb-10">
+        <div class="ibox-title">
+            <h1 class="titName" style="border:none;">配矿基础信息</h1>
+        </div>
+        <div class="ibox-content">
+            <div id="contents">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="jcxx-left">
+                            <li class="fangan"><span>配矿方案 ：</span><span></span></li>
+                            <li ><span>配矿时间 ：</span><span class="times"></span></li>
+                            <li><span class="heapTotal">配矿总量 ：</span><span></span>&nbsp;&nbsp;&nbsp;<span class="usedNum">已投数量 ：</span><span></span>&nbsp;&nbsp;&nbsp;<span class="oreRemainedNum">剩余总量 ：</span><span></span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="jcxx-right"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox fayh">
+        <div class="ibox-title">
+            <div class="titName">配矿方案优化</div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <!--按钮组-->
+            <div class="toolbar-btns clearfix mgb-10">
+                <div class="pull-right">
+                    <button class="btn btn-ffa82d " id="distribution-btn" >
+                        <i class="fa fa-american-sign-language-interpreting"></i> 优化
+                    </button>
+                    <button class="btn btn-save " id="btn-save" >
+                        <i class="fa fa-file-text-o"></i> 保存
+                    </button>
+                    <button class="btn btn-export " id="export-btn" >
+                        <i class="fa fa-sign-out"></i> 导出
+                    </button>
+                </div>
+            </div>
+            <!--表格区-->
+            <div class="aps-create-list">
+                <form id="inputForms" class="form-horizontal" action="/api/sys/SysMenu/ajaxSave" method="post">
+                    <table id="treeTables" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                        <!--表头-->
+                        <thead>
+                            <tr role="row"></tr>
+                        </thead>
+                        <!--表内容-->
+                        <tbody id="datainners"></tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/oreDistribution/schemeview" src="/js/zlib/require.js"></script>
+</body>
+</html>

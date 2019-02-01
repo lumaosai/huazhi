@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鉴权类管理内页</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+
+<body id="authTypeInner" class="wrapper-white">
+<form id="inputForm" action="$Api.admin$/api/sys/SysAuthClass/ajaxSave" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="table form-table">
+        <tr>
+            <td class="active require">鉴权类名称:</td>
+            <td>
+                <input id="name" name="name" class="form-control " require="true"  type="text" value="" maxlength="50"></td>
+            <td class="active require">鉴权类编码:</td>
+            <td>
+                <input id="code" name="code" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">描述:</td>
+            <td >
+                <input id="des" name="des" class="form-control abc" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">所属应用:</td>
+            <td >
+                <select  id="selApp" name="sysApplication.id"  class=" form-control" require="true">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">排序:</td>
+            <td >
+                <input id="sort" name="sort" class="form-control digits" require="true" dataType="Number" type="text" value="" maxlength="11">
+            </td>
+            <td class="active require">是否可用:</td>
+            <td>
+                <select name="enable" id="enable" class="form-control" require="true">
+                    <option value="1">启用</option>
+                    <option value="0">禁用</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">备注:</td>
+            <td colspan="3">
+                <textarea id="remark" name="remark" maxlength="200" class="form-control "rows="3"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/authenticationType" src="/js/zlib/require.js"></script>
+</body>
+</html>

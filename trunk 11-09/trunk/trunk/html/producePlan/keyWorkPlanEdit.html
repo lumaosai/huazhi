@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>月计划--重点工作计划--编辑页面</title>
+    <style>
+        #btn-adjust {
+            display: none;
+        }
+        .noData{
+            font-size:20px;
+            text-align: center;
+            line-height: 30px;
+            display: none;
+            margin-top:80px;
+            color:#cec9c9d4;
+        }
+        .btn-delete,.btn-save{display: none;}
+    </style>
+</head>
+<body id="KeyWorkPlanViewEdit">
+<div class="ibox">
+    <div class="ibox-content ">
+        <div class="clearfix btn-box mgb-20 hidden">
+            <button class="btn pull-right btn-save" type="button"  data-status="0">
+                <i class="fa fa-save"></i>保存
+            </button>
+            <button class="btn pull-right btn-delete" type="button" data-status="1">
+                <i class="fa fa-trash-o"></i>删除
+            </button>
+            <button class="btn pull-right btn-add" type="button" data-status="2">
+                <i class="fa fa-save"></i>增加
+            </button>
+        </div>
+        <div class="noData">暂无数据！</div>
+        <div class="commercePurCon proTargetPlanItem datagridsContent" id="parentDiv">
+        </div>
+    </div>
+</div>
+<script data-main="/js/module/producePlan/keyWorkPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

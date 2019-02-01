@@ -1,0 +1,54 @@
+
+.btn-primary1 {
+  padding: 4px;
+  width: 10px !important;
+  height: 20px !important;
+  border: 1px solid #1ab394 !important;
+  color: #1ab394;
+  background-color: transparent;
+  border-radius: 3px;
+  }
+.btn-stop {
+  padding: 3px;
+  border-color: #f75c5a;
+  color: #f75c5a;
+  background-color: transparent;
+  border: 1px solid #f75c5a !important;
+  border-radius: 3px; }
+
+.btn-cancel {
+  padding: 3px;
+  border-color: #999999;
+  color: #999999;
+  background-color: transparent;
+  border: 1px solid  #999999 !important;
+  border-radius: 3px; }
+
+.btn-await1 {
+  padding: 3px 10px;
+  width: 10px !important;
+  height: 20px !important;
+  border-color: #ffa82d;
+  color: #ffa82d;
+  background-color: transparent;
+  border: 1px solid  #ffa82d !important;
+  border-radius: 3px; }
+.datePicker{
+  height: 30px;
+  width: 120px;
+  border:1px solid #e5e6e7;
+  border-radius: 3px;
+  display: inline-block !important;
+}
+.fa-calendar{
+  margin-left: -16px;
+  color: #ffa82d;
+}
+.id {
+  display: none; }
+
+
+
+
+.show {
+  display: block; }

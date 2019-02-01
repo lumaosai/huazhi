@@ -1,0 +1,1048 @@
+{
+  "oPage":[
+    {
+      "itemCode":"Mineral",
+      "itemList":[
+        {
+          "itemCode":"ST_KDPCXX",
+          "itemName":"矿堆盘存信息",
+          "colNames":["id","groupCode","delFlag","code","名称","子项","规格(米)","长(米)","宽(米)","高(米)","重量(T)"],
+          "colModel":[
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+              },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "lengths",
+              "label": "lengths",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "widths",
+              "label": "widths",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "high",
+              "label": "high",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "weight",
+              "label": "weight",
+              "align": "center",
+              "editable": true,
+              "sorttype":"text",
+              "formatter":"text",
+              "summaryType":"sum"
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_MJPCXX",
+          "itemName":"磨机盘存信息",
+          "colNames":["name","delFlag","code","groupCode","id","序号","名称","定量给料机显示","修正值","外报"],
+          "colModel":[
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "valueView",
+              "label": "valueView",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "valueModify",
+              "label": "valueModify",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "valueReport",
+              "label": "valueReport",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_CCPCXX",
+          "itemName":"仓存盘存信息",
+          "colNames":["name","delFlag","code","tagName","groupCode","id","序号","名称","工艺编号","规格","手抄","步长","DCS","料位高度(米)"],
+          "colModel":[
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "tagName",
+              "label": "tagName",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "techNo",
+              "label": "techNo",
+              "align": "center"
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "upHighHand",
+              "label": "upHighHand",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "timeStep",
+              "label": "timeStep",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "upHighDcs",
+              "label": "upHighDcs",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "highPos",
+              "label": "highPos",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        }
+        ]
+    },
+    {
+      "itemCode":"NaoHAL",
+      "itemList":[
+        {
+          "itemCode":"ST_YHLCCXX",
+          "colNames":["subName","delFlag","code","groupCode","id","序号","名称","工艺编号","规格(米)","上空高度1(米)","上空高度2(米)","上空高度3(米)","上空高度4(米)","上空高度5(米)","上空高度6(米)"],
+          "colModel":[
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "techNo",
+              "label": "techNo",
+              "align": "center"
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "upOne",
+              "label": "upOne",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "upTwo",
+              "label": "upTwo",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "upThree",
+              "label": "upThree",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "upFour",
+              "label": "upFour",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "upFive",
+              "label": "upFive",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "upSix",
+              "label": "upSix",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_QYHLCCXX",
+          "colNames":["subName","delFlag","code","groupCode","id","序号","名称","工艺编号","规格","长","宽","高","重量(T)"],
+          "colModel":[
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "techNo",
+              "label": "techNo",
+              "align": "center"
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "lengths",
+              "label": "lengths",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "widths",
+              "label": "widths",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "high",
+              "label": "high",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "weight",
+              "label": "weight",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_YHLQYHLBZXX",
+          "colNames":["subName","delFlag","code","groupCode","id","序号","名称","规格","单位重量(t)","入库(t)","出库(t)","库存(t)","备注"],
+          "colModel":[
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "weightUnit",
+              "label": "weightUnit",
+              "align": "center"
+            },
+            {
+              "name": "warehoueIn",
+              "label": "warehoueIn",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "warehoueOut",
+              "label": "warehoueOut",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "warehoueBeing",
+              "label": "warehoueBeing",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "remark",
+              "label": "remark",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "itemCode":"Decgroove",
+      "itemList":[
+        {
+          "itemCode":"ST_FJCYWCLPCXX",
+          "colNames":["groupCode","delFlag","code","types","id","序号","仓、槽、罐名称","工艺编号","规格(米)","上空高度(米)","料位高度(米)"],
+          "colModel":[
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "types",
+              "label": "types",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "techNo",
+              "label": "techNo",
+              "align": "center"
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "highUp",
+              "label": "highUp",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "highPos",
+              "label": "highPos",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "itemCode":"dcs",
+      "itemList":[
+        {
+          "itemCode":"ST_DCSCGYWPCXX",
+          "colNames":["groupCode","delFlag","code","tagName","types","序号","id","仓、槽、罐名称","工艺编号","规格(米)","上空高度(米)","步长","料位高度(米)","料位高度(米)2018-10-12 14:30:00"],
+          "colModel":[
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "tagName",
+              "label": "tagName",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "types",
+              "label": "types",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "techNo",
+              "label": "techNo",
+              "align": "center"
+
+            },
+            {
+              "name": "specification",
+              "label": "specification",
+              "align": "center"
+            },
+            {
+              "name": "highUp",
+              "label": "highUp",
+              "align": "center",
+              "editable": true
+
+            },
+            {
+              "name": "timeStep",
+              "label": "timeStep",
+              "align": "center",
+              "editable": true
+
+            },
+            {
+              "name": "highPos",
+              "label": "highPos",
+              "align": "center",
+              "editable": true
+
+            },
+            {
+              "name": "highPos",
+              "label": "highPos",
+              "align": "center",
+              "editable": true
+
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "itemCode":"Deposit",
+      "itemList":[
+        {
+          "itemCode":"ST_MPCXX",
+          "colNames":["delFlag","id","编码","名称","子项","过程说明","重量"],
+          "colModel":[
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "proInfo",
+              "label": "proInfo",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "weight",
+              "label": "weight",
+              "align": "center",
+              "editable": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "itemCode":"Process",
+      "itemList":[
+        {
+          "itemCode":"ST_GCWLHYXX",
+            "colNames":["groupCode","delFlag","code","id","序号","试样名称","原液体积","加EDTA体积","加HCL体积","滴HCL体积","滴NAOH体积","滴ZA体积","NK(g/t)","NT(g/t)","AO(g/t)","NC(%)","RP","干重(g)","固含(g/t)"],
+          "colModel":[
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "sort",
+              "label": "sort",
+              "align": "center",
+              "width":"55px"
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "volumeOrigin",
+              "label": "volumeOrigin",
+              "align": "center"
+            },
+            {
+              "name": "volumeEDTA",
+              "label": "volumeEDTA",
+              "align": "center"
+            },
+            {
+              "name": "volumeHCLAdd",
+              "label": "volumeHCLAdd",
+              "align": "center"
+            },
+            {
+              "name": "volumeHCLLow",
+              "label": "volumeHCLLow",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "volumeNAOHLow",
+              "label": "volumeNAOHLow",
+              "align": "center",
+              "editable": true,
+              "width":"130px"
+            },
+            {
+              "name": "volumeZALow",
+              "label": "volumeZALow",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "densityNk",
+              "label": "densityNk",
+              "align": "center"
+            },
+            {
+              "name": "densityNt",
+              "label": "densityNt",
+              "align": "center"
+            },
+            {
+              "name": "densityAo",
+              "label": "densityAo",
+              "align": "center"
+            },
+            {
+              "name": "densityNc",
+              "label": "densityNc",
+              "align": "center"
+            },
+            {
+              "name": "densityRp",
+              "label": "densityRp",
+              "align": "center",
+              "width":"40px"
+            },
+            {
+              "name": "weightDry",
+              "label": "weightDry",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "densitySolid",
+              "label": "densitySolid",
+              "align": "center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "itemCode":"Field",
+      "itemList":[
+        {
+          "itemCode":"ST_LTKPCXX",
+          "colNames":["delFlag","code","groupCode","id","名称","子项","单位","本月值","累计值"],
+          "colModel":[
+            {
+              "name": "delFlag",
+              "label": "delFlag",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "unit",
+              "label": "unit",
+              "align": "center"
+            },
+            {
+              "name": "monthValue",
+              "label": "monthValue",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "monthTotal",
+              "label": "monthTotal",
+              "align": "center"
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_XHXHXFPCXX",
+          "colNames":["code","groupCode","id","名称","子项","单位","本月值","累计值"],
+          "colModel":[
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "unit",
+              "label": "unit",
+              "align": "center"
+            },
+            {
+              "name": "monthValue",
+              "label": "monthValue",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "monthTotal",
+              "label": "monthTotal",
+              "align": "center"
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_YJPJWGQYHLJGPCXX",
+          "colNames":["code","groupCode","id","名称","子项","单位","本月值","累计值"],
+          "colModel":[
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "unit",
+              "label": "unit",
+              "align": "center"
+            },
+            {
+              "name": "monthValue",
+              "label": "monthValue",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "monthTotal",
+              "label": "monthTotal",
+              "align": "center"
+            }
+          ]
+        },
+        {
+          "itemCode":"ST_MQMDMTSGFPCXX",
+          "colNames":["code","groupCode","id","名称","子项","单位","本月值","累计值"],
+          "colModel":[
+            {
+              "name": "code",
+              "label": "code",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "groupCode",
+              "label": "groupCode",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+            },
+            {
+              "name": "subName",
+              "label": "subName",
+              "align": "center"
+            },
+            {
+              "name": "unit",
+              "label": "unit",
+              "align": "center"
+            },
+            {
+              "name": "monthValue",
+              "label": "monthValue",
+              "align": "center",
+              "editable": true
+            },
+            {
+              "name": "monthTotal",
+              "label": "monthTotal",
+              "align": "center"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+

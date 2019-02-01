@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>月计划--查看页面</title>
+    <style>
+        .targetPlanTab-nav{position: relative;z-index: 99;display: inline-block;vertical-align: middle;margin:0;}
+        .targetPlanTab-nav li{padding:0 20px; text-align: center;line-height: 42px;font-size:14px;float:left;cursor: pointer;border:1px solid #e3e3e3;border-left:none;background: #f9f9f9;border-bottom:none;position: relative;}
+        .targetPlanTab-nav li:before,.targetPlanTab-nav li:after{content: "";position: absolute;left:0; width:100%;height:1px;}
+        .targetPlanTab-nav li:before{border-top:1px solid transparent;top:0;}
+        .targetPlanTab-nav li:after{border-bottom:1px solid transparent;bottom:-1px;}
+        .targetPlanTab-nav li.active,.targetPlanTab-nav li:hover{border-top-color:#1ab394;border-bottom:none;background: #fff;}
+        .targetPlanTab-nav li.active:before,.targetPlanTab-nav li:hover:before{
+            border-top-color:#1ab394;
+        }
+        .targetPlanTab-nav li.active:after,.targetPlanTab-nav li:hover:after{
+            border-bottom-color:#fff;
+        }
+        #iframeCon{background: #fff;border-top:1px solid #e3e3e3;min-height:323px;}
+        #iframeCon iframe{position: relative;top:0;padding:0;background: #fff;}
+    </style>
+</head>
+<body id="proTargetPlan">
+    <div class="ibox">
+        <div class="ibox-content">
+            <div class="btn btn-export pull-right btn-white"><i class="fa fa-file-word-o" aria-hidden="true"></i> 导出</div>
+            <div class="targetPlanTab">
+                <ul class="targetPlanTab-nav clearfix">
+                    <li class="active">全厂主要生产技术指标计划</li>
+                    <li>商务采购指标计划</li>
+                    <li>安全、环保、设备管理总体指标计划</li>
+                    <li>重点工作计划</li>
+                </ul>
+                <div class="targetPlanTab-con" id="iframeCon">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/monthPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

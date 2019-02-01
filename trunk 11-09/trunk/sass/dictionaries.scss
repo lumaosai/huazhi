@@ -1,0 +1,203 @@
+@charset "utf-8";
+.btn{
+  border-radius: 3px;
+}
+#menu-content{
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #676a6c;
+  background-color: #f3f3f4;
+  padding: 20px;
+}
+
+
+//title
+.ibox-title{
+  background-color: #ffffff;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 4px 0 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 14px 15px 7px;
+  min-height: 48px;
+  >h5{
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+    font-weight: 800;
+  }
+  >.ibox-tools {
+    display: inline-block;
+    float: right;
+    margin-top: 0;
+    position: relative;
+    padding: 0;
+    a{
+      cursor: pointer;
+      margin-left: 5px;
+      color: #c4c4c4;
+    }
+  }
+}
+//content
+.ibox-content{
+  clear: both;
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+  //button
+  .btn-white {
+    color: inherit;
+    background: white;
+    border: 1px solid #e7eaec;
+  }
+  .btn-white:hover, .btn-white:focus, .btn-white:active, .btn-white.active, .open .dropdown-toggle.btn-white {
+    color: inherit;
+    border: 1px solid #d2d2d2;
+  }
+  .pull-right{
+    >.btn-primary{
+      border-color: #1ab394;
+      border-radius: 50px;
+      color: #1ab394;
+      background-color: transparent;
+
+    }
+    >.btn-primary:hover{
+      background-color: #18a689;
+      border-color: #18a689;
+      color: #fff;
+    }
+  }
+  //table
+  .table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+
+  }
+  table.dataTable thead th {
+    padding:8px;
+    border-bottom: 0;
+    background-color: #F5F5F6;
+    vertical-align: middle;
+  }
+  table.dataTable tbody td {
+    padding: 8px;
+    vertical-align: middle;
+  }
+
+}
+//table
+
+  .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-right:1px solid #e8eaf0;
+    border-top:1px solid #E8EAF0;
+    border-left: 0;
+    border-bottom:0;
+
+  }
+  tbody>tr:last-child>td{
+    border-bottom:1px solid #E8EAF0;
+  }
+
+
+//table footer
+.ibox-content label{
+  margin: 8px;
+  font-weight: inherit;
+}
+$col:#fff;
+.btn-info,.btn-info:hover,.btn-success,.btn-success:hover,.btn-primary,.btn-primary:hover{
+  color: $col;
+}
+.btn-info {
+  background-color: #23c6c8;
+  border-color: #23c6c8;
+  &:hover{
+    background-color: #21b9bb;
+    border-color: #21b9bb;
+  }
+}
+.btn-success {
+  background-color: #1c84c6;
+  border-color: #1c84c6;
+  &:hover{
+    background-color: #1a7bb9;
+    border-color: #1a7bb9;
+  }
+}
+
+.btn-primary {
+  background-color: #1ab394;
+  border-color: #1ab394;
+  &:hover{
+    background-color: #18a689;
+    border-color: #18a689;
+  }
+}
+
+
+//翻页
+#treeTable_paginate a{
+  line-height: 1.428571429;
+  padding: 6px 12px;
+  margin-left: 0;
+  border: 1px solid #ddd;
+  border-radius:0;
+    :hover{
+    border-color: #ddd;
+  }
+}
+.paginate_button.disabled{
+  :hover{
+    color:black;
+  }
+}
+.paginate_button.current{
+  background:linear-gradient(to bottom, #eee 0%,  #eee 0%)!important;
+  :hover{
+    color:black;
+  }
+}
+
+//treeTable css
+.table.treetable,.table.dataTable{
+  border:1px solid #ddd;
+  thead{
+    tr{
+      th{
+        border-color:#ddd;
+        border-left:0;
+        font-size:13px;
+        text-align: center;
+        font-weight:bold;
+      }
+    }
+  }
+
+
+}
+
+.form-control, .single-line {
+  background-color: #FFFFFF;
+  background-image: none;
+  border: 1px solid #e5e6e7;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  font-size: 14px;
+}

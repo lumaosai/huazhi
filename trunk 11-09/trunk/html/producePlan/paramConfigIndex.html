@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生产计划--计划模板管理--参数配置</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="paramConfigIndex" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title ">
+            <div class="titName clearfix">
+                <span>参数配置</span>
+                <div class="pull-right">
+                    <button class="btn btn-white btn-sm"
+                            onclick="Bus.openEditDialog('新增参数','./producePlan/paramConfigCheckView.html','568px','355px');"
+                            title="添加">
+                        <i class="fa fa-plus"></i>
+                        增加
+                    </button>
+                    <button class="btn btn-white btn-sm" onclick="Bus.delCheckTable('确认要删除该用户吗？',Api.aps+'/api/aps/Configure/delete/','#treeTable')"
+                    ><i class="fa fa-trash"></i>批量删除
+                    </button>
+                    <button class="btn btn-white btn-sm "
+                            id="refresh-btn"
+                            onclick="window.location.reload();" title="刷新">
+                        <i class="glyphicon glyphicon-repeat"></i> 刷新
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--内容表格-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+                <thead>
+                    <tr class="center">
+                        <th><input type="checkbox" class="i-checks" ></th>
+                        <th>参数</th>
+                        <th>数值</th>
+                        <th>参数说明</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/paramConfig" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>工厂模型--进出厂点物料配置</title>
+</head>
+<!--list1 左上数据-->
+<!--list2 右上数据-->
+<!--list3 左下数据-->
+<body id="turnoverSpot" class="wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title">
+        <div class="titName ">
+            <span>进出厂点物料配置</span>
+        </div>
+    </div>
+    <div class="ibox-content config clearfix">
+        <div class="width-47 pull-left">
+            <div class="tit">
+                <span>进出厂点</span>
+            </div>
+            <div class="config-content">
+                <div class="toolbar-form clearfix">
+                    <div  class="form-inline">
+                        <span>MOM工厂：</span>
+                        <select  class="form-control" id="fctrName1" data-width="120px">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <span>装卸台：</span>
+                        <select  class="form-control" id="areaLoadRack" data-width="120px">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                    <div class="form-inline">
+                        <span>进出厂点 ：</span>
+                        <input id="nodename"  class="form-control" type="text" value="" data-width="120px" >
+                    </div>
+
+                    <div class="pull-right">
+                        <button class="btn btn-search" id="btn-search1" type="button"><i class="fa fa-search"></i>查询</button>
+                    </div>
+                </div>
+                <ul id="list1"></ul>
+            </div>
+
+            <div class="tit">
+                <span>已经分配的物料</span>
+                <button id="btn-submit" class="btn pull-right btn-search">保存</button>
+            </div>
+            <div class="config-content">
+                <ul id="list3" class="list3" ></ul>
+                <div class="handelUpDownbox ">
+                    <div id="btn-up" class="fa fa-angle-double-up"></div>
+                    <div id="btn-down" class="fa fa-angle-double-down"></div>
+                </div>
+
+                <div class="handelLeftRightbox ">
+                    <button id="btn-left" class="btn btn-lg btn-primary glyphicon glyphicon-menu-left"></button>
+                    <button id="btn-right" class="btn btn-lg btn-primary glyphicon glyphicon-menu-right"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="width-47 pull-right">
+            <div class="tit">
+                <span>进出厂点物料</span>
+            </div>
+            <div class="config-content">
+                <div class="toolbar-form clearfix">
+                    <div  class="form-inline">
+                        <span>MOM工厂：</span>
+                        <select class="form-control" id="fctrName2" data-width="120px">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+
+                    <div class="form-inline">
+                        <span>物料类型 ：</span>
+                        <select  class="form-control" id="mtrlType" data-width="120px">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+
+                    <div class="form-inline">
+                        <span>物料名称 ：</span>
+                        <input id="mtrlName" class="form-control" type="text" value="" data-width="120px" >
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-search" id="btn-search2" type="button"><i class="fa fa-search"></i>查询</button>
+                    </div>
+                </div>
+                <ul id="list2"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script data-main="/js/module/material/factoryModels/turnoverSpot" src="/js/zlib/require.js"></script>
+</html>

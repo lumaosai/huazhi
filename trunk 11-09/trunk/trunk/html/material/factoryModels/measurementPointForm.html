@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>测量点弹出页</title>
+</head>
+<body id="measurementPointForm" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/Instrument/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="width-15 active require">测量点编号:</td>
+            <td class="width-35">
+                <input id="instrNo" name="instrNo" class="form-control " require="true" type="number" value="" placeholder="110000-799999" dataType="Range" min="110000" max="799999" ></td>
+
+            <td class="width-15 active require">测量点名称:</td>
+            <td class="width-35">
+                <input id="instrName" name="instrName" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">测量点别名:</td>
+            <td >
+                <input id="instrAlias" name="instrAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">系数:</td>
+            <td>
+                <input id="coefficient" dataType="Range" onblur="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" name="coefficient" class="form-control" min="0" max="100" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">工位号:</td>
+            <td >
+                <input id="tag" require="true"  name="tag" class="form-control" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">量纲:</td>
+            <td>
+                <select name="dimensionType" require="true" id="dimensionType" class="form-control">
+                    <option value="0">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">测量类型:</td>
+            <td>
+                <select name="mesType" require="true" id="mesType" class="form-control">
+                    <option value="0">请选择</option>
+                </select>
+            </td>
+            <td class="active require">MOM工厂:</td>
+            <td>
+                <select name="fctrId" require="true" id="fctrId" class="form-control">
+                    <option value="0">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">类型:</td>
+            <td>
+                <select name="mtrlType" require="true" id="mtrlType" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">界区:</td>
+            <td>
+                <select name="nodeAreaId" require="true" id="nodeAreaId" class="form-control">
+                    <option value="0">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">虚实标识:</td>
+            <td>
+                <input type="checkbox"  name="realFlag" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">启用标识:</td>
+            <td>
+                <input type="checkbox"  name="enable" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">累计表标识:</td>
+            <td>
+                <input type="checkbox"  name="accuInstrFlag" class="i-checks" value="1" checked>
+            </td>
+            <td class="active require">量程上限:</td>
+            <td>
+                <input id="upSpan" require="true" class="form-control" min="0" max="29999" type="number" name="upSpan" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">量程下限:</td>
+            <td>
+                <input id="dowmSpan" require="true" class="form-control" min="0" max="29999" type="number" name="dowmSpan" value="1" checked>
+            </td>
+            <td class="active require">显示顺序:</td>
+            <td>
+                <input id="displayOrder" dataType="Range" require="true" class="form-control" min="0" max="1000" type="number" name="displayOrder" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">说明</td>
+            <td colspan="3">
+                <textarea name="remark" id="remark" class="form-control"  rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/measurementPoint" src="/js/zlib/require.js"></script>
+
+
+</body>
+</html>

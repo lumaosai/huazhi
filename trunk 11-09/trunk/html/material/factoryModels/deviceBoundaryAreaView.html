@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装置界区</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        .width-20{
+            width: 20%;
+        }
+        .width-30{
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body id="deviceBoundaryAreaView" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/AreaUnit/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <input id="nodeAreaId" name="nodeAreaId" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="width-20 active require">
+                装置界区编号:
+            </td>
+            <td class="width-30">
+                <input id="areaNo" name="areaNo"  class="form-control " require="true" placeholder="2000-2999之间" dataType="Range" min="2000" max="2999"  type="number" value="" maxlength="50">
+            </td>
+            <td class="width-20 active require">
+                装置界区编码:
+            </td>
+            <td class="width-30">
+                <input id="areaCode" name="areaCode" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                装置界区名称:
+            </td>
+            <td class="">
+                <input id="areaName" name="areaName" class="form-control " require="true"  type="text" value="" maxlength="50">
+            <td class="active require">
+                装置界区别名:
+            </td>
+            <td class="">
+                <input id="areaAlias" name="areaAlias" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                MOM车间:
+            </td>
+            <td class="">
+                <select name="wspId" id="wspId" class="form-control" require="true">
+                </select>
+            </td>
+            <td class="active ">
+                显示顺序:
+            </td>
+            <td class="">
+                <input id="displayOrder" name="displayOrder" class="form-control"    type="number"  value="0"  onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                启用标识:
+            </td>
+            <td class="">
+                <input type="checkbox" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">
+               说明:
+            </td>
+            <td class="">
+                <input id="remark" name="remark" class="form-control" type="text" value="">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/deviceBoundaryArea" src="/js/zlib/require.js"></script>
+</body>
+</html>

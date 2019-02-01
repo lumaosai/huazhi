@@ -1,0 +1,29 @@
+.Wdate, .WdateTime{
+	/*border:#999 1px solid;*/
+	background:#fff url('datePicker.png') no-repeat 98% center;
+	height: 30px;
+	/*background-size: 20px;*/
+}
+
+.Wdate::-ms-clear{display:none;}
+
+.form-control.Wdate {
+	width: 170px;
+	display: inline-block;
+}
+.form-control.WdateTime {
+	width: 170px;
+	display: inline-block;
+}
+
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}
+
+.table .form-control.Wdate {
+	width: 100%;
+}
+.table .form-control.WdateTime {
+	width: 100%;
+}

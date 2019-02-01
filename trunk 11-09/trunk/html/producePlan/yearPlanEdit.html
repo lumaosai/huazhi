@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>年计划管理--新增、编辑</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="yearPlanEdit" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName">
+                <span>复晟铝业</span>
+                <span class="Moyear"></span><span>年生产经营计划</span>
+            </div>
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    计划周期（年）：
+                    <input type="text" id="yMPicker" onclick="WdatePicker({dateFmt:'yyyy'});" class="form-control WdateTime" readonly>
+                </div>
+                <div class="form-inline">
+                    计划名称：
+                    <input type="text" value="" id="yearName" class="form-control" placeholder="请输入计划名称"  />
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-back btn-white" id="back-btn">
+                        <i class="fa fa-reply"></i> 返回
+                    </button>
+                    <button class="btn btn-save hidden  btn-bgf29">
+                        <i class="fa fa-save"></i>
+                        保存</button>
+                    <button class="btn btn-white btn-submit hidden"><i class="fa fa-upload"></i>提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="datagridsContent"></div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/yearPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

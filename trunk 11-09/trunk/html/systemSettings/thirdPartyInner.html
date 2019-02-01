@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第三方用户管理--新增、编辑页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+
+<body id="thirdPartyInner" class="wrapper-white">
+<form id="inputForm" action="$Api.admin$/api/sys/SysUserRel/save" method="post" >
+    <input id="id" name="id" type="hidden" >
+    <table class="table form-table">
+        <tbody>
+        <tr>
+            <td class="active require">Mom用户名:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="momUserId" name="user.id">
+                   <input type="text" id="momUserName" name="user.name" class="form-control" require="true" readonly placeholder="双击选择">
+                   <button type="button" id="momUserBtn" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+            <td class="active require">Mom登录名:</td>
+            <td>
+                <input type="text" id="momLoginName" name="user.loginName" class="form-control" readonly="readonly"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">用户名:</td>
+            <td>
+                <input id="name" name="name" class="form-control" require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">登录名:</td>
+            <td>
+                <input id="loginName" name="loginName" class="form-control" require="true" type="text" maxlength="50"></td>
+        </tr>
+        <tr>
+            <td class="active">部门编码:</td>
+            <td>
+                <input id="deptCode" name="deptCode" class="form-control" type="text" maxlength="50">
+            </td>
+            <td class="active require">部门名称:</td>
+            <td>
+                <input id="deptLabel" name="deptLabel" class="form-control" require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">岗位编码:</td>
+            <td >
+                <input id="jobCode" name="jobCode" class="form-control" type="text" maxlength="50">
+            </td>
+            <td class="active">岗位名称:</td>
+            <td>
+                <input id="jobLabel" name="jobLabel" class="form-control" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">手机号码:</td>
+            <td>
+                <input id="mobile" name="mobile" class="form-control" require="true" dataType="Mobile" type="text" maxlength="50">
+            </td>
+            <td class="active">电话</td>
+            <td >
+                <input id="tel" name="tel" class="form-control" dataType="Tel" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">邮箱:</td>
+            <td >
+                <input id="email" name="email" class="form-control" dataType="Email" type="text" maxlength="50">
+            </td>
+            <td class="active">专业:</td>
+            <td>
+                <input id="professional" name="professional" class="form-control" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">应用:</td>
+            <td>
+                <select id="sys" name="sys" class="form-control" require="true">
+                    <option value="">--请选择--</option>
+                </select>
+            </td>
+            <td class="active"></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/thirdParty" src="/js/zlib/require.js"></script>
+</body>
+</html>

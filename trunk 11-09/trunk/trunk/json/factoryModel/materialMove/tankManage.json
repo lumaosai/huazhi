@@ -1,0 +1,712 @@
+{
+    "rows":[
+      {"primaryTable":[{
+        "itemName":"槽/罐检尺",
+        "Name":"槽/罐检尺列表",
+        "colNames":["initialization","id","tankId","槽/罐名称","检尺时间","检尺类型","物料","别名","质量状态","槽/罐量","料位高度","温度","密度","体积","液/固质量",
+                    "收付","提交状态","大气温度","气相密度","气相体积","气相质量","气相温度","含水率","含水量","含水量","修正料位高度","毛标准质量","毛标准体积","毛计量体积"],
+        "colModel":[
+          {
+            "name": "initialization",
+            "label": "initialization",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "id",
+            "label": "id",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "tankId",
+            "label": "tankId",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "tankName",
+            "label": "tankName",
+            "align": "center"
+          },
+          {
+            "name": "chkTime",
+            "label": "chkTime",
+            "align": "center"
+          },
+          {
+            "name": "chkType",
+            "label": "chkType",
+            "align": "center"
+          },
+          {
+            "name": "mtrlName",
+            "label": "mtrlName",
+            "align": "center"
+          },
+          {
+            "name": "mtrlAlias",
+            "label": "mtrlAlias",
+            "align": "center"
+          },
+          {
+            "name": "tankQutyStatus",
+            "label": "tankQutyStatus",
+            "align": "center"
+          },
+          {
+            "name": "tankConVal",
+            "label": "tankConVal",
+            "align": "center"
+          },
+          {
+            "name": "tankConVal",
+            "label": "tankConVal",
+            "align": "center"
+          },
+          {
+            "name": "temprt",
+            "label": "temprt",
+            "align": "center"
+          },
+          {
+            "name": "oilDnst",
+            "label": "oilDnst",
+            "align": "center"
+          },
+          {
+            "name": "temprtVol",
+            "label": "temprtVol",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddWeight",
+            "label": "gnrStddWeight",
+            "align": "center"
+          },
+          {
+            "name": "rap",
+            "label": "rap",
+            "align": "center"
+          },
+          {
+            "name": "submissionState",
+            "label": "submissionState",
+            "align": "center"
+          },
+          {
+            "name": "temprtAtp",
+            "label": "temprtAtp",
+            "align": "center"
+          },
+          {
+            "name": "temprtCct",
+            "label": "temprtCct",
+            "align": "center"
+          },
+          {
+            "name": "temprtVol",
+            "label": "temprtVol",
+            "align": "center"
+          },
+          {
+            "name": "temprtWeight",
+            "label": "temprtWeight",
+            "align": "center"
+          },
+          {
+            "name": "temprtClm",
+            "label": "temprtClm",
+            "align": "center"
+          },
+          {
+            "name": "waterRate",
+            "label": "waterRate",
+            "align": "center"
+          },
+          {
+            "name": "waterContent",
+            "label": "waterContent",
+            "align": "center"
+          },
+          {
+            "name": "chkModVal",
+            "label": "chkModVal",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddWeight",
+            "label": "gnrStddWeight",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddVol",
+            "label": "gnrStddVol",
+            "align": "center"
+          },
+          {
+            "name": "gnrStddVol",
+            "label": "gnrStddVol",
+            "align": "center"
+          },
+          {
+            "name": "gnrMetVol",
+            "label": "gnrMetVol",
+            "align": "center"
+          }
+        ]
+      }],"seedTable":[{"itemName":"槽/罐检尺",
+          "Name":"槽/罐检尺信息",
+          "colNames":["id","检尺时间","检尺类型","物料","别名","槽/罐量","人工检尺高度","温度","密度","仪表检尺","水尺高度","水容积","含水率","VCF","压力","气相温度",
+                      "气相密度","气相体积","气相质量","固/液体体积","毛标准质量","毛标准体积","毛计量体积","大气温度","修正料位高度","温度修正值","净油质量","酸度系数","浓碱系数",
+                      "检尺人","录入时间","提交状态","备注","最大安全容量","最大安全容积","最小安全容量","最小安全容积","净油容积"
+                    ],
+          "colModel":[
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },{
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },{
+              "name": "measureType",
+              "label": "measureType",
+              "align": "center"
+            },{
+              "name": "matrl",
+              "label": "matrl",
+              "align": "center"
+            },
+            {
+              "name": "mtrlAlias",
+              "label": "mtrlAlias",
+              "align": "center"
+            },{
+              "name": "tankConVal",
+              "label": "tankConVal",
+              "align": "center"
+            },{
+              "name": "chkMnulVal",
+              "label": "chkMnulVal",
+              "align": "center"
+            },{
+              "name": "temprt",
+              "label": "temprt",
+              "align": "center"
+            }, {
+              "name": "oilDnst",
+              "label": "oilDnst",
+              "align": "center"
+            },
+            {
+              "name": "chkInstVal",
+              "label": "chkInstVal",
+              "align": "center"
+            },{
+              "name": "watrHeight",
+              "label": "watrHeight",
+              "align": "center"
+            },{
+              "name": "waterVol",
+              "label": "waterVol",
+              "align": "center"
+            }, {
+              "name": "waterRate",
+              "label": "waterRate",
+              "align": "center"
+            }, {
+              "name": "vcfVal",
+              "label": "vcfVal",
+              "align": "center"
+            },
+            {
+              "name": "pressure",
+              "label": "pressure",
+              "align": "center"
+            },{
+              "name": "temprtClm",
+              "label": "temprtClm",
+              "align": "center"
+            }, {
+              "name": "temprtCctv",
+              "label": "temprtCct",
+              "align": "center"
+            },{
+              "name": "temprtVol",
+              "label": "temprtVol",
+              "align": "center"
+            }, {
+              "name": "temprtWeight",
+              "label": "temprtWeight",
+              "align": "center"
+            },
+            {
+              "name": "gnrStddWeight",
+              "label": "gnrStddWeight",
+              "align": "center"
+            },
+            {
+              "name": "gnrStddWeight",
+              "label": "gnrStddWeight",
+              "align": "center"
+            },
+            {
+              "name": "gnrStddWeight",
+              "label": "gnrStddWeight",
+              "align": "center"
+            }, {
+              "name": "gnrStddVol",
+              "label": "gnrStddVol",
+              "align": "center"
+            }, {
+              "name": "temprtAtp",
+              "label": "temprtAtp",
+              "align": "center"
+            }, {
+              "name": "chkModVal",
+              "label": "chkModVal",
+              "align": "center"
+            },{
+              "name": "tempAdjVal",
+              "label": "tempAdjVal",
+              "align": "center"
+            },{
+              "name": "netoilMass",
+              "label": "netoilMass",
+              "align": "center"
+            },
+            {
+              "name": "acidFctr",
+              "label": "acidFctr",
+              "align": "center"
+            },
+            {
+              "name": "alklFctr",
+              "label": "alklFctr",
+              "align": "center"
+            },
+            {
+              "name": "chkUser",
+              "label": "chkUser",
+              "align": "center"
+            },
+            {
+              "name": "createtime",
+              "label": "createtime",
+              "align": "center"
+            },
+            {
+              "name": "chkDate",
+              "label": "chkDate",
+              "align": "center"
+            },
+            {
+              "name": "submissionState",
+              "label": "submissionState",
+              "align": "center"
+            },
+            {
+              "name": "remark",
+              "label": "remark",
+              "align": "center"
+            },
+            {
+              "name": "maxSaleCont",
+              "label": "maxSaleCont",
+              "align": "center"
+            },
+            {
+              "name": "maxSaleVol",
+              "label": "maxSaleVol",
+              "align": "center"
+            },
+            {
+              "name": "minSaleCont",
+              "label": "minSaleCont",
+              "align": "center"
+            },
+            {
+              "name": "minSaleVol",
+              "label": "minSaleVol",
+              "align": "center"
+            }
+          ]}]},
+      {"primaryTable": [ {
+            "itemName": "物料移动",
+            "Name":"罐列表物料移动",
+            "colNames": [
+              "id",
+              "槽/罐名称",
+              "检尺时间",
+              "检尺类型",
+              "物料",
+              "别名",
+              "质量状态",
+              "槽/罐量",
+              "槽/罐高",
+              "温度",
+              "密度",
+              "液/固质量",
+              "收付",
+              "提交状态",
+              "气相密度",
+              "气相体积",
+              "气相质量",
+              "气相温度",
+              "含水量",
+              "毛计量体积"
+            ],
+            "colModel": [
+              {
+                "name": "id",
+                "label": "id",
+                "align": "center",
+                "hidden":true
+              },
+              {
+                "name": "name",
+                "label": "name",
+                "align": "center"
+              },
+              {
+                "name": "gaugeTime",
+                "label": "gaugeTime",
+                "align": "center"
+              },
+              {
+                "name": "gaugeType",
+                "label": "gaugeType",
+                "align": "center"
+              },
+              {
+                "name": "materialName",
+                "label": "materialName",
+                "align": "center"
+              },
+              {
+                "name": "aliasName",
+                "label": "aliasName",
+                "align": "center"},
+              {
+                "name": "qualityState",
+                "label": "qualityState",
+                "align": "center"
+              },
+              {
+                "name": "potquality",
+                "label": "potquality",
+                "align": "center"
+              },
+              {
+                "name": "potHeight",
+                "label": "potHeight",
+                "align": "center"
+              },
+              {
+                "name": "temperature",
+                "label": "temperature",
+                "align": "center"
+              },
+              {
+                "name": "density",
+                "label": "density",
+                "align": "center"
+              },
+              {
+                "name": "liquidSolidMass",
+                "label": "liquidSolidMass",
+                "align": "center"
+              },
+              {
+                "name": "receiptPayment",
+                "label": "receiptPayment",
+                "align": "center"
+              },
+              {
+                "name": "subState",
+                "label": "subState",
+                "align": "center"
+              },
+              {
+                "name": "gaseousPDensity",
+                "label": "gaseousPDensity",
+                "align": "center"
+              },
+              {
+                "name": "gaseousPVolume",
+                "label": "gaseousPVolume",
+                "align": "center"
+              },
+              {
+                "name": "gaseousPQuality",
+                "label": "gaseousPQuality",
+                "align": "center"
+              },
+              {
+                "name": "gaseousPTemperature",
+                "label": "gaseousPTemperature",
+                "align": "center"
+              },
+              {
+                "name": "waterContent",
+                "label": "waterContent",
+                "align": "center"
+              },
+              {
+                "name": "grossMeasurementVolume",
+                "label": "grossMeasurementVolume",
+                "align": "center"
+              }
+            ]
+          }],"seedTable":[
+          {
+            "itemName": "移动列表",
+            "Name":"物料移动列表",
+            "colNames": [
+              "id",
+              "类型",
+              "移动类型",
+              "付方节点",
+              "收方节点",
+              "收付开始时间",
+              "收付结束时间",
+              "付方物料",
+              "收方物料",
+              "付方提交状态",
+              "收方提交状态",
+              "付方前检尺",
+              "付方后检尺",
+              "收方前检尺",
+              "收方后检尺",
+              "创建人",
+              "创建时间",
+              "关闭人",
+              "关闭时间"
+
+            ],
+            "colModel": [
+              {
+                "name": "id",
+                "label": "id",
+                "align": "center",
+                "hidden":true
+              },
+              {
+                "name": "moveType",
+                "label": "moveType",
+                "align": "center",
+                "hidden":true
+              },
+              {
+                "name": "moveName",
+                "label": "moveName",
+                "align": "center"
+              },
+              {
+                "name": "payNode",
+                "label": "payNode",
+                "align": "center"
+
+              },
+              {
+                "name": "getNode",
+                "label": "getNode",
+                "align": "center"
+              },
+              {
+                "name": "startTime",
+                "label": "startTime",
+                "align": "center"
+              },
+              {
+                "name": "endTime",
+                "label": "endTime",
+                "align": "center"},
+              {
+                "name": "payMaterial",
+                "label": "payMaterial",
+                "align": "center"
+              },
+              {
+                "name": "getMaterial",
+                "label": "getMaterial",
+                "align": "center"
+              },
+              {
+                "name": "paySubState",
+                "label": "paySubState",
+                "align": "center"
+              },
+              {
+                "name": "getSubState",
+                "label": "getSubState",
+                "align": "center"
+              },
+              {
+                "name": "payAgoGauge",
+                "label": "pagAgoGauge",
+                "align": "center"
+              },
+              {
+                "name": "payLaterGauge",
+                "label": "payLaterGauge",
+                "align": "center"
+              },
+              {
+                "name": "getAgoGauge",
+                "label": "getAgoGauge",
+                "align": "center"
+              },
+              {
+                "name": "getLaterGauge",
+                "label": "getLaterGauge",
+                "align": "center"
+              },
+              {
+                "name": "createBy",
+                "label": "createBy",
+                "align": "center"
+              },
+              {
+                "name": "createTime",
+                "label": "createTime",
+                "align": "center"
+              },
+              {
+                "name": "closeBy",
+                "label": "closeBy",
+                "align": "center"
+              },
+              {
+                "name": "closeTime",
+                "label": "closeTime",
+                "align": "center"
+              }
+
+            ]
+          }
+        ] },
+      {"primaryTable":[{
+        "itemName":"封账提交",
+        "Name":"封账提交列表",
+        "colNames":[
+          "id",
+          "槽/罐名称",
+          "是否可提交",
+          "物料",
+          "提交状态",
+          "提交人",
+          "解除提交人",
+          "提交时间",
+          "解除提交时间",
+          "罐收付"],
+        "colModel":[
+          {
+            "name": "id",
+            "label": "id",
+            "align": "center",
+            "hidden":true
+          },
+          {
+            "name": "name",
+            "label": "name",
+            "align": "center",
+            "title":false
+          },
+          {
+            "name": "submitFlag",
+            "label": "submitFlag",
+            "align": "center"
+
+          },
+          {
+            "name": "wuliao",
+            "label": "wuliao",
+            "align": "center"
+          },
+          {
+            "name": "sealFlag",
+            "label": "sealFlag",
+            "align": "center"
+          },
+          {
+            "name": "submitBy",
+            "label": "submitBy",
+            "align": "center"},
+          {
+            "name": "freeBy",
+            "label": "freeBy",
+            "align": "center"
+          },
+          {
+            "name": "submitDate",
+            "label": "submitDate",
+            "align": "center"
+          },
+          {
+            "name": "freeDate",
+            "label": "freeDate",
+            "align": "center"
+          },
+          {
+            "name": "paySum",
+            "label": "paySum",
+            "align": "center"
+          }
+        ]
+      }],"seedTable":[
+        {"itemName":"封账提交",
+          "Name":"封账提交信息",
+          "colNames":[
+            "id",
+            "操作类型",
+            "对方节点名称",
+            "开始时间",
+            "结束时间",
+            "接点值",
+            "关闭时间"
+          ],
+          "colModel":[
+            {
+              "name": "id",
+              "label": "id",
+              "align": "center",
+              "hidden":true
+            },
+            {
+              "name": "type",
+              "label": "type",
+              "align": "center"
+            },
+            {
+              "name": "name",
+              "label": "name",
+              "align": "center"
+
+            },
+            {
+              "name": "startTime",
+              "label": "startTime",
+              "align": "center"
+            },
+            {
+              "name": "endTime",
+              "label": "endTime",
+              "align": "center"
+            },
+            {
+              "name": "node",
+              "label": "node",
+              "align": "center"},
+            {
+              "name": "relieveTime",
+              "label": "relieveTime",
+              "align": "center"
+            }
+          ]}
+      ]}
+    ]
+}

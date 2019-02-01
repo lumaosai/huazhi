@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <title>新增物料弹出页</title>
+    <style>
+        box{
+            cursor: auto;
+        }
+    </style>
+</head>
+<body id="addMove" class="theme-tight wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/mv/TankMtrlMove/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <input id="tankId" name="tankId" type="hidden" value="">
+    <input id="date" name="date" type="hidden" value="">
+    <input id="shift" name="shift" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active">操作类型:</td>
+            <td>
+                <select name="mtrlMvOprtType" id="operationType" class="form-control">
+                </select>
+            </td>
+            <td class="active">使用拓扑结构:</td>
+            <td>
+                <input type="checkbox" id="useTopo" name="useTopo" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">开始时间:</td>
+            <td>
+                <input type="text" require="true" id="startTime" name="begMvDate" class="form-control WdateTime" readonly>
+            </td>
+            <td class="active">结束时间:</td>
+            <td>
+                <input type="text" id="endTime" name="endMvDate" class="form-control WdateTime" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">本方节点:</td>
+            <td>
+                <input type="text" id="ownNode" name="dlvNode.nodename" class=" form-control">
+                <input type="hidden" id="ownNodeId" name="dlvNodeId">
+            </td>
+            <td class="active">对方节点:</td>
+            <td>
+                <select name="rcvNodeId" id="oppositeNode" class="form-control">
+                    <option value>请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">本方物料:</td>
+            <td>
+                <input type="text" id="ownMaterial" name="dlvMtrl.mtrlName" class="form-control">
+                <input type="hidden" id="dlvMtrlId" name="dlvMtrlId" class="form-control">
+
+            </td>
+            <td class="active">对方物料:</td>
+            <td>
+                <select name="rcvMtrlId" id="oppositeMaterial" class="form-control">
+                </select>
+            </td>
+        </tr>
+        <!--需求文档更新 去掉本方别名对方别名-->
+        <!--<tr>-->
+            <!--<td class="active">本方别名:</td>-->
+            <!--<td>-->
+                <!--<input type="text" id="ownalias" name="dlvMtrl.mtrlAlias" class="form-control">-->
+
+            <!--</td>-->
+            <!--<td class="active">对方别名:</td>-->
+            <!--<td>-->
+                <!--<input type="text" id="oppositealias" name="rcvMtrl.mtrlAlias" class="form-control">-->
+            <!--</td>-->
+        <!--</tr>-->
+        <tr>
+            <td class="active">创建时间:</td>
+            <td>
+                <input type="text" id="createTime" name="createDate" class="form-control WdateTime" readonly>
+            </td>
+            <td class="active">关闭时间:</td>
+            <td>
+                <input type="text" id="closeTime" name="clsDate" class="form-control WdateTime" readonly>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="active">创建人:</td>
+            <td>
+                <input type="text" id="createBy" name="createName" class=" form-control">
+            </td>
+            <td class="active">关闭人:</td>
+            <td>
+                <input type="text" id="closeBy" name="clsBy" class=" form-control">
+            </td>
+
+        </tr>
+        <tr>
+            <td class="active">本方量:</td>
+            <td>
+                <div class="dlvVal">
+
+                    <span class="searchGroup">
+                        <input type="text" id="ownQuantity" name="ownQuantity" class=" form-control" readonly>
+                            <button type="button" id="ownQuantitybtn" class="btn btn-primary"><i
+                            class="fa fa-search"></i></button>
+                    </span>
+                    <!--保存用数据-->
+                    <input id="dlvPreChkId" name="dlvPreChkId" type="hidden" value="">
+                    <input id="dlvPreChkCont" name="dlvPreChkCont" type="hidden" value="">
+                    <input id="dlvAftChkId" name="dlvAftChkId" type="hidden" value="">
+                    <input id="dlvAftChkCont" name="dlvAftChkCont" type="hidden" value="">
+                    <!--保存用数据-->
+
+
+
+            </td>
+            <td class="active">对方量:</td>
+            <td>
+                <div class="rcvVal">
+
+                    <span class="searchGroup">
+                        <input type="text" id="oppositeQuantity" name="oppositeQuantity" class=" form-control" readonly>
+                        <button type="button" id="oppositeQuantitybtn" class="btn btn-primary"><i
+                                class="fa fa-search color"></i></button>
+                    </span>
+                    <!--保存用数据-->
+                    <input id="rcvPreChkId" name="rcvPreChkId" type="hidden" value="">
+                    <input id="rcvPreChkCont" name="rcvPreChkCont" type="hidden" value="">
+                    <input id="rcvAftChkId" name="rcvAftChkId" type="hidden" value="">
+                    <input id="rcvAftChkCont" name="rcvAftChkCont" type="hidden" value="">
+                    <!--保存用数据-->
+
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>
+<!--结束-->
+</body>
+</html>

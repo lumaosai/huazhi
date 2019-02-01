@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装置列表页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        tr{
+            height: 40px;
+        }
+        #wait_searchText {
+            height: 30px;
+            width: 80%;
+        }
+
+        .searchAll {
+            height: 30px;
+            width: 30px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        .rightTable {
+            width: 80%;
+            margin: 0 8px;
+        }
+
+        #schemeMTable {
+            width: 100%;
+        }
+        #zTree {
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        .zTree {
+            background: #f3f3f3;
+            box-sizing: border-box;
+            padding: 10px;
+            height: 400px;
+            width: 18%
+        }
+
+        .ztree {
+            margin: 13px 0;
+            padding: 5px;
+            max-height: 344px;
+            overflow-y: scroll;
+            color: rgb(51, 51, 51);
+            background-color: rgb(255, 255, 255);
+        }
+
+        .jqTable-item .toolbar-form {
+            margin-bottom: 10px;
+        }
+
+        .fa-check-circle {
+            color: #00cc66;
+        }
+
+        .ibox-content-table {
+            overflow-x: scroll !important;
+            min-height: 430px;
+        }
+
+        .table-content {
+            width: 2000px;
+            padding: 0;
+        }
+        /*动态创建的css*/
+        .classMeasure .subTableBox{
+            width: 860px;
+        }
+
+        .editSelect{
+            text-align: center;
+            text-align-last: center;
+        }
+        /*动态创建的css End*/
+        .ibox-content-title {
+            font-size: 16px;
+            font-weight: 700 !important;
+            color: #000;
+            position: relative;
+            border-bottom: 1px solid rgb(234, 234, 234);
+        }
+
+        .ibox-tableSon {
+            margin-top: 10px;
+        }
+        /*jqgrid表头行高调整*/
+        .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+            height: 40px!important;
+        }
+    </style>
+
+</head>
+<body id="deviceIndex" class="wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line theme-tight">
+        <div class="titName clearfix">
+            <span>装置管理</span>
+            <div class="pull-right toolbar-btns">
+                <button class="btn" id="submit"><i class="fa fa-check col-1ab394"></i> 数据提交
+                </button>
+                <button class="btn" id="unSubmit"><i class="fa fa-unlink col-1ab394"></i> 解除提交
+                </button>
+                <button class="btn" id="delClass"><i class="fa fa-trash-o col-f98080"></i> 删除班次记录
+                </button>
+            </div>
+        </div>
+        <div class="toolbar-form clearfix">
+            <div class="form-inline">
+                <span>日期：</span>
+                <input type="text" value="" id="tankDate" class="time-input form-control Wdate" onclick="WdatePicker({skin:'whyGreen',maxDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd'});"
+                       placeholder="">
+            </div>
+            <div class="form-inline">
+                <span>班次 ：</span>
+                <select name="shift"  class="form-control" id="shift">
+                </select>
+                <input type="hidden" id="shiftHidden" value="" data-time="" data-nodeId="">
+            </div>
+
+            <button class="btn btn-search" id="search-btn-New" type="button"><i class="fa fa-search"></i>查询</button>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="pull-left zTree">
+                <span class="searchGroup dataTable_my ">
+                    <input type="text" id="wait_searchText" class="form-control pull-left" placeholder="关键字筛选">
+                    <button type="button" class="btn-search searchAll">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                <ul id="zTree" class="ztree"></ul>
+            </div>
+            <div class="tab-box  pull-left clearfix  rightTable">
+                <div class="tab-bar tabtop clearfix">
+                    <ul class="tab-nav tabBtn  pull-left">
+                        <li class="noBtn active">方案管理</li>
+                        <li class="hasBtn">班计量</li>
+                        <li class="hasBtn">投入产出</li>
+                        <li class="hasBtn">物料移动</li>
+                        <li class="noBtn">场景图</li>
+                    </ul>
+                    <ul class="tab-btns pull-right">
+                        <li class="active operationBtn"></li>
+                        <li class="operationBtn">
+                            <button class="btn btn-gather btn-1ab394" id="gather"><i class="fa fa-circle-o-notch "></i>自动采集</button>
+                            <button class="btn btn-save col-1ab394" id="class-btn-save"><i class="fa fa-save"></i>保存</button>
+                        </li>
+                        <li class="operationBtn">
+                            <button class="btn btn-comAgain btn-1ab394" id="btn-comAgain"><i class="fa fa-circle-o-notch"></i> 重新计算
+                            </button>
+                            <button class="btn btn-save" id="btn-save"><i class="fa fa-save"></i> 保存
+                            </button>
+                        </li>
+                        <li class="operationBtn">
+                            <button class="btn btn-add" id="btn-add"><i class="fa fa-plus"></i> 新建
+                            </button>
+                            <button class="btn btn-save" id="btn-close"><i class="fa fa-times-circle "></i> 关闭
+                            </button>
+                            <button class="btn btn-delete" id="btn-delete"><i class=" fa fa-trash-o "></i> 删除
+                            </button>
+                        </li>
+                        <li class="operationBtn"></li>
+                    </ul>
+                </div>
+                <div class="tab-con">
+                    <!--方案管理-->
+                    <div class="jqTable-item active theme-tight" id="schemeMana">
+                        <div class="toolbar-form">
+                            <div class="form-inline">
+                                <span>方案名称：</span>
+                                <select name="schemeName" class="form-control" id="schemeName">
+                                </select>
+                            </div>
+                            <div class="form-inline">
+                                <span>切换时间：</span>
+                                <input type="text" readonly name="tabDate" class="form-control" id="tabDate">
+                            </div>
+                            <button class="btn btn-tab btn-1ab394" id="tab-btn" type="button"><i class="fa fa-exchange"></i>切换方案
+                            </button>
+                        </div>
+                        <div class="tableParent">
+                            <table id="schemeMTable"
+                                   class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                <thead>
+                                <tr role="row">
+                                    <th>方案名称</th>
+                                    <th>开始时间</th>
+                                    <th>编辑</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <!--班计量-->
+                    <div class="jqTable-item" id="classMeasure">
+                        <div class="tableParent">
+                            <div class="ibox-content-table">
+                                <!--表格区-->
+                                <div class="table-content classMeasure">
+                                    <table id="classMTable">
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mgt-5 treeTable-count">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <span class="treeTable-taps">班计量记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--投入产出-->
+                    <div class="jqTable-item" id="inputOutput">
+                        <div class="tableParent">
+                            <div class=" ibox-content-table">
+                                <!--表格区-->
+                                <div class="ibox-content inputOutput table-content">
+                                    <table id="treeTable">
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mgt-5 treeTable-count">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <span class="treeTable-taps">投入产出记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--物料移动-->
+                    <div class="jqTable-item" id="materialMove">
+                        <div class="tableParent">
+                            <table id="materialMTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                <thead>
+                                <tr role="row">
+                                    <th>序号</th>
+                                    <th width='60px;'><input type='checkbox' class='i-checks'></th>
+                                    <th>收付类型</th>
+                                    <th>付方节点名称</th>
+                                    <th>收方节点名称</th>
+                                    <th>收付开始时间</th>
+                                    <th>收付结束时间</th>
+                                    <th>创建人</th>
+                                    <th>创建时间</th>
+                                    <th>关闭人</th>
+                                    <th>关闭时间</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            <div class="mgt-5 treeTable-count">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <span class="treeTable-taps">班计量记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--场景图-->
+                    <div class="jqTable-item" id="sceneGraph">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script data-main="/js/module/material/materialMove/device" src="/js/zlib/require.js"></script>
+</html>

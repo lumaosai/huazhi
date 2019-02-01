@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>审批流程</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .wrapper,.ibox{height:100%;}
+        .ibox{background: #fff;}
+        .revP-tit{background: #f3f3f4;}
+        .btn-sub{
+            display: none;
+        }
+        .targetPlanTit{font-size:18px;line-height: 30px;}
+        .targetPlanTab-nav li{padding:0 20px; text-align: center;line-height: 42px;font-size:14px;float:left;cursor: pointer;border:1px solid #e3e3e3;border-left:none;background: #f9f9f9;border-bottom:none;position: relative;}
+        .targetPlanTab-nav li:before,.targetPlanTab-nav li:after{content: "";position: absolute;left:0; width:100%;height:1px;}
+        .targetPlanTab-nav li:before{border-top:1px solid transparent;top:0;}
+        .targetPlanTab-nav li:after{border-bottom:1px solid transparent;bottom:-1px;}
+        .targetPlanTab-nav li.active,.targetPlanTab-nav li:hover{border-top-color:#1ab394;border-bottom:none;background: #fff;}
+        .targetPlanTab-nav li.active:before,.targetPlanTab-nav li:hover:before{
+            border-top-color:#1ab394;
+        }
+        .targetPlanTab-nav li.active:after,.targetPlanTab-nav li:hover:after{
+            border-bottom-color:#fff;
+        }
+
+        #iframeCon{padding-top:20px;background: #fff;border-top:1px solid #e3e3e3;}
+        #iframeCon iframe{position: relative;top:0;background: #fff;}
+        .back-btn,.btn-submit{margin-top:2px;}
+    </style>
+</head>
+<body id="reviewPlan" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-content pos-rel">
+            <input type="hidden" value="" id="monthStatus">
+            <div class="pull-right" style="margin-top:4px;">
+                <button type="button" class="back-btn btn btn-white">
+                    <i class="fa fa-reply"></i>
+                    返回</button>
+                <button class="btn btn-submit  btn-white" id="btnSub">
+                    <i class="fa fa-file-text-o"></i>
+                    审核</button>
+            </div>
+            <div class="reviewPlans-tab tab-box">
+                <ul class="revP-tit tab-tit clearfix review-box">
+                    <li class="active">审批流程</li>
+                    <li >表单信息</li>
+                </ul>
+                <ul class="tab-con">
+                    <li id="reviewPlans" class="pag-30 bg-fff active">
+                        <div>
+                            <span class=" mgr-30" style="display: inline-block;text-indent: 15px;">申请人&nbsp;：<i class="appUser"></i></span>
+                            <span class=" mgr-30">申请时间：<i class="appTime"></i></span>
+                            <span class=" mgr-30">当前审批人：<i class="currentApp" data-id=""></i></span>
+                            <span class=" mgr-30">流程状态：<i class="flowStatus">审批中</i></span>
+                        </div>
+                        <div class="app-radio">
+                            <span class="w-74">审批&nbsp;：</span>
+                            <label class="mgr-30 customRadio" ><input type="radio" value="通过" name="appRadio" checked><i></i>通过</label>
+                            <label class="mgr-30 customRadio"><input type="radio"  value="驳回" name="appRadio"><i></i>驳回</label>
+                        </div>
+                        <div class="app-view">
+                            <span style="vertical-align: top;" class="w-74">审批意见&nbsp;：</span>
+                            <textarea name="" id="" placeholder="请填写您的意见"  class="appTextare"></textarea>
+                        </div>
+                        <div class="tab-box app-flow-tabBox">
+                            <ul class="app-flow-tit tab-tit clearfix">
+                                <li class="active">审批过程</li>
+                                <li >流程图</li>
+                            </ul>
+                            <ul class="tab-con">
+                                <li class="flow-list active">
+                                </li>
+                                <li class="flow-process">
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="pag-30 bg-fff">
+                        <h1 class="targetPlanTit mgb-20"><span></span>生产计划</h1>
+                        <div class="targetPlanTab">
+                            <ul class="targetPlanTab-nav clearfix">
+                                <li class="active">全厂主要生产技术指标计划</li>
+                                <li>商务采购指标计划</li>
+                                <li>安全、环保、设备管理总体指标计划</li>
+                                <li>重点工作计划</li>
+                            </ul>
+                            <div class="targetPlanTab-con" id="iframeCon">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/monthPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建/维护计量单</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        .btnBox{
+            width: 136px;
+            margin: 20px auto;
+        }
+        .tab-bar{
+            padding-bottom: 5px;
+        }
+        .btn-tankCar{
+            height: 150px;
+            overflow-x:scroll !important;
+        }
+    </style>
+</head>
+<body id="creategaugeTicket" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/mv/SmtinoutBill/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">
+                类型:
+            </td>
+            <td>
+                <select id="transType" require="true"  name="transType" class="form-control">
+                </select>
+            </td>
+            <td class="active require">
+                进出:
+            </td>
+            <td>
+                <input type="radio" class="i-checks radios"  name="inoutFlag" value="0" checked/>进厂
+                <input type="radio" class="i-checks radios"  name="inoutFlag" value="1"/>出厂
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                进出厂点:
+            </td>
+            <td>
+                <select id="nodeId"  require="true" name="nodeId" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            <td class="active require">
+                物料:
+            </td>
+            <td>
+                <select id="mtrlId" require="true"  name="mtrlId" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                开始班次:
+            </td>
+            <td>
+                <input id="begShiftDate" require="true"   name="begShiftDate" class="form-control"  value=""></td>
+            <td class="active require">
+                结束班次:
+            </td>
+            <td>
+                <input id="endShiftDate" require="true" name="endShiftDate" class="form-control"  value=""></td>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                录入者:
+            </td>
+            <td>
+                <input id="crtBy" name="crtBy" class="form-control"  value="" ></td>
+            <td class="active">
+                录入日期:
+            </td>
+            <td>
+                <input id="createDate" name="createDate" class="form-control"  value="" ></td>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                关闭者:
+            </td>
+            <td>
+                <input id="clsBy" name="clsBy" class="form-control"  type="text" value="" ></td>
+            <td class="active">
+                关闭时间:
+            </td>
+            <td>
+                <input id="clsDate" name="clsDate" class="form-control"  type="text" value=""></td>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                单据总量:
+            </td>
+            <td>
+                <input id="amount" name="amount" class="form-control"  value="" ></td>
+            <td class="active">
+                确认总量:
+            </td>
+            <td>
+                <input id="conAmount" name="conAmount" class="form-control"   value="" ></td>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                单据编号:
+            </td>
+            <td>
+                <input id="conNo" name="conNo" class="form-control"  type="text" value=""></td>
+            <td class="active">
+                备注:
+            </td>
+            <td>
+                <input id="remark" name="remark" class="form-control"  value="" ></td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<div class="btnBox">
+    <button class="btn btn-save" id="saveBtn">保存</button>
+    <button class="btn" id="">完成</button>
+</div>
+<div class="clearfix tab-bar">
+    <div class="pull-left toolbar-btns active">
+        <a class="btn" id="btn-add"><i class="fa fa-plus"></i> 计量记录</a>
+    </div>
+    <div class="pull-right toolbar-btns">
+        <a class="btn btn-save" id="btn-surface"><i class="fa fa-plus"></i>表计量</a>
+        <a class="btn btn-save" id="btn-tankCar"><i class="fa fa-edit"></i>槽车计量</a>
+        <a class="btn btn-save" id="btn-automobile"><i class="fa fa-download"></i>汽车衡计量</a>
+        <a class="btn btn-save" id="btn-maintain"><i class="fa fa-upload"></i>维护</a>
+        <a class="btn btn-save" id="btn-delete"><i class="fa fa-question-circle-o"></i>删除</a>
+    </div>
+</div>
+<!--内容区-->
+<div class="btn-tankCar">
+    <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+        <thead>
+        <tr role="row">
+            <th width="60px"><input type="checkbox" class="i-checks" ></th>
+            <th>表(车、罐)号</th>
+            <th>计量方式</th>
+            <th>前读数(空车)</th>
+            <th>后读数(重车)</th>
+            <th>计量量</th>
+            <th>确认量</th>
+            <th>前量(空车)时间</th>
+            <th>后量(重车)时间</th>
+            <th>班次开始时间</th>
+            <th>班次结束时间</th>
+            <th>测量人</th>
+            <th>计量时间</th>
+            <th>录入人</th>
+            <th>录入时间</th>
+            <th>确认人</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <!--表内容-->
+        <!--<tbody id="datainner">-->
+
+        <!--</tbody>-->
+    </table>
+</div>
+</body>
+<script data-main="/js/module/material/materialMove/mobilisationTicket" src="/js/zlib/require.js"></script>
+</html>

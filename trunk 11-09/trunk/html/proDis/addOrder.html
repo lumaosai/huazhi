@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作管理--操作指令--操作指令--创建指令页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        /*.ibox {
+            background-color: #f3f3f4;
+            position: relative;
+        }
+        .ibox-content:nth-of-type(1) {
+            margin-bottom: 20px;
+        }
+        .ibox-content:nth-of-type(2) {
+            height: 675px;
+            width: 300px;
+            float: left;
+            margin-right: 20px;
+            overflow-y: scroll;
+        }
+        .ibox-content:nth-of-type(3) {
+            position: absolute;
+            right: 0;
+            width: 75%;
+        }
+        .ibox-content {
+            background-color: #ffffff;
+        }
+        html,body{
+            background: #f3f3f4;
+        }*/
+    </style>
+</head>
+<body id="addOrder" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName"><span>创建操作指令</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline proc">
+                    工序：
+                    <select name="proc" id="proc" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline grade">
+                    指令级别：
+                    <select name="grade" id="grade" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline kind">
+                    指令分类：
+                    <select name="kind" id="kind" class="width-fix-120">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn  btn-instruct" id="btn-add" type="button" >
+                        <i class="fa icon-instruct"></i>
+                        指令添加
+                    </button>
+                    <button id="refresh-btn" hidden="hidden" onclick="window.location.reload()"></button>
+                    <button class="btn  btn-white" id="btn-back" type="button" >
+                        <i class="fa fa-reply"></i>
+                        返回
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--左侧ztree-->
+        <div class="ibox-content">
+            <!--左侧树-->
+            <div class="leftBox pull-left"  id="left">
+                <div id="tree" class="ztree leftBox-content"></div>
+            </div>
+            <div id="right">
+                <iframe id="officeContent" name="officeContent" width="100%" height="650px" frameborder="0"></iframe>
+            </div>
+            <!--内容区-->
+        </div>
+    </div>
+<script data-main="/js/module/proDis/addOrder" src="/js/zlib/require.js"></script>
+</body>
+</html>

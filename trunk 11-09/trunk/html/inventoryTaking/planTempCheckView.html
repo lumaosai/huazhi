@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘存模板</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="planTempCheckView" class="wrapper-white">
+<form id="inputForm" action="$Api.aps$/api/stocktake/StocktakeTemplate/saveTemplate" method="post">
+    <input id="id" name="id" type="hidden" />
+    <table class="table form-table">
+        <tr>
+            <td class="width-25 active require">模版名称:</td>
+            <td class="width-75">
+                <input id="opeName" name="name" require="true" type="text" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">模版类型:</td>
+            <td>
+                <select id="opeCode" name="types" require="true" class="form-control">
+                    <option value="">-- 请选择 --</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否启用：</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/inventoryTaking/planTemple" src="/js/zlib/require.js"></script>
+</body>
+</html>

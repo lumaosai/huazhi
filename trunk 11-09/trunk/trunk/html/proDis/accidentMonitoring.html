@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>事件监控</title>
+</head>
+<style>
+    .apsType-linkage li{
+        display: inline-block;
+    }
+    .col-1ab394{
+        color: #1ab394;
+    }
+</style>
+<body id="monitoring" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>事件监控</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline reportingTime"></div>
+                <div class="form-inline col-1ab394">
+                    <i class="fa fa-check-circle"></i>
+                    上报:<span></span>
+                </div>
+                <div class="form-inline col-ffa82d">
+                    <i class="fa icon-wait"></i>
+                    处理中:<span></span>
+                </div>
+                <div class="form-inline">
+                    <i class="fa fa-times-circle"></i>
+                    关闭:<span></span>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--创建表格-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>事件</th>
+                    <th>原因</th>
+                    <th>上报人</th>
+                    <th>上报时间</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody id="treeTableBody">
+                </tbody>
+            </table>
+            <!--分页显示-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/proDis/monitoring" src="/js/zlib/require.js"></script>
+</body>
+</html>

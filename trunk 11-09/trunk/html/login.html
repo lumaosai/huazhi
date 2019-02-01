@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}-用户登录</title>
+    <script type="text/javascript" src="../js/meta.js"></script>
+</head>
+
+<body>
+<!--<canvas id="myCanvas"></canvas>-->
+<div class="login-bg"></div>
+<div class="login-logo">
+    <div class="login-wrapper">
+        <img src="../images/login/login-logo.png" alt="img">
+    </div>
+</div>
+<form action="" id="loginForm">
+    <div class="login-box">
+        <h1><p> MOM</p> 制造运营管理平台</h1>
+        <input id="user" type="hidden" name="clientId" value="admin">
+        <div class="login-item login-user">
+            <input type="text" id="loginName" placeholder="用户名"  name="loginName">
+            <!--<span><i class="fa icon-user"></i></span>-->
+            <span><img src="../images/login/login-user.png" alt="img"></span>
+        </div>
+        <div class="login-item login-password">
+            <input id="password" type="password" name="password" placeholder="密码">
+            <!--<span><i class="fa icon-pass"></i></span>-->
+            <span><img src="../images/login/login-password.png" alt="img"></span>
+        </div>
+        <!--<div>-->
+            <!--<label><input class="check" type="checkbox" id="rememberMe">五天内免登-->
+                <!--<span>忘记密码？</span>-->
+            <!--</label>-->
+        <!--</div>-->
+        <div class="forgetPassword">
+            <label>
+                <span id="forget">忘记密码？</span>
+            </label>
+            <div class="login-error"></div>
+        </div>
+
+        <div class="login-submit">登录</div>
+    </div>
+</form>
+<script data-main="/js/module/login/login" src="/js/zlib/require.js"></script>
+</body>
+</html>

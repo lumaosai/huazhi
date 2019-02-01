@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汽车衡计量</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="automobileMeasure" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/mv/TruckMeas/save" method="post">
+    <input id="smtinoutBillId" name="smtinoutBillId" type="hidden">
+    <input id="nodeId" name="nodeId" type="hidden">
+    <input id="gaugeType" name="gaugeType" type="hidden" value="4">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active">
+                汽车编号:
+            </td>
+            <td>
+                <input id="vhclNo" name="vhclNo"  class="form-control"  type="text" value="">
+            </td>
+            <td class="active require">
+                班次开始时间:
+            </td>
+            <td>
+                <input id="begShiftDate" name="begShiftDate"  class="form-control"  type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                班次结束时间:
+            </td>
+            <td>
+                <input id="endShiftDate" name="endShiftDate" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                皮重:
+            </td>
+            <td>
+                <input id="vhclWeight" name="vhclWeight"  class="form-control"  type="number" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                重车时间:
+            </td>
+            <td>
+                <input id="heavyDate" name="heavyDate" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                毛重:
+            </td>
+            <td>
+                <input id="grossWeight" name="grossWeight" class="form-control"  type="text" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                空车时间:
+            </td>
+            <td>
+                <input id="emptyDate" name="emptyDate" class="form-control "  type="text" value="">
+            </td>
+            <td class="active">
+                重量:
+            </td>
+            <td>
+                <input id="weight" name="weight" class="form-control"  type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                净量:
+            </td>
+            <td>
+                <input id="netWeight" name="netWeight" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                含水率%:
+            </td>
+            <td>
+                <input id="waterPercent" name="waterPercent" class="form-control" type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                明水重:
+            </td>
+            <td>
+                <input id="wtrWeight" name="wtrWeight" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                确认量:
+            </td>
+            <td>
+                <input id="conVal" name="conVal" class="form-control"  type="text" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                测量人:
+            </td>
+            <td>
+                <input id="crtBy" name="crtBy" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                确认人:
+            </td>
+            <td>
+                <input id="conBy" name="conBy" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                测量时间:
+            </td>
+            <td>
+                <input id="createDate" name="createDate" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                备注:
+            </td>
+            <td>
+                <input id="remark" name="remark" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+<script data-main="/js/module/material/materialMove/mobilisationTicket" src="/js/zlib/require.js"></script>
+</html>

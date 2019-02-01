@@ -1,0 +1,52 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "page":{
+    "rows":[{
+      "id":"1",
+      "wspId":"0",
+      "nodeNo":"1232",
+      "nodeCode":"FSLY001’",
+      "nodeName":"复晟铝业有限公司生产工厂",
+      "nodeAlias":"复晟铝业",
+      "pres":"34.5",
+      "enable":"0",
+      "displayOrder":"1000",
+      "remark":"这是工厂",
+      "srcFormula":"122",
+      "destFormula":"1212",
+      "arbiFormula":"12121",
+      "fctr":{
+        "srcFctrName":"源工厂名称",
+        "destFctrCode":"源工厂编码"
+      },
+      "mtrl":{
+        "srcMtrlName":"源物料名称",
+        "desMtrlCode":"源物料编码"
+      },
+
+      "MOMtype":[{
+        "id":"1212",
+        "name":"化学工厂"
+      },{
+        "id":"12123",
+        "name":"生产工厂"
+      }],
+      "zhuangzhi":[{
+        "id":"1212",
+        "name":"化学工厂"
+      },{
+        "id":"12123",
+        "name":"生产工厂"
+      }]
+    }],
+    "count":7,
+    "pageCount":5,
+    "pageNo":1,
+    "endRowNum": 17,
+    "startRowNum": 0,
+    "pageSize":10
+  }
+
+}

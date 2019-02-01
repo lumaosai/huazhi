@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘存管理--盘存字典--编辑页面</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="planDicCheckView" class="wrapper-white">
+<form id="inputForm" method="post" action="$Api.aps$/api/aps/Device/save">
+    <input id="id" name="id" type="hidden">
+    <table class="table form-table">
+        <tr>
+            <td class="active">上级指标:</td>
+            <td>
+                <input id="parentIdH" name="parent.id" class="form-control" type="hidden">
+                <input id="_parentId" readonly="readonly" name="parentName" type="text"
+                       class="form-control">
+            </td>
+            <td class="active require">指标名称:</td>
+            <td id="nameShow">
+                <input id="name" name="name" type="text" class="form-control " require="true">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">指标代码:</td>
+            <td>
+                <input id="code" name="code" type="text" require="true" class="form-control ">
+            </td>
+            <td class="active">单位:</td>
+            <td>
+                <input id="unit" name="unit" type="text"  class="form-control " >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">指标值:</td>
+            <td colspan="3">
+                <div id="formula"  class="formula width-85 pull-left" style="line-height: 30px;"></div>
+                <input id="val" name="val" class="val" type="hidden">
+                <button type="button" id="computerBtn" style="height:34px;" class="btn btn-primary pull-right">公式</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">指标类型:</td>
+            <td>
+                <select id="types" name="types" class="form-control" ></select>
+            </td>
+            <td class="active">是否启用:</td>
+            <td>
+                <select id="enable" name="enable"  class="form-control">
+                    <option value="1">启用</option>
+                    <option value="2">禁用</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/inventoryTaking/dicTree" src="/js/zlib/require.js"></script>
+</body>
+</html>

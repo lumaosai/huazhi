@@ -1,0 +1,125 @@
+{
+  "zyzbjh":{
+    "columnArr":[[
+      {"field": "id", "title": "id","hidden": true},
+      {"field": "mainId", "title": "mainId", "hidden": true},
+      {"field": "itemCode", "title": "", "hidden": true},
+      {"field": "itemName", "title": "项目", "width": 100, "align": "center"},
+      {"field": "itemUnit", "title": "单位", "width": 100, "align": "center"},
+      {"field": "ndyjcl", "title":"年预计计划", "width": 100, "align": "center"},
+      {"field": "yjdsjdcl", "title": "预计第四季度计划", "width": 100, "align": "center"},
+      {"field": "ncl", "title": "年计划", "width": 100, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"ndyjcl","editor":{"type": "text"} },
+      { "field":"yjdsjdcl","editor":{"type": "text"} },
+      { "field":"ncl","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{}
+  },
+
+  "zljh":{
+    "columnArr":[[
+      {"field": "id", "title": "id","hidden": true},
+      {"field": "mainId", "title": "mainId", "hidden": true},
+      {"field": "itemCode", "title": "", "hidden": true},
+      {"field": "itemName", "title": "项目", "width": 100, "align": "center"},
+      {"field": "itemUnit", "title": "单位", "width": 100, "align": "center"},
+      {"field": "ndyjcl", "title":"年预计计划", "width": 100, "align": "center"},
+      {"field": "yjdsjdcl", "title": "预计第四季度计划", "width": 100, "align": "center"},
+      {"field": "ncl", "title": "年计划", "width": 100, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"ndyjcl","editor":{"type": "text"} },
+      { "field":"yjdsjdcl","editor":{"type": "text"} },
+      { "field":"ncl","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{}
+  },
+
+  "cpxl":{
+    "columnArr":[[
+      {"field": "id", "title": "id","hidden": true},
+      {"field": "mainId", "title": "mainId", "hidden": true},
+      {"field": "itemCode", "title": "", "hidden": true},
+      {"field": "itemName", "title": "项目", "width": 100, "align": "center"},
+      {"field": "itemUnit", "title": "单位", "width": 100, "align": "center"},
+      {"field": "ndyjcl", "title":"年预计计划", "width": 100, "align": "center"},
+      {"field": "yjdsjdcl", "title": "预计第四季度计划", "width": 100, "align": "center"},
+      {"field": "ncl", "title": "年计划", "width": 100, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"ndyjcl","editor":{"type": "text"} },
+      { "field":"yjdsjdcl","editor":{"type": "text"} },
+      { "field":"ncl","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{}
+  },
+  "zlzbjh":{
+    "columnArr":[[
+      {"field": "id", "title": "id","hidden": true},
+      {"field": "mainId", "title": "mainId", "hidden": true},
+      {"field": "itemCode", "title": "", "hidden": true},
+      {"field": "itemName", "title": "项目", "width": 100, "align": "center"},
+      {"field": "itemUnit", "title": "单位", "width": 100, "align": "center"},
+      {"field": "ndyjcl", "title":"年预计计划", "width": 100, "align": "center"},
+      {"field": "yjdsjdcl", "title": "预计第四季度计划", "width": 100, "align": "center"},
+      {"field": "ncl", "title": "年计划", "width": 100, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"ndyjcl","editor":{"type": "text"} },
+      { "field":"yjdsjdcl","editor":{"type": "text"} },
+      { "field":"ncl","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{}
+  },
+
+  "cpcl":{
+    "columnArr":[[
+      {"field": "id", "title": "id","hidden": true},
+      {"field": "mainId", "title": "mainId", "hidden": true},
+      {"field": "itemCode", "title": "", "hidden": true},
+      {"field": "itemName", "title": "项目", "width": 100, "align": "center"},
+      {"field": "itemUnit", "title": "单位", "width": 100, "align": "center"},
+      {"field": "ndyjcl", "title":"年预计计划", "width": 100, "align": "center"},
+      {"field": "yjdsjdcl", "title": "预计第四季度计划", "width": 100, "align": "center"},
+      {"field": "ncl", "title": "年计划", "width": 100, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"ndyjcl","editor":{"type": "text"} },
+      { "field":"yjdsjdcl","editor":{"type": "text"} },
+      { "field":"ncl","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{
+      "checkRowArr": [0,1],
+      "checkFieldArr": ["ncl"]
+    }
+  },
+
+  "zyxhzbjh":{
+    "columnArr":[[
+      {"field": "id", "title": "id","hidden": true},
+      {"field": "mainId", "title": "mainId", "hidden": true},
+      {"field": "itemCode", "title": "", "hidden": true},
+      {"field": "itemName", "title": "项目", "width": 100, "align": "center"},
+      {"field": "itemUnit", "title": "单位", "width": 100, "align": "center"},
+      {"field": "ndyjcl", "title":"年预计计划", "width": 100, "align": "center"},
+      {"field": "yjdsjdcl", "title": "预计第四季度计划", "width": 100, "align": "center"},
+      {"field": "ncl", "title": "年计划", "width": 100, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"ndyjcl","editor":{"type": "text"} },
+      { "field":"yjdsjdcl","editor":{"type": "text"} },
+      { "field":"ncl","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{}
+  }
+
+
+}

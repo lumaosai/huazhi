@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+      #dropzone{
+          margin: 0 auto;
+          width: 95%;
+          min-height: 280px;
+          border-radius: 3px;
+          padding: 10px 0 0;
+          box-sizing: border-box;
+          position: relative;
+      }
+      #dropzone select{
+          position: absolute;
+          left:0;
+          top:0;
+      }
+      .dropzone,.dropzone>div,input[type=file]{
+          display: block;
+      }
+      #dropzone .dropzone{
+          border: 3px dashed rgb(155, 193, 224);
+          min-height: 275px;
+      }
+      input[type=file]{
+          z-index: 2001;
+          opacity: 0;
+      }
+      #dropzone .dropzone>.dz-message{
+          margin-top:17%;
+      }
+      .dropzone .dz-preview .dz-progress{
+          opacity: 0!important;
+      }
+      .dropzone>.dz-message>span{
+          line-height: 100%;
+          color: rgb(175, 175, 175);
+          font-size: 20px;
+      }
+      #upexcel{
+          background-color: rgb(255, 168, 45) !important;
+          color: rgb(255, 255, 255) !important;
+          font-size: 13px;
+          border: 1px solid rgb(231, 231, 231);
+          min-width: 55px;
+          border-radius: 5px;
+          line-height: 25px;
+          cursor: pointer;
+          margin-bottom: 15px;
+          display: none;
+      }
+      #upexcel:active{
+          opacity: .8;
+      }
+    </style>
+</head>
+
+<body id="laboratoryInfInner">
+
+
+
+
+<div id="dropzone">
+    <button id="upexcel" class="btn btn-white btn-sm">上传</button>
+    <form method="post" enctype="multipart/form-data" class="dropzone" action="$Api.aps$/ob/import/OreLaboratoryInfo/excelPut">
+        <div class="fallback">
+            <input name="file" type="file" />
+        </div>
+    </form>
+
+</div>
+
+<script data-main="/js/module/oreDistribution/laboratoryInf" src="/js/zlib/require.js">
+</script>
+</body>
+</html>

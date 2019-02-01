@@ -1,0 +1,23 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "MOMtype":[{
+    "id":"1212",
+    "name":"化学工厂"
+  },{
+    "id":"12123",
+    "name":"生产工厂"
+  }],
+  "AreaUnit":{
+    "id":"0",
+    "areaNo ":"1",
+    "areaCode":"FSLY001’",
+    "areaName":"复晟铝业有限公司生产工厂",
+    "areaAlias":"复晟铝业",
+    "fctrType":"12123",
+    "delFlag":"0",
+    "displayOrder":"1000",
+    "remark":"这是工厂"
+  }
+}

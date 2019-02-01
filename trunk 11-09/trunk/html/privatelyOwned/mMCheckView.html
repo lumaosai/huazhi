@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>磁贴查看</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <link rel="stylesheet" href="../../css/home/workBench-iconsLibrary/iconfont.css">
+    <link rel="stylesheet" href="../../css/aps.css">
+    <link rel="stylesheet" href="../../css/privatelyOwned.css">
+    <style>
+        /*.notapproval{*/
+            /*height:91%;*/
+        /*}*/
+        .typeName>span {
+            overflow: inherit;
+        }
+        .iconImage{ width: 110px; height: 110px; margin:15px auto; position: relative; }
+        #iconImg{ position: absolute; top: 46px; left: 5px; font-size: 100px; color: #3ab394; }
+        .topcontent{ height: 270px; }
+        .notapproval>li,.alreadyapproval>li{ width: 100%; height: 100%; margin:0; }
+        .notapproval>li>div { height: 65%; width: 100%; }
+        .contentfrom{ max-height:185px; box-sizing: border-box; font-size: 16px; padding: 15px 50px; overflow-x: auto; height:auto; }
+        .contentfrom>li{ margin-bottom: 10px; }
+        .contentfrom>li:nth-of-type(1),.contentfrom>li:nth-of-type(2),.contentfrom>li:nth-of-type(3){
+            width: 33%; float: left;
+        }
+        .contentfrom>li:nth-of-type(4),.contentfrom>li:nth-of-type(5){ width: 100%; }
+        .typeName{ font-size: 26px; line-height: 24px; margin-bottom:10px; }
+        #dataSource { width: 460px; background: transparent; border: none; outline: none; }
+    </style>
+</head>
+<!--内容-->
+<body id="mMCheckView">
+    <ul class="notapproval">
+        <li id="tileDetail">
+            <div class="topcontent">
+                <div class="iconImage"></div>
+                <div class="typeName" id="title"><span></span></div>
+            </div>
+            <ul class="contentfrom clearfix">
+                <li>编码: <span id="tileTemplateCode"></span></li>
+                <li>应用: <span id="appName"></span></li>
+                <li>磁贴大小: <span id="size"></span></li>
+                <li>数据来源: <input type="text" id="dataSource" readonly></li>
+                <li>描述: <span id="des"></span></li>
+            </ul>
+        </li>
+    </ul>
+<script data-main="/js/module/privatelyOwned/magnetManagement" src="/js/zlib/require.js"></script>
+</body>
+</html>

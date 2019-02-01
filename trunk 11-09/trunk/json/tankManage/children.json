@@ -1,0 +1,24 @@
+{
+  "success":true,
+  "rows":[
+    {"id":"123",
+      "name":"苯乙烯-101A",
+      "measureType":"班检尺",
+      "chkDate":"2019-08-09 20:00:00",
+      "matrl":"苯乙烯",
+      "other":"工业用苯乙烯",
+      "tankQutyStatus":"....",
+      "tankConVal":"1234",
+      "chkContVal":"234",
+      "tempAdjVal":"1234",
+      "temprtCct":"12332",
+      "temprtVol":"1234",
+      "gnrStddWeight":"1234"},
+    {"id":"123","name":"苯乙烯-101A","measureType":"班内检尺","chkDate":"2019-08-09 20:00:00","matrl":"苯乙烯","other":"工业用苯乙烯","tankQutyStatus":"....","tankConVal":"1234","chkContVal":"234","tempAdjVal":"1234","temprtCct":"12332","temprtVol":"1234","gnrStddWeight":"1234"},
+    {"id":"123","name":"苯乙烯-101A","measureType":"盘点","chkDate":"2019-08-09 20:00:00","matrl":"苯乙烯","other":"工业用苯乙烯","tankQutyStatus":"....","tankConVal":"1234","chkContVal":"234","tempAdjVal":"1234","temprtCct":"12332","temprtVol":"1234","gnrStddWeight":"1234"},
+    {"id":"123","name":"苯乙烯-101A","measureType":"班检尺","chkDate":"2019-08-09 20:00:00","matrl":"苯乙烯","other":"工业用苯乙烯","tankQutyStatus":"....","tankConVal":"1234","chkContVal":"234","tempAdjVal":"1234","temprtCct":"12332","temprtVol":"1234","gnrStddWeight":"1234"},
+    {"id":"123","name":"苯乙烯-101A","measureType":"班内检尺","chkDate":"2019-08-09 20:00:00","matrl":"苯乙烯","other":"工业用苯乙烯","tankQutyStatus":"....","tankConVal":"1234","chkContVal":"234","tempAdjVal":"1234","temprtCct":"12332","temprtVol":"1234","gnrStddWeight":"1234"},
+    {"id":"123","name":"苯乙烯-101A","measureType":"盘点","chkDate":"2019-08-09 20:00:00","matrl":"苯乙烯","other":"工业用苯乙烯","tankQutyStatus":"....","tankConVal":"1234","chkContVal":"234","tempAdjVal":"1234","temprtCct":"12332","temprtVol":"1234","gnrStddWeight":"1234"},
+    {"id":"123","name":"苯乙烯-101A","measureType":"班检尺","chkDate":"2019-08-09 20:00:00","matrl":"苯乙烯","other":"工业用苯乙烯","tankQutyStatus":"....","tankConVal":"1234","chkContVal":"234","tempAdjVal":"1234","temprtCct":"12332","temprtVol":"1234","gnrStddWeight":"1234"}
+  ]
+}

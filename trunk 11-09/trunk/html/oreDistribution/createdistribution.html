@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配矿管理--配矿方案--创建配矿方案</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        #heap{
+            height: 32px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .content td:first-child input,.content td:not(:first-child) span{
+            display: none !important;
+        }
+        .radio{
+            display: inline-block !important;
+            height: 25px !important;
+            margin-right: 5px !important;
+            vertical-align: middle;
+        }
+        .exceedbg{
+            color: red;
+        }
+        .pdbrm{
+            padding-bottom: 20px;
+        }
+        .table tr td,.table input{text-align:center;}
+        .checks-box{height:auto;padding:15px 0 15px 15px;}
+        .checks-box li{line-height: 30px;}
+        .checks-box label{margin:0 !important;}
+        .checks-box li label div{margin-right:6px;}
+
+        .ibox-content #left.leftBox{min-height:auto;width:160px;}
+        .ibox-content .ibox-title .titName{padding-left:0;}
+        .ibox-content .ibox-title .titName:before{display: none;}
+        .ibox-content .ibox{padding:0 10px;}
+        .toolbar-form .form-inline,.toolbar-form label,.toolbar-form .btn{margin-top:0 !important;margin-bottom:0 !important;}
+        .gray-line{border-bottom:10px solid #f3f3f3;}
+    </style>
+</head>
+<body id="createdistribution" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title" style="background: #f3f3f3;">
+            <div class="titName"><span>创建配矿方案</span></div>
+        </div>
+        <div class="ibox-content pagV-10" >
+            <!--质检信息-->
+            <div class="ibox gray-line">
+                <div class="ibox-title border-bottom ">
+                    <div class="titName"><span>矿石进厂质检信息</span></div>
+                </div>
+                <div class="ibox-content clearfix">
+                    <!--左侧内容-->
+                    <div id="left"  class="leftBox pull-left">
+                        <ul class="checks-box"> </ul>
+                    </div>
+                    <!--右侧内容-->
+                    <div id="right">
+                        <div class="toolbar-form mgb-10">
+                            <div class="form-inline">
+                                到货日期:
+                                <input id="startDate" name="sendDate" onclick="WdatePicker();" class="form-control Wdate">
+                                &nbsp;—
+                                <input id="endDate" name="endDate" onclick="WdatePicker();" class="form-control Wdate">
+                            </div>
+                            <div class="toolbar-btns pull-right">
+                                <button class="btn btn-ffa82d " id="calculation-btn"
+                                        title="添加"><i class="fa fa-calculator"></i> 计算
+                                </button>
+                                <button class="btn btn-white " type="button" id="Sequestration"><i
+                                        class="fa fa-file-text-o"></i> 查看
+                                </button>
+                                <button class="btn btn-white " type="button" id="back-btn">
+                                    <i class="fa fa-mail-reply"></i> 返回
+                                </button>
+                            </div>
+                        </div>
+                        <!--表格区-->
+                        <div class="aps-create-list">
+                            <form id="inputForm" class="form-horizontal" action="/api/sys/SysMenu/ajaxSave" method="post">
+                                <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                    <!--表头-->
+                                    <thead>
+                                    <tr role="row">
+                                        <th>矿石种类</th>
+                                        <th>主数量</th>
+                                        <th>Al2O3</th>
+                                        <th>SiO2</th>
+                                        <th>ST</th>
+                                        <th>CaO</th>
+                                        <th>C</th>
+                                        <th>Fe2O3</th>
+                                        <th>TiO2</th>
+                                        <th>A/S</th>
+                                        <th>TOL</th>
+                                        <th>KO2</th>
+                                        <th>水分含量</th>
+                                    </tr>
+                                    </thead>
+                                    <!--表内容-->
+                                    <tbody id="datainner">
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--配矿方案-->
+            <div class="ibox">
+                <div class="ibox-title">
+                    <div class="titName"><span>配矿方案</span></div>
+                </div>
+                <!--内容区-->
+                <div class="ibox-content">
+                    <!--按钮组-->
+                    <div class="toolbar-form">
+                        <div class="form-inline">
+                            堆别 ：
+                            <select name="" id="heap">
+                                <option value="东堆">东堆(30000吨)</option>
+                                <option value="西堆">西堆(33000吨)</option>
+                            </select>
+                            <span class="heapNum hidden">30000</span>
+                        </div>
+                        <div class="form-inline">
+                            配矿日期 ：
+                            <input id="startDate1" name="sendDate" onclick="WdatePicker();" class="form-control Wdate">
+                            &nbsp;—
+                            <input id="endDate1" name="endDate" onclick="WdatePicker();" class="form-control Wdate">
+                        </div>
+                        <div class="toolbar-btns pull-right">
+                            <button class="btn btn-ffa82d " id="distribution-btn" >
+                                <i class="fa fa-american-sign-language-interpreting"></i> 配矿
+                            </button>
+                            <button class="btn btn-save" id="add-btn" >
+                                <i class="fa fa-file-text-o"></i> 保存
+                            </button>
+                            <button class="btn btn-export " id="export-btn" >
+                                <i class="fa fa-upload"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                    <!--表格区-->
+                    <div class="aps-create-list">
+                        <form id="inputForms" class="form-horizontal" action="/api/sys/SysMenu/ajaxSave" method="post">
+                            <table id="treeTables" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                                <!--表头-->
+                                <thead>
+                                <tr role="row"></tr>
+                                </thead>
+                                <!--表内容-->
+                                <tbody id="datainners"></tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script data-main="/js/module/oreDistribution/createdistribution" src="/js/zlib/require.js"></script>
+</html>

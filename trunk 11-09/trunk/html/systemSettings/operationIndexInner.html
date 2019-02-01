@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作管理--新增、编辑</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="operationIndexInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.admin$/api/sys/SysOperation/ajaxSave" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="table form-table">
+        <tbody>
+        <tr>
+            <td class="active require" >操作名称:</td>
+            <td>
+                <input id="opeName" name="name" type="text" value="" class="form-control" require="true" >
+            </td>
+            <td class="active require" >操作编码:</td>
+            <td>
+                <input id="opeCode" name="code" type="text" value="" class="form-control" require="true" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">描述:</td>
+            <td>
+                <input id="opedes" name="des" type="text" value="" class="form-control" require="true" >
+            </td>
+            <td class="active require">排序:</td>
+            <td>
+                <input id="opesort" name="sort" type="text" value="" class="form-control" require="true" dataType="Number" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">是否启用</td>
+            <td>
+                <select id="enable" name="enable" class="form-control">
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </td>
+            <td class="active">备注:</td>
+            <td>
+                <textarea id="remarks" name="remark" maxlength="200" class="form-control" rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/operationIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

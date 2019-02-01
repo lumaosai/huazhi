@@ -1,0 +1,222 @@
+{
+  "title":"槽/罐管理-批量检尺",
+ "batchInit":{
+   "itemName":"批量检尺",
+   "Name":"批量检尺",
+   "colNames":["id","tankId","mtrlId","槽/罐名称","物料","物料别名","罐确认量","计算量","检尺时间","人工检尺高度","温度","密度","收付","提交状态","仪表检尺高度",
+                 "偏移量","水尺高度","水容积","含水率","VCF","压力","气相温度","气相密度","气相体积","气相质量","固/液体质量","毛标准质量",
+               "毛计量体积","大气温度","修正料位高度","温度修正值","静压修正","酸碱系数","介质浓度","检尺人ID","录入时间","净油容积量",
+                "备注","最大安全容量","最大安全容积","最小安全容量","最小安全容积"],
+   "colModel":[
+        {
+            "name": "id",
+          "label": "id",
+          "align": "center",
+          "hidden":true
+        },
+     {
+       "name": "mtrlId",
+       "label": "mtrlId",
+       "align": "center",
+       "hidden":true
+     },
+     {
+       "name": "tankId",
+       "label": "tankId",
+       "align": "center",
+       "hidden":true
+     },
+     {
+          "name": "tankName",
+          "label": "tankName",
+          "align": "center"
+     },{
+          "name": "mtrlName",
+          "label": "mtrlName",
+          "align": "center"
+     },{
+          "name": "nodeAlias",
+          "label": "nodeAlias",
+          "align": "center"
+     },{
+          "name": "tankConVal",
+          "label": "tankConVal",
+          "align": "center",
+          "editable": true
+        },{"name": "tankConVal",
+          "label": "tankConVal",
+          "align": "center"
+        },
+     {
+          "name": "chkDate",
+          "label": "chkDate",
+          "align": "center"
+        }, {
+          "name": "chkMnulVal",
+          "label": "chkMnulVal",
+          "align": "center",
+          "editable": true
+        },{
+          "name": "temprt",
+          "label": "temprt",
+          "align": "center",
+          "editable": true
+        },{
+          "name": "oilDnst",
+          "label": "oilDnst",
+          "align": "center",
+          "editable": true
+        },{ "name": "rap",
+          "label": "rap",
+          "align": "center"},{
+          "name": "submissionState",
+          "label": "submissionState",
+          "align": "center"
+        },
+     {
+          "name": "chkInstVal",
+          "label": "chkInstVal",
+          "align": "center"
+        },
+        { "name": "offsetVal",
+          "label": "offsetVal",
+          "align": "center"},
+     {
+       "name": "watrHeight",
+        "label": "watrHeight",
+        "align": "center",
+       "editable": true
+     },
+        {
+          "name": "waterVol",
+          "label": "waterVol",
+          "align": "center"
+        },
+     {
+          "name": "waterRate",
+          "label": "waterRate",
+          "align": "center",
+       "editable": true
+        },
+     {
+          "name": "vcfVal",
+          "label": "vcfVal",
+          "align": "center"
+        },
+        {
+          "name": "pressure",
+          "label": "pressure",
+          "align": "center",
+          "editable": true
+        },
+     {
+          "name": "temprtClm",
+          "label": "temprtClm",
+          "align": "center",
+       "editable": true
+        },
+        {
+          "name": "emprtCct",
+          "label": "emprtCct",
+          "align": "center"
+        },
+     {
+          "name": "temprtVol",
+          "label": "temprtVol",
+          "align": "center"
+        },
+        {
+          "name": "temprtWeight",
+          "label": "temprtWeight",
+          "align": "center"
+        },
+     {
+          "name": "temprtWeight",
+          "label": "temprtWeight",
+          "align": "center"
+        },
+        {
+          "name": "gnrStddWeight",
+          "label": "gnrStddWeight",
+          "align": "center"
+        },
+     {
+          "name": "gnrMetVol",
+          "label": "gnrMetVol",
+          "align": "center"
+        },
+     {
+          "name": "temprtAtp",
+          "label": "temprtAtp",
+          "align": "center",
+         "editable": true
+        },
+     {
+          "name": "chkModVal",
+          "label": "chkModVal",
+          "align": "center"
+        },
+     {
+          "name": "tempAdjVal",
+          "label": "tempAdjVal",
+          "align": "center"
+        },
+        {
+          "name": "fixprsrAdjVal",
+          "label": "fixprsrAdjVal",
+          "align": "center"
+        },
+     {
+          "name": "acidFctr",
+          "label": "acidFctr",
+          "align": "center"
+        },
+     {
+          "name": "medCct",
+          "label": "medCct",
+          "align": "center",
+           "editable": true
+        },
+        {
+          "name": "chkType",
+          "label": "chkType",
+          "align": "center"
+        },
+        {
+          "name": "createTIme",
+          "label": "createTIme",
+          "align": "center"
+        },
+        {
+          "name": "netoilVol",
+          "label": "netoilVol",
+          "align": "center"
+        },
+        {
+          "name": "remark",
+          "label": "remark",
+          "align": "center"
+        },
+        {
+          "name": "maxSaleCont",
+          "label": "maxSaleCont",
+          "align": "center"
+        },
+        {
+          "name": "maxSaleVol",
+          "label": "maxSaleVol",
+          "align": "center"
+        },
+        {
+          "name": "minSaleCont",
+          "label": "minSaleCont",
+          "align": "center"
+        },
+        {
+          "name": "minSaleCont",
+          "label": "minSaleCont",
+          "align": "center"
+        }
+      ]
+ }
+}

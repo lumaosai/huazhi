@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>料线列表页</title>
+</head>
+<body id="lateralLineList" class="theme-tight wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName clearfix">
+                <span>料线</span>
+                <div class="pull-right toolbar-btns">
+                    <button class="btn" id="btn-add"><i class="fa fa-plus "></i> 新增
+                    </button>
+                    <button class="btn" id="btn-edit"><i class="fa fa-edit  "></i> 编辑
+                    </button>
+                    <button class="btn" id="btn-import"><i class="fa fa-download "></i> 导入
+                    </button>
+                    <button class="btn" id="btn-export"><i class="fa fa-upload "></i> 导出
+                    </button>
+                    <button class="btn" id="btn-help"><i class="fa fa-question-circle-o "></i> 帮助
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar-form clearfix">
+                <div class="form-inline">
+                    <span>料线编码：</span>
+                    <input id="nodeCode" name="nodeCode" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>料线名称：</span>
+                    <input id="nodename" name="nodename" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>料线进出类型：</span>
+                    <select name="slineInoutType" class="form-control" id="slineInoutType">
+                        <option value="">请选择</option>
+                        <option value="0">进</option>
+                        <option value="1">出</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>装置：</span>
+                    <select name="unitId" class="form-control" id="unitId">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+
+                <div class="pull-right">
+                    <button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+                    <button class="btn btn-reset " id="reset-btn"><i class="fa fa-refresh"></i> 重置
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+                <!--表格区-->
+                <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                    <!--表头-->
+                    <thead>
+                    <tr role="row">
+                        <th class="autoWidth"><input type="checkbox" class="i-checks" ></th>
+                        <th>料线编号</th>
+                        <th>料线编码</th>
+                        <th>料线名称</th>
+                        <th>料线别名</th>
+                        <th>装置组</th>
+                        <th>装置名称</th>
+                        <th>料线物料类型</th>
+                        <th>料线进出类型</th>
+                        <th>回流关联料线ID</th>
+                        <th>料线精度</th>
+                        <th>是否校正</th>
+                        <th>启用标示</th>
+                        <th>显示顺序</th>
+                        <th>说明</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <!--表内容-->
+                    <tbody id="datanner">
+
+                    </tbody>
+
+                </table>
+
+                <div class="clearfix pagination-box">
+                    <div class="page-info pull-left"></div>
+                    <div id="pagination" class="pagination-roll pull-right"></div>
+                </div>
+            </div>
+        </div>
+<script data-main="/js/module/material/factoryModels/lageralLine" src="/js/zlib/require.js"></script>
+</body>
+</html>

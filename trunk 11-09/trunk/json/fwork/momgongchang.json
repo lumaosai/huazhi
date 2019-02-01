@@ -1,0 +1,35 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "page":{
+    "rows":[{
+      "id":"0",
+      "fctrNo ":"1",
+      "fctrCode":"FSLY001’",
+      "fctrName":"复晟铝业有限公司生产工厂",
+      "fctrAlias":"复晟铝业",
+      "fctrType":"生产工厂",
+      "enable":"0",
+      "displayOrder":"1000",
+      "remark":"这是工厂"
+    },{
+      "id":"022",
+      "fctrNo ":"11",
+      "fctrCode":"FSLY001’",
+      "fctrName":"复晟铝业有限公司生产工厂",
+      "fctrAlias":"复晟铝业",
+      "fctrType":"生产工厂",
+      "enable":"1",
+      "displayOrder":"1000",
+      "remark":"这是工厂"
+    }],
+    "count":7,
+    "pageCount":5,
+    "pageNo":1,
+    "endRowNum": 17,
+    "startRowNum": 0,
+    "pageSize":10
+  }
+
+}

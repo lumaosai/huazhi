@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>XX弹出页</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="form" class="wrapper-white">
+    <form id="inputForm"  action="$Api.admin$/api/sys/Demo/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tr>
+            <td class="active require">物料编号:</td>
+            <td>
+                <input id="value" name="mtrlNumber" class="form-control" require="true" type="number" placeholder="3000以上" dataType="Range" min="3000" >
+            </td>
+            <td class="active require">物料编码:</td>
+            <td>
+                <input id="label" name="mtrlCode" class="form-control" require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">组织机构:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="orgId" name="orgId">
+                   <input type="text" id="orgName" name="orgName" class="form-control" require="true" readonly placeholder="双击选择">
+                   <button type="button" id="companyButton" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+            <td class="active">用户选择1:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="userId1" name="userId1">
+                   <input type="text" id="userName1" name="userName1" class="form-control" readonly placeholder="双击选择">
+                   <button type="button" id="userButton1" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">用户选择2:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="userId2" name="userId2">
+                   <input type="text" id="userName2" name="userName2" class="form-control" readonly placeholder="双击选择">
+                   <button type="button" id="userButton2" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+            <td class="active">用户选择3:</td>
+            <td>
+                <span class="searchGroup">
+                   <input type="hidden" id="userId3" name="userId3">
+                   <input type="text" id="userName3" name="userName3" class="form-control" readonly placeholder="双击选择">
+                   <button type="button" id="userButton3" class="btn btn-primary"><i
+                           class="fa fa-search"></i></button>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">物料类型:</td>
+            <td>
+                <select name="mtrlType" id="mtrl-type" class="form-control">
+                    <option value="1">adf</option>
+                </select>
+            </td>
+            <td class="active">小数:</td>
+            <td>
+                <!-- scale属性用来控制精度，如果不需要限制精度删掉此属性 -->
+                <input type="text" name="num" class="form-control" dataType="Double" scale="2">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">启动标识:</td>
+            <td>
+                <input type="checkbox" name="checkboxName" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">状态:</td>
+            <td>
+                <label><input type="radio" name="radioName" class="i-checks" value="1" checked>篮球</label>
+                <label><input type="radio" name="radioName" class="i-checks" value="2">足球</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">说明2:</td>
+            <td colspan="3">
+                <textarea name="mtrlRemark2" id="remark2" class="form-control" rows="3"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">日期选择(可输入):</td>
+            <td>
+                <input type="text" name="date1" onclick="WdatePicker();" class="form-control Wdate">
+            </td>
+            <td class="active">时间选择(只读):</td>
+            <td>
+                <input type="text" name="date1" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" class="form-control WdateTime" readonly>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/html/0_0/js/list" src="/js/zlib/require.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <title>槽/罐区管理列表页</title>
+    <style>
+        tr{
+            height: 40px;
+        }
+        .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+            height: 40px !important;
+        }
+        .ibox-content{
+            padding: 0;
+        }
+        .zTree{
+            height:800px;
+            width: 15%;
+            background-color: #F2F5F7;
+            margin-left: 8px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #zTree{
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        #wait_searchText{
+            height: 30px;
+            width: 80%;
+        }
+        .searchAll{
+            height: 30px;
+            width: 30px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        .table{
+            width: 79%;
+            margin-right: 8px;
+        }
+        .loadZtree{
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            margin: 8px auto;
+        }
+        .tabBtn li{
+            float: left;
+            padding: 8px 11px;
+            color: black;
+            background-color: #F5F5F6;
+            border-radius: 4px 4px 0 0;
+        }
+        .fa-check-circle{
+            color:#47B523;
+        }
+        /*设置table滚动*/
+        .scorll-bar{
+            overflow-x:scroll !important;
+        }
+        .tableParent{
+            width: 1600px;
+        }
+        .form-inline .form-control {
+            width: 166px;
+        }
+        .tab-box{
+            width: 80%
+        }
+        .hide{
+            display: none;
+        }
+        .sceneGraph{
+            border:1px solid #ccc;
+        }
+        embed{
+            width: 1200px;
+            height: 800px;
+            padding-left: 150px;
+        }
+        
+    </style>
+</head>
+<body id="tankManage" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>槽/罐区管理</span>
+        </div>
+        <div class="toolbar-form clearfix">
+            <label>
+                <div class="form-inline">
+                    <span>日期：</span>
+                    <input type="text" id="tankDate" onclick="WdatePicker();" class="form-control Wdate">
+                </div>
+            </label>
+            <div class="form-inline">
+                <label>
+                    <span>班次 ：</span>
+                    <select name="shift" class="form-control" id="shift">
+                    </select>
+                    <input type="hidden" id="shiftHidden" value="" data-time="" data-nodeTankId="" data-areaTankId="" >
+                </label>
+            </div>
+            <button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="pull-left zTree">
+                <span class="searchGroup dataTable_my ">
+                    <input type="text" id="wait_searchText"  class="form-control pull-left" placeholder="关键字筛选" >
+                    <button type="button" class="btn-search searchAll">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                <ul id="zTree" class="ztree"></ul>
+            </div>
+            <!--表格区-->
+            <div class="tab-box pull-left">
+                <div class="tab-bar clearfix">
+                    <ul class="tab-nav  pull-left">
+                        <li>槽/罐检尺</li>
+                        <li>槽/罐物料移动</li>
+                        <li>封账提交</li>
+                        <li>场景图</li>
+                    </ul>
+                    <ul class="tab-btns pull-right" style="margin-top:2px;margin:0;">
+                        <li class="active">
+                            <button class="btn btn-save" id="initialize">
+                                <i class="fa fa-save"></i>
+                                槽/罐初始化
+                            </button>
+                            <button class="btn btn-save" id="batch">
+                                <i class="fa fa-save"></i>
+                                批量检尺
+                            </button>
+                            <button class="btn btn-save" id="construction">
+                                <i class="fa fa-save"></i>
+                                新建
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-add" id="btn-add"><i class="fa fa-plus"></i> 新建
+                            </button>
+                            <button class="btn" id="btn-close"><i class="fa fa-edit"></i> 关闭
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-save" id="btn-save" ><i class="fa fa-check"></i> 提交
+                            </button>
+                            <button class="btn btn-save" id="btn-delete"><i class=" fa fa-times "></i> 解除
+                            </button>
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-con" id="jgTables">
+                    <div class="msgbox active" id="measure">
+                        <div class="scorll-bar">
+                            <div class="ibox-content tableParent">
+                                <table id="dataTable0"></table>
+                            </div>
+                        </div>
+                        <div class="mgt-10 treeTable-count hide">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            <span class="treeTable-taps">槽/罐检尺记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                        </div>
+                    </div>
+                    <div class="msgbox" id="matrlMove">
+                        <div class="scorll-bar">
+                            <div class="ibox-content tableParent">
+                                <table id="materialMTable" ></table>
+                            </div>
+                        </div>
+                        <div class="mgt-10 treeTable-count hide">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            <span class="treeTable-taps">槽/罐物料移动记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                        </div>
+                    </div>
+                    <div class="msgbox" id="sealingAccount">
+                        <div class="scorll-bar">
+                            <div class="ibox-content tableParent">
+                                <table id="treeTable"></table>
+
+                            </div>
+                        </div>
+                        <div class="mgt-10 treeTable-count hide">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            <span class="treeTable-taps">封账提交记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                        </div>
+                    </div>
+                    <div class="msgbox" id="sceneGraph">
+                        <div class="sceneGraph">
+                        </div>
+                    </div>
+                </div>
+                <div id="tableArr">
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>
+</body>
+</html>

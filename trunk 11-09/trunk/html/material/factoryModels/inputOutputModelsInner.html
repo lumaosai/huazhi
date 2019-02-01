@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂模型--投入产出模型配置--新增、编辑页面</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+
+<body id="inputOutputModelsInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.mtrl$/api/fm/InoutputModel/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="require active">MOM工厂:</td>
+            <td>
+                <select name="fctr.id" require="true" id="fctrName" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">装置:</td>
+            <td>
+                <select require="true" name="unitId" id="unitId"  class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">加工方案:</td>
+            <td>
+                <select name="caseId" id="caseId" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">料线:</td>
+            <td>
+                <select name="nodeId" id="nodeId" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">物料:</td>
+            <td>
+                <select name="mtrlId" id="mtrlId" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="require active">收率上限:</td>
+            <td>
+                <input id="ratioUplimit" require="true" name="ratioUplimit" class="form-control "  dataType="Double" scale="2"  type="number" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="require active">收率下限:</td>
+            <td>
+                <input id="ratioDownlimit" require="true" name="ratioDownlimit" class="form-control "  dataType="Double" scale="2"  type="number" value="" >
+            </td>
+            <td class="active">参考收率:</td>
+            <td>
+                <input id="ratio" name="ratio" class="form-control " dataType="Double" scale="2"  type="number" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class=" active">显示顺序:</td>
+            <td>
+                <input  onkeyup=" if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" id="displayOrder" name="displayOrder" class="form-control "  type="number" value="0" >
+            </td>
+            <td class="active">启用标识:</td>
+            <td>
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">说明:</td>
+            <td colspan="3">
+               <textarea id="remark" name="remark" class="form-control"  rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/inputOutputModels" src="/js/zlib/require.js"></script>
+</body>
+</html>

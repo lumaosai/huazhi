@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择应用</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="selectApp" class="wrapper-white">
+    <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+        <thead>
+        <tr>
+            <th width="60px"><input type="checkbox" class="i-checks"></th>
+            <th>排序</th>
+            <th>应用名称</th>
+            <th>应用路径</th>
+            <th>应用编码</th>
+            <th>使用范围</th>
+        </tr>
+        </thead>
+        <tbody id="datainner"></tbody>
+    </table>
+    <!--分页-->
+    <div class="clearfix pagination-box">
+        <div class="page-info pull-left"></div>
+        <div id="pagination" class="pagination-roll pull-right"></div>
+    </div>
+    <script data-main="/js/module/systemSettings/orgAssign" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分配应用</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="orgAllotApp" class="wrapper-white">
+    <input type="hidden" name="deptId" id="orgId">
+    <input type="hidden" name="companyId" id="companyId">
+    <div class="toolbar-form mgb-10" id="orgData">
+        <div class="form-inline">
+            <span>机构名称：</span>
+            <b id="name"></b>
+        </div>
+        <div class="form-inline">
+            <span>机构简称 ：</span>
+            <b id="sname"></b>
+        </div>
+        <div class="form-inline">
+            <span>机构类型 ：</span>
+            <b id="typeLabel"></b>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="pull-left">
+        </div>
+        <div class="pull-right mgb-10">
+            <button id="assignButton" class="btn btn-outline btn-primary btn-sm" title="添加应用"><i
+                    class="fa fa-plus"></i> 添加应用
+            </button>
+            <button class="btn btn-delete btn-sm" id="delete-btn" ><i class="fa fa-trash-o"></i>移除
+            </button>
+            <button class="btn btn-white btn-sm hidden" id="refresh-btn"
+                    title="刷新"><i class="glyphicon glyphicon-repeat"></i> 刷新
+            </button>
+        </div>
+    </div>
+
+    <table id="treeTable"
+           class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+        <thead>
+        <tr>
+            <th width="60px"><input type="checkbox" class="i-checks" >
+            <th>应用名称</th>
+            <th>应用路径</th>
+            <th>应用编码</th>
+            <th>使用范围</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <!--表内容-->
+        <tbody id="datainner"></tbody>
+    </table>
+    <script data-main="/js/module/systemSettings/orgAssign" src="/js/zlib/require.js"></script>
+</body>
+</html>

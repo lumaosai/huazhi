@@ -1,0 +1,30 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+  "MOMtype":[{
+    "id":"1212",
+    "name":"化学工厂"
+  },{
+    "id":"12123",
+    "name":"生产工厂"
+  }],
+  "zhuangzhi":[{
+    "id":"1212",
+    "name":"化学工厂"
+  },{
+    "id":"12123",
+    "name":"生产工厂"
+  }],
+  "unit":{
+    "id":"0",
+    "fctrNo ":"1",
+    "fctrCode":"FSLY001’",
+    "fctrName":"复晟铝业有限公司生产工厂",
+    "fctrAlias":"复晟铝业",
+    "fctrType":"1212",
+    "enable":"1",
+    "displayOrder":"1000",
+    "remark":"这是工厂"
+  }
+}

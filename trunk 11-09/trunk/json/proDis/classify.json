@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "retCode": "10000",
+  "message": "操作成功",
+  "rows":[
+    {
+      "id":"1",
+      "classify":"流程型"
+    },
+    {
+      "id":"2",
+      "classify":"固定型"
+    },
+    {
+      "id":"3",
+      "classify":"没有型"
+    }
+  ]
+}

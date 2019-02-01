@@ -1,0 +1,18 @@
+{
+  "success":"true",
+  "message":"请求成功",
+  "retcode":"10000",
+    "rows":[{
+      "id":"021212",
+      "name":"密度",
+      "Alias":"p",
+      "remark":"这是密度",
+      "formula":"1+5*56"
+  },{
+      "id":"021211212",
+      "name":"高度",
+      "Alias":"H",
+      "remark":"这是高度",
+      "formula":"454545"
+    }]
+}

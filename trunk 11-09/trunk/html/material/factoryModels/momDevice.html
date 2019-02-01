@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装置</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="momDevice" class="theme-tight wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName clearfix">
+                <span>装置</span>
+                <div class="pull-right toolbar-btns">
+                    <button class="btn" id="btn-add" onclick="Bus.openEditDialog('新增装置数据','/material/factoryModels/momDeviceView.html','700px', '370px')"><i class="fa fa-plus "></i> 新增
+                    </button>
+                    <button class="btn" id="btn-edit" ><i class="fa fa-edit  "></i> 编辑
+                    </button>
+                    <button class="btn" id="btn-import"><i class="fa fa-download "></i> 导入
+                    </button>
+                    <button class="btn" id="btn-export"><i class="fa fa-upload "></i> 导出
+                    </button>
+                    <button class="btn" id="btn-help"><i class="fa fa-question-circle-o "></i> 帮助
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar-form clearfix">
+                <div class="form-inline">
+                    <span>装置编码：</span>
+                    <input id="unitCode" name="unitCode" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>装置名称：</span>
+                    <input id="unitName" name="unitName" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>装置界区 ：</span>
+                    <select name="nodeAreaId" class="form-control" id="nodeAreaId">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>类型 ：</span>
+                    <select name="unitType" class="form-control" id="unitType">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-search" id="btn-search" type="button"><i class="fa fa-search"></i>查询</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <!--表头-->
+                <thead>
+                <tr role="row">
+                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                    <th>装置编号</th>
+                    <th>装置编码</th>
+                    <th>装置名称</th>
+                    <th>装置别名</th>
+                    <th>装置类型</th>
+                    <th>加工能力</th>
+                    <th>启用标识</th>
+                    <th>显示顺序</th>
+                    <th>说明</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+
+                </tbody>
+            </table>
+            <!--分页-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="/js/module/material/factoryModels/momDevice" src="/js/zlib/require.js"></script>
+
+</body>
+</html>

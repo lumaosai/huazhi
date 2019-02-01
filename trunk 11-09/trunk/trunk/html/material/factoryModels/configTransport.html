@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>工厂模型--运输计量配置</title>
+</head>
+<!--list1 左上数据-->
+<!--list2 右上数据-->
+<!--list3 左下数据-->
+<body id="configTransport" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName ">
+                <span>运输计量配置</span>
+            </div>
+        </div>
+        <div class="ibox-content config clearfix">
+            <div class="width-47 pull-left">
+                <div class="tit">
+                    <span>运输类型</span>
+                </div>
+                <div class="config-content">
+                    <ul id="list1" ></ul>
+                </div>
+
+                <div class="tit">
+                    <span>已分配的计量类型</span>
+                    <button id="btn-submit" class="btn pull-right btn-search">保存</button>
+                </div>
+                <div class="config-content">
+                    <ul id="list3" class="list3" ></ul>
+                    <div class="handelUpDownbox ">
+                        <div id="btn-up" class="fa fa-angle-double-up"></div>
+                        <div id="btn-down" class="fa fa-angle-double-down"></div>
+                    </div>
+
+                    <div class="handelLeftRightbox ">
+                        <button id="btn-left" class="btn btn-lg btn-primary glyphicon glyphicon-menu-left"></button>
+                        <button id="btn-right" class="btn btn-lg btn-primary glyphicon glyphicon-menu-right"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="width-47 pull-right">
+                <div class="tit">
+                    <span>计量类型</span>
+                </div>
+                <div class="config-content">
+                    <ul id="list2" >
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script data-main="/js/module/material/factoryModels/configTransport" src="/js/zlib/require.js"></script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>实产管控</title>
+</head>
+<body id="productioncontrol" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>实产管控</span></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <ul class="rank-ul">
+                        	<li>
+                		          事件类型:
+                                <select name="" id="type">
+                                    <option value="">-- 请选择 --</option>
+                                    <option value="指标类">指标类</option>
+                                    <option value="消耗类">消耗类</option>
+                                    <option value="能源类">能源类</option>
+                                    <option value="生产类">生产类</option>
+                                </select>
+                            </li>
+                            <li>
+                               	事件:
+                                <select name="" id="event" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li class="year">
+                                	工序:
+                                <select name="" id="proc" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li>
+                               	 原因:
+                                <select name="" id="cause" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                                   <li >
+                                                                                       等级:
+                                <select name="" id="grade">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                                           <li>
+                                <label>
+                                    <div class="execution time">
+                                        <span>执行时间:</span>
+                                        <input type="text" value="" id="startDateParam" class="time-input form-control datePicker" placeholder="开始时间"><i class="fa fa-calendar"></i>
+                                        &nbsp;&nbsp;—
+                                        <input type="text" value="" id="endDateParam" class="time-input form-control datePicker" placeholder="结束时间"><i class="fa fa-calendar"></i>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pull-right">
+                        <label>
+                            <button class="btn btn-search  bg-ffa82d btn-white" id="search-btn" type="button">
+                                <i class="fa fa-search"></i>查询</button>
+                                 <label>
+                            <button class="btn btn-search  bg-ffa82d btn-white" id="btn-add" type="button">
+                                <i class="fa icon-create"></i>创建</button>
+                        </label>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="treeTable_wrapper" class="dataTable_wrapper form-inline dt-bootstrap">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--表格区-->
+                        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                            <thead>
+                            <tr>
+                            	<th class="id"></th>
+                                <th>序号</th>
+                                <th>事件</th>
+                                <th>原因</th>
+                                <th>上报人</th>
+                                <th>上报时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="treeTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!--分页显示-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/proDis/productioncontrol" src="/js/zlib/require.js"></script>
+</body>
+</html>

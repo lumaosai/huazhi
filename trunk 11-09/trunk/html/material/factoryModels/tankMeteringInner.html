@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>罐计量管理</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+
+<body id="tankMeteringInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.mtrl$/api/fm/TankMeas/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="width-15 require active">
+                    MOM工厂:
+            </td>
+            <td class="width-35">
+                <select require="true" name="fctrId" id="fctrId"  class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="width-15 require active">
+                界区类型:
+            </td>
+            <td class="width-35">
+                <select require="true" name="nodeAreaType" id="nodeAreaType"  class="form-control ">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+
+
+
+
+        </tr>
+        <tr>
+            <td class="active require">
+                界区:
+            </td>
+            <td>
+                <select name="nodeAreaId" id="nodeAreaId" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">
+                    罐:
+            </td>
+            <td>
+                <select name="nodeId" id="nodeId" data-height="150px" require="true" class="form-control select2">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td class="active">
+                位号:
+            </td>
+            <td>
+                <input require="true" id="tag" name="tag" class="form-control " value="" >
+            </td>
+            <td class="require active">
+                 计量类型: 
+            </td>
+            <td>
+                <select require="true" name="measType" id="measType" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td class="require active">
+                计量系数:
+            </td>
+            <td>
+                <input require="true" id="coefficient" step="0.01" name="coefficient" dataType="Range" scale="2" min="0" max="1" class="form-control" type="number" value="">
+            </td>
+            <td class=" active">
+                    显示顺序:
+            </td>
+            <td>
+                <input  onkeyup=" if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" id="displayOrder" name="displayOrder"  class="form-control" type="number" value="0">
+            </td>
+
+
+        </tr>
+        <tr>
+            <td class="active">
+                启用标识:
+            </td>
+            <td>
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">说明:</td>
+            <td>
+                <input name="remark" id="remark" class="form-control">
+            </td>
+
+
+            <!--<td class="active">-->
+                    <!--说明:-->
+            <!--</td>-->
+            <!--<td colspan="3">-->
+                <!--<textarea id="remark" rows="3" name="remark" class="form-control"></textarea>-->
+            <!--</td>-->
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/tankMetering" src="/js/zlib/require.js"></script>
+</body>
+</html>

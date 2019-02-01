@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字典管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="dictionaryInner" class="wrapper-white">
+<form id="inputForm" action="$Api.admin$/api/sys/SysDict/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table ">
+        <tbody>
+        <tr>
+            <td class="active require">键值:</td>
+            <td>
+                <input id="value" name="value" class="form-control " require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">标签:</td>
+            <td>
+                <input id="label" name="label" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">类型:</td>
+            <td>
+                <input id="type" name="type" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">排序:</td>
+            <td>
+                <input id="sort" name="sort" class="form-control" type="text" value="10" require="true" dataType="Number" maxlength="5">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">描述:</td>
+            <td>
+                <textarea id="description" name="description" maxlength="200" class="form-control " rows="3"></textarea>
+            </td>
+            <td class="active">备注:</td>
+            <td>
+                <textarea id="remarks" name="remark" maxlength="200" class="form-control " rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/dictionary" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+.hideScroll {
+  height: auto !important; }
+
+html, body {
+  height: 100%; }
+body {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #676a6c;
+  table-layout:fixed
+}
+/*.form-horizontal {*/I
+  /*margin: 0 10px 10px; }*/
+.table-bordered {
+  border: none; }
+.input-group-btn{
+ width: 38px;
+  height: 30px;
+}
+
+.input-group-btn .btn{
+  width:100%;
+  height:100%;
+  color:#fff;
+}
+
+.table-bordered > tbody > tr > td {
+  /*width: 100px;*/
+  vertical-align: middle;
+  word-wrap:break-word;
+  border-top: 1px solid #e7eaec;
+  line-height: 1.42857;
+  padding: 8px;
+  color: black;
+}
+
+.table .input-group{
+  width:100%;
+}
+
+.thumbnail{
+  border: none;
+  margin: 0;
+}
+.thumbnail img{
+  width: 100px;
+  height: 100px;
+  background: url("../images/headPortrait.png") no-repeat;
+  background-size:100% 100%;
+}
+#nameImagePreview{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+}
+#nameImagePreview img{
+  height: 100px;
+  width: 100px;
+}
+
+.webuploader-pick{
+  line-height: 24px;
+  padding:0;
+  color: #fff;
+  display: block;
+  border: 0 !important;
+}
+
+.webuploader-element-invisible{
+  opacity: 0;
+}
+
+.table-bordered > tbody > .tableFoot > td{
+  line-height: 20px;
+  border: none;
+  padding: 0;
+}
+.tableFoot > td >span{
+  width:100%;
+  padding:0 5px;
+  text-align: right;
+  display: inline-block;
+  vertical-align:middle;
+}
+.tableFoot > td >.form-control{
+  width: 70%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-align: left;
+  display: inline-block;
+  vertical-align:middle;
+  padding:0 5px;
+}
+.tableFoot > td >.form-control[readonly]{
+  background-color: transparent;
+}
+/*jxg*/
+
+
+
+.form-control:focus {
+  border-color: #1ab394 !important;
+  box-shadow: none !important; }
+
+
+
+
+/*# sourceMappingURL=dic-inner.css.map */
+/*jxg 参数配置 paramConfigCheckView.html*/
+.table{
+  margin-bottom: 0;
+}
+/*.width-35>input{*/
+  /*width: 260px;*/
+/*}*/
+.width-60{
+  width: 60%;
+}
+  .width-60>textarea{
+    width:80%;
+  }
+
+
+.iradio_square-green{
+  display:inline-block;
+  vertical-align: middle;
+  top:-2px;
+  margin-right:5px;
+}

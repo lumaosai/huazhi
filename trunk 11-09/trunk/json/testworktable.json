@@ -1,0 +1,76 @@
+{
+  "dataLine":
+    [
+      {"value":335,"group":"溶出", "name":"1月"},
+      {"value":310,"group":"溶出", "name":"2月"},
+      {"value":234,"group":"溶出", "name":"3月"},
+      {"value":135,"group":"溶出", "name":"4月"},
+      {"value":113,"group":"溶出", "name":"5月"},
+      {"value":135,"group":"溶出", "name":"6月"},
+      {"value":125,"group":"溶出", "name":"7月"},
+      {"value":189,"group":"溶出", "name":"8月"},
+      {"value":230,"group":"溶出", "name":"9月"},
+      {"value":113,"group":"溶出", "name":"10月"},
+      {"value":141,"group":"溶出", "name":"11月"},
+      {"value":53,"group":"溶出", "name":"12月"},
+      {"value":116,"group":"沉降", "name":"1月"},
+      {"value":128,"group":"沉降", "name":"2月"},
+      {"value":168,"group":"沉降", "name":"3月"},
+      {"value":161,"group":"沉降", "name":"4月"},
+      {"value":162,"group":"沉降", "name":"5月"},
+      {"value":234,"group":"沉降", "name":"6月"},
+      {"value":113,"group":"沉降", "name":"7月"},
+      {"value":98,"group":"沉降", "name":"8月"},
+      {"value":13,"group":"沉降", "name":"9月"},
+      {"value":113,"group":"沉降", "name":"10月"},
+      {"value":135,"group":"沉降", "name":"11月"},
+      {"value":233,"group":"沉降", "name":"12月"},
+      {"value":199,"group":"垃圾发电", "name":"1月"},
+      {"value":142,"group":"垃圾发电", "name":"2月"},
+      {"value":155,"group":"垃圾发电", "name":"3月"},
+      {"value":123,"group":"垃圾发电", "name":"4月"},
+      {"value":11,"group":"垃圾发电", "name":"5月"},
+      {"value":13,"group":"垃圾发电", "name":"6月"},
+      {"value":133,"group":"垃圾发电", "name":"7月"},
+      {"value":43,"group":"垃圾发电", "name":"8月"},
+      {"value":133,"group":"垃圾发电", "name":"9月"},
+      {"value":123,"group":"垃圾发电", "name":"10月"},
+      {"value":83,"group":"垃圾发电", "name":"11月"},
+      {"value":133,"group":"垃圾发电", "name":"12月"}
+    ]
+  ,
+  "dataPie":[
+          {"value":335, "name":"访问"},
+          {"value":310, "name":"营销"},
+          {"value":234, "name":"联盟"},
+          {"value":135, "name":"视频"},
+          {"value":113, "name":"引擎"},
+          {"value":116, "name":"搜索"},
+          {"value":128, "name":"索引"},
+          {"value":168, "name":"搜擎"}
+  ],
+  "dataBar":[
+    {"value":335, "group":"溶出","name":"1月"},
+    {"value":310, "group":"溶出","name":"2月"},
+    {"value":234, "group":"溶出","name":"3月"},
+    {"value":135, "group":"溶出","name":"4月"},
+    {"value":154 ,"group":"溶出","name":"5月"},
+    {"value":222, "group":"沉降","name":"1月"},
+    {"value":322, "group":"沉降","name":"2月"},
+    {"value":123, "group":"沉降","name":"3月"},
+    {"value":235, "group":"沉降","name":"4月"},
+    {"value":244 ,"group":"沉降","name":"5月"},
+    {"value":202, "group":"垃圾发电","name":"1月"},
+    {"value":122, "group":"垃圾发电","name":"2月"},
+    {"value":323, "group":"垃圾发电","name":"3月"},
+    {"value":435, "group":"垃圾发电","name":"4月"},
+    {"value":274 ,"group":"垃圾发电","name":"5月"}
+  ],
+  "dataGauge":[
+    {"value": 50, "name": "完成率","group":"测试"}
+  ],
+  "message": "操作成功",
+  "retCode": "10000",
+  "success": true
+}
+

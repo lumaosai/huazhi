@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘存数据核算</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .ibox{
+            height: 100%;
+        }
+        .tab{
+            height: 54px;
+        }
+        .btn-box{
+            line-height: 54px;
+        }
+        .form-table tbody > tr > td.active{
+            text-align: center!important;
+        }
+        .aps-create-list {
+             margin-top: 5px;
+            padding-bottom: 100px;
+        }
+        .tabChange>li{
+            font-size: 14px;
+            width:104px;
+            height: 46px;
+            line-height: 46px;
+            float: left;
+            background-color: #F5F5F7;
+            color: #000;
+            text-align: center;
+            border: 1px solid #e3e3e3;
+            padding: 2px 8px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            cursor: pointer;
+        }
+        .tabChange>li:hover,.tabChange>li.active{
+            background-color: #fff;
+            color: #3ab394;
+            border: none;
+            border-top: 2px solid #3ab394;
+        }
+    </style>
+</head>
+<body id="invDataComputation" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName">
+                <span>盘存数据核算</span>
+                <div class="pull-right">
+                    <button class="btn btn-search  btn-white" id="back-btn" type="button"><i class="fa fa-reply"></i>返回</button>
+                </div>
+            </div>
+            <div class="toolbar-form mgb-10">
+                <table class="form-table table">
+                    <tbody>
+                    <tr>
+                        <td class="active require">盘存时间：</td>
+                        <td>
+                            <label for="invDate">
+                                <select name="" id="invDate" class="form-control">
+                                </select>
+                                <input type="hidden" id="invDateinput" class="datePicker form-control">
+                            </label>
+                        <td class="active require">盘存人员:</td>
+                        <td>
+                            <form>
+                                 <input type="text" value="" require="true" name="fstMan" id="creator" class="datePicker form-control">
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="tab">
+                <ul class="tabChange pull-left">
+                    <li statu="gcwlhs" class="active">过程物料核算</li>
+                    <li statu="ksshhs">矿石石灰核算</li>
+                    <li statu="wbckhs">外报仓库核算</li>
+                    <li statu="jcwlhs">进厂物料核算</li>
+                    <li statu="clhs">产量核算</li>
+                    <li statu="zbhs">指标核算</li>
+                    <li statu="zyxhhs">主要消耗核算</li>
+                    <li statu="aodchs">AO大仓核算</li>
+                </ul>
+                <div class="pull-right btn-box">
+                    <button class="btn btn-search  btn-white" id="computed-btn" type="button"><i class="fa fa-calculator"></i>计算</button>
+                    <button class="btn btn-search  btn-white" id="save-btn" type="button"><i class="fa fa-file-text-o"></i>保存</button>
+                </div>
+            </div>
+            <div class="aps-create-list">
+                <div class="tableBox active"></div>
+                <div class="tableBox"></div>
+                <div class="tableBox"></div>
+                <div class="tableBox"></div>
+                <div class="tableBox"></div>
+                <div class="tableBox"></div>
+                <div class="tableBox"></div>
+                <div class="tableBox"></div>
+
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/inventoryTaking/invManagement" src="/js/zlib/require.js"></script>
+</body>
+</html>

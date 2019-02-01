@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>槽车计量</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="tankWagon" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/mv/WagonMeas/save" method="post">
+    <input id="smtinoutBillId" name="smtinoutBillId" type="hidden">
+    <input id="nodeId" name="nodeId" type="hidden">
+    <input id="begShiftDate" name="begShiftDate" type="hidden">
+    <input id="endShiftDate" name="endShiftDate" type="hidden">
+    <input id="gaugeType" name="gaugeType" type="hidden" value="2">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">
+                车号:
+            </td>
+            <td>
+                <input id="wagonNo" name="wagonNo" require="true" class="form-control"  type="number" value=""></td>
+            <td class="active">
+                检尺高度:
+            </td>
+            <td>
+                <input type="text" id="chkHeight" class="form-control" name="chkHeight" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                检尺时间:
+            </td>
+            <td>
+                <input type="text" id="chkDate" class="form-control" name="chkDate" value=""/>
+            </td>
+            <td class="active">
+                温度:
+            </td>
+            <td>
+                <input type="text" id="temp" class="form-control" name="temp" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                温度修正:
+            </td>
+            <td>
+                <input id="tempAdjVal" name="tempAdjVal" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                密度:
+            </td>
+            <td>
+                <input id="dnsty" name="dnsty" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                Vcf值:
+            </td>
+            <td>
+                <input id="vcfVal" name="vcfVal" class="form-control"  type="text" value="" >
+            </td>
+            <td class="active">
+                Vp值:
+            </td>
+            <td>
+                <input id="vpVal" name="vpVal" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                重量:
+            </td>
+            <td>
+                <input id="weight" name="weight" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                净重:
+            </td>
+            <td>
+                <input id="netWeight" name="netWeight" class="form-control"  type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                含水率%:
+            </td>
+            <td>
+                <input id="waterPercent" name="waterPercent" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                水尺:
+            </td>
+            <td>
+                <input id="waterHeight" name="waterHeight" class="form-control"  type="text" value="">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                容积:
+            </td>
+            <td>
+                <input id="cubage" name="cubage" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                明水量:
+            </td>
+            <td>
+                <input id="wtrWeight" name="wtrWeight" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                测量人:
+            </td>
+            <td>
+                <input id="crtBy" name="crtBy" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                计量量:
+            </td>
+            <td>
+                <input id="mearVal" name="mearVal" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                测量时间:
+            </td>
+            <td>
+                <input id="createDate" name="createDate" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                确认量:
+            </td>
+            <td>
+                <input id="conVal" name="conVal" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                确认人:
+            </td>
+            <td>
+                <input id="conBy" name="conBy" class="form-control"  type="text" value="">
+            </td>
+            <td class="active">
+                备注:
+            </td>
+            <td>
+                <input id="remark" name="remark" class="form-control"  type="text" value="" >
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+<script data-main="/js/module/material/materialMove/mobilisationTicket" src="/js/zlib/require.js"></script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日计划新增、编辑页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--插件样式-->
+    <!--引入样式-->
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/aps.css">
+    <link rel="stylesheet" href="../../js/plugins/easyui/themes/default/datagrid.css">
+    <link rel="stylesheet" href="../../js/plugins/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="../../css/customDatagrid.css">
+    <style>
+        #dayName {
+            width: 200px;
+            background: #fff;
+            padding: 4px 12px;
+            height: 30px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .apsType-linkage li select, .apsType-linkage li {
+            box-sizing: border-box;
+            padding: 0 12px;
+        }
+    </style>
+
+</head>
+<body id="dayPLUpdateInit" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>日计划</span></div>
+            <!--按钮条-->
+            <div class="toolbar-btns clearfix">
+                <div class="pull-left">
+                    <ul class="apsType-linkage">
+                        <li class="month">
+                            月计划：
+                            <select name="monthName" id="monthName" class="inputFocus">
+                                <option value="">请选择</option>
+                            </select>
+                        </li>
+                        <li class="week">
+                            计划周期（周）：
+                            <select name="" class="inputFocus" id="apsWeek">
+                                <option value="">请选择</option>
+                                <option value="1">第一周</option>
+                                <option value="2">第二周</option>
+                                <option value="3">第三周</option>
+                                <option value="4">第四周</option>
+                            </select>
+                        </li>
+                        <li class="dayPlanName">
+                            日计划名称：
+                            <input type="text" placeholder="请输入计划名称" id="dayName" class="time-input inputFocus">
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                        <button class="btn btn-white btn-back" id="back-btn"><i
+                                class="fa fa-reply"></i> 返回
+                        </button>
+                        <button class="btn btn-white btn-sav" id="save-btn"><i
+                                class="fa fa-save"></i> 保存
+                        </button>
+                        <input type="hidden" name="state" id="state" value>
+                        <button class="btn btn-primary bg-ffa82d btn-submit" id="submit-btn"><i
+                                class="fa fa-upload"></i> 提交
+                        </button>
+                    </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <!--班计划-->
+                <div class="tableItemBox">
+                    <table id="td0" class="tableItem">
+                    </table>
+                </div>
+                <!--产量-->
+                <div class="tableItemBox">
+                    <table id="td1" class="tableItem ">
+                    </table>
+                </div>
+
+                <!--质量指标计划-->
+                <div class="tableItemBox">
+                    <table id="td2" class="tableItem">
+                    </table>
+                </div>
+                <!--技术指标计划-->
+                <div class="tableItemBox">
+                    <table id="td3" class="tableItem">
+                    </table>
+                </div>
+                <!--各项单耗指标计划-->
+                <div class="tableItemBox">
+                    <table id="td4" class="tableItem">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/dayPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>库位弹出页</title>
+</head>
+<body id="storageLocationInner" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/NodeLocation/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">
+                    库位编号:
+            </td>
+            <td>
+                <input id="nodeNo" name="nodeNo" class="form-control " require="true" type="number" value=""  placeholder="400000-499999" dataType="Range" min="400000" max="499999"></td>
+            <td class="active require">
+                   库位编码:
+            </td>
+            <td>
+                <input id="nodeCode" name="nodeCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+               库位名称:
+            </td>
+            <td>
+                <input id="nodename" name="nodename" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">
+                    库位别名:
+            </td>
+            <td>
+                <input id="nodeAlias" name="nodeAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                <label >库位精度:</label>
+            </td>
+            <td>
+                <input id="pres" name="pres" class="form-control" placeholder="0-100" min="0" max="100"  type="text" value="" maxlength="50" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            </td>
+            <td class="active require">
+                <label >仓库:</label>
+            </td>
+            <td>
+                <select name="nodeAreaId" id="nodeAreaId" class="form-control" require="true">
+                    <option value="">
+                        --请选择--
+                    </option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="active">
+                <label >显示顺序:</label>
+            </td>
+            <td>
+                <div class="form-checked">
+                    <input id="displayOrder" require="true" class="form-control" min="0" max="1000" type="number" name="displayOrder" value="1" checked onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                </div>
+            </td>
+
+            <td class="active">
+                <label  >启用标识:</label>
+            </td>
+            <td>
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="active">
+                <label >说明:</label>
+            </td>
+            <td colspan="3">
+                <textarea name="remark" id="remark" class="form-control"  rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="../../js/module/material/factoryModels/storageLocation" src="/js/zlib/require.js"></script>
+</body>
+</html>

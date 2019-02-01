@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仓库弹出页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="warehouseForm" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/AreaStock/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">仓库编号:</td>
+            <td>
+                <input id="areaNo" name="areaNo" class="form-control " require="true" type="number" value=""  placeholder="3000-3999" dataType="Range" min="3000" max="3999" ></td>
+            <td class="active require">仓库编码:</td>
+            <td>
+                <input id="areaCode" name="areaCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">仓库名称:</td>
+            <td >
+                <input id="areaName" name="areaName" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">仓库别名:</td>
+            <td>
+                <input id="areaAlias" name="areaAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">仓库类型:</td>
+            <td >
+                <select name="stockType" require="true" id="stockType" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+            <td class="active require">MOM车间:</td>
+            <td>
+                <select name="wspId" require="true" id="wspId" class="form-control">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">显示顺序:</td>
+            <td>
+                <input id="displayOrder" name="displayOrder" class="form-control" type="number" min="0"  maxlength="4" dataType="Range" value="0" onblur="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" >
+            </td>
+            <td class="active">启动标识:</td>
+            <td>
+                <input type="checkbox" name="enable" class="i-checks" value="1" checked>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">说明:</td>
+            <td  colspan="3">
+                <textarea name="remark" id="remark" class="form-control"  rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/warehouse" src="/js/zlib/require.js"></script>
+
+
+</body>
+</html>

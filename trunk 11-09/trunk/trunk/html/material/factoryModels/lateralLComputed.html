@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>料线公式配置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body id="lateralLComputed" class="wrapper-white">
+    <div class="ibox">
+        <div class="ibox-content pag0">
+            <!--标签切换-->
+            <div class="tabBox">
+                <ul class="tabChange pull-left">
+                    <li data-name="areaForm" class="pull-left active">界区计量公式</li>
+                    <li data-name="slineForm" class="pull-left">侧线计量公式</li>
+                </ul>
+            </div>
+            <!--界区-->
+            <div class="contentBox active">
+                <!--内容切换-->
+                <div class="conBox pull-left">
+                    <ul class="contentChange pull-left">
+                        <li class="pull-left active"><i class="fa fa-dot-circle-o"></i>罐区</li>
+                        <li class="pull-left"><i class="fa fa-circle-o"></i>装置界区</li>
+                        <li class="pull-left"><i class="fa fa-circle-o"></i>仓库</li>
+                        <li class="pull-left"><i class="fa fa-circle-o"></i>装卸台</li>
+                    </ul>
+                </div>
+                <!--内容区-->
+                <div class="contentInner pull-left">
+                    <div class="search pull-left">
+                        <div class="searchinputinner">
+                            <input type="text" class="searchinput">
+                            <button class="btn btn-search  btn-white"><i class="fa fa-search"></i>查询</button>
+                        </div>
+                        <div class="searchContent">
+                            <ul class="searchUl"></ul>
+                        </div>
+                    </div>
+                    <div class="fn pull-right">
+                        <span>函数:</span>
+                        <select name="Fn" id="jqselectFn" class="selFn">
+
+                        </select>
+                        <button class="btn btn-matching  btn-white"><i class="fa fa-search"></i>匹配</button>
+                    </div>
+                    <div class="btnFn pull-right">
+                        <fieldset >
+                            <legend>运算</legend>
+                            <button>+</button>
+                            <button>-</button>
+                            <button>*</button>
+                            <button>/</button>
+                            <button>(</button>
+                            <button>)</button>
+                            <button class="empty">C</button>
+                            <button class="backOne">CE</button>
+                        </fieldset>
+                        <div class="btntool pull-right">
+                            <button class="btn btn-verify  btn-white"><i class="fa fa-search"></i>验证</button>
+                            <button class="btn btn-save  btn-white"><i class="fa fa-save"></i>保存</button>
+                        </div>
+                    </div>
+                    <div class="valbox">
+                        <div class="context active pull-left" contenteditable="true"></div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!--侧线-->
+            <div class="contentBox">
+                <!--内容切换-->
+                <div class="conBox pull-left">
+                    <ul class="contentChange pull-left">
+                        <li class="pull-left active"><i class="fa fa-dot-circle-o"></i>罐区</li>
+                        <li class="pull-left"><i class="fa fa-circle-o"></i>装置界区</li>
+                        <li class="pull-left"><i class="fa fa-circle-o"></i>仓库</li>
+                        <li class="pull-left"><i class="fa fa-circle-o"></i>装卸台</li>
+                    </ul>
+                </div>
+                <!--内容区-->
+                <div class="contentInner pull-left">
+                    <div class="search pull-left">
+                        <div class="searchinputinner">
+                            <input type="text" class="searchinput">
+                            <button class="btn btn-search  btn-white"><i class="fa fa-search"></i>查询</button>
+                        </div>
+                        <div class="searchContent">
+                            <ul class="searchUl"></ul>
+                        </div>
+                    </div>
+                    <div class="fn pull-right">
+                        <span>函数:</span>
+                        <select name="Fn" id="cxSelectFn" class="selFn">
+
+                        </select>
+                        <button class="btn btn-matching  btn-white"><i class="fa fa-search"></i>匹配</button>
+                    </div>
+                    <div class="btnFn pull-right">
+                        <fieldset >
+                            <legend>运算</legend>
+                            <button>+</button>
+                            <button>-</button>
+                            <button>*</button>
+                            <button>/</button>
+                            <button>(</button>
+                            <button>)</button>
+                            <button class="empty">C</button>
+                            <button class="backOne">CE</button>
+                        </fieldset>
+                        <div class="btntool pull-right">
+                            <button class="btn btn-verify  btn-white"><i class="fa fa-search"></i>验证</button>
+                            <button class="btn btn-save  btn-white"><i class="fa fa-save"></i>保存</button>
+                        </div>
+                    </div>
+                    <div class="valbox">
+                        <div class="context active pull-left" contenteditable="true"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!--隐藏值-->
+            <input type="hidden" id="material">
+            <input type="hidden" id="Fninput">
+            <input type="hidden" id="boxindex">
+            <input type="hidden" id="tabindex">
+        </div>
+    </div>
+<script data-main="/js/module/material/factoryModels/lageralLine" src="/js/zlib/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.hideScroll {
+  height: auto!important;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #676a6c;
+}
+//form
+.form-horizontal {
+  margin: 0 10px;
+}
+//table
+.table-bordered {
+   border: none;
+}
+form table.dataTable.no-footer {
+  border-bottom: none;
+}
+.table-bordered>tbody>tr>td {
+  border: 1px solid #e7e7e7 ;
+}
+td .form-control, .single-line {
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #e5e6e7;
+   border-radius: 1px;
+   color: inherit;
+   display: block;
+   padding: 6px 12px;
+   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+   width: 100%;
+   font-size: 14px;
+ }
+.width-15{
+  width: 15%;
+}
+.width-35{
+  width: 35%;
+}
+.form-control:focus {
+  border-color: #1ab394 !important;
+  box-shadow: none !important;
+}
+
+form > .table > tbody > tr > td, .table > tfoot > tr > td {
+  border-top: 1px solid #e7eaec;
+  line-height: 1.42857;
+  padding: 8px;
+  vertical-align: middle;
+}

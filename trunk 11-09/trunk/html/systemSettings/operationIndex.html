@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="operationIndex" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>操作管理</span></div>
+            <!--搜索区-->
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    <span>操作名称:</span>
+                    <!--<input id="operationNameId" name="operationNameId" class="form-control" type="hidden" value="">-->
+                    <input id="operationName" name="nameParam" type="text" value="" class="form-control" >
+                </div>
+                <div class="form-inline">
+                    <span >操作编码:</span>
+                    <!--<input id="proCodeId" name="proCodeId" class="form-control" type="hidden" value="">-->
+                    <input id="operationCode" name="codeParam" type="text" value="" class="form-control" >
+                </div>
+                <div class="form-inline">
+                    <span>描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述:</span>
+                    <!--<input id="opeDescriptionId" name="opeDescriptionId" class="form-control" type="hidden" value="">-->
+                    <input id="opeDescription" name="desParam" type="text" value="" class="form-control" >
+                </div>
+                <div class="form-inline">
+                    <span >是否启用:</span>
+                    <!--<input id="enableId" name="enableId.id" class="form-control" type="hidden" value="">-->
+                    <select id="enable" name="enable" class="form-control">
+                        <option value="">全部</option>
+                        <option value="1">启用</option>
+                        <option value="0">禁用</option>
+                    </select>
+                </div>
+            </div>
+            <!--按钮区-->
+            <div class="toolbar-btns clearfix">
+                <div class="pull-left">
+                    <button class="btn btn-white btn-sm" onclick="Bus.openEditDialog('新增操作','/systemSettings/operationIndexInner.html','640px','294px')" title="添加"><i class="fa fa-plus"></i> 添加
+                    </button>
+
+                    <button class="btn btn-white btn-sm" onclick="Bus.editCheckedTable('修改操作','/systemSettings/operationIndexInner.html','640px','294px','#treeTable')" title="修改"><i class="fa fa-file-text-o"></i> 修改
+                    </button>
+                    <button class="btn btn-white btn-sm" onclick="Bus.delCheckTable('确认要删除该用户吗？',Api.admin+'/api/sys/SysOperation/delete/','#treeTable')"><i
+                            class="fa fa-trash-o"></i>删除</button>
+                    <button class="btn btn-white btn-sm " id="refresh-btn" onclick="refresh()" title="刷新"><i class="glyphicon glyphicon-repeat"></i> 刷新
+                    </button>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-white btn-rounded btn-outline btn-sm " id="search-btn"><i
+                            class="fa fa-search"></i> 查询
+                    </button>
+                    <button class="btn btn-white btn-rounded btn-outline btn-sm " id="reset-btn"><i
+                            class="fa fa-refresh"></i> 重置
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <!--表头-->
+                <thead>
+                <tr class="center">
+                    <th><input type="checkbox" class="i-checks" ></th>
+                    <th>序号</th>
+                    <th>操作名称</th>
+                    <th>操作编码</th>
+                    <th>描述</th>
+                    <th>排序</th>
+                    <th>是否启用</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+
+                </tbody>
+            </table>
+
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+
+        </div>
+    </div>
+    <script data-main="/js/module/systemSettings/operationIndex" src="/js/zlib/require.js"></script>
+</body>
+</html>

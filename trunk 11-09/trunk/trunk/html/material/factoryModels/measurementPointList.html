@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>测量点列表页</title>
+</head>
+<body id="measurementPointList" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>测量点</span>
+            <div class="pull-right toolbar-btns">
+                <button class="btn" id="btn-add"><i class="fa fa-plus "></i> 新增
+                </button>
+                <button class="btn" id="btn-edit"><i class="fa fa-edit  "></i> 编辑
+                </button>
+                <button class="btn" id="btn-import"><i class="fa fa-download "></i> 导入
+                </button>
+                <button class="btn" id="btn-export"><i class="fa fa-upload "></i> 导出
+                </button>
+                <button class="btn" id="btn-help"><i class="fa fa-question-circle-o "></i> 帮助
+                </button>
+            </div>
+        </div>
+        <div class="toolbar-form clearfix">
+            <div class="form-inline">
+                <span>测量点名称：</span>
+                <input id="instrName" name="instrName" class="form-control" type="text" value="" maxlength="50" >
+            </div>
+            <div class="form-inline">
+                <span>工位号：</span>
+                <input id="Tag" name="Tag" class="form-control" type="text" value="" maxlength="50" >
+
+            </div>
+            <div class="form-inline">
+                <span>界区：</span>
+                <select name="nodeAreaId" class="form-control" id="nodeAreaId">
+                    <option value="">请选择</option>
+                </select>
+            </div>
+            <div class="form-inline">
+                <span>MOM工厂：</span>
+                <select name="fctrId" class="form-control" id="fctrId">
+                    <option value="">请选择</option>
+                </select>
+            </div>
+            <div class="form-inline">
+                <span>类型：</span>
+                <select name="mtrlType" class="form-control" id="mtrlType">
+                    <option value="">请选择</option>
+                </select>
+            </div>
+
+
+
+            <div class="pull-right">
+                <button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+                <button class="btn btn-reset " id="reset-btn"><i class="fa fa-refresh"></i> 重置
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <!--表格区-->
+        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+            <!--表头-->
+            <thead>
+            <tr role="row">
+                <th class="autoWidth"><input type="checkbox" class="i-checks" ></th>
+                <th>测量点编号</th>
+                <th>测量点名称</th>
+                <th>测量点别名</th>
+                <th>界区</th>
+                <th>工位号</th>
+                <th>系数</th>
+                <th>量纲</th>
+                <th>MOM工厂</th>
+                <th>类型</th>
+                <th>启用标识</th>
+                <th>虚实标识</th>
+                <th>累计标识</th>
+                <th>累计上限</th>
+                <th>累计下限</th>
+                <th>显示顺序</th>
+                <th>说明</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <!--表内容-->
+            <tbody id="datanner">
+
+            </tbody>
+
+        </table>
+
+        <div class="clearfix pagination-box">
+            <div class="page-info pull-left"></div>
+            <div id="pagination" class="pagination-roll pull-right"></div>
+        </div>
+    </div>
+</div>
+<script data-main="/js/module/material/factoryModels/measurementPoint" src="/js/zlib/require.js"></script>
+</body>
+</html>

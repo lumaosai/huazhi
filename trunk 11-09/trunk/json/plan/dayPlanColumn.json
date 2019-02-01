@@ -1,0 +1,109 @@
+{
+  "jszbjh":{
+    "columnArr":[[
+      { "field": "id", "title": "id", "hidden": true},
+      { "field": "itemName", "title": "项目", "width": 100, "align": "center" },
+      { "field": "itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field": "weekPlan", "title": "周计划", "width": 100, "align": "center" },
+      { "field": "dayPlan", "title": "日计划", "width": 100, "align": "center" },
+      { "field": "classPlan", "title": "班计划","width": 150, "align": "center" }
+    ]],
+    "editArr":[
+      { "field":"weekPlan","editor":{"type": "text", "options": {"precision": 1}} },
+      { "field":"dayPlan","editor":{"type": "text"} },
+      { "field":"classPlan","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{
+      "checkRowArr": [0],
+      "checkFieldArr": ["weekPlan","dayPlan","classPlan"]
+    }
+  },
+
+  "bjh":{
+    "columnArr":[[
+      { "field": "id", "title": "id", "hidden": true},
+      { "field": "itemName", "title": "项目", "width": 100, "align": "center" },
+      { "field": "itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field": "mouthPlan", "title": "月计划", "width": 100, "align": "center" },
+      { "field": "weekPlan", "title": "周计划", "width": 100, "align": "center" },
+      { "field": "dayPlan", "title": "日计划", "width": 150, "align": "center" }
+    ]],
+    "editArr":[
+      { "field":"mouthPlan","editor":{"type": "text", "options": {"precision": 1}} },
+      { "field":"weekPlan","editor":{"type": "text"} },
+      { "field":"dayPlan","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{
+      "checkRowArr": [0,1],
+      "checkFieldArr": ["mouthPlan","weekPlan","dayPlan"]
+    }
+  },
+
+  "zlzbjh":{
+    "columnArr":[[
+      { "field": "id", "title": "id", "hidden": true},
+      { "field": "pname", "title": "名称", "width": 100, "align": "center" },
+      { "field": "itemName", "title": "项目", "width": 100, "align": "center" },
+      { "field": "itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field": "weekPlan", "title": "周计划", "width": 100, "align": "center" },
+      { "field": "dayPlan", "title": "日计划", "width": 100, "align": "center"},
+      { "field": "classPlan", "title": "班计划", "width": 150, "align": "center"}
+    ]],
+    "editArr":[
+      { "field":"weekPlan","editor":{"type": "text", "options": {"precision": 1}} },
+      { "field":"dayPlan","editor":{"type": "text"} },
+      { "field":"classPlan","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{
+      "checkRowArr": [0],
+      "checkFieldArr": ["weekPlan","dayPlan","classPlan"]
+    }
+  },
+
+  "cljh":{
+    "columnArr":[[
+      { "field": "id", "title": "id", "hidden": true},
+      { "field": "itemName", "title": "项目", "width": 100, "align": "center" },
+      { "field": "itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field": "mouthPlan", "title": "月计划", "width": 100, "align": "center" },
+      { "field": "weekPlan", "title": "周计划", "width": 100, "align": "center" },
+      { "field": "dayPlan", "title": "日计划", "width": 150, "align": "center" }
+    ]],
+    "editArr":[
+      { "field":"mouthPlan","editor":{"type": "text", "options": {"precision": 1}} },
+      { "field":"weekPlan","editor":{"type": "text"} },
+      { "field":"dayPlan","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{
+      "checkRowArr": [0],
+      "checkFieldArr": ["mouthPlan","weekPlan","dayPlan"]
+    }
+  },
+
+  "gxdhzbjh":{
+    "columnArr":[[
+      { "field": "id", "title": "id", "hidden": true },
+      { "field": "itemName", "title": "项目", "width": 100, "align": "center" },
+      { "field": "itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field": "mouthPlan", "title": "月计划", "width": 100, "align": "center" },
+      { "field": "weekPlan", "title": "周计划", "width": 100, "align": "center" },
+      { "field": "dayPlan", "title": "日计划",  "width": 150, "align": "center" }
+    ]],
+    "editArr":[
+      { "field":"mouthPlan","editor":{"type": "text", "options": {"precision": 1}} },
+      { "field":"weekPlan","editor":{"type": "text"} },
+      { "field":"dayPlan","editor":{"type": "text"} }
+    ],
+    "mergeCell":[],
+    "validator":{
+      "checkRowArr": [0],
+      "checkFieldArr": ["mouthPlan","weekPlan","dayPlan"]
+    }
+  }
+
+
+}

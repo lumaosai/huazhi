@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width,initial-scale=1.0">
+    <title>年计划对比页面</title>
+    <link rel="stylesheet" href="../../js/plugins/easyui/themes/default/datagrid.css">
+    <link rel="stylesheet" href="../../js/plugins/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" href="../../css/aps.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<style>
+    .btn-sub{
+        display: none;
+    }
+    table{
+        text-align: center;
+    }
+    input{
+        width: 45px;
+        /*border: none;*/
+        text-align: center;
+        line-height: 20px;
+        padding: 0 2px;
+        margin:0;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    thead th{
+        text-align: center;
+        border-right: 1px dotted #ccc;
+    }
+    form{
+        margin-bottom: 20px;
+    }
+    thead{
+        background: #1cb392;
+        color:#fff;
+    }
+    table td {
+        word-break: normal!important;
+    }
+    .form-horizontal table tr,.form-horizontal table tr td{border:1px dotted #ccc;padding:3px;}
+</style>
+<body id="yearPlanCompare" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>计划-实产对比页面</span>
+                <div class="pull-right">
+                    <button class="btn btn-back btn-white" id="back-btn">
+                        <i class="fa fa-reply"></i> 返回
+                    </button>
+                    <button class="btn btn-save  btn-bgf29">
+                        <i class="fa fa-save"></i>
+                        保存</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <form id="inputForm" class="form-horizontal" action="/api/sys/SysUser/save" method="post">
+                <input type="hidden" id="yearName" value="">
+                <input type="hidden" id="period" value="">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th colspan="2" rowspan="2">月份</th>
+                        <th colspan="2">1月</th>
+                        <th colspan="2">2月</th>
+                        <th colspan="2">3月</th>
+                        <th colspan="2">4月</th>
+                        <th colspan="2">5月</th>
+                        <th colspan="2">6月</th>
+                        <th colspan="2">7月</th>
+                        <th colspan="2">8月</th>
+                        <th colspan="2">9月</th>
+                        <th colspan="2">10月</th>
+                        <th colspan="2">11月</th>
+                        <th colspan="2">12月</th>
+                        <th colspan="2">合计</th>
+                    </tr>
+                    <tr>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                        <th>计划</th>
+                        <th>实产</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tab"></tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+<script data-main="/js/module/producePlan/yearPlan" src="/js/zlib/require.js"></script>
+<script type="text/x-jsrender" id="j-specCard">
+    {{for result}}
+   <tr class="{{:itemCode}}">
+      <td class="td0">{{:pName }}</td>
+      <td class="td1">{{:itemName }}</td>
+      <td>{{:pcValue1}}</td>
+      <td>
+        <input type="text" name="scValue1" value="{{:scValue1}}">
+      </td>
+      <td>{{:pcValue2}}</td>
+      <td>
+        <input type="text" name="scValue2" value="{{:scValue2}}">
+      </td>
+      <td>{{:pcValue3}}</td>
+      <td>
+        <input type="text" name="scValue3" value="{{:scValue3}}">
+      </td>
+      <td>{{:pcValue4}}</td>
+      <td>
+        <input type="text" name="scValue4" value="{{:scValue4}}">
+      </td>
+      <td>{{:pcValue5}}</td>
+      <td>
+        <input type="text" name="scValue5" value="{{:scValue5}}">
+      </td>
+      <td>{{:pcValue6}}</td>
+      <td>
+        <input type="text" name="scValue6" value="{{:scValue6}}">
+      </td>
+      <td>{{:pcValue7}}</td>
+      <td>
+        <input type="text" name="scValue7" value="{{:scValue7}}">
+      </td>
+      <td>{{:pcValue8}}</td>
+      <td>
+        <input type="text" name="scValue8" value="{{:scValue8}}">
+      </td>
+      <td>{{:pcValue9}}</td>
+      <td>
+        <input type="text" name="scValue9" value="{{:scValue9}}">
+      </td>
+      <td>{{:pcValue10}}</td>
+      <td>
+        <input type="text" name="scValue10" value="{{:scValue10}}">
+      </td>
+      <td>{{:pcValue11}}</td>
+      <td>
+        <input type="text" name="scValue11" value="{{:scValue11}}">
+      </td>
+      <td>{{:pcValue12}}</td>
+      <td>
+        <input type="text" name="scValue12" value="{{:scValue12}}">
+      </td>
+      <td>{{:pcValueSum}}</td>
+      <td>
+        <input type="text" name="scValueSum" disabled id="{{:id}}" value="{{:scValueSum}}">
+      </td>
+
+    </tr>
+    {{/for}}
+</script>
+</body>
+</html>

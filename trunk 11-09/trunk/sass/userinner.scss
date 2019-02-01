@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+
+$h100: 100%;
+body{
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #676a6c;
+  overflow-x: hidden;
+}
+//内容区
+.wrapper{
+  height:$h100;
+}
+.wrapper-content {
+  padding: 20px;
+}
+.form-control, .single-line {
+  background-color: #FFFFFF;
+  background-image: none;
+  border: 1px solid #e5e6e7;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  font-size: 14px;
+  box-shadow: none;
+    &:focus{
+      border-color: #1ab394 !important;
+    }
+}
+.form-group{
+  .company{
+    .input-group{
+      margin-right: 10px;
+    }
+    #companyName,#officeName{
+      width: 200px;
+      margin-right: 0;
+    }
+  }
+  .user{
+    input{
+      width: 232px;
+    }
+  }
+  span{
+    display:inline-block;
+    width: 65px;
+  }
+
+}
+
+.company{
+  margin-bottom: 10px;
+}
+
+
+
+//搜索按钮
+.btn-primary {
+  background-color: #1ab394;
+  border-color: #1ab394;
+  color: #FFFFFF;
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:hover{
+    color: #fff;
+    background-color: #18a689;
+    border-color: #18a689;
+  }
+}
+
+
+//左侧按钮
+.btn-white {
+  color: inherit;
+  background: white;
+  border: 1px solid #e7eaec;
+}
+.pull-right{
+  >.btn-primary{
+    border-color: #1ab394;
+    border-radius: 50px;
+    color: #1ab394;
+    background-color: transparent;
+  }
+  >.btn-primary:hover{
+    background-color: #18a689;
+    border-color: #18a689;
+    color: #fff;
+  }
+}
+
+
+
+
+//表格
+.dataTable {
+  clear: both;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  max-width: none !important;
+  border-bottom: 0;
+
+
+}
+table.dataTable thead th{
+  border-bottom: 0;
+  background-color: #F5F5F6;
+  vertical-align: middle;
+}
+table.dataTable thead th, table.dataTable thead td,table.dataTable tbody td{
+  padding: 8px;
+  a.btn-xs{
+    margin: 0 3px 0 0;
+  }
+}
+
+.dataTables_length label {
+  margin: 8px;
+  font-weight: inherit;
+}
+.btn-info {
+  background-color: #23c6c8;
+  border-color: #23c6c8;
+  color: #FFFFFF;
+}
+.btn-success {
+  background-color: #1c84c6;
+  border-color: #1c84c6;
+  color: #FFFFFF;
+}
+.btn-danger {
+  background-color: #ed5565;
+  border-color: #ed5565;
+  color: #FFFFFF;
+}

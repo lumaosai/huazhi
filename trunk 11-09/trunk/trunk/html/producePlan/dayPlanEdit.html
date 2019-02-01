@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>日计划新增、编辑页面</title>
+</head>
+<body id="dayPlanEdit" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>日计划</span></div>
+            <div class="toolbar-form">
+                <div class="form-inline month">
+                    月计划：
+                    <select name="monthName" id="monthName" class="inputFocus">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+                <div class="form-inline week">
+                    计划周期（周）：
+                    <select name="" class="inputFocus" id="apsWeek">
+                        <option value="">请选择</option>
+                        <option value="1">第一周</option>
+                        <option value="2">第二周</option>
+                        <option value="3">第三周</option>
+                        <option value="4">第四周</option>
+                    </select>
+                </div>
+                <div class="form-inline dayPlanName">
+                    日计划名称：
+                    <input type="text" placeholder="请输入计划名称" id="dayName" class="time-input inputFocus">
+                </div>
+                <!--按钮条-->
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-white btn-back" id="back-btn"><i
+                            class="fa fa-reply"></i> 返回
+                    </button>
+                    <button class="btn btn-white btn-sav" id="save-btn"><i
+                            class="fa fa-save"></i> 保存
+                    </button>
+                    <input type="hidden" name="state" id="state" value>
+                    <button class="btn btn-submit" id="submit-btn"><i
+                            class="fa fa-upload"></i> 提交
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="datagridsContent"></div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/dayPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

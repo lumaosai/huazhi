@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>MOM工厂编辑</title>
+</head>
+
+<body id="momFactoryView" class="wrapper-white">
+
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/Fctr/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">工厂编号:</td>
+            <td>
+                <input id="fctrNo" name="fctrNo" class="form-control " require="true" placeholder="0-100之间" dataType="Range" min="0" max="100" type="number"  maxlength="4"   maxlength="50" >
+            </td>
+            <td class="active require">工厂编码:</td>
+            <td>
+                <input id="fctrCode" name="fctrCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">工厂名称:</td>
+            <td>
+                <input id="fctrName" name="fctrName" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">工厂别名:</td>
+            <td>
+                <input id="fctrAlias" name="fctrAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">工厂类型:</td>
+            <td>
+                <select name="fctrType" id="fctrType" class="form-control" require="true">
+                </select>
+            </td>
+            <td class="active require">显示顺序:</td>
+            <td>
+                <input id="displayOrder" name="displayOrder" class="form-control" require="true" placeholder="1000以下" dataType="Range" min="0" max="1000" type="number"  value="" maxlength="4" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">启动标识:</td>
+            <td>
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">说明:</td>
+            <td>
+                <input type="text" id="remark" name="remark" class="form-control" value="">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/momFactory" src="/js/zlib/require.js"></script>
+</body>
+</html>

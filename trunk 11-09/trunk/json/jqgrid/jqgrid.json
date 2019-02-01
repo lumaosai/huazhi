@@ -1,0 +1,46 @@
+[
+  {
+    "id": "122",
+    "invdate": "sssaa",
+    "name": "lisi22",
+    "amount": "sss",
+    "tax": "ddd",
+    "total": "ggg",
+    "children": [
+      {
+        "id": "333",
+        "picUrl": "sssaa",
+        "name": "在用",
+        "remark": "sss"
+      },
+      {
+        "id": "444",
+        "picUrl": "sssqqq",
+        "name": "空闲",
+        "remark": "sss"
+      }
+    ]
+  },
+  {
+    "id": "1222",
+    "invdate": "sssqqq",
+    "name": "lisi",
+    "amount": "sss",
+    "tax": "ddd",
+    "total": "ggg",
+    "children": [
+      {
+        "id": "333",
+        "picUrl": "sssaa",
+        "name": "在用",
+        "remark": "sss"
+      },
+      {
+        "id": "444",
+        "picUrl": "sssqqq",
+        "name": "空闲",
+        "remark": "sss"
+      }
+    ]
+  }
+]

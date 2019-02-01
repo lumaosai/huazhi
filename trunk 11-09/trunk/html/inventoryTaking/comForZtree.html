@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘存管理--盘存字典--计算公式</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .paramTag span{margin-bottom:10px;}
+    </style>
+</head>
+<body id="comForZtree" class="wrapper-white">
+    <form id="inputForm" method="post" style="padding: 20px;">
+        <input type="hidden" name="id" id="objId" value="">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="param-item">
+                    <div class="paramCount-r paramTag">
+                        <span class="btn  numBtn">1</span>
+                        <span class="btn  numBtn">2</span>
+                        <span class="btn  numBtn">3</span>
+                        <span class="btn  numBtn">4</span>
+                        <span class="btn  numBtn">5</span>
+                        <span class="btn  numBtn">6</span>
+                        <span class="btn  numBtn">7</span>
+                        <span class="btn  numBtn">8</span>
+                        <span class="btn  numBtn">9</span>
+                        <span class="btn  numBtn">0</span>
+                        <span class="btn  decBtn">.</span>
+                        <span class="btn  addBtn">+</span>
+                        <span class="btn  subBtn">-</span>
+                        <span class="btn  mulBtn">*</span>
+                        <span class="btn  divsBtn">/</span>
+                        <span class="btn  bracLBtn">(</span>
+                        <span class="btn  bracRBtn">)</span>
+                        <span class="btn  clearAll">C</span>
+                        <span class="btn  clearOne"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div class="param-item">
+                    <div class="paramCount">
+                        <div class="paramCount-l">
+                            <span class="paramName-tit text-left">计算公式：</span>
+                            <div id="paramRecord" class="paramRecord"></div>
+                            <input type="hidden" value="" id="paramRecordShow" name="formula" required  aria-required="true">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <h1>参数选择</h1>
+                <div id="tree" class="ztree leftBox-content" style="height: 300px !important;overflow: scroll !important;"></div>
+            </div>
+        </div>
+        <input type="hidden" value="" id="paramRecordHide" name="val">
+    </form>
+    <script data-main="/js/module/inventoryTaking/dicTree.js" src="/js/zlib/require.js"></script>
+</body>
+</html>

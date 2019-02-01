@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>氧化铝仓/氢氧化铝/堆栈盘存信息</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/aps.css">
+    <link rel="stylesheet" href="../../css/customDatagrid.css">
+    <link rel="stylesheet" href="../../js/plugins/jqGrid/css/ui.jqgrid.css">
+    <link rel="stylesheet" href="../../js/plugins/jqGrid/css/themes/start/jquery-ui-1.8.20.custom.css">
+    <link rel="stylesheet" href="../../css/invCommon.css">
+    <!--<link rel="stylesheet" href="../../js/plugins/jqGrid/css/jqGrid_my.css">-->
+
+</head>
+<style>
+    .titleNames{
+        font-weight: bold;
+        margin: 8px 0 10px 0;
+        padding: 8px 0 10px 0;
+        border-bottom: 1px solid #eaeaea;
+    }
+    .tit{
+        font-weight: bold;
+        margin: 8px 0 10px 0;
+        padding: 8px 0 10px 0;
+    }
+    .titleNamesT{
+        font-weight: bold;
+        margin: 8px 0 10px 0;
+        padding: 8px 0 10px 0;
+    }
+    .datatimepicker{
+        margin-right: 0 !important;
+    }
+</style>
+<!--内容-->
+<body id="createAIHO" class="wrapper-white">
+    <div class="ibox">
+        <!--头部-->
+        <div class="ibox-title">
+            <div class="titName">
+                <span>氧化铝/氢氧化铝/堆栈盘存信息</span>
+                <div class="pull-right">
+                    <button class="btn  bg-ffa82d btn-white" id="back-btn" type="button">
+                    <i class="fa fa-reply"></i>返回</button>
+                </div>
+            </div>
+            <div class="toolbar-form">
+                <div id="searchForm" class="form-inline">
+                    <table class="table table-bordered  table-condensed dataTables-example dataTable">
+                        <tr>
+                            <td>主盘人：</td>
+                            <td>
+                                <input type="text" disabled="disabled" class="maindiskUser">
+                            </td>
+                            <td>监盘：</td>
+                            <td>
+                                <input type="text" class="supervisionplate form-control datatimepicker" />
+                            </td>
+                            <td>盘存日期：</td>
+                            <td>
+                                <label for="startDate">
+                                    <select id="startDate" class="form-control datatimepicker">
+                                        <option value="">--请选择--</option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td>参与盘存人员：</td>
+                            <td>
+                                <input type="text" id="otherPlate" class="form-control datatimepicker"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <!--按钮组-->
+            <!--表格区-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <h2 class="titleNamesT">氧化铝仓存信息</h2>
+                    </div>
+
+                    <div class="pull-right">
+                        <button class="btn btn-save btnHide btn-bgf29" style="display: inline-block;">
+                            <i class="fa fa-save"></i>
+                            保存</button>
+                    </div>
+                </div>
+            </div>
+            <div id="tableArr">
+                <div class="datagridsContent">
+                    <table id="dataTable0" class="datatable"></table>
+                </div>
+                <div class="datagridsContent tables">
+                    <h2 class="titleNames">氢氧化铝仓存信息</h2>
+                    <table id="dataTable1" class="datatable"></table>
+                </div>
+                <div class="datagridsContent">
+                    <div class="row titleNames">
+                        <div class="pull-left">
+                            <h2 class="tit">氧化铝/氢氧化铝包装信息</h2>
+                        </div>
+                        <div class="pull-right">
+                            <label>
+                                <div class="execution">
+                                    <span>截至日期:</span>
+                                    <input type="text" value="" id="startDateParam" class="time-input datePicker form-control" placeholder=""><i class="fa fa-calendar"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <table id="dataTable2" class="datatable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/inventoryTaking/inventoryCollection" src="/js/zlib/require.js"></script>
+</body>
+</html>

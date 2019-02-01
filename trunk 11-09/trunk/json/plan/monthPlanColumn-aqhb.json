@@ -1,0 +1,35 @@
+{
+  "aqhbsbglztzbjh":{
+    "columnArr":[[
+      { "field":"id", "title": "id", "hidden": true},
+      { "field":"itemCode","title":"itemCode","hidden": true },
+      { "field":"mainId","title":"mainId","hidden": true },
+      { "field":"itemName", "title": "指标名称", "width": 100, "align": "center" },
+      { "field":"itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field":"indexValue","title":"指标值","width":100,"align":"center"},
+      { "field":"remark", "title": "备注", "width": 150, "align": "center" }
+    ]],
+    "editArr":[
+      { "field":"indexValue","editor":{"type": "numberbox"} },
+      { "field":"remark","editor":{"type": "text"} }
+    ],
+    "mergeCell":[]
+  },
+  "zlzbjh":{
+    "columnArr":[[
+      { "field":"id", "title": "id", "hidden": true},
+      { "field":"itemCode","title":"itemCode","hidden": true },
+      { "field":"mainId","title":"mainId","hidden": true },
+      { "field":"itemName", "title": "指标名称", "width": 100, "align": "center" },
+      { "field":"itemUnit", "title": "单位", "width": 100, "align": "center" },
+      { "field":"indexValue","title":"指标值","width":100,"align":"center"},
+      { "field":"remark", "title": "备注", "width": 150, "align": "center" }
+    ]],
+    "editArr":[
+      { "field":"indexValue","editor":{"type": "numberbox"} },
+      { "field":"remark","editor":{"type": "text"} }
+    ],
+    "mergeCell":[]
+  }
+
+}

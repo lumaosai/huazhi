@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <link rel="stylesheet" href="../../../css/allocation.css">
+    <title>料线料仓配置</title>
+    <style>
+        #list3 i{
+            display: block;
+            float: right;
+            height: 40px;
+            line-height: 40px;
+            width: 90px;
+        }
+    </style>
+</head>
+<!--list1 左上数据-->
+<!--list2 右上数据-->
+<!--list3 左下数据-->
+<body id="materialMoveModelsConf" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName clearfix">
+                <span>物料移动模型配置</span>
+            </div>
+        </div>
+        <div class="ibox-content config clearfix">
+            <div class="width-47 pull-left">
+                <div class="tit">
+                    <span>源节点</span>
+                </div>
+                <div class="config-content">
+                    <div class="toolbar-form clearfix">
+                        <div  class="form-inline">
+                            <span>MOM工厂：</span>
+                            <select name="fctrName" class="form-control" id="fctrName" data-width="120px">
+                                <option value="">请选择</option>
+
+                            </select>
+                        </div>
+                        <div class="form-inline">
+                            <span>源节点 ：</span>
+                            <input id="nodename" name="nodename" class="form-control" type="text" value="" data-width="120px" >
+                        </div>
+
+                        <div class="pull-right">
+                            <button class="btn btn-search" id="btn-search1" type="button"><i class="fa fa-search"></i>查询</button>
+                        </div>
+                    </div>
+                    <ul id="list1"></ul>
+                </div>
+
+                <div class="tit">
+                    <span>目标节点</span>
+                    <button id="btn-submit" class="btn pull-right btn-save">保存</button>
+                </div>
+                <div class="config-content">
+                    <ul id="list3" class="list3" ></ul>
+                    <div class="handelUpDownbox ">
+                        <div id="btn-up" class="glyphicon glyphicon-menu-up"></div>
+                        <div id="btn-down" class="glyphicon glyphicon-menu-down"></div>
+                    </div>
+                    <div class="handelLeftRightbox ">
+                        <button id="btn-left" class="btn btn-lg btn-primary glyphicon glyphicon-menu-left"></button>
+                        <button id="btn-right" class="btn btn-lg btn-primary glyphicon glyphicon-menu-right"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="width-47 pull-right">
+                <div class="tit">
+                    <span>节点</span>
+                </div>
+                <div class="config-content">
+                    <div class="toolbar-form clearfix">
+                        <div  class="form-inline">
+                            <span>MOM工厂：</span>
+                            <select name="fctrName2" class="form-control" id="fctrName2" data-width="120px">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+
+                        <div class="form-inline">
+                            <span>目的节点 ：</span>
+                            <input id="stockName" name="stockName" class="form-control" type="text" value="" data-width="120px" >
+                        </div>
+
+                        <div class="pull-right">
+                            <button class="btn btn-search" id="btn-search2" type="button"><i class="fa fa-search"></i>查询</button>
+                        </div>
+                    </div>
+                    <ul id="list2"></ul>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+<script data-main="/js/module/material/factoryModels/materialMoveModelsConf" src="/js/zlib/require.js"></script>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <link rel="stylesheet" href="../../../js/plugins/ztree/css/zTreeStyle/zTreeStyle.css">
+    <title>槽/罐区管理列表页</title>
+    <style>
+        .zTree{
+            height:800px;
+            width: 19%;
+            background-color: #F2F5F7;
+            margin-left: 8px;
+            /*padding-top: 10px;*/
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #zTree{
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        #wait_searchText{
+            height: 30px;
+            width: 80%;
+        }
+        .searchAll{
+            height: 30px;
+            width: 30px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        .table{
+            width: 79%;
+            /*background-color: red;*/
+            margin-right: 8px;
+        }
+        .loadZtree{
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            margin: 8px auto;
+        }
+        .tabBtn li{
+            float: left;
+            padding: 8px 11px;
+            color: black;
+            background-color: #F5F5F6;
+            border-radius: 4px 4px 0 0;
+        }
+        .tabBtn{
+            /*margin-left: 17px;*/
+        }
+        .toolbar-btns{
+            /*margin-right: 17px;*/
+        }
+        .active{
+            border-top: 2px solid #1ab394;
+            color: #1ab394 !important;
+            background-color: #fff !important;
+        }
+        .hide{
+            display: none;
+        }
+        tr{
+            height: 50px;
+        }
+        .fa-check-circle{
+            color:#47B523;
+        }
+        .treeTable-count{
+            display: none;
+        }
+        .tableParent{
+            width: 5000px;
+            padding: 0;
+        }
+        #measure{
+            overflow-x:scroll !important;
+        }
+        /*设置table滚动*/
+    </style>
+</head>
+<body id="tankManage" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>槽/罐区管理</span>
+        </div>
+        <div class="toolbar-form clearfix">
+            <label>
+                <div class="form-inline">
+                    <span>日期：</span>
+                    <input type="text" value="" id="tankDate" class="time-input datePicker form-control" placeholder="">
+                </div>
+            </label>
+            <div class="form-inline">
+                <label>
+                    <span>班次 ：</span>
+                    <select name="shift" class="form-control" id="shift">
+                    </select>
+                    <input type="hidden" id="shiftHidden" value="" data-time="" data-nodeTankId="" data-areaTankId="" >
+                </label>
+            </div>
+            <button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="pull-left zTree">
+                <!--<span class="dataTable_my">-->
+                <!--槽/罐:-->
+                <!--<input type="text" id="wait_searchText" class="searchText" placeholder="关键字筛选">-->
+                <!--</span>-->
+                <!--<div class="loadZtree">-->
+                <!--<ul id="zTree" class="ztree"></ul>-->
+                <!--</div>-->
+
+
+
+                <span class="searchGroup dataTable_my ">
+                    <input type="text" id="wait_searchText"  class="form-control pull-left" placeholder="关键字筛选" >
+                    <button type="button" class="btn-search searchAll">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                <ul id="zTree" class="ztree"></ul>
+            </div>
+            <div class="pull-right clearfix  table">
+                <div class=" tabtop mgb-10 clearfix">
+                    <ul class="tabBtn pull-left">
+                        <li>槽/罐检尺</li>
+                        <li>槽/罐物料移动</li>
+                        <li>封账提交</li>
+                        <li>场景图</li>
+                    </ul>
+                    <div class="operationBtn hide toolbar-btns pull-right">
+                        <a class="btn btn-add" id="initialize"><i class="fa fa-circle-o-notch"></i>槽/罐初始化</a>
+                        <a class="btn btn-add" id="batch"><i class="fa fa-th"></i>批量检尺</a>
+                        <a class="btn btn-add" id="construction"><i class="fa fa-plus"></i>新建</a>
+                    </div>
+                    <div class="operationBtn hide pull-right toolbar-btns">
+                        <button class="btn btn-add" id="btn-add"><i class="fa fa-plus"></i> 新建
+                        </button>
+                        <button class="btn" id="btn-close"><i class="fa fa-edit"></i> 关闭
+                        </button>
+                    </div>
+                    <div class="operationBtn hide pull-right toolbar-btns">
+                        <button class="btn btn-save" id="btn-save" ><i class="fa fa-check"></i> 提交
+                        </button>
+                        <button class="btn btn-save" id="btn-delete"><i class=" fa fa-times "></i> 解除
+                        </button>
+                    </div>
+                </div>
+                <div class="msgbox hide" id="measure">
+                    <!--<div>检尺</div>-->
+                    <div class="tableParent">
+                        <table id="dataTable0"></table>
+                    </div>
+                </div>
+                <div class="msgbox hide" id="matrlMove">
+                    <!--开始-->
+                    <div class="ibox">
+                        <div class="ibox-title">
+                        </div>
+                        <div class="ibox-content tableParent">
+                            <table id="materialMTable" >
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="msgbox hide" id="sealingAccount">
+                    <div>
+                        <div class="ibox-content tableParent">
+                            <table id="treeTable"></table>
+                            <div class="mgt-10 treeTable-count">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <span class="treeTable-taps">封账提交记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msgbox hide" id="sceneGraph">
+                    <div>场景图</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">-->
+    <!--<meta http-equiv="Cache-Control" content="no-store"/>-->
+    <!--<meta http-equiv="Pragma" content="no-cache"/>-->
+    <!--<link rel="stylesheet" href="../../../js/plugins/ztree/css/zTreeStyle/zTreeStyle.css">-->
+    <!--<title>槽/罐区管理列表页</title>-->
+    <!--<style>-->
+        <!--.zTree{-->
+            <!--height:800px;-->
+            <!--width: 19%;-->
+            <!--background-color: #f1f5f8;-->
+            <!--margin-left: 8px;-->
+        <!--}-->
+        <!--.tabBtn li{-->
+            <!--display: inline-block;-->
+            <!--padding: 4px 7px;-->
+            <!--color: black;-->
+            <!--background-color: #f9f9f9;-->
+        <!--}-->
+        <!--.tabBtn{-->
+            <!--margin-left: 17px;-->
+        <!--}-->
+        <!--.toolbar-btns{-->
+            <!--margin-right: 17px;-->
+        <!--}-->
+        <!--.active{-->
+            <!--border-top: 2px solid #1ab394;-->
+            <!--color: #1ab394 !important;-->
+            <!--box-shadow: 0 5px 3px #888888;-->
+        <!--}-->
+        <!--.hide{-->
+            <!--display: none;-->
+        <!--}-->
+        <!--tr{-->
+            <!--height: 50px;-->
+        <!--}-->
+        <!--#left{-->
+            <!--width: 200px;-->
+        <!--}-->
+        <!--.fa-check-circle{-->
+            <!--color:#47B523;-->
+        <!--}-->
+        <!--.treeTable-count{-->
+            <!--display: none;-->
+        <!--}-->
+        <!--.searchGroup{-->
+            <!--margin-bottom: 8px;-->
+            <!--position: absolute;-->
+            <!--top: 8px;-->
+            <!--left: 7px;}-->
+        <!--#ztree_searchText{-->
+            <!--margin: 0;-->
+            <!--width: 132px;-->
+        <!--}-->
+        <!--.btn-search-input .searchAll{-->
+            <!--margin: 0;-->
+        <!--}-->
+        <!--#tree{-->
+            <!--height: 100%;-->
+            <!--background: #fff;-->
+            <!--border: 1px solid #ddd;-->
+             <!--word-wrap: break-word;-->
+             <!--word-break: break-all;-->
+             <!--white-space: normal;-->
+                <!--box-sizing: content-box;-->
+            <!--}-->
+        <!--#tree li a{-->
+            <!--height: 100%;-->
+            <!--background: #fff;-->
+            <!--border: 1px solid #ddd;-->
+             <!--word-wrap: break-word;-->
+             <!--word-break: break-all;-->
+             <!--white-space: normal;-->
+             <!--box-sizing: content-box;-->
+        <!--}-->
+<!--</style>-->
+<!--</head>-->
+<!--<body id="tankManage" class="theme-tight wrapper-gray">-->
+<!--<div class="ibox">-->
+    <!--<div class="ibox-title gray-line">-->
+        <!--<div class="titName clearfix">-->
+            <!--<span>槽/罐区管理</span>-->
+        <!--</div>-->
+        <!--<div class="toolbar-form clearfix">-->
+            <!--<label>-->
+            <!--<div class="form-inline">-->
+                <!--<span>日期：</span>-->
+                <!--<input type="text" value="" id="tankDate" class="time-input datePicker form-control" placeholder="">-->
+            <!--</div>-->
+            <!--</label>-->
+            <!--<div class="form-inline">-->
+                <!--<label>-->
+                <!--<span>班次 ：</span>-->
+                <!--<select name="shift" class="form-control" id="shift">-->
+                <!--</select>-->
+                <!--<input type="hidden" id="shiftHidden" value="" data-time="" data-nodeTankId="" data-areaTankId="" >-->
+                    <!--</label>-->
+            <!--</div>-->
+                <!--<button class="btn btn-search" id="search-btn" type="button"><i class="fa fa-search"></i>查询</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="ibox-content clearfix">-->
+            <!--&lt;!&ndash;左侧内容&ndash;&gt;-->
+            <!--<div id="left" style="background-color: rgb(231, 234, 236); height: 100%;" class="leftBox pull-left wrapper-white" >-->
+                 <!--<span class="searchGroup">-->
+                     <!--槽/罐:-->
+                    <!--<input type="text" id="ztree_searchText" placeholder="关键字筛选">-->
+                    <!--<button type="button" class="btn-search-input searchAll"><i class="fa fa-search"></i></button>-->
+                 <!--</span>-->
+                <!--<div id="tree" class="ztree leftBox-content" style="height: 100%;"></div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;右侧内容&ndash;&gt;-->
+            <!--<div id="right" class="animated fadeInRight" >-->
+                <!--<div class="tabtop">-->
+                    <!--<ul class="tabBtn pull-left">-->
+                        <!--<li>槽/罐检尺</li>-->
+                        <!--<li>槽/罐物料移动</li>-->
+                        <!--<li>封账提交</li>-->
+                        <!--<li>场景图</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="row ">-->
+                    <!--<div class="clearfix">-->
+                        <!--<div class="operationBtn hide toolbar-btns pull-right">-->
+                            <!--<a class="btn" id="initialize"><i class="fa fa-plus"></i>槽/罐初始化</a>-->
+                            <!--<a class="btn" id="batch"><i class="fa fa-edit"></i>批量检尺</a>-->
+                            <!--<a class="btn" id="construction"><i class="fa fa-download"></i>新建</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="operationBtn hide pull-right toolbar-btns">-->
+                        <!--<button class="btn btn-add" id="btn-add"><i class="fa fa-plus"></i> 新建-->
+                        <!--</button>-->
+                        <!--<button class="btn" id="btn-close"><i class="fa fa-edit"></i> 关闭-->
+                        <!--</button>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="operationBtn hide pull-right toolbar-btns">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<button class="btn" id="btn-save" ><i class="fa fa-edit  "></i> 提交&ndash;&gt;-->
+                        <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<button class="btn" id="btn-delete"><i class="fa fa-trash-o "></i> 解除&ndash;&gt;-->
+                        <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="msgbox hide" id="measure">-->
+                    <!--&lt;!&ndash;<div>检尺</div>&ndash;&gt;-->
+                    <!--<table id="dataTable0"></table>-->
+                    <!--<div class="mgt-10 tank-scale">-->
+                        <!--<i class="fa fa-check-circle" aria-hidden="true"></i>-->
+                        <!--<span class="treeTable-taps">槽/罐检尺记录查询成功,共 <i class="tank-scaleI"></i> 条记录</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="msgbox hide" id="matrlMove">-->
+                    <!--&lt;!&ndash;开始&ndash;&gt;-->
+                    <!--<div class="ibox">-->
+                        <!--<div class="ibox-title">-->
+                        <!--</div>-->
+                        <!--<div class="ibox-content">-->
+                            <!--<table id="materialMTable" >-->
+
+                            <!--</table>-->
+                            <!--<div class="mgt-10 mtrl-move">-->
+                                <!--<i class="fa fa-check-circle" aria-hidden="true"></i>-->
+                                <!--<span class="treeTable-taps">物料移动记录查询成功,共 <i class="mtrl-move"></i> 条记录</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="msgbox hide" id="sealingAccount">-->
+                    <!--<div>-->
+                        <!--<div class="ibox-content">-->
+                            <!--<table id="treeTable"></table>-->
+                            <!--<div class="mgt-10 treeTable-count">-->
+                                <!--<i class="fa fa-check-circle" aria-hidden="true"></i>-->
+                                <!--<span class="treeTable-taps">封账提交记录查询成功,共 <i class="treeTable-num"></i> 条记录</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="msgbox hide" id="sceneGraph">-->
+                    <!--<div>场景图</div>-->
+                <!--</div>-->
+            <!--<table id="tt"  style="width:auto;" class="treeGridTable"></table>-->
+        <!--</div>-->
+<!--</body>-->
+<!--<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>-->
+<!--</html>-->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>维护属性值</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="proPreserveValue">
+    <div class="ibox">
+        <div class="ibox-content">
+            <div id="content clearfix">
+                <!--左侧内容-->
+                <div id="left" class="leftBox pull-left">
+                    <a onclick="window.location.reload();" class="pull-right ztree-refresh">
+                        <i class="fa fa-refresh"></i>
+                    </a>
+                    <ul id="tree" class="ztree leftBox-content" style="height:100%;"></ul>
+                </div>
+                <!--右侧内容-->
+                <div id="right" class="animated fadeInRight">
+                    <!--按钮条-->
+                    <div class="toolbar-btns mgb-10">
+                        <button class="btn btn-white btn-sm" id="btnadd" title="添加"><i class="fa fa-plus"></i> 添加
+                        </button>
+                    </div>
+                    <!--内容表格-->
+                    <table id="tt" style="width:100%; max-height:340px"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/systemSettings/preserveValue" src="/js/zlib/require.js"></script>
+</body>
+</html>

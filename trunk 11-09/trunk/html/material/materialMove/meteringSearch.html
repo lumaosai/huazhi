@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计量单查询</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        #btn-search{
+            top: -5px;
+            position: relative;
+        }
+        tr{
+            height: 40px;
+        }
+        .fa-check-circle{
+            color:#00CC66;
+        }
+        .ibox-content-table{
+            overflow-x: scroll !important;
+            /*margin-bottom: 40px;*/
+        }
+        .table-content{
+            padding: 0;
+            width: 2000px;
+        }
+        .edit{
+            width: 100%;
+        }
+        .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+            height: 40px !important;
+        }
+    </style>
+</head>
+<body id="meteringSearch" class="theme-tight wrapper-gray">
+<div class="ibox">
+    <div class="ibox-title gray-line">
+        <div class="titName clearfix">
+            <span>计量单查询</span>
+        </div>
+        <div class="toolbar-form clearfix">
+            <div class="form-inline">
+                <span>起始时间 ：</span>
+                <input id="startDate" name="startDate" autocomplete="off" class="form-control Wdate " onclick="WdatePicker({maxDate:'#F{$dp.$D(\'endDate\')}'});"  type="text" >
+            </div>
+            <div class="form-inline">
+                <span>结束时间 ：</span>
+                <input id="endDate" name="endDate" autocomplete="off" class="form-control Wdate " onclick="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}'});" type="text" >
+            </div>
+            <div class="form-inline">
+                <span>单据状态 ：</span>
+                <select name="smtinoutBillStatus" class="form-control " id="smtinoutBillStatus">
+                    <option value="0">制单状态</option>
+                    <option value="1">关闭状态</option>
+                </select>
+            </div>
+            <div class="form-inline">
+                <span>分组 ：</span>
+                <select name="groupBy" class="form-control " id="groupBy">
+                    <option value="mtrl">按物料分组</option>
+                    <option value="inoutput">按进出厂点分组</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="toolbar-form clearfix">
+            <div class="form-inline">
+                <span>运输类型 ：</span>
+                <select name="transType" class="form-control " id="transType">
+                </select>
+            </div>
+            <div class="form-inline">
+                <span>进出方向 ：</span>
+                <select name="inoutType" class="form-control " id="inoutType">
+                </select>
+            </div>
+            <div class="form-inline">
+                <span>进出厂点 ：</span>
+                <select name="nodename" class="form-control " id="nodename">
+                </select>
+            </div>
+            <div class="form-inline">
+                <span>物料 ：</span>
+                <select name="mtrlName" class="form-control " id="mtrlName">
+                </select>
+            </div>
+            <div class="form-inline">
+                <button class="btn btn-search" id="btn-search"  type="button"><i class="fa fa-search"></i>查询</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="ibox-content ibox-content-table">
+        <!--表格区-->
+        <div class="ibox-content table-content">
+            <table id="treeTable">
+
+            </table>
+        </div>
+
+    </div>
+    <div class="mgb-20 treeTable-count ibox-content">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span class="treeTable-taps">计量单查询成功,共 <i class="treeTable-num"></i> 条记录</span>
+    </div>
+</div>
+<script data-main="/js/module/material/materialMove/meteringSearch" src="/js/zlib/require.js"></script>
+
+</body>
+</html>

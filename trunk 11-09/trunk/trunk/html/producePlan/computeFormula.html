@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生产计划--计划模板管理--计算公式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body id="computeFormula" class="wrapper-gray">
+    <div class="ibox">
+        <!--头部-->
+        <div class="ibox-title clearfix">
+            <div class="titName"><span>计算公式配置</span>
+                <div class="pull-right">
+                    <button class="btn btn-white" id="btn-add" type="button"><i class="fa fa-plus"></i>新增</button>
+                </div>
+            </div>
+        </div>
+        <!--内容区-->
+        <div class="ibox-content">
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable">
+                <!--表头-->
+                <thead>
+                <tr role="row">
+                    <th>id</th>
+                    <th>参数名称</th>
+                    <th>计算公式</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+                </tbody>
+            </table>
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/producePlan/computeForm.js" src="/js/zlib/require.js"></script>
+</body>
+</html>

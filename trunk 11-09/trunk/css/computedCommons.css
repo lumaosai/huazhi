@@ -1,0 +1,161 @@
+/*初始化控制内容*/
+.ibox, .ibox-content{
+    height:100%;
+}
+/*<!--标签切换-->*/
+.tabBox{
+    height:48px;
+}
+.tabChange>li{
+    font-size: 14px;
+    width:130px;
+    height: 38px;
+    line-height: 38px;
+    background-color: #F5F5F7;
+    color: #000;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    padding: 2px 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.tabChange>li:hover,.tabChange>li.active{
+    background-color: #fff;
+    color: #3ab394;
+    border: 1px solid #e3e3e3;
+    border-top: 2px solid #3ab394;
+}
+/*内容切换单选框*/
+.conBox{
+    height:30px;
+}
+.contentChange .fa{
+    margin:0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*内容区*/
+.contentInner{
+    width:100%;
+    height:340px;
+}
+.search{
+    width: 270px;
+    height: 242px;
+    margin-bottom: 10px;
+}
+.searchinput{
+    height:30px;
+    width: 196px;
+    border-radius: 3px;
+    border: 1px solid rgb(202, 202, 202);
+    background: rgb(255, 255, 255);
+    padding: 4px 12px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    outline: none;
+}
+.searchinput:focus,.context.active:focus{
+    border: 1px solid #1ab394 !important;
+    box-shadow: 0 0 3px #1ab394;
+}
+.searchinputinner{
+    margin-bottom: 10px;
+}
+.searchContent{
+    height: 198px;
+    width: 267px;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    overflow-y: auto;
+    padding:15px;
+    box-sizing: border-box;
+}
+.fn{
+    width: 310px;
+    height: 32px;
+
+}
+.selFn{
+    width: 200px;
+}
+.search,.btnFn{
+    margin-bottom: 10px;
+}
+.btnFn{
+    width: 310px;
+    height: 210px;
+    box-sizing: border-box;
+    padding: 22px 0 0 31px;
+}
+fieldset{
+    font-size: 14px;
+    width: 226px;
+    height: 140px;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    margin-bottom: 16px;
+
+}
+fieldset button{
+    width:30px;
+    height: 30px;
+    margin: 0 0 14px 18px;
+}
+legend{
+    border: 0;
+    width: 17%;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 0 5px;
+}
+.context{
+    width: 100%;
+    height: 86px;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    padding: 15px;
+    outline: none;
+}
+/*修改btnsearch*/
+.btn-search{
+    margin: 0;
+}
+/*tab切换*/
+.ibox-content .contentBox.active{
+    display: block;
+}
+.ibox-content .contentBox{
+    display: none;
+}
+/*控制弹出框表格*/
+.layui-layer-btn {
+    border-top: 0 !important;
+}
+/*计算选择物料的时候*/
+.searchUl>li:hover{
+    background-color: #cacaca;
+    cursor: pointer;
+}
+.searchUl>li.active{
+    background-color: #cacaca;
+}
+/*计算最终保存的输入框*/
+.context{
+    display: none;
+}
+.context.active{
+    display: block;
+}
+/*计算按钮样式*/
+.td.center>a{
+    display: inline-block;
+    vertical-align: middle;
+}
+.theme-tight .btn-computed {
+    font-size: 20px;
+    padding: 0 5px;
+}

@@ -1,0 +1,136 @@
+.aps-create-list{
+    margin-top: 70px;
+    padding-bottom: 100px;
+}
+
+/*可提公共方法样式 jqgrid表格用样式*/
+.ui-jqgrid .ui-jqgrid-title{font-size:16px; font-weight: 600;margin:0;}    /*修改grid标题的字体大小*/
+
+.ui-jqgrid-sortable {font-size:14px;font-weight: 300}   /*修改列名的字体大小*/
+
+.ui-jqgrid tr.jqgrow td {font-size:14px;} /*修改表格内容字体*/
+
+.ui-widget-header,.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: none;
+    background-color: #f5f5f7;
+    color:#000;
+    border:1px solid #e3e3e3;
+}
+.ui-widget-header{
+    line-height: 40px;
+}
+.ui-jqgrid .ui-jqgrid-titlebar{
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+.ui-widget-content{
+    border:1px solid #e3e3e3;
+}
+/*修改列名的高度*/
+.ui-jqgrid .ui-jqgrid-htable th div {
+    height:30px;
+}
+div.ui-jqgrid,div.ui-jqgrid-view,.ui-jqgrid-bdiv,.ui-jqgrid-sdiv,.ui-jqgrid-htable,.ui-state-default,.ui-jqgrid-btable,.ui-jqgrid-hbox{
+    max-width: 100% !important;
+
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{
+    border: 1px solid #e3e3e3!important;
+    background: none;
+    background-color: #f5f5f7;
+}
+.ui-jqgrid .ui-jqgrid-titlebar-close {
+    width:40px;
+    height: 35px;
+    top:32%;
+    right: 15px !important;
+}
+
+div.tableBox>.ui-jqgrid{
+    position: relative;
+}
+div.tableBox>.ui-jqgrid .floatColShow{
+    max-height: 150px!important;
+    overflow-y: scroll;
+    display: none;
+    position: absolute;
+    right:-1px;
+    top:110px;
+    z-index: 1001;
+    background-color: white;
+}
+.floatColShow>li{
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 12px;
+    height:30px;
+    line-height: 30px;
+    color: black;
+    text-align: left
+;
+    background-color: #f5f5f7;
+    /*float: left;*/
+    /*border: 1px solid #e3e3e3;*/
+    /*border-radius:3px;*/
+}
+.floatColShow>li>input{
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type=checkbox]{
+    margin: 0;
+}
+.ui-jqgrid-bdiv{
+    overflow-y:hidden !important;
+    overflow-x:hidden !important;
+
+}
+.aps-create-list>div{
+    display: none;
+}
+.aps-create-list>div.active{
+    display: block;
+}
+
+/*上下箭头*/
+.ui-widget-header .ui-icon{
+    background: url('../../../../images/jqGridTreeGrid/pcsjhs.png') top left no-repeat!important;
+
+
+}
+.ui-widget-header .ui-icon-circle-triangle-s,.ui-widget-header .ui-icon-circle-triangle-n {
+    margin: 10px auto!important;
+    width:15px;
+    height:15px;
+}
+
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column{
+    height: 60px!important;
+}
+
+.ui-widget-content th.ui-state-hover,th.ui-state-hover{
+    /*border: 1px solid green!important;*/
+    border-bottom:0!important;
+    border-top:0!important;
+}
+.ui-widget-header .ui-icon-circle-triangle-s{
+    background-position:-10px -35px!important;
+}
+.ui-widget-header .ui-icon-circle-triangle-n {
+    background-position:-10px -10px!important;
+}
+a.btnChart{
+    background:transparent!important;
+}
+/* jqgrid 表头自动换行 */
+th.ui-th-column div {
+    white-space: normal !important;
+    height: auto !important;
+    padding: 0;
+}
+.ui-jqgrid tr.jqgrow td{
+    white-space: normal !important;
+    height: auto !important;
+}
+

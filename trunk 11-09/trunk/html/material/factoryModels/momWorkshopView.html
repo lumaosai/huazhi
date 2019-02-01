@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOM车间编辑</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+
+<body id="momWorkshopView" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/Workshop/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">
+                车间编号:
+            </td>
+            <td>
+                <input id="wspNo" name="wspNo" class="form-control " require="true" placeholder="100-500之间" dataType="Range" min="100" max="500" type="number"  maxlength="4"   maxlength="50">
+            </td>
+            <td class="active require">
+               车间编码:
+            </td>
+            <td>
+                <input id="wspCode" name="wspCode" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                车间名称:
+            </td>
+            <td>
+                <input id="wspName" name="wspName" class="form-control " require="true"  type="text" value="" maxlength="50">
+            <td class="active require">
+                车间别名:
+            </td>
+            <td>
+                <input id="wspAlias" name="wspAlias" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                <label class="pull-right">MOM工厂:</label>
+            </td>
+            <td>
+                <select name="fctr.id" id="fctr" class="form-control" require="true">
+                </select>
+            </td>
+            <td class="active ">
+                <label class="pull-right">显示顺序:</label>
+            </td>
+            <td>
+                <input id="displayOrder" name="displayOrder" class="form-control"    type="number"  value="0"  onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                <label class="pull-right">启用标识:</label>
+            </td>
+            <td>
+                <input type="checkbox" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">
+                <label class="pull-right">说明:</label>
+            </td>
+            <td>
+                <input id="remark" name="remark" class="form-control" type="text" value="">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/momWorkshop" src="/js/zlib/require.js"></script>
+</body>
+</html>

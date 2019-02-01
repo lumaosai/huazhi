@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方案查看</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .apsType-linkage li{
+            display: inline-block;
+            line-height: 40px;
+            padding:  0 8px 0 8px;
+        }
+        .active{
+            border-bottom: 2px solid #1cb394;
+            color: #1cb394;
+        }
+        .mgb-15{
+            border-bottom: 1px solid #e3e3e3;
+        }
+        .apsType-linkage1{
+            padding-right: 20px;
+        }
+        .apsType-linkage1 li #goodsNum {
+            border: 1px solid #d2d3d4;
+            background: #fff;
+            padding: 4px 12px;
+            height: 30px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="createdistrbutionInner" class="wrapper-white">
+    <div class="row clearfix">
+        <div class="col-sm-12 mgb-15">
+            <div class="pull-left">
+                <div id="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <ul class="apsType-linkage">
+                            <!--动态创建li标签-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-right">
+                <div  class="form-inline">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <ul class="apsType-linkage1">
+                                <li>
+                                    统计:
+                                    <select name="" id="goodsNum">
+                                        <option value="day" selected="selected">按日统计</option>
+                                        <option value="month">按月统计</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <!--表格区-->
+            <div class="aps-create-list">
+                    <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                        <!--表头-->
+                        <thead>
+                        <tr role="row">
+                            <th>序号</th>
+                            <th>到货日期</th>
+                            <th>主数量</th>
+                            <th>Al2O3</th>
+                            <th>SiO2</th>
+                            <th>ST</th>
+                            <th>CaO</th>
+                            <th>C</th>
+                            <th>Fe203</th>
+                            <th>TiO2</th>
+                            <th>A/S</th>
+                            <th>TOL</th>
+                            <th>KO2</th>
+                            <th>水分含量</th>
+                        </tr>
+                        </thead>
+                        <!--表内容-->
+                        <tbody id="datainner">
+                        </tbody>
+                    </table>
+                <!--分页-->
+                <div class="clearfix pagination-box">
+                    <div class="page-info pull-left"></div>
+                    <div id="pagination" class="pagination-roll pull-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script data-main="/js/module/oreDistribution/createdistribution" src="/js/zlib/require.js"></script>
+</html>

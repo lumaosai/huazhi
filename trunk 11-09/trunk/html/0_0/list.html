@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XX列表</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="list" class="theme-tight wrapper-gray">
+    <div class="toolbar-btns pagl-10" style="padding:10px;border:1px solid #4aa85a;">
+        <h1 style="font-size:20px;margin-bottom:10px;">按钮样式请严格按照的样例编写</h1>
+        <button class="btn btn-delete " id="btn1"
+                onclick="javascript:;" title="删除"><i class="fa fa-trash"></i> 删除
+        </button>
+        <p>保存（.btn-save）、编辑（.btn-edit）、添加（.btn-add)、开启（.btn-opens）、.btn-1ab394适用于相同样式不同文案的按钮</p>
+        <button class="btn btn-save " id="btn2"
+                onclick="javascript:;" title="保存"><i class="fa fa-save"></i> 保存
+        </button>
+        <button class="btn btn-1ab394 " id="btn4"
+                onclick="javascript:;" title="#1ab394"><i class="fa fa-plus"></i> #1ab394
+        </button>
+        <p>查询（.btn-search）、查看（.btn-check）、提交（.btn-submit）、指令下达（.btn-levels）、btn-ffa82d适用于相同样式不同文案的按钮</p>
+        <button class="btn btn-search " id="btn3"
+                onclick="javascript:;" title="查询"><i class="fa fa-search"></i> 查询
+        </button>
+
+        <button class="btn btn-ffa82d " id="btn5"
+                onclick="javascript:;" title="#ffa82d"><i class="fa fa-plus"></i> #ffa82d
+        </button>
+        <p>无边框的按钮</p>
+        <button class="btn col-1ab394 " id="btn6"
+                onclick="javascript:;" title="颜色1"><i class="fa fa-save"></i> 颜色1
+        </button>
+        <button class="btn col-ffa82d" id="btn7"
+                onclick="javascript:;" title="颜色2"><i class="fa fa-search"></i> 颜色2
+        </button>
+        <button class="btn col-f98080" id="btn8"
+                onclick="javascript:;" title="颜色3"><i class="fa fa-trash"></i> 颜色3
+        </button>
+
+    </div>
+    <div class="ibox">
+        <div class="ibox-title gray-line">
+            <div class="titName clearfix">
+                <span>标题</span>
+                <div class="pull-right toolbar-btns">
+                    <a class="btn" id="btn-add"><i class="fa fa-plus"></i> 新增</a>
+                    <a class="btn" id="btn-edit"><i class="fa fa-edit"></i> 编辑</a>
+                    <a class="btn" id="btn-import"><i class="fa fa-download"></i> 导入</a>
+                    <a class="btn" id="btn-export"><i class="fa fa-upload"></i> 导出</a>
+                    <a class="btn" id="btn-help"><i class="fa fa-question-circle-o"></i> 帮助</a>
+                </div>
+            </div>
+            <div class="toolbar-form clearfix">
+                <div class="form-inline">
+                    <span>工厂名称：</span>
+                    <input id="name" name="name" class="form-control" type="text" value="" maxlength="50" >
+                </div>
+                <div class="form-inline">
+                    <span>是否启用 ：</span>
+                    <select id="enable" name="enable" class="form-control">
+                        <option value="">请选择</option>
+                        <option value="1">启用</option>
+                        <option value="0">禁用</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    <span>树选择 ：</span>
+                    <span class="searchGroup">
+                       <input type="hidden" id="companyId" name="companyId">
+                       <input type="text" id="companyName" name="companyName" class="form-control" readonly>
+                       <button type="button" id="companyButton" class="btn btn-primary"><i
+                               class="fa fa-search"></i></button>
+                    </span>
+                </div>
+                <div class="form-inline">
+                    <label>
+                        动罐<input type="checkbox" name="tankType" class='i-checks' checked >
+                    </label>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-search" id="btn-search" type="button"><i class="fa fa-search"></i>查询</button>
+                    <button class="btn btn-reset " id="reset-btn"><i class="fa fa-refresh"></i> 重置
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <thead>
+                <tr role="row">
+                    <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                    <th>键值</th>
+                    <th>标签</th>
+                    <th>类型</th>
+                    <th>是否启用</th>
+                    <th>描述</th>
+                    <th>排序</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <!--表内容-->
+                <tbody id="datainner">
+
+                </tbody>
+            </table>
+            <!--分页-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="/html/0_0/js/list" src="/js/zlib/require.js"></script>
+
+</body>
+</html>

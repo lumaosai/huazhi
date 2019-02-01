@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交接班记录</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="record" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>交接班记录</span></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <label>
+                            <div class="execution time">
+                                <span>执行时间:</span>
+                                <input type="text" id="startDateParam" onclick="WdatePicker();" class="form-control Wdate">
+                            </div>
+                        </label>
+                        <ul class="rank-ul">
+                            <li>
+                                班次:
+                                <select name="" id="time" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li class="year">
+                                工序:
+                                <select name="" id="process" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li>
+                                班组:
+                                <select name="" id="team" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pull-right">
+                        <label>
+                            <button class="btn btn-search  bg-ffa82d btn-white" id="search-btn" type="button">
+                                <i class="fa fa-search"></i>
+                                查询</button>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="treeTable_wrapper" class="dataTable_wrapper form-inline dt-bootstrap">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!--表格区-->
+                        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                            <thead>
+                            <tr>
+                                <th>工序</th>
+                                <th>班次</th>
+                                <th>班组</th>
+                                <th>交班人</th>
+                                <th>接班人</th>
+                                <th>交班日期</th>
+                                <th>接班日期</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="treeTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!--分页显示-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/proDis/record" src="/js/zlib/require.js"></script>
+</body>
+</html>

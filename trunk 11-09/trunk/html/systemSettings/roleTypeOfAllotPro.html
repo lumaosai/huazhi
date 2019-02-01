@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理--分配许可</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+<body id="roleTypeOfAllotPro">
+<div class="ibox">
+    <div class="ibox-title">
+        <!--搜索区-->
+        <div class="toolbar-form">
+            <div class="form-inline">
+                <span>许可名称：</span>
+                <input id="authProName" name="authProName" class="form-control " >
+            </div>
+            <div class="form-inline">
+                <span>许可编码：</span>
+                <input id="authPro" name="authPro" class="form-control" type="text" value="" maxlength="50">
+            </div>
+            <button class="btn btn-white" type="button" id = "search-btn"><i
+                    class="fa fa-search"></i> 查询
+            </button>
+            <button class="btn btn-white"  id ="reset-btn" ><i
+                    class="fa fa-refresh" ></i> 重置
+            </button>
+        </div>
+        <!--按钮区-->
+        <div class="toolbar-btns clearfix">
+            <button class="btn btn-white"  id = "allot-btn" ><i
+                    class="fa fa-refresh" ></i> 分配
+            </button>
+            <button class="btn btn-white"  id = "cancel-btn" ><i
+                    class="fa fa-refresh" ></i> 撤销
+            </button>
+        </div>
+    </div>
+    <!--内容区-->
+    <div class="ibox-content">
+        <!--表格区-->
+        <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+            <!--表头-->
+            <thead>
+            <tr role="row">
+                <th width="60px"><input type="checkbox" class="i-checks" ></th>
+                <th>许可名称</th>
+                <th>许可编码</th>
+                <th>描述</th>
+                <th>是否分配</th>
+            </tr>
+            </thead>
+            <!--表内容-->
+            <tbody id="datainner"></tbody>
+        </table>
+
+        <div class="clearfix pagination-box">
+            <div class="page-info pull-left"></div>
+            <div id="pagination" class="pagination-roll pull-right"></div>
+        </div>
+    </div>
+</div>
+
+<script data-main="/js/module/systemSettings/roleAssign" src="/js/zlib/require.js"></script>
+</body>
+</html>

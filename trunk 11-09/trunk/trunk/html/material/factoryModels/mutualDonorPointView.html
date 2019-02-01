@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>互供点编辑</title>
+    <style>
+        .width-18{
+            width: 18%;
+        }
+        .width-32{
+            width: 32%;
+        }
+
+    </style>
+</head>
+
+<body id="mutualDonorPointView" class="wrapper-white">
+    <form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/NodeInnSmt/save" method="post">
+        <input id="id" name="id" type="hidden" value="">
+        <table class="form-table table">
+            <tbody>
+            <tr>
+                <td class="width-18 active require">
+                    互供点编号:
+                </td>
+                <td class="width-32">
+                    <input id="nodeNo" name="nodeNo" class="form-control " require="true" placeholder="600000-699999之间" dataType="Range" min="600000" max="699999"  type="number" value="" maxlength="50">
+                </td>
+                <td class="width-18 active require">
+                    互供点编码:
+                </td>
+                <td class="width-32">
+                    <input id="nodeCode" name="nodeCode" class="form-control " require="true"  type="text" value="" maxlength="50">
+                </td>
+            </tr>
+            <tr>
+                <td class="active require">
+                    互供点名称:
+                </td>
+                <td >
+                    <input id="nodename" name="nodename" class="form-control " require="true"  type="text" value="" maxlength="50">
+                <td class="active require">
+                    互供点别名:
+                </td>
+                <td >
+                    <input id="nodeAlias" name="nodeAlias" class="form-control " require="true"  type="text" value="" maxlength="50">
+                </td>
+            </tr>
+            <tr>
+                <td class="active require">
+                    互供点精度:
+                </td>
+                <td >
+                    <input id="pres" name="pres" class="form-control" require="true" dataType="Range" type="number" min="0" max="100" value="" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                </td>
+                <td class="active require">
+                    源MOM工厂:
+                </td>
+                <td >
+                    <select name="srcFctrId" id="srcFctrId" require="true" class="form-control">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="active require">
+                    目的MOM工厂:
+                </td>
+                <td >
+                    <select name="destFctrId" id="destFctrId" require="true" class="form-control">
+                    </select>
+                </td>
+                <td class="active require">
+                    源物料:
+                </td>
+                <td >
+                    <select name="srcMtrlId" id="srcMtrlId" require="true" class="form-control">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="active require">
+                    目的物料:
+                </td>
+                <td >
+                    <select name="destMtrlId" id="destMtrlId" require="true" class="form-control">
+                    </select>
+                </td>
+                <td class="active">仲裁公式:</td>
+                <td>
+                    <label><input type="radio" name="arbiFormula" class="i-checks" value="0" checked>源工厂为准</label>
+                    <label><input type="radio" name="arbiFormula" class="i-checks" value="1">目的工厂为准</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="active require">
+                    显示顺序:
+                </td>
+                <td >
+                    <input id="displayOrder" name="displayOrder" class="form-control" require="true" placeholder="1000以下" dataType="Range" min="0" max="1000" type="number"  value="" maxlength="4" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                </td>
+                <td class="active">
+                    启用标识:
+                </td>
+                <td >
+                    <input type="checkbox" name="enable" class="i-checks" value="1" checked>
+                </td>
+            </tr>
+            <tr>
+                <td class="active">
+                    说明:
+                </td>
+                <td  colspan="3">
+                    <input id="remark" name="remark" rows="3" class="form-control" type="text" value="">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+<script data-main="/js/module/material/factoryModels/mutualDonorPoint" src="/js/zlib/require.js"></script>
+</body>
+</html>

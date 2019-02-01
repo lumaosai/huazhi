@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .big p{
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btnaddr{
+            width: 25px;
+            background-color: #1ab394;
+            border: none;
+            font-size: 17px;
+            color: white;
+        }
+        .content{
+            margin: 40px;
+
+        }
+        .content i{
+            color: gainsboro;
+            padding: 5px;
+        }
+        .datamsg{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body id="productioncontrilCheck" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>实产管控</span></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-left">
+                        <ul class="rank-ul">
+                        	<li>
+                		                事件类型:
+                                <select name="" id="type">
+                                    <option value="">-- 请选择 --</option>
+                                    <option value="指标类">指标类</option>
+                                    <option value="消耗类">消耗类</option>
+                                    <option value="能源类">能源类</option>
+                                    <option value="生产类">生产类</option>
+                                </select>
+                            </li>
+                            <li>
+                               	事件:
+                                <select name="" id="event" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li class="year">
+                                	工序:
+                                <select name="" id="proc" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                            <li>
+                               	 原因:
+                                <select name="" id="cause" class="width-fix-120">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                                   <li >
+                                                                                       等级:
+                                <select name="" id="grade">
+                                    <option value="">-- 请选择 --</option>
+                                </select>
+                            </li>
+                               
+                        </ul>
+                    </div>
+                    <div class="pull-right">
+                        <label>
+                            <button class="btn btn-search  bg-ffa82d btn-white" id="back-btn" type="button">
+                                 <i class="fa fa-reply"></i>返回</button>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+			
+			<!--事故描述，解决方案，执行跟踪-->
+			<div class="SGMS content"><!--事故描述-->
+                <div class="big1 big">
+                    <div>  <p>事故描述:</p><input type="button" class="addbtn1 btnaddr" value="+"></div>
+                    <div class="parentbox" id="SGMS"></div>
+                </div>
+            </div>
+            <div class="JJFA content"><!--解决方案-->
+                <div class="big1 big">
+                    <div>  <p>解决方案:</p><input type="button" class="addbtn1 btnaddr" value="+"></div>
+                    <div class="parentbox" id="JJFA"></div>
+                </div>
+            </div>
+            <div class="ZXGZ content"><!--执行跟踪-->
+                <div class="big1 big">
+                    <div>  <p>执行跟踪:</p><input type="button" class="addbtn1 btnaddr" value="+"></div>
+                    <div class="parentbox" id="ZXGZ"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/js/module/proDis/productioncontrol" src="/js/zlib/require.js"></script>
+</body>
+</html>

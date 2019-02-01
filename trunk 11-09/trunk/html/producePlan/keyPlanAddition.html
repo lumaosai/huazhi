@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>月计划--重点工作计划--弹出页</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+    <style>
+        .combo-panel{
+            max-height:150px !important;
+        }
+        .toolbar-btns{margin-top:0;}
+    </style>
+</head>
+<body id="keyPlanAddition" class="wrapper-white  pace-done" >
+<form id="inputForm" class="form-horizontal" method="post">
+    <div class="toolbar-btns clearfix mgb-10">
+        <button class="btn pull-right  dropUpLoader" type="button" data-status="2">
+            <i class="fa fa-plus"></i> 导入
+        </button>
+        <button class="btn pull-right btn-delete" type="button" data-status="1">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+        <button class="btn pull-right btn-add" type="button" data-status="2">
+            <i class="fa fa-save"></i>增加
+        </button>
+    </div>
+    <div class="commercePurCon proTargetPlanItem" id="parentDiv">
+        <div class="tableItemBox">
+            <table id="td0" class="tableItem"></table>
+        </div>
+    </div>
+</form>
+<script data-main="/js/module/producePlan/keyWorkPlan" src="/js/zlib/require.js"></script>
+</body>
+</html>

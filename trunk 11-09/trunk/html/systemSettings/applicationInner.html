@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>应用管理</title>
+    <script type="text/javascript" src="../../js/meta.js"></script>
+</head>
+
+<body id="applicationInner" class="wrapper-white">
+<form id="inputForm" class="form-horizontal" action="$Api.admin$/api/sys/SysApplication/ajaxSave" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="table form-table">
+        <tbody>
+        <tr>
+            <td class="active require">应用名称:</td>
+            <td>
+                <input id="name" name="appName" class="form-control "  require="true"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">应用编码:</td>
+            <td>
+                <input id="code" name="appCode" class="form-control "  require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">应用路径:</td>
+            <td class="active">
+                <input id="appRoot" name="appRoot" class="form-control "  require="true"  type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">使用范围:</td>
+            <td>
+                <select  id="selApp" name="applicability"  class=" form-control" require="true">
+                    <option value="">请选择</option>
+                    <option value="1">B/S端</option>
+                    <option value="2">C/S端</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="require active">排序:</td>
+            <td>
+                <input id="sort" name="sort" class="form-control digits" type="text" value="" maxlength="11" require="true" dataType="Number">
+            </td>
+            <td class="require active">是否可用:</td>
+            <td >
+                <select name="enable" id="enable" class="form-control " require="true">
+                    <option value="">请选择</option>
+                    <option value="1">启用</option>
+                    <option value="0">禁用</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">备注:</td>
+            <td colspan="3">
+                <textarea id="remark" name="remark" maxlength="200" class="form-control" rows="3"></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/systemSettings/application" src="/js/zlib/require.js"></script>
+</body>
+</html>

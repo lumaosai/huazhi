@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>生产调度--调度指令--指令跟踪</title>
+</head>
+<body id="ordertailafter" class="wrapper-gray">
+    <div class="ibox">
+        <div class="ibox-title">
+            <div class="titName"><span>指令跟踪</span></div>
+            <div class="toolbar-form ">
+                <div class="form-inline ">
+                    <span>执行时间:</span>
+                    <input type="text" value="" id="startDateParam" class="time-input datePicker form-control" placeholder="请选择时间"><i class="fa fa-calendar"></i>
+                </div>
+                <div class="form-inline hidden">
+                    班次:
+                    <select name="" id="time">
+                        <option value="">-- 全部 --</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    工序:
+                    <select name="" id="process" class="width-fix-120">
+                        <option value="">-- 全部 --</option>
+                    </select>
+                </div>
+                <div class="form-inline">
+                    分类:
+                    <select name="" id="classify" class="width-fix-120">
+                        < <option value="">-- 全部 --</option>
+                    </select>
+                </div>
+                <div class="form-inline execution time">
+                    指令:<input type="text" value="" class="name" placeholder="请输入指令">
+                </div>
+            </div>
+            <div class="toolbar-form">
+                <div class="form-inline">
+                    状态：
+                    <lable>
+                        <input type='checkbox' name="status" class='i-checks' value="stop"><span>停止执行</span>
+                    </lable>
+                    <lable>
+                       <input type='checkbox' name="status" class='i-checks' value="wait"><span>待执行</span>
+                    </lable>
+                    <lable>
+                        <input type='checkbox' name="status" class='i-checks' value="finish"><span>执行完成</span>
+                    </lable>
+                    <lable>
+                        <input type='checkbox' name="status" class='i-checks' value="cancel"><span>取消执行</span>
+                    </lable>
+                </div>
+                <div class="toolbar-btns pull-right">
+                    <button class="btn btn-search bg-ffa82d btn-white" type="button" id="search-btn">
+                        <i class="fa fa-search"></i>
+                        查询</button>
+                    <button class="btn  btn-white" id="reset-btn">
+                        <i class="fa icon-reset"></i>
+                        重置</button>
+                    <button class="btn btn-white" id="duty">
+                        <i class="fa fa-edit"></i>
+                        值班指令</button>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <!--表格区-->
+            <table id="treeTable" class="table table-striped table-bordered table-hover table-condensed dataTables-example dataTable tree_table">
+                <thead>
+                <tr>
+                    <th class="id">id</th>
+                    <th class="id">分类</th>
+                    <th class="id">工序</th>
+                    <th>一级</th>
+                    <th>二级</th>
+                    <th>三级</th>
+                    <th>下达时间</th>
+                    <th>执行人</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="treeTableBody">
+                </tbody>
+            </table>
+            <!--分页显示-->
+            <div class="clearfix pagination-box">
+                <div class="page-info pull-left"></div>
+                <div id="pagination" class="pagination-roll pull-right"></div>
+            </div>
+        </div>
+    </div>
+<script data-main="/js/module/proDis/ordertailafter" src="/js/zlib/require.js"></script>
+</body>
+</html>

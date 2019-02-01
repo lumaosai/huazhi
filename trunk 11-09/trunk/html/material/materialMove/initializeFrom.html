@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>槽/罐区-槽/罐初始化</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="initializeFrom" class="wrapper-white">
+<form id="inputForm"  action="$Api.admin$/api/sys/Demo/save" method="post">
+    <input id="tankId" name="tankId" type="hidden" value="" >
+    <table class="form-table table">
+        <tr>
+            <td class="width-25 active require">槽/罐:</td>
+            <td class="width-75">
+                <input id="areaName" name="areaName" readonly class="form-control"  type="text"   >
+            </td>
+
+        </tr>
+        <tr>
+            <td class="active require">时间:</td>
+            <td>
+                <input type="text" id="initDate" name="initDate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" class="form-control WdateTime" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">物料:</td>
+            <td>
+                <select name="mtrlId" id="mtrlId" class="form-control require select2" data-height="80px">
+                    <option value="">
+                        --请选择--
+                    </option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>
+</body>
+</html>

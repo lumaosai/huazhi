@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>装置</title>
+</head>
+
+<body id="momDeviceView" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/Unit/save" method="post">
+    <input id="id" name="id" type="hidden" value="">
+    <table class="form-table table">
+        <tbody>
+        <tr>
+            <td class="active require">
+                装置编号:
+            </td>
+            <td>
+                <input id="unitNo" name="unitNo" class="form-control " require="true" placeholder="10000-99999之间" dataType="Range" min="10000" max="99999"  type="number" value="" maxlength="6">
+            </td>
+            <td class="active require">
+                装置编码:
+            </td>
+            <td>
+                <input id="unitCode" name="unitCode" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                装置名称:
+            </td>
+            <td>
+                <input id="unitName" name="unitName" class="form-control " require="true"  type="text" value="" maxlength="50">
+            <td class="active require">
+                装置别名:
+            </td>
+            <td>
+                <input id="unitAlias" name="unitAlias" class="form-control " require="true"  type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                装置类型:
+            </td>
+            <td>
+                <select name="unitType" id="unitType" class="form-control" require="true">
+                </select>
+            </td>
+            <td class="active require">
+                装置界区:
+            </td>
+            <td>
+                <select name="nodeAreaId" id="nodeAreaId" class="form-control" require="true">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                加工能力:
+            </td>
+            <td>
+                <input id="capacity" name="capacity" class="form-control digits" require="true" dataType="Range" type="number" placeholder="1000以上" min="1000" value="" maxlength="11">
+            </td>
+            <td class="active">
+                显示顺序:
+            </td>
+            <td>
+                <input id="displayOrder" name="displayOrder" class="form-control" require="true" placeholder="1000以下" dataType="Range" min="0" max="1000" type="number"  value="" maxlength="4" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                启用标识:
+            </td>
+            <td>
+                <input type="checkbox" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">
+                说明
+            </td>
+            <td>
+                <input id="remark" name="remark" class="form-control" type="text" value="">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="/js/module/material/factoryModels/momDevice" src="/js/zlib/require.js"></script>
+</body>
+</html>

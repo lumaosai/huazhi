@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>罐区弹出页</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+</head>
+<body id="tankFieldInner" class="wrapper-white">
+<form id="inputForm" class="input-form" action="$Api.mtrl$/api/fm/AreaTank/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <table class="form-table table" >
+        <tbody>
+        <tr>
+            <td class="active require">
+                   罐区编号:
+            </td>
+            <td>
+                <input id="areaNo" name="areaNo" class="form-control " require="true" type="number" value=""  placeholder="1000-1999" dataType="Range" min="1000" max="1999"></td>
+            <td class="active require">
+             罐区编码:
+            </td>
+            <td>
+                <input id="areaCode" name="areaCode" class="form-control "  require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                 罐区名称:
+            </td>
+            <td>
+                <input id="areaName" name="areaName" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+            <td class="active require">
+                    罐区别名:
+            </td>
+            <td>
+                <input id="areaAlias" name="areaAlias" class="form-control" require="true" type="text" value="" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">
+                <label >MOM车间:</label>
+            </td>
+            <td>
+                <select name="wspId" id="wspId" class="form-control" require="true">
+                    <option value="">
+                        --请选择--
+                    </option>
+                </select>
+            </td>
+            <td class="active">
+                <label >显示顺序:</label>
+            </td>
+            <td>
+                <div class="form-checked">
+                    <input id="displayOrder" require="true" class="form-control" min="0"  type="number" name="displayOrder" value="0" checked onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="active">
+                <label  >启动标识:</label>
+            </td>
+            <td>
+                <input type="checkbox" id="enable" name="enable" class="i-checks" value="1" checked>
+            </td>
+            <td class="active">
+                <label >说明:</label>
+            </td>
+            <td>
+                <input name="remark" id="remark" class="form-control"  />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<script data-main="../../js/module/material/factoryModels/tankField" src="/js/zlib/require.js"></script>
+</body>
+</html>

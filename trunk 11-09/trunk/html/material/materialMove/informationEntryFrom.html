@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>槽/罐区-槽/罐信息录入</title>
+    <script type="text/javascript" src="../../../js/meta.js"></script>
+    <style>
+        .form-table tbody > tr > td{
+            width: auto;
+        }
+        tbody th{
+            background-color: #f5f5f7;
+        }
+        table{
+            margin: 10px 0 !important;
+        }
+    </style>
+</head>
+<body id="informationEntryFrom" class="wrapper-white">
+<form id="inputForm"  action="$Api.mtrl$/api/mv/TankChk/save" method="post">
+    <input id="id" name="id" type="hidden" value="" >
+    <input id="mtrlId" name="mtrlId" type="hidden" value="" >
+    <input id="tankId" name="tankId" type="hidden" value="" >
+    <input id="chkTypeId" name="chkTypeId" type="hidden" value="" >
+    <table class="form-table table ">
+        <tr>
+            <td class="active require width-10">槽/罐:</td>
+            <td class="width-15">
+                <input id="tankName" name="tankName" readonly class="form-control" type="text">
+            </td>
+            <td class="active width-10 require">检尺类型:</td>
+            <td class="width-15">
+                <select name="chkType" id="chkType" class="form-control">
+                    <option value="">
+                        --请选择--
+                    </option>
+                </select>
+            </td>
+            <td class="active width-10 require">物料:</td>
+            <td class="width-15">
+                <input id="mtrlName" name="mtrlName" readonly class="form-control" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">物料别名:</td>
+            <td>
+                <input id="mtrlAlias" name="mtrlAlias" readonly class="form-control" type="text" maxlength="50">
+            </td>
+            <td class="active require">检尺人:</td>
+            <td>
+                <input id="chkUser" name="chkUser" readonly class="form-control"  type="text" maxlength="50">
+            </td>
+            <td class="active require">检尺时间:</td>
+            <td>
+                <input id="chkTime" name="chkTime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});" class="form-control WdateTime" readonly>
+                <!--<input id="" name="chkTime"  class="form-control"  type="hidden" maxlength="50">-->
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">仪表料位高度(m):</td>
+            <td>
+                <input id="chkInstVal" name="chkInstVal" readonly class="form-control"  require="true" type="text" maxlength="50" >
+            </td>
+            <td class="active require">温度(℃):</td>
+            <td>
+                <input id="temprt" name="temprt"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">水尺(m):</td>
+            <td>
+                <input id="watrHeight" name="watrHeight"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">人工料位高度(m):</td>
+            <td>
+                <input id="chkMnulVal" name="chkMnulVal"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">压力(MPa):</td>
+            <td>
+                <input id="pressure" name="pressure"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">含水率(%):</td>
+            <td>
+                <input id="waterRate" name="waterRate"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">标准密度(kg/m3):</td>
+            <td>
+                <input id="oilDnst" name="oilDnst"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">介质浓度:</td>
+            <td>
+                <input id="medCct" name="medCct"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">酸碱系数:</td>
+            <td>
+                <input id="acidFctr" name="acidFctr"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">含水量:</td>
+            <td>
+                <input id="waterContent" name="waterContent" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">气相温度:</td>
+            <td>
+                <input id="temprtClm" name="temprtClm"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">大气温度:</td>
+            <td>
+                <input id="temprtAtp" name="temprtAtp"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">修正料位高度:</td>
+            <td>
+                <input id="chkModVal" name="chkModVal" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active"></td>
+            <td>
+            </td>
+            <td class="active"></td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <table class="form-table table">
+        <tr>
+            <td class="active require width-10">是否空尺:</td>
+            <td class="width-15">
+                <input type="checkbox" name="chkIsNull" id="chkIsNull" class="i-checks" value="1" checked>
+            </td>
+            <td class="active width-10 require">空尺:</td>
+            <td class="width-15">
+                <input id="chkNull" name="chkNull"  class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active width-10 require">量料位高度修正:</td>
+            <td class="width-15">
+                <input id="chkContVal" name="chkContVal"  class="form-control"   type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">浸油高度:</td>
+            <td>
+                <input id="oilHeight" name="oilHeight"  class="form-control" require="true" type="number" >
+            </td>
+            <td class="active"></td>
+            <td>
+
+            </td>
+            <td class="active ">检尺时间:</td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    <table class="form-table table">
+        <tr>
+            <td class="active width-10 require">毛标准体积:</td>
+            <td class="width-15">
+                <input id="gnrStddVol" name="gnrStddVol" readonly class="form-control" require="true" type="number">
+            </td>
+            <td class="active width-10 require">水容积:</td>
+            <td class="width-15">
+                <input id="waterVol" name="waterVol" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active width-10 require">VCF:</td>
+            <td class="width-15">
+                <input id="vcfVal" name="vcfVal" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">净油容积量:</td>
+            <td>
+                <input id="netoilVol" name="netoilVol" readonly class="form-control" require="true" type="number" >
+            </td>
+            <td class="active require">净压修正值:</td>
+            <td>
+                <input id="fixprsrAdjVal" name="fixprsrAdjVal" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">毛标准质量:</td>
+            <td>
+                <input id="gnrStddWeight" name="gnrStddWeight" readonly class="form-control "  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">气相密度:</td>
+            <td>
+                <input id="temprtCct" name="temprtCct" readonly class="form-control" require="true" type="number">
+            </td>
+            <td class="active require">气相体积:</td>
+            <td>
+                <input id="temprtVol" name="temprtVol" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">气相质量:</td>
+            <td>
+                <input id="temprtWeight" name="temprtWeight" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">温度修正值:</td>
+            <td>
+                <input id="tempAdjVal" name="tempAdjVal" readonly class="form-control" require="true" type="number">
+            </td>
+            <td class="active require">毛计量体积:</td>
+            <td>
+                <input id="gnrMetVol" name="gnrMetVol" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">盈亏量:</td>
+            <td>
+                <input id="perLessVal" name="perLessVal" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+            <td class="active require">最大安全容积:</td>
+            <td>
+                <input id="maxSaleVol" name="maxSaleVol" readonly class="form-control" require="true" type="number">
+            </td>
+            <td class="active require">最大安全量:</td>
+            <td>
+                <input id="maxSaleCont" name="maxSaleCont" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+            <td class="active require">净油质量:</td>
+            <td>
+                <input id="netoilMass" name="netoilMass" readonly class="form-control"  require="true" type="text" maxlength="50">
+            </td>
+        </tr>
+        <tr>
+        <td class="active require">最小安全容积:</td>
+        <td>
+            <input id="minSaleVol" name="minSaleVol" readonly class="form-control"  type="number">
+        </td>
+        <td class="active require">最小安全量:</td>
+        <td>
+            <input id="minSaleCont" name="minSaleCont" readonly class="form-control "   type="text" maxlength="50">
+        </td>
+        <td class="active require">槽/罐确认量:</td>
+        <td>
+            <input id="tankConVal" name="tankConVal"  class="form-control "  require="true" type="text" maxlength="50">
+        </td>
+    </tr>
+        <tr>
+            <td class="active">
+                <label >说明:</label>
+            </td>
+            <td colspan="3">
+                <textarea name="remark" id="remark" class="form-control"  rows="3"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+<script data-main="/js/module/material/materialMove/tankManage" src="/js/zlib/require.js"></script>
+</body>
+</html>
